@@ -40,7 +40,7 @@ class View
             ob_end_clean(); // Finish and clean the buffer
             return $template;
         } else {
-            throw new Exception("View does not exist " . $filePath);
+            throw new Exception("Error, view does not exist " . $filePath);
         }
     }
 } //End class View
