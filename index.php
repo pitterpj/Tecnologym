@@ -18,5 +18,4 @@ require("system/core/autoload.php");
 
 // MAIN PRUEBAS
 
-echo URI
 ?>
