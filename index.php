@@ -11,5 +11,5 @@
         ->Parameter: Parameters used  
 -->
 <?php
- echo $_SERVER['DOCUMENT_ROOT'] 
+ echo CORE
 ?>
