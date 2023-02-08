@@ -11,11 +11,36 @@
         ->Parameter: Parameters used  
 -->
 <?php
+
+if (!session_id()) session_start();
+
 // As always happens by index we load the basic configuration and the core here.
 require("system/config.php");
 require("system/core/autoload.php");
 
+// Instantiate the Router
+$router = new Router();
 
-// MAIN PRUEBAS
+$controller = $router->getController();
+$method = $router->getMethod();
+$parameters = $router->getParams();
 
+// Include the controller that is in the URI
+//      If not exists the controller redirect to error page in controllers
+if (!is_file(PATH_CONTROLLERS . $controller . ".php")) $controller = "ErrorPage";
+include PATH_CONTROLLERS . $controller . ".php";
+
+// Instantiate the Controller
+$myController = new Controller();
+
+// Validate that method exist in the Uri
+//      If not exists the controller redirect to index page
+if (!method_exists($myController, $method)) $method = "index";
+
+// Call controller method with the parameters
+if (empty($parameters)) {
+    $myController->$method();
+} else {
+    $myController->$method($parameters);
+}
 ?>

@@ -13,13 +13,13 @@ define("PATH_VIEWS", "app/views/"); // Path to the views
 define("PATH_MODELS", "app/models/"); // Path to the models
 
 // **** Change this setting for each project **** //
-define("ROOT", $_SERVER['DOCUMENT_ROOT'] . '/MVC_Template/');
-define("BASE_URL", "http://localhost/MVC_Template");
+define("ROOT", $_SERVER['DOCUMENT_ROOT'] . '/Tecnologym/');
+define("BASE_URL", "http://localhost/Tecnologym");
 
 // **** DATABASE **** //
 define("DB_HOST","localhost");
 define("DB_USER","root");
 define("DB_PASS","");
-define("DB_NAME","MVC_Template"); // Change this!
+define("DB_NAME","tecnologym"); // Change this!
 
 ?>
