@@ -31,7 +31,7 @@ if (!is_file(PATH_CONTROLLERS . $controller . ".php")) $controller = "ErrorPage"
 include PATH_CONTROLLERS . $controller . ".php";
 
 // Instantiate the Controller
-$myController = new Controller();
+$myController = new $controller();
 
 // Validate that method exist in the Uri
 //      If not exists the controller redirect to index page

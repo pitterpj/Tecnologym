@@ -3,7 +3,7 @@
 
 <?php
 //This means that if you try enter by URL it will not allow it.
-defined('BASEPATH') or exit('No direct script access allowed');
+//defined('BASEPATH') or exit('No direct script access allowed');
 
 abstract class Controller
 {
@@ -22,8 +22,8 @@ abstract class Controller
 
     protected function loadModel($model)
     {
-        if (is_file(ROOT . PATH_MODELS . $model . "php")) {
-            include ROOT . PATH_MODELS . $model . "php";
+        if (is_file(ROOT . PATH_MODELS . $model . ".php")) {
+            include ROOT . PATH_MODELS . $model . ".php";
             return new $model();
         } else {
             throw new Exception("Error, model does not exist");
