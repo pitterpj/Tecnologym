@@ -16,3 +16,10 @@
     - La función consultar del Model (consult) no me convence el nombre
 
     - Ejecutar = launch()
+    
+
+## To Do:
+    
+    - Poner logo al title
+
+    - Borrar exceso cosas assets/sidebar 

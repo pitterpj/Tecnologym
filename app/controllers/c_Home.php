@@ -9,6 +9,6 @@ class c_Home extends Controller
     }
     public function index()
     {
-        $this->loadView("v_Index");
+        $this->loadView("v_IndexTest");
     }
 }
