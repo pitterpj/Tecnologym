@@ -27,7 +27,7 @@ $parameters = $router->getParams();
 
 // Include the controller that is in the URI
 //      If not exists the controller redirect to error page in controllers
-if (!is_file(PATH_CONTROLLERS . $controller . ".php")) $controller = "ErrorPage";
+if (!is_file(PATH_CONTROLLERS . $controller . ".php")) $controller = "c_ErrorPage";
 include PATH_CONTROLLERS . $controller . ".php";
 
 // Instantiate the Controller
