@@ -33,6 +33,10 @@
 
     - Al crear templates mover archivo css(poner ruta)
 
+    - Links font awesmome fuera
+
+    - Ocultar Worker Name and Role Worker
+
 
 
 
