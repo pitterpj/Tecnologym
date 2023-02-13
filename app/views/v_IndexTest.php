@@ -15,7 +15,7 @@
     <!-- iconos booostrat -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="app\assets\libs\v_index.css>
+    <link rel="stylesheet" href="app\assets\libs\v_index.css">
 
 </head>
 
@@ -25,39 +25,39 @@
 
     <header>
         <!-- place navbar here -->
-        <nav class=" navbar navbar-expand-lg bg-info navbar-dark">
+        <nav class="navbar navbar-expand-lg bg-info navbar-dark">
 
-    <!-- img brand -->
-    <div class="container">
-        <a href="#" class="navbar-brand">
-            <img src="app\assets\imgs\Brand_Tecnologym.png" height="75" alt="Tecnologym">
-        </a>
+            <!-- img brand -->
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    <img src="app\assets\imgs\Brand_Tecnologym.png" height="75" alt="Tecnologym">
+                </a>
 
-        <!-- button collapse -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-            <!-- icono hamburguesa -->
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                <!-- button collapse -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                    <!-- icono hamburguesa -->
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <!-- menu collapse -->
-        <!-- le metemos id navbar para que el boton collapse haga referncia aqui -->
-        <div class="collapse navbar-collapse" id="navmenu">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a href="#a" class="nav-link">Avatar</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#b" class="nav-link">Settings</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#c" class="nav-link">Log out</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+                <!-- menu collapse -->
+                <!-- le metemos id navbar para que el boton collapse haga referncia aqui -->
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="#questions" class="nav-link">Avatar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#b" class="nav-link">Settings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#c" class="nav-link">Log out</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
 
-    </nav>
+        </nav>
 
 
     </header>
@@ -115,7 +115,7 @@
 
         <section class="p-5">
             <div class="container">
-                <div class="row text-center">
+                <div class="row text-center g-4">
                     <div class="col-md">
                         <div class="card bg-dark text-light">
                             <div class="card-body text-center">
@@ -156,6 +156,49 @@
             </div>
         </section>
 
+        <!-- doble section info -->
+        <section id="learn" class="p-5">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-md"><img src="app\assets\imgs\pruebas\beam-analytics.png" alt="" class="img-fluid"></div>
+                    <div class="col-md p-5">
+                        <h2>Learn the Foundamentals</h2>
+                        <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum maxime possimus similique impedit voluptas accusamus.</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam sunt, nobis optio, asperiores voluptatem distinctio quam reprehenderit assumenda esse laborum eaque ipsa? Ut cumque quo cum neque repellendus molestias quaerat!</p>
+                        <a href="@" class="btn btn-light mt-3">
+                            <i class="bi bi-chevron-right"></i> Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="learn" class="p-5 bg-dark text-light">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+
+                    <div class="col-md p-5">
+                        <h2>Learn to React</h2>
+                        <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum maxime possimus similique impedit voluptas accusamus.</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam sunt, nobis optio, asperiores voluptatem distinctio quam reprehenderit assumenda esse laborum eaque ipsa? Ut cumque quo cum neque repellendus molestias quaerat!</p>
+                        <a href="@" class="btn btn-light mt-3">
+                            <i class="bi bi-chevron-right"></i> Read More
+                        </a>
+                    </div>
+
+                    <div class="col-md"><img src="app\assets\imgs\pruebas\beam-analytics.png" alt="" class="img-fluid"></div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- QUESTION ACCORDION -->
+        <section id="questions" class="p-5">
+
+        </section>
+
 
 
 
@@ -173,6 +216,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-        </body>
+</body>
 
 </html>

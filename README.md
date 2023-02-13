@@ -40,3 +40,7 @@
     - UL -navbar colocar medidas pantalla/movil
 
     - Renombrar datos navbar
+
+    - Menu movible etiquetas #
+
+    -45:31
