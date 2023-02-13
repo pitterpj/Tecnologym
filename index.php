@@ -15,8 +15,8 @@
 if (!session_id()) session_start();
 
 // As always happens by index we load the basic configuration and the core here.
-require("system/config.php");
-require("system/core/autoload.php");
+require("config/config.php");
+require("config/core/autoload.php");
 
 // Instantiate the Router
 $router = new Router();

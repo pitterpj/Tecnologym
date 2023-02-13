@@ -7,7 +7,7 @@
 define("URI", $_SERVER['REQUEST_URI']); // Return the URI of th current page
 define("DEFAULT_CONTROLLER", "c_Home"); // This is the default controller
 define("DEFAULT_METHOD", "Index"); // This is the default method
-define("CORE", "system/core/"); // Path to the core
+define("CORE", "config/core/"); // Path to the core
 define("PATH_CONTROLLERS", "app/controllers/"); // Path to the controllers
 define("PATH_VIEWS", "app/views/"); // Path to the views
 define("PATH_MODELS", "app/models/"); // Path to the models
