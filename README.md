@@ -38,3 +38,5 @@
     - loading... algo carga SEO
 
     - UL -navbar colocar medidas pantalla/movil
+
+    - Renombrar datos navbar
