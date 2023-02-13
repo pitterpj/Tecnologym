@@ -31,16 +31,6 @@
     
     - Poner logo al title
 
-    - Borrar exceso cosas assets/sidebar 
 
-    - SEO fotos
 
-    - loading... algo carga SEO
 
-    - UL -navbar colocar medidas pantalla/movil
-
-    - Renombrar datos navbar
-
-    - Menu movible etiquetas #
-
-    -45:31
