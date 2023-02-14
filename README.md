@@ -52,5 +52,7 @@
 
     - Clase active por arreglar css 228
 
+    - Shadows: https://getbootstrap.com/docs/4.1/utilities/shadows/
+
 
 
