@@ -12,19 +12,21 @@
             <!-- BRAND -->
             <div class="sidebar-header">
                 <h3><img src="app/assets/imgs/Brand_Tecnologym.png" width="200" alt="Brand-Tecnologym"></h3>
-                <strong>BS</strong>
+
+                <!-- Miniature Brand -->
+                <strong><img src="app/assets/imgs/Brand_Tecnologym.png" width="50" alt="Brand-Tecnologym"></strong>
             </div>
 
             <!-- AVATAR ROLE PERSON -->
             <!-- Depending on the person, this avatar is one or the other -->
             <div class="sidebar-header text-center">
                 <h3><img src="app/assets/imgs/logos/avatar-prueba.webp" width="200" alt="Brand-Tecnologym"></h3>
-                <h4>Worker Name</h4>
-                <h5>Role Worker</h5>
+                <h3>Worker Name</h3>
+                <h3>Role Worker</h3>
             </div>
 
             <!-- OPTIONS LIST -->
-            <!-- PONER ICONOS -->
+            <!--TODO ----------------- PONER ICONOS -->
             <ul class="list-unstyled">
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" class="dropdown-toggle">
