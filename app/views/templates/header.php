@@ -7,7 +7,7 @@
 <head>
     <title>Tecnologym</title>
     <!-- Icon Title -->
-    <link rel="shortcut icon" href="app/assets/imgs/Brand_Tecnologym.png">
+    <link rel="shortcut icon" href="<?= BASE_URL ?>app/assets/imgs/Brand_Tecnologym.png">
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -17,7 +17,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <!-- Files CSS -->
-    <link rel="stylesheet" href="app\assets\libs\v_index.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>app\assets\libs\v_index.css">
 
     <!-- Font Awesome JS
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>

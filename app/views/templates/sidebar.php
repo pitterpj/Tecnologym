@@ -1,7 +1,7 @@
 <!-- Pedro.J (Pitter) -->
 <!-- https://github.com/pitterpj -->
 
-<!-- Left Menu that contracts  and header with collapsing buttons -->
+<!-- Left Menu that contracts and header with collapsing buttons -->
 
 <body>
     <div class="wrapper">
@@ -11,16 +11,16 @@
         <nav id="sidebar">
             <!-- BRAND -->
             <div class="sidebar-header">
-                <h3><img class="img-fluid" src="app/assets/imgs/Brand_Tecnologym.png" width="200" alt="Brand-Tecnologym"></h3>
+                <a href="<?=BASE_URL?>/c_Home/v_IndexTest"><img class="img-fluid" src="<?= BASE_URL ?>app/assets/imgs/Brand_Tecnologym.png" width="200" alt="Brand-Tecnologym"></a>
 
                 <!-- Miniature Brand -->
-                <strong><img src="app/assets/imgs/Brand_Tecnologym.png" width="50" alt="Brand-Tecnologym"></strong>
+                <!-- <strong><img src="<?= BASE_URL ?>app/assets/imgs/Brand_Tecnologym.png" width="50" alt="Brand-Tecnologym"></strong> -->
             </div>
 
             <!-- AVATAR ROLE PERSON -->
             <!-- Depending on the person, this avatar is one or the other -->
             <div class="sidebar-header text-center push ">
-                <h3><img class="img-fluid rounded-circle" src="app\assets\imgs\icons\avatar_person.jpg" width="200" alt="Brand-Tecnologym"></h3>
+                <img class="img-fluid rounded-circle" src="<?= BASE_URL ?>app\assets\imgs\icons\avatar_person.jpg" width="200" alt="Brand-Tecnologym">
                 <span class="disappear fs-3">Worker Name</span>
                 <span class="disappear fs-4">Role</span>
 
@@ -32,7 +32,7 @@
 
                     <!-- Icon Home -->
                     <a href="#">
-                        <i class="fas fa-home"> <img src="app\assets\imgs\icons\home_gym.png" width="50" alt="Inicio"></i>
+                        <i class="fas fa-home"> <img src="<?= BASE_URL ?>app\assets\imgs\icons\home_gym.png" width="50" alt="Inicio"></i>
                         <span class="disappear">Inicio</span>
                     </a>
                 </li>
@@ -41,7 +41,7 @@
                     <!-- Icon Create schedules  -->
                     <a href="#schudeleSubmenu" data-toggle="collapse" class="dropdown-toggle">
                         <i class="fas fa-home">
-                            <img src="app\assets\imgs\icons\calendar.png" width="50" alt="Horario">
+                            <img src="<?= BASE_URL ?>app\assets\imgs\icons\calendar.png" width="50" alt="Horario">
                         </i>
                         <span class="disappear">Horarios</span>
                     </a>
@@ -50,21 +50,21 @@
                         <li>
                             <a href="#">
                                 <i class="fas fa-home">
-                                    <img src="app\assets\imgs\icons\calendar_watch.png" width="30" alt="Horario Personal">
+                                    <img src="<?= BASE_URL ?>app\assets\imgs\icons\calendar_watch.png" width="30" alt="Horario Personal">
                                 </i>
                                 <span class="disappear">Horario personal</span></a>
                         </li>
                         <li>
                             <a href="#">
                                 <i class="fas fa-home">
-                                    <img src="app\assets\imgs\icons\calendar_plus.png" width="30" alt="Crear Horario">
+                                    <img src="<?= BASE_URL ?>app\assets\imgs\icons\calendar_plus.png" width="30" alt="Crear Horario">
                                 </i>
                                 <span class="disappear">Crear Horarios</span></a>
                         </li>
                         <li>
                             <a href="#">
                                 <i class="fas fa-home">
-                                    <img src="app\assets\imgs\icons\tasks.png" width="35" alt="Administrar Personal">
+                                    <img src="<?= BASE_URL ?>app\assets\imgs\icons\tasks.png" width="35" alt="Administrar Personal">
                                 </i>
                                 <span class="disappear">Administrar Personal</span></a>
                         </li>
@@ -75,7 +75,7 @@
                 <li>
                     <a href="#">
                         <i class="fas fa-home">
-                            <img src="app\assets\imgs\icons\personal_training.png" width="50" alt="Entrenamientos Personales">
+                            <img src="<?= BASE_URL ?>app\assets\imgs\icons\personal_training.png" width="50" alt="Entrenamientos Personales">
                         </i>
                         <span class="disappear">Entrenamientos</span></a>
                 </li>
@@ -85,7 +85,7 @@
                     <!-- Icon Create schedules  -->
                     <a href="#holidaysSubmenu" data-toggle="collapse" class="dropdown-toggle">
                         <i class="fas fa-home">
-                            <img src="app\assets\imgs\icons\time_out.png" width="50" alt="Horario">
+                            <img src="<?= BASE_URL ?>app\assets\imgs\icons\time_out.png" width="50" alt="Horario">
                         </i>
                         <span class="disappear">Vacaciones</span>
                     </a>
@@ -94,21 +94,21 @@
                         <li>
                             <a href="#">
                                 <i class="fas fa-home">
-                                    <img src="app\assets\imgs\icons\overtime.png" width="30" alt="Horario Personal">
+                                    <img src="<?= BASE_URL ?>app\assets\imgs\icons\overtime.png" width="30" alt="Horario Personal">
                                 </i>
                                 <span class="disappear">Solicitar Vacaciones</span></a>
                         </li>
                         <li>
                             <a href="#">
                                 <i class="fas fa-home">
-                                    <img src="app\assets\imgs\icons\calendar_time.png" width="30" alt="Crear Horario">
+                                    <img src="<?= BASE_URL ?>app\assets\imgs\icons\calendar_time.png" width="30" alt="Crear Horario">
                                 </i>
                                 <span class="disappear">Pedir Rotacion</span></a>
                         </li>
                         <li>
                             <a href="#">
                                 <i class="fas fa-home">
-                                    <img src="app\assets\imgs\icons\grinch.png" width="35" alt="Administrar Personal">
+                                    <img src="<?= BASE_URL ?>app\assets\imgs\icons\grinch.png" width="35" alt="Administrar Personal">
                                 </i>
                                 <span class="disappear">Días disponibles</span>
                             </a>
@@ -128,14 +128,14 @@
                     <!-- COLLAPSE BUTTON -->
                     <button type="button" id="sidebarCollapse" class="btn">
                         <i class="fas fa-home">
-                            <img src="app\assets\imgs\icons\return.png" width="35" alt="Cerrar Menu">
+                            <img class="rotation" src="<?= BASE_URL ?>app\assets\imgs\icons\left_arrow.png" width="35" alt="Cerrar Menu">
                         </i>
                     </button>
 
                     <!-- RIGHT BUTTON COLLAPSE -->
                     <button class="btn d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
-                        <img src="app\assets\imgs\icons\avatar.png" width="35" alt="X">
+                        <img src="<?= BASE_URL ?>app\assets\imgs\icons\avatar.png" width="35" alt="X">
                     </button>
 
                     <!-- OPTIONS RIGHT BUTTON COLLAPSE -->
