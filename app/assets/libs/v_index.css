@@ -150,7 +150,12 @@ button:hover div:last-child{
 .rotation{
     transition: all .7s;
 }
-
+.fondo-1{
+    background: #3a72df;
+}
+.fondo-2{
+    background-color: #289bbe7a;
+}
 
 #sidebar.active .sidebar-header h3,
 #sidebar.active .CTAs {
@@ -217,15 +222,17 @@ button:hover div:last-child{
   background: #fff;
 }
 
+
 #sidebar ul li a i {
   margin-right: 10px;
 }
 
-#sidebar ul li.active > a,
+/* CLASE ACTIVE POR ARREGLAR */
+/* #sidebar ul li.active > a,
 a[aria-expanded="true"] {
   color: #fff;
-  background: #6d7fcc;
-}
+  background: #5770df;
+} */
 
 a[data-toggle="collapse"] {
   position: relative;

@@ -43,5 +43,14 @@
 
     - Cambiar icono return por uno animado
 
+    - 
+.fondo-2{
+    background-color: #289bbe7a;
+}
+
+    - BG IMAGE CON OPACITY
+
+    - Clase active por arreglar css 228
+
 
 

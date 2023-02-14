@@ -10,7 +10,7 @@
 
         <nav id="sidebar">
             <!-- BRAND -->
-            <div class="sidebar-header">
+            <div class="sidebar-header ">
                 <a href="<?=BASE_URL?>/c_Home/v_IndexTest"><img class="img-fluid" src="<?= BASE_URL ?>app/assets/imgs/Brand_Tecnologym.png" width="200" alt="Brand-Tecnologym"></a>
 
                 <!-- Miniature Brand -->
@@ -23,6 +23,7 @@
                 <img class="img-fluid rounded-circle" src="<?= BASE_URL ?>app\assets\imgs\icons\avatar_person.jpg" width="200" alt="Brand-Tecnologym">
                 <span class="disappear fs-3">Worker Name</span>
                 <span class="disappear fs-4">Role</span>
+                <strong class="mt-4">G</strong> 
 
             </div>
 
@@ -122,8 +123,8 @@
         <!-- PAGE CONTENT HEADER -->
         <div id="content">
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
+            <nav class="fondo-2 shadow p-3 mb-5 rounded navbar navbar-expand-lg navbar-light">
+                <div class=" container-fluid">
 
                     <!-- COLLAPSE BUTTON -->
                     <button type="button" id="sidebarCollapse" class="btn">
@@ -142,15 +143,15 @@
                     <div class="collapse justify-content-end navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto text-end">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Home</a>
+                                <a class="text-light nav-link" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Settings
+                                <a class="text-light nav-link" href="#">Settings
 
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Log Out
+                                <a class="text-light nav-link" href="#">Log Out
 
                                 </a>
                             </li>
