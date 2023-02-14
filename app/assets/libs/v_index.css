@@ -68,7 +68,7 @@ span {
   transition: 0.5s;
 }
 
-/* animacion para los logos */
+/* animacion para los logos
 @keyframes taadaa {
   0% {
     opacity: 0;
@@ -81,7 +81,7 @@ span {
 
 .appear {
   animation: taadaa 3s;
-}
+} */
 
 .wrapper {
   display: flex;

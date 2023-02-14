@@ -11,7 +11,7 @@
         <nav id="sidebar">
             <!-- BRAND -->
             <div class="sidebar-header">
-                <h3><img class="appear" src="app/assets/imgs/Brand_Tecnologym.png" width="200" alt="Brand-Tecnologym"></h3>
+                <h3><img class="img-fluid" src="app/assets/imgs/Brand_Tecnologym.png" width="200" alt="Brand-Tecnologym"></h3>
 
                 <!-- Miniature Brand -->
                 <strong><img src="app/assets/imgs/Brand_Tecnologym.png" width="50" alt="Brand-Tecnologym"></strong>
@@ -19,10 +19,10 @@
 
             <!-- AVATAR ROLE PERSON -->
             <!-- Depending on the person, this avatar is one or the other -->
-            <div class="sidebar-header text-center push">
-                <h3><img class="appear" src="app/assets/imgs/logos/avatar-prueba.webp" width="200" alt="Brand-Tecnologym"></h3>
-                <span class="disappear appear fs-3">Worker Name</span>
-                <span class="disappear appear fs-4">Role</span>
+            <div class="sidebar-header text-center push ">
+                <h3><img class="img-fluid rounded-circle" src="app\assets\imgs\icons\avatar_person.jpg" width="200" alt="Brand-Tecnologym"></h3>
+                <span class="disappear fs-3">Worker Name</span>
+                <span class="disappear fs-4">Role</span>
 
             </div>
 
@@ -134,20 +134,25 @@
 
                     <!-- RIGHT BUTTON COLLAPSE -->
                     <button class="btn d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i><img src="app\assets\imgs\icons\avatar.png" width="35" alt="X">
+                        <i class="fas fa-align-justify"></i>
+                        <img src="app\assets\imgs\icons\avatar.png" width="35" alt="X">
                     </button>
 
                     <!-- OPTIONS RIGHT BUTTON COLLAPSE -->
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav ml-auto">
+                    <div class="collapse justify-content-end navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto text-end">
                             <li class="nav-item active">
                                 <a class="nav-link" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Settings</a>
+                                <a class="nav-link" href="#">Settings
+
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Log Out</a>
+                                <a class="nav-link" href="#">Log Out
+
+                                </a>
                             </li>
                         </ul>
                     </div>
