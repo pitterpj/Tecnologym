@@ -26,24 +26,23 @@
             </div>
 
             <!-- OPTIONS LIST -->
-            <!--TODO ----------------- PONER ICONOS -->
             <ul class="list-unstyled">
                 <li class="active">
 
                     <!-- Icon Home -->
                     <a href="#">
                         <i class="fas fa-home"> <img src="app\assets\imgs\icons\home_gym.png" width="50" alt="Inicio"></i>
-                        Inicio
+                        <span class="disappear">Inicio</span>
                     </a>
                 </li>
-                <li class="active">
 
+                <li>
                     <!-- Icon Create schedules  -->
                     <a href="#homeSubmenu" data-toggle="collapse" class="dropdown-toggle">
                         <i class="fas fa-home">
                             <img src="app\assets\imgs\icons\calendar.png" width="50" alt="Horario">
                         </i>
-                        Horarios
+                        <span class="disappear">Horarios</span>
                     </a>
                     <!-- subclass schedules -->
                     <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -73,21 +72,21 @@
 
                 <!-- Icon Personal Training  -->
                 <li>
-                            <a href="#">
-                                <i class="fas fa-home">
-                                    <img src="app\assets\imgs\icons\personal_training.png" width="50" alt="Entrenamientos Personales">
-                                </i>
-                                Entrenamientos</a>
-                        </li>
+                    <a href="#">
+                        <i class="fas fa-home">
+                            <img src="app\assets\imgs\icons\personal_training.png" width="50" alt="Entrenamientos Personales">
+                        </i>
+                        Entrenamientos</a>
+                </li>
 
                 <!-- Icon Vacations / Rotations -->
                 <li>
-                            <a href="#">
-                                <i class="fas fa-home">
-                                    <img src="app\assets\imgs\icons\time_out.png" width="50" alt="Vacaciones Rotaciones">
-                                </i>
-                                Vacaciones</a>
-                        </li>
+                    <a href="#">
+                        <i class="fas fa-home">
+                            <img src="app\assets\imgs\icons\time_out.png" width="50" alt="Vacaciones Rotaciones">
+                        </i>
+                        Vacaciones</a>
+                </li>
             </ul>
         </nav>
 
@@ -100,7 +99,7 @@
                     <!-- COLLAPSE BUTTON -->
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
-                        <span><-< /span>
+                        <span><- </span>
                     </button>
 
                     <!-- RIGHT BUTTON COLLAPSE -->

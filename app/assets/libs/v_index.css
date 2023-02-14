@@ -54,6 +54,12 @@ span {
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
+#sidebar.active .disappear{
+    display: none;
+
+}
+
+
 
 .wrapper {
     display: flex;
