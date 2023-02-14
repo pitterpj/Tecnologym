@@ -29,7 +29,7 @@
 
 ## To Do:
     
-    - Poner logo al title
+    - [X] Poner logo al title
 
     - Al crear templates mover archivo css(poner ruta)
 
