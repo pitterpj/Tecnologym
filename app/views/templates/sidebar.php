@@ -51,21 +51,21 @@
                                 <i class="fas fa-home">
                                     <img src="app\assets\imgs\icons\calendar_watch.png" width="30" alt="Horario Personal">
                                 </i>
-                                Horario Personal</a>
+                                <span class="disappear">Horario personal</span></a>
                         </li>
                         <li>
                             <a href="#">
                                 <i class="fas fa-home">
                                     <img src="app\assets\imgs\icons\calendar_plus.png" width="30" alt="Crear Horario">
                                 </i>
-                                Crear Horario</a>
+                                <span class="disappear">Crear Horarios</span></a>
                         </li>
                         <li>
                             <a href="#">
                                 <i class="fas fa-home">
                                     <img src="app\assets\imgs\icons\tasks.png" width="35" alt="Administrar Personal">
                                 </i>
-                                Administrar Personal</a>
+                                <span class="disappear">Administrar Personal</span></a>
                         </li>
                     </ul>
                 </li>
@@ -76,7 +76,7 @@
                         <i class="fas fa-home">
                             <img src="app\assets\imgs\icons\personal_training.png" width="50" alt="Entrenamientos Personales">
                         </i>
-                        Entrenamientos</a>
+                        <span class="disappear">Entrenamientos</span></a>
                 </li>
 
                 <!-- Icon Vacations / Rotations -->
@@ -85,7 +85,7 @@
                         <i class="fas fa-home">
                             <img src="app\assets\imgs\icons\time_out.png" width="50" alt="Vacaciones Rotaciones">
                         </i>
-                        Vacaciones</a>
+                        <span class="disappear">Vacaciones</span></a>
                 </li>
             </ul>
         </nav>
