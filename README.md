@@ -39,5 +39,7 @@
 
     - CSS CTAs quitar
 
+    - Quitar i de CSS
+
 
 

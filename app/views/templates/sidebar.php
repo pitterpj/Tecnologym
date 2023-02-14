@@ -29,67 +29,65 @@
             <!--TODO ----------------- PONER ICONOS -->
             <ul class="list-unstyled">
                 <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" class="dropdown-toggle">
-                        <i class="fas fa-home"></i>
+
+                    <!-- Icon Home -->
+                    <a href="#">
+                        <i class="fas fa-home"> <img src="app\assets\imgs\icons\home_gym.png" width="50" alt="Inicio"></i>
                         Inicio
                     </a>
+                </li>
+                <li class="active">
+
+                    <!-- Icon Create schedules  -->
+                    <a href="#homeSubmenu" data-toggle="collapse" class="dropdown-toggle">
+                        <i class="fas fa-home">
+                            <img src="app\assets\imgs\icons\calendar.png" width="50" alt="Horario">
+                        </i>
+                        Horarios
+                    </a>
+                    <!-- subclass schedules -->
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="#">Home 1</a>
+                            <a href="#">
+                                <i class="fas fa-home">
+                                    <img src="app\assets\imgs\icons\calendar_watch.png" width="30" alt="Horario Personal">
+                                </i>
+                                Horario Personal</a>
                         </li>
                         <li>
-                            <a href="#">Home 2</a>
+                            <a href="#">
+                                <i class="fas fa-home">
+                                    <img src="app\assets\imgs\icons\calendar_plus.png" width="30" alt="Crear Horario">
+                                </i>
+                                Crear Horario</a>
                         </li>
                         <li>
-                            <a href="#">Home 3</a>
+                            <a href="#">
+                                <i class="fas fa-home">
+                                    <img src="app\assets\imgs\icons\tasks.png" width="35" alt="Administrar Personal">
+                                </i>
+                                Administrar Personal</a>
                         </li>
                     </ul>
                 </li>
 
+                <!-- Icon Personal Training  -->
                 <li>
-                    <a href="#">
-                        <i class="fas fa-briefcase"></i>
-                        Crear Horarios
-                    </a>
-
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fas fa-copy"></i>
-                        Horario Personal
-                    </a>
-
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Page 1</a>
+                            <a href="#">
+                                <i class="fas fa-home">
+                                    <img src="app\assets\imgs\icons\personal_training.png" width="50" alt="Entrenamientos Personales">
+                                </i>
+                                Entrenamientos</a>
                         </li>
-                        <li>
-                            <a href="#">Page 2</a>
+
+                <!-- Icon Vacations / Rotations -->
+                <li>
+                            <a href="#">
+                                <i class="fas fa-home">
+                                    <img src="app\assets\imgs\icons\time_out.png" width="50" alt="Vacaciones Rotaciones">
+                                </i>
+                                Vacaciones</a>
                         </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <i class="fas fa-image"></i>
-                        Administrar Personal
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <i class="fas fa-question"></i>
-                        Entrenamientos Personales
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <i class="fas fa-paper-plane"></i>
-                        Vacaciones / Rotaciones
-                    </a>
-                </li>
             </ul>
         </nav>
 
@@ -102,7 +100,7 @@
                     <!-- COLLAPSE BUTTON -->
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
-                        <span><-</span>
+                        <span><-< /span>
                     </button>
 
                     <!-- RIGHT BUTTON COLLAPSE -->
