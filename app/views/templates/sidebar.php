@@ -11,7 +11,7 @@
         <nav id="sidebar">
             <!-- BRAND -->
             <div class="sidebar-header">
-                <h3><img src="app/assets/imgs/Brand_Tecnologym.png" width="200" alt="Brand-Tecnologym"></h3>
+                <h3><img class="appear" src="app/assets/imgs/Brand_Tecnologym.png" width="200" alt="Brand-Tecnologym"></h3>
 
                 <!-- Miniature Brand -->
                 <strong><img src="app/assets/imgs/Brand_Tecnologym.png" width="50" alt="Brand-Tecnologym"></strong>
@@ -19,10 +19,11 @@
 
             <!-- AVATAR ROLE PERSON -->
             <!-- Depending on the person, this avatar is one or the other -->
-            <div class="sidebar-header text-center">
-                <h3><img src="app/assets/imgs/logos/avatar-prueba.webp" width="200" alt="Brand-Tecnologym"></h3>
-                <h3>Worker Name</h3>
-                <h3>Role Worker</h3>
+            <div class="sidebar-header text-center push">
+                <h3><img class="appear" src="app/assets/imgs/logos/avatar-prueba.webp" width="200" alt="Brand-Tecnologym"></h3>
+                <span class="disappear appear fs-3">Worker Name</span>
+                <span class="disappear appear fs-4">Role</span>
+
             </div>
 
             <!-- OPTIONS LIST -->
@@ -38,14 +39,14 @@
 
                 <li>
                     <!-- Icon Create schedules  -->
-                    <a href="#homeSubmenu" data-toggle="collapse" class="dropdown-toggle">
+                    <a href="#schudeleSubmenu" data-toggle="collapse" class="dropdown-toggle">
                         <i class="fas fa-home">
                             <img src="app\assets\imgs\icons\calendar.png" width="50" alt="Horario">
                         </i>
                         <span class="disappear">Horarios</span>
                     </a>
                     <!-- subclass schedules -->
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <ul class="collapse list-unstyled" id="schudeleSubmenu">
                         <li>
                             <a href="#">
                                 <i class="fas fa-home">
@@ -81,30 +82,59 @@
 
                 <!-- Icon Vacations / Rotations -->
                 <li>
-                    <a href="#">
+                    <!-- Icon Create schedules  -->
+                    <a href="#holidaysSubmenu" data-toggle="collapse" class="dropdown-toggle">
                         <i class="fas fa-home">
-                            <img src="app\assets\imgs\icons\time_out.png" width="50" alt="Vacaciones Rotaciones">
+                            <img src="app\assets\imgs\icons\time_out.png" width="50" alt="Horario">
                         </i>
-                        <span class="disappear">Vacaciones</span></a>
+                        <span class="disappear">Vacaciones</span>
+                    </a>
+                    <!-- subclass schedules -->
+                    <ul class="collapse list-unstyled" id="holidaysSubmenu">
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-home">
+                                    <img src="app\assets\imgs\icons\overtime.png" width="30" alt="Horario Personal">
+                                </i>
+                                <span class="disappear">Solicitar Vacaciones</span></a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-home">
+                                    <img src="app\assets\imgs\icons\calendar_time.png" width="30" alt="Crear Horario">
+                                </i>
+                                <span class="disappear">Pedir Rotacion</span></a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-home">
+                                    <img src="app\assets\imgs\icons\grinch.png" width="35" alt="Administrar Personal">
+                                </i>
+                                <span class="disappear">Días disponibles</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
+
             </ul>
         </nav>
 
-        <!-- PAGE CONTENT  -->
+        <!-- PAGE CONTENT HEADER -->
         <div id="content">
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
 
                     <!-- COLLAPSE BUTTON -->
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <i class="fas fa-align-left"></i>
-                        <span><- </span>
+                    <button type="button" id="sidebarCollapse" class="btn">
+                        <i class="fas fa-home">
+                            <img src="app\assets\imgs\icons\return.png" width="35" alt="Cerrar Menu">
+                        </i>
                     </button>
 
                     <!-- RIGHT BUTTON COLLAPSE -->
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
+                    <button class="btn d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i><img src="app\assets\imgs\icons\avatar.png" width="35" alt="X">
                     </button>
 
                     <!-- OPTIONS RIGHT BUTTON COLLAPSE -->
