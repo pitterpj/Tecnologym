@@ -1,6 +1,6 @@
-/*
-    DEMO STYLE
-*/
+/* ---------------------------------------------------
+    GENERAL
+----------------------------------------------------- */
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
@@ -149,12 +149,6 @@ button:hover div:last-child{
 
 .rotation{
     transition: all .7s;
-}
-.fondo-1{
-    background: #3a72df;
-}
-.fondo-2{
-    background-color: #289bbe7a;
 }
 
 #sidebar.active .sidebar-header h3,
@@ -337,4 +331,20 @@ a.article:hover {
   #sidebarCollapse span {
     display: none;
   }
+}
+/* ---------------------------------------------------
+    HEADER STYLES
+----------------------------------------------------- */
+div ul li a:hover{
+  background: #3a72df;
+}
+
+/* ---------------------------------------------------
+    COLORS
+----------------------------------------------------- */
+.fondo-1{
+  background: #3a72df;
+}
+.fondo-2{
+  background-color: #289bbe7a;
 }

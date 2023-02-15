@@ -35,6 +35,8 @@
 
     - Links font awesmome fuera
 
+    - Enviar correo autenticacion
+
     - Ocultar Worker Name and Role Worker
 
     - CSS CTAs quitar
@@ -42,6 +44,10 @@
     - Quitar i de CSS
 
     - Cambiar icono return por uno animado
+
+    - Cuando está en móvil mal las opciones hover a
+
+    - Revisar imágenes fluidas
 
     - 
 .fondo-2{
