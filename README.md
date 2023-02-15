@@ -35,6 +35,8 @@
 
     - Añadir descripcion seo
 
+    - style landig responsive logo reducido en js
+
     - Al crear templates mover archivo css(poner ruta)
 
     - Links font awesmome fuera

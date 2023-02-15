@@ -5,6 +5,13 @@
 <html lang="en">
 <!-- <html class="no-js" lang="en"> -->
 
+<?php include_once 'config\config.php' ?>
+<script>
+    const BASE_URL = '<?= BASE_URL; ?>';
+    console.log(BASE_URL);
+</script>
+
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -63,8 +70,8 @@
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
                             <!--====== LOGO NAVBAR ======-->
-                            <a class="navbar-brand" href="index.html">
-                                <img src="<?= BASE_URL ?>app\assets\img\Brand_Tecnologym.png" alt="Logo">
+                            <a class="navbar-brand " href="index.html">
+                                <img src="<?= BASE_URL ?>app\assets\img\Brand_Tecnologym.png"  alt="Logo">
                             </a>
                             <!--====== BOTON RIGHT COLLAPSE ======-->
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -122,7 +129,7 @@
 
             <div class="header_image d-flex align-items-end">
                 <div class="image wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="1.8s">
-                    <img src="<?= BASE_URL ?>app\assets\img\landing\app_mobile.png" alt="header App">
+                    <img src="<?= BASE_URL ?>app\assets\img\iphone.png" width="300" alt="header App">
                     <img src="<?= BASE_URL ?>app\assets\libs\landing\images\dots.svg" alt="dots" class="dots">
                 </div> <!-- image -->
             </div> <!-- header image -->
@@ -136,30 +143,32 @@
     <section id="features" class="features_area pt-35 pb-80">
         <div class="container">
             <div class="row justify-content-center">
+
                 <div class="col-lg-4 col-md-7 col-sm-8">
-                    <div class="single_features mt-30 features_1 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                    <div class="single_features mt-30 features_1 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
 
                         <img src="<?= BASE_URL ?>app\assets\img\icons\pullups.gif" alt="" srcset="">
-
                         <div class="features_content">
                             <h4 class="features_title">Entrenos Personales</h4>
-                            <p>Cada monitor podrá llevar un registro de sus entrenos personales</p>
+                            <p>Cada monitor podrá llevar un registro de sus entrenos personales y continuo para que midan lo mismo</p>
                         </div>
 
                     </div> <!-- single featuresow -->
                 </div>
+
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single_features mt-30 features_2 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                    <img src="<?= BASE_URL ?>app\assets\img\icons\administration.gif" alt="" srcset="">
+                        <img src="<?= BASE_URL ?>app\assets\img\icons\administration.gif" alt="" srcset="">
                         <div class="features_content">
                             <h4 class="features_title">Administration</h4>
                             <p>Fácil gestión de las salas y las clases para llevar la gestion perfecta de tu gimnasio</p>
                         </div>
                     </div> <!-- single featuresow -->
                 </div>
+
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single_features mt-30 features_3 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.9s">
-                    <img src="<?= BASE_URL ?>app\assets\img\icons\support.gif" alt="" srcset="">
+                        <img src="<?= BASE_URL ?>app\assets\img\icons\support.gif" alt="" srcset="">
                         <div class="features_content">
                             <h4 class="features_title">Soporte Técnico</h4>
                             <p>Soporte técnico garantizado que solucionara cualquier problema enseguida</p>
@@ -179,17 +188,17 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-9">
                     <div class="about_image mt-50 wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                        <img class="image" src="<?= BASE_URL ?>app\assets\libs\landing\images\about.png" alt="about">
+                        <img class="image" src="<?= BASE_URL ?>app\assets\img\iphone.png" alt="about">
                         <img class="dots" src="<?= BASE_URL ?>app\assets\libs\landing\images\dots.svg" alt="dots">
                     </div> <!-- about image -->
                 </div>
                 <div class="col-lg-6">
                     <div class="about_content mt-45 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
                         <div class="section_title">
-                            <h4 class="title">Discover New Experience!</h4>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut labore et dolore malquyam erat, sed diam voluptua. At vero eos et accusam et justo doloes et ea rebum. Stet clita kasd gubergren, nod sea takmaa santus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sitdse ametr consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.</p>
+                            <h4 class="title">Descubre la nueva manera de gestionar tu tiempo!</h4>
+                            <p>Si desea gestionar su gimnasio así como sus horarios o sus entrnemaientos personales esta aplciación te ayudará a todo eso y más. Desde gestión de centros a gestión personal tanto para entrenamientos como para horarios distribuidos en diferentes salas en función de las necesidades de su centro.</p>
                         </div>
-                        <a class="main-btn" href="#">Discover</a>
+                        <a class="main-btn" href="#">Descubrelo</a>
 
                     </div> <!-- about image -->
                 </div>
@@ -199,35 +208,6 @@
 
     <!--====== ABOUT PART ENDS ======-->
 
-    <!--====== APP FEATURES PART START ======-->
-
-    <section id="app_features">
-
-    </section>
-
-    <!--====== APP FEATURES PART ENDS ======-->
-
-    <!--====== VIDEO PART START ======-->
-
-    <section id="video" class="video_area pt-80 pb-80">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="section_title text-center">
-                        <h4 class="title">You are using free lite version</h4>
-                        <p>Please, purchase full version of the template to get all sections, features and permission to remove footer credits.</p></br>
-
-                        <a href="https://rebrand.ly/advanced-ud" rel="nofollow" class="main-btn">Purchase Now</a>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-
-    <section id="screenshot">
-
-    </section>
-
     <!--====== PRICNG PART START ======-->
 
     <section id="pricing" class="pricing_area mt-80 pt-75 pb-80">
@@ -235,8 +215,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section_title text-center pb-25">
-                        <h4 class="title">Choose a Plan</h4>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut labore et dolore.</p>
+                        <h4 class="title">Elige tu Plan</h4>
+                        <p>Elige que eres y como deseas gastar tu dinero para ganar tu tiempo.</p>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
@@ -244,9 +224,9 @@
                 <div class="col-lg-4 col-md-8 col-sm-10">
                     <div class="single_pricing text-center pricing_color_1 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
                         <div class="pricing_top_bar">
-                            <h5 class="pricing_title">Startup</h5>
+                            <h5 class="pricing_title">Entrenador</h5>
                             <i class="lni lni-coffee-cup"></i>
-                            <span class="price">$9.00</span>
+                            <span class="price">9.00€/MES</span>
                         </div>
                         <div class="pricing_list">
                             <ul>
@@ -256,16 +236,16 @@
                             </ul>
                         </div>
                         <div class="pricing_btn">
-                            <a href="#" class="main-btn main-btn-2">Get Started</a>
+                            <a href="#" class="main-btn main-btn-2">Comienza ahora</a>
                         </div>
                     </div> <!-- single pricing -->
                 </div>
                 <div class="col-lg-4 col-md-8 col-sm-10">
                     <div class="single_pricing text-center pricing_active pricing_color_2 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
                         <div class="pricing_top_bar">
-                            <h5 class="pricing_title">Standard</h5>
+                            <h5 class="pricing_title">Gimnasio</h5>
                             <i class="lni lni-crown"></i>
-                            <span class="price">$15.00</span>
+                            <span class="price">15.00€/MES</span>
                         </div>
                         <div class="pricing_list">
                             <ul>
@@ -275,16 +255,16 @@
                             </ul>
                         </div>
                         <div class="pricing_btn">
-                            <a href="#" class="main-btn">Get Started</a>
+                            <a href="#" class="main-btn">Comienza ahora</a>
                         </div>
                     </div> <!-- single pricing -->
                 </div>
                 <div class="col-lg-4 col-md-8 col-sm-10">
                     <div class="single_pricing text-center pricing_color_3 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
                         <div class="pricing_top_bar">
-                            <h5 class="pricing_title">Premium</h5>
+                            <h5 class="pricing_title">Organizaciones</h5>
                             <i class="lni lni-diamond-alt"></i>
-                            <span class="price">$20.00</span>
+                            <span class="price">20.00€/MES</span>
                         </div>
                         <div class="pricing_list">
                             <ul>
@@ -294,7 +274,7 @@
                             </ul>
                         </div>
                         <div class="pricing_btn">
-                            <a href="#" class="main-btn main-btn-2">Get Started</a>
+                            <a href="#" class="main-btn main-btn-2">Comienza ahora</a>
                         </div>
                     </div> <!-- single pricing -->
                 </div>
@@ -316,8 +296,8 @@
                     <img src="<?= BASE_URL ?>app\assets\libs\landing\images\shape-6.png" alt="shape">
                 </div>
                 <div class="download_app_content">
-                    <h3 class="download_title">Download The App</h3>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod.</p>
+                    <h3 class="download_title">Descarga la APP</h3>
+                    <p>Lleva siempre contigo la gestión de tu gimnasio y organiza tu vida y tus horarios desde cualquier sitio</p>
                     <ul>
                         <li>
                             <a class="d-flex align-items-center" href="#">
@@ -347,97 +327,12 @@
         </div> <!-- container -->
         <div class="download_app_image d-none d-lg-flex align-items-end">
             <div class="image wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                <img src="<?= BASE_URL ?>app\assets\libs\landing\images\download.png" alt="download">
+                <img src="<?= BASE_URL ?>app\assets\img\iphone.png" alt="download">
             </div> <!-- image -->
         </div> <!-- download app image -->
     </section>
 
     <!--====== DOWNLOAD APP PART ENDS ======-->
-
-    <!--====== BLOG PART START ======-->
-
-    <section id="blog" class="blog_area pt-80 pb-80">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center pb-25">
-                        <h4 class="title">From The Blog</h4>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut labore et dolore.</p>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-8">
-                    <div class="single_blog blog_1 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
-                        <div class="blog_image">
-                            <img src="<?= BASE_URL ?>app\assets\libs\landing\images\blog-1.jpg" alt="blog">
-                        </div>
-                        <div class="blog_content">
-                            <div class="blog_meta d-flex justify-content-between">
-                                <div class="meta_date">
-                                    <span>20 December, 2023</span>
-                                </div>
-                                <div class="meta_like">
-                                    <ul>
-                                        <li><a href="#"><i class="lni lni-comments-alt"></i> 20</a></li>
-                                        <li><a href="#"><i class="lni lni-heart"></i> 15</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4 class="blog_title"><a href="#">Unlimited featrues with free updates.</a></h4>
-                            <a href="#" class="main-btn">Read More</a>
-                        </div>
-                    </div> <!-- single blog -->
-                </div>
-                <div class="col-lg-4 col-md-8">
-                    <div class="single_blog blog_2 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                        <div class="blog_image">
-                            <img src="<?= BASE_URL ?>app\assets\libs\landing\images\blog-2.jpg" alt="blog">
-                        </div>
-                        <div class="blog_content">
-                            <div class="blog_meta d-flex justify-content-between">
-                                <div class="meta_date">
-                                    <span>20 December, 2023</span>
-                                </div>
-                                <div class="meta_like">
-                                    <ul>
-                                        <li><a href="#"><i class="lni lni-comments-alt"></i> 20</a></li>
-                                        <li><a href="#"><i class="lni lni-heart"></i> 15</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4 class="blog_title"><a href="#">Easy to use and customize the App.</a></h4>
-                            <a href="#" class="main-btn">Read More</a>
-                        </div>
-                    </div> <!-- single blog -->
-                </div>
-                <div class="col-lg-4 col-md-8">
-                    <div class="single_blog blog_3 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
-                        <div class="blog_image">
-                            <img src="<?= BASE_URL ?>app\assets\libs\landing\images\blog-3.jpg" alt="blog">
-                        </div>
-                        <div class="blog_content">
-                            <div class="blog_meta d-flex justify-content-between">
-                                <div class="meta_date">
-                                    <span>20 December, 2023</span>
-                                </div>
-                                <div class="meta_like">
-                                    <ul>
-                                        <li><a href="#"><i class="lni lni-comments-alt"></i> 20</a></li>
-                                        <li><a href="#"><i class="lni lni-heart"></i> 15</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4 class="blog_title"><a href="#">Super fast and strong security.</a></h4>
-                            <a href="#" class="main-btn">Read More</a>
-                        </div>
-                    </div> <!-- single blog -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-
-    <!--====== BLOG PART ENDS ======-->
 
     <!--====== FOOTER PART START ======-->
 
@@ -445,17 +340,6 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
-                    <div class="footer_subscribe text-center">
-                        <h3 class="subscribe_title">Subscribe our newsletter</h3>
-                        <p>Join thousands of users who believe this is the one app.</p>
-
-                        <div class="subscribe_form">
-                            <form action="#">
-                                <input type="text" placeholder="Enter Email...">
-                                <button class="main-btn">Subscribe</button>
-                            </form>
-                        </div> <!-- subscribe form -->
-                    </div> <!-- footer subscribe -->
                     <div class="footer_social text-center mt-60">
                         <ul>
                             <li><a href="#"><span class="lni lni-facebook-filled"></span></a></li>
@@ -463,9 +347,10 @@
                             <li><a href="#"><span class="lni lni-instagram-filled"></span></a></li>
                             <li><a href="#"><span class="lni lni-linkedin-original"></span></a></li>
                         </ul>
+
                     </div> <!-- footer social -->
                     <div class="footer_copyright text-center mt-55">
-                        <p>Copyright &copy; 2023. Designed and Developed by <a href="https://uideck.com" rel="nofollow">UIdeck</a></p>
+                        <p>Copyright &copy; 2023. Designed and Developed by <a href="https://github.com/pitterpj" rel="nofollow">Pedro.J</a></p>
                     </div> <!-- footer copyright -->
                 </div>
             </div> <!-- row -->
