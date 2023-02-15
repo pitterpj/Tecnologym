@@ -110,7 +110,7 @@
                     <div class="col-lg-6">
                         <div class="header_hero_content mt-45">
                             <h2 class="header_title wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.2s">Tecnologym</h2>
-                            <p class="wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.6s">Toda la fuerza de la tecnología ahora en tus manos.</p>
+                            <p class="wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.6s">All the power of technology now in your hands.</p>
                             <ul>
                                 <li><a class="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1s" href="#">Sign In</a></li>
                                 <li><a class="main-btn main-btn-2 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.4s" href="#">Sign Up</a></li>
@@ -119,9 +119,10 @@
                     </div>
                 </div> <!-- row -->
             </div> <!-- container -->
+
             <div class="header_image d-flex align-items-end">
                 <div class="image wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="1.8s">
-                    <img src="<?= BASE_URL ?>app\assets\libs\landing\images\header_app.png" alt="header App">
+                    <img src="<?= BASE_URL ?>app\assets\img\landing\app_mobile.png" alt="header App">
                     <img src="<?= BASE_URL ?>app\assets\libs\landing\images\dots.svg" alt="dots" class="dots">
                 </div> <!-- image -->
             </div> <!-- header image -->
@@ -137,34 +138,31 @@
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single_features mt-30 features_1 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
-                        <div class="features_icon">
-                            <i class="lni lni-code"></i>
-                        </div>
+
+                        <img src="<?= BASE_URL ?>app\assets\img\icons\pullups.gif" alt="" srcset="">
+
                         <div class="features_content">
-                            <h4 class="features_title">Bootstrap</h4>
-                            <p>Lorem ipsum dolor sit ame consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.</p>
+                            <h4 class="features_title">Entrenos Personales</h4>
+                            <p>Cada monitor podrá llevar un registro de sus entrenos personales</p>
                         </div>
+
                     </div> <!-- single featuresow -->
                 </div>
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single_features mt-30 features_2 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                        <div class="features_icon">
-                            <i class="lni lni-layers"></i>
-                        </div>
+                    <img src="<?= BASE_URL ?>app\assets\img\icons\administration.gif" alt="" srcset="">
                         <div class="features_content">
-                            <h4 class="features_title">HTML5</h4>
-                            <p>Lorem ipsum dolor sit ame consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.</p>
+                            <h4 class="features_title">Administration</h4>
+                            <p>Fácil gestión de las salas y las clases para llevar la gestion perfecta de tu gimnasio</p>
                         </div>
                     </div> <!-- single featuresow -->
                 </div>
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single_features mt-30 features_3 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.9s">
-                        <div class="features_icon">
-                            <i class="lni lni-exit-down"></i>
-                        </div>
+                    <img src="<?= BASE_URL ?>app\assets\img\icons\support.gif" alt="" srcset="">
                         <div class="features_content">
-                            <h4 class="features_title">Free</h4>
-                            <p>Lorem ipsum dolor sit ame consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.</p>
+                            <h4 class="features_title">Soporte Técnico</h4>
+                            <p>Soporte técnico garantizado que solucionara cualquier problema enseguida</p>
                         </div>
                     </div> <!-- single featuresow -->
                 </div>
