@@ -37,6 +37,8 @@
 
     - Enviar correo autenticacion
 
+    - Elegir letra
+
     - Ocultar Worker Name and Role Worker
 
     - CSS CTAs quitar

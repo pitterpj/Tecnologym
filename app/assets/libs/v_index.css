@@ -46,10 +46,10 @@ a:focus {
   margin: 40px 0;
 }
 
-i,
+/* i,
 span {
   display: inline-block;
-}
+} */
 
 /* ---------------------------------------------------
     SIDEBAR STYLE
@@ -59,60 +59,9 @@ span {
   transition: 5s;
 }
 
-/* baja el menu al estar recogido */
-#sidebar.active div.push {
-  margin-bottom: 130px;
-}
-
 #sidebar .sidebar-header {
   transition: 0.5s;
 }
-
-/* animacion para los logos
-@keyframes taadaa {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.appear {
-  animation: taadaa 3s;
-} */
-/* /* ------------------------------------
-    BUTTON ANIMATED
---------------------------------------- */
-/* button  {
-  display: flex;
-  flex-direction: column;
-  width: 3rem;
-  height: 3rem;
-  border: 0;
-  background-color: transparent;
-  gap: 0.65rem;
-}
-button>div {
-  background: black;
-  height: 2px;
-  width: 100%;
-  border-radius: 5px;
-  transition: all 0.5s;
-  transform-origin: left;
-}
-button:hover div:first-child{
-    transform: rotate(45deg);
-}
-button:hover div:nth-child(2){
-    opacity: 0;
-}
-button:hover div:last-child{
-    transform: rotate(-45deg);
-} */
-
-
 
 .wrapper {
   display: flex;
@@ -134,23 +83,6 @@ button:hover div:last-child{
   transition: all 0.5s;
 }
 
-/* .left{
-    background-image: url(../imgs/icons/left_arrow.png);
-}
-.right{
-    background-image: url(app\assets\imgs\icons\right_arrow.png);
-} */
-
-
-/* arrows girando */
-#sidebar.active + #content .rotation{
-    transform: rotate(-180deg);
-}
-
-.rotation{
-    transition: all .7s;
-}
-
 #sidebar.active .sidebar-header h3,
 #sidebar.active .CTAs {
   display: none;
@@ -160,9 +92,9 @@ button:hover div:last-child{
   display: block;
 }
 
-#sidebar ul li a {
+/* #sidebar ul li a {
   text-align: left;
-}
+} */
 
 #sidebar.active ul li a {
   padding: 20px 10px;
@@ -221,7 +153,7 @@ button:hover div:last-child{
   margin-right: 10px;
 }
 
-/* CLASE ACTIVE POR ARREGLAR */
+/* CLASE ACTIVE POR ARREGLAR --------------------------------------------*/
 /* #sidebar ul li.active > a,
 a[aria-expanded="true"] {
   color: #fff;
@@ -258,16 +190,16 @@ ul.CTAs a {
   margin-bottom: 5px;
 }
 
-a.download {
+/* a.download {
   background: #fff;
   color: #7386d5;
-}
+} */
 
-a.article,
+/* a.article,
 a.article:hover {
   background: #6d7fcc !important;
   color: #fff !important;
-}
+} */
 
 /* ---------------------------------------------------
     CONTENT STYLE
@@ -332,12 +264,6 @@ a.article:hover {
     display: none;
   }
 }
-/* ---------------------------------------------------
-    HEADER STYLES
------------------------------------------------------ */
-div ul li a:hover{
-  background: #3a72df;
-}
 
 /* ---------------------------------------------------
     COLORS
@@ -347,4 +273,32 @@ div ul li a:hover{
 }
 .fondo-2{
   background-color: #289bbe7a;
+}
+
+/* ---------------------------------------------------
+    HEADER STYLES
+----------------------------------------------------- */
+div ul li a:hover{
+  background: #3a72df;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR
+----------------------------------------------------- */
+/* baja el menu al estar recogido */
+#sidebar.active div.push {
+  margin-bottom: 130px;
+}
+
+/* ---------------------------------------------------
+    ICONS ANIMATED
+----------------------------------------------------- */
+
+/* arrows girando */
+#sidebar.active + #content .rotation{
+  transform: rotate(-180deg);
+}
+
+.rotation{
+  transition: all .7s;
 }
