@@ -31,6 +31,8 @@
     
     - [X] Poner logo al title
 
+    - he creado carpetas css y js
+
     - Al crear templates mover archivo css(poner ruta)
 
     - Links font awesmome fuera
