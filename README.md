@@ -33,9 +33,13 @@
 
     - he creado carpetas css y js
 
+    - Añadir descripcion seo
+
     - Al crear templates mover archivo css(poner ruta)
 
     - Links font awesmome fuera
+
+    - Modal Sign In
 
     - Enviar correo autenticacion
 

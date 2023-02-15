@@ -5,18 +5,22 @@
 <html lang="en">
 
 <head>
-    <title>Tecnologym</title>
-    <!-- Icon Title -->
-    <link rel="shortcut icon" href="<?= BASE_URL ?>app/assets/img/Brand_Tecnologym.png">
-
     <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <!--====== Title ======-->
+    <title>Tecnologym</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS v5.2.1 -->
+    <!--====== Bootstrap CSS ======-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
-    <!-- Files CSS -->
+    <!--====== Style CSS ======-->
     <link rel="stylesheet" href="<?= BASE_URL ?>app\assets\libs\CSS\v_index.css">
 
     <!-- Font Awesome JS
