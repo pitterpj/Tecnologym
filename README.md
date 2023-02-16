@@ -25,6 +25,9 @@
         Large	            lg	            ≥992px
         Extra large	        xl	            ≥1200px
         Extra extra large	xxl	            ≥1400px
+
+    - LOS MODELOS SON PARA CARGAR LAS FUNCIONES Y CONSULTAS DE LA BASE DE DATOS
+    
     
 
 ## To Do:
@@ -35,6 +38,8 @@
 
     - Añadir descripcion seo
 
+    - Logo dispositivo movil hacer pequeño
+
     - style landig responsive logo reducido en js
 
     - Al crear templates mover archivo css(poner ruta)
@@ -44,6 +49,8 @@
     - Modal Sign In
 
     - Enviar correo autenticacion
+
+    - cambiar directorios assets
 
     - Elegir letra
 

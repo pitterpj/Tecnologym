@@ -71,7 +71,7 @@
                         <nav class="navbar navbar-expand-lg">
                             <!--====== LOGO NAVBAR ======-->
                             <a class="navbar-brand " href="index.html">
-                                <img src="<?= BASE_URL ?>app\assets\img\Brand_Tecnologym.png"  alt="Logo">
+                                <img src="<?= BASE_URL ?>app\assets\img\Brand_Tecnologym.png" alt="Logo">
                             </a>
                             <!--====== BOTON RIGHT COLLAPSE ======-->
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,7 +95,7 @@
                                         <a class="page-scroll" href="#pricing">Pricing</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#">Sign In</a>
+                                        <a class="page-scroll" href="<?= BASE_URL ?>c_Director">Sign In</a>
                                     </li>
                                 </ul>
                             </div> <!-- navbar collapse -->
@@ -119,8 +119,8 @@
                             <h2 class="header_title wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.2s">Tecnologym</h2>
                             <p class="wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.6s">All the power of technology now in your hands.</p>
                             <ul>
-                                <li><a class="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1s" href="#">Sign In</a></li>
-                                <li><a class="main-btn main-btn-2 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.4s" href="#">Sign Up</a></li>
+                                <li><a class="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1s" href="<?= BASE_URL ?>c_Director">Sign In</a></li>
+                                <li><a class="main-btn main-btn-2 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.4s" href="<?= BASE_URL ?>c_Director">Sign Up</a></li>
                             </ul>
                         </div> <!-- header hero content -->
                     </div>
@@ -135,7 +135,6 @@
             </div> <!-- header image -->
         </div> <!-- header hero -->
     </section> <!--====== HEADER PART ENDS ======-->
-
 
 
     <!--====== FEATURES PART START ======-->
