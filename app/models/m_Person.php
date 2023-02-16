@@ -1,14 +1,19 @@
 <!-- Pedro.J (Pitter) -->
 <!-- https://github.com/pitterpj -->
 
+
 <?php
-class c_Home extends Controller
+
+class m_Person extends Model
 {
+
     public function __construct()
     {
-    }
-    public function index()
-    {
-        $this->loadView("v_landing");
+        parent::__construct();
     }
 }
+
+
+
+
+?>

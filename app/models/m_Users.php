@@ -4,7 +4,7 @@
 
 <?php
 
-class m_Director extends Model
+class m_Users extends Model
 {
 
     public function __construct()

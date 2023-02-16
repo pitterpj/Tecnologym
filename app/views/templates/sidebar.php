@@ -11,7 +11,7 @@
         <nav id="sidebar">
             <!-- BRAND -->
             <div class="sidebar-header">
-                <a href="<?= BASE_URL ?>/c_Home/v_IndexTest"><img class="img-fluid" src="<?= BASE_URL ?>app/assets/img/Brand_Tecnologym.png" width="200" alt="Brand-Tecnologym"></a>
+                <a href="<?= BASE_URL ?>/c_Person"><img class="img-fluid" src="<?= BASE_URL ?>app/assets/img/Brand_Tecnologym.png" width="200" alt="Brand-Tecnologym"></a>
             </div>
 
             <!-- AVATAR ROLE PERSON -->
@@ -32,7 +32,7 @@
 
 
                 <li class="active"> <!-- Icon Home -->
-                    <a href="#">
+                    <a href="<?= BASE_URL ?>/c_Dashboard/schedule">
                         <i class="fas fa-home"><img src="<?= BASE_URL ?>app\assets\img\icons\home_gym.png" width="50" alt="Inicio"></i>
                         <span class="disappear">Inicio</span>
                     </a>
@@ -49,7 +49,7 @@
                     <!-- subclass schedules -->
                     <ul class="collapse list-unstyled" id="schudeleSubmenu">
                         <li>
-                            <a href="#">
+                            <a href="<?= BASE_URL ?>/c_Schedule">
                                 <i class="fas fa-home">
                                     <img src="<?= BASE_URL ?>app\assets\img\icons\calendar_watch.png" width="30" alt="Horario Personal">
                                 </i>

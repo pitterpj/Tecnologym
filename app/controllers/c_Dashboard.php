@@ -2,20 +2,20 @@
 <!-- https://github.com/pitterpj -->
 
 <?php
-class c_Director extends Controller
+class c_Dashboard extends Controller
 {
 
-    private $c_director;
+    private $c_person;
 
     public function __construct()
     {
-        $this->c_director = $this->loadModel("m_Director");
+        // $this->c_person= $this->loadModel("m_Person");
     }
 
 
     public function index()
     {
-        $this->loadView("v_Director");
+        $this->loadView("v_Dashboard");
     }
 }
 

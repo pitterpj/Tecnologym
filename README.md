@@ -48,6 +48,8 @@
 
     - Modal Sign In
 
+    - Botón en v_login sign up modificar y descomentar para que haga submit
+
     - Enviar correo autenticacion
 
     - cambiar directorios assets

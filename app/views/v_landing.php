@@ -83,7 +83,7 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ml-auto">
                                     <li class="nav-item active">
-                                        <a class="page-scroll" href="#home">Home</a>
+                                        <a class="page-scroll" href="index.php">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#features">Features</a>
@@ -95,7 +95,7 @@
                                         <a class="page-scroll" href="#pricing">Pricing</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="<?= BASE_URL ?>c_Director">Sign In</a>
+                                        <a class="page-scroll" href="<?= BASE_URL ?>c_Users">Sign In</a>
                                     </li>
                                 </ul>
                             </div> <!-- navbar collapse -->

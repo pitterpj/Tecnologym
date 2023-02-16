@@ -44,148 +44,120 @@
 
 <body>
 
-    <!--====== PRELOADER PART START ======-->
-    <div class="preloader">
-        <div class="loader">
-            <div class="ytp-spinner">
-                <div class="ytp-spinner-container">
-                    <div class="ytp-spinner-rotator">
-                        <div class="ytp-spinner-left">
-                            <div class="ytp-spinner-circle"></div>
+
+
+
+
+        <!-- ---------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------- -->
+
+        <!-- Section: Design Block -->
+
+        <section  class="text-center text-lg-start">
+            <style>
+                .cascading-right {
+                    margin-right: -50px;
+                }
+
+                @media (max-width: 991.98px) {
+                    .cascading-right {
+                        margin-right: 0;
+                    }
+                }
+                #formumu{
+                z-index: 1;
+            }
+            </style>
+
+            <!-- Jumbotron -->
+            <div  class="container py-4">
+                <div class="row g-0 align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="card cascading-right" style="
+            background: hsla(0, 0%, 100%, 0.55);
+            backdrop-filter: blur(30px);
+            ">
+                            <div id="formumu" class="card-body p-5 shadow-5 text-center">
+                                <h2 class="fw-bold mb-5">Sign up now</h2>
+                                <form>
+                                    <!-- 2 column grid layout with text inputs for the first and last names -->
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" id="form3Example1" class="form-control" />
+                                                <label class="form-label" for="form3Example1">First name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" id="form3Example2" class="form-control" />
+                                                <label class="form-label" for="form3Example2">Last name</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Email input -->
+                                    <div class="form-outline mb-4">
+                                        <input type="email" id="form3Example3" class="form-control" />
+                                        <label class="form-label" for="form3Example3">Email address</label>
+                                    </div>
+
+                                    <!-- Password input -->
+                                    <div class="form-outline mb-4">
+                                        <input type="password" id="form3Example4" class="form-control" />
+                                        <label class="form-label" for="form3Example4">Password</label>
+                                    </div>
+
+                                    <!-- Checkbox -->
+                                    <div class="form-check d-flex justify-content-center mb-4">
+                                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                                        <label class="form-check-label" for="form2Example33">
+                                            Subscribe to our newsletter
+                                        </label>
+                                    </div>
+
+                                    <!-- Submit button -->
+                                    <!-- <button type="submit" class="btn btn-primary btn-block mb-4">
+                                        Sign up
+                                    </button> -->
+                                    <button type="button"  class="btn btn-info btn-block mb-4">
+                                    <a class="page-scroll" href="<?= BASE_URL ?>c_Dashboard">Sign In</a>
+                                    </button>
+
+                                    <!-- Register buttons -->
+                                    <div class="text-center">
+                                        <p>or sign up with:</p>
+                                        <button type="button" class="btn btn-link btn-floating mx-1">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-link btn-floating mx-1">
+                                            <i class="fab fa-google"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-link btn-floating mx-1">
+                                            <i class="fab fa-twitter"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-link btn-floating mx-1">
+                                            <i class="fab fa-github"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                        <div class="ytp-spinner-right">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" class="w-100 rounded-4 shadow-4" alt="" />
                     </div>
                 </div>
             </div>
-        </div>
-    </div> <!--====== PRELOADER PART ENDS ======-->
-
-    <!--====== HEADER PART START ======-->
-    <section class="header_area">
-        <div class="header_navbar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg">
-                            <!--====== LOGO NAVBAR ======-->
-                            <a class="navbar-brand " href="index.html">
-                                <img src="<?= BASE_URL ?>app\assets\img\Brand_Tecnologym.png" alt="Logo">
-                            </a>
-                            <!--====== BOTON RIGHT COLLAPSE ======-->
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                            </button>
-                            <!--====== TOP MENU ======-->
-                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                                <ul id="nav" class="navbar-nav ml-auto">
-                                    <li class="nav-item active">
-                                        <a class="page-scroll" href="#home">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#features">Features</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#about">About</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#pricing">Pricing</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="<?= BASE_URL ?>c_Director">Sign In</a>
-                                    </li>
-                                </ul>
-                            </div> <!-- navbar collapse -->
-                        </nav> <!-- navbar -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- header navbar -->
-
-
-
-
-        <!-- ---------------------------------------------------------- -->
-        <!-- ---------------------------------------------------------- -->
-        <!-- ---------------------------------------------------------- -->
-        <!-- ---------------------------------------------------------- -->
-        <!-- ---------------------------------------------------------- -->
-        <!-- ---------------------------------------------------------- -->
-        <!-- ---------------------------------------------------------- -->
-        <!-- ---------------------------------------------------------- -->
-
-        <!--====== FOOTER PART START ======-->
-
-        <section id="footer" class="footer_area pt-75 pb-80">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-7">
-                        <div class="footer_social text-center mt-60">
-                            <ul>
-                                <li><a href="#"><span class="lni lni-facebook-filled"></span></a></li>
-                                <li><a href="#"><span class="lni lni-twitter-original"></span></a></li>
-                                <li><a href="#"><span class="lni lni-instagram-filled"></span></a></li>
-                                <li><a href="#"><span class="lni lni-linkedin-original"></span></a></li>
-                            </ul>
-
-                        </div> <!-- footer social -->
-                        <div class="footer_copyright text-center mt-55">
-                            <p>Copyright &copy; 2023. Designed and Developed by <a href="https://github.com/pitterpj" rel="nofollow">Pedro.J</a></p>
-                        </div> <!-- footer copyright -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
+            <!-- Jumbotron -->
         </section>
-
-        <!--====== FOOTER PART ENDS ======-->
-
-        <!--====== BACK TOP TOP PART START ======-->
-
-        <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
-
-        <!--====== BACK TOP TOP PART ENDS ======-->
-
-        <!--====== PART START ======-->
-
-        <!--
-    <section class="">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-">
-                    
-                </div>
-            </div>
-        </div>
-    </section>
--->
-
-        <!--====== PART ENDS ======-->
-
-
-
-
-
-        <!--====== Jquery js ======-->
-        <script src="<?= BASE_URL ?>app\assets\libs\landing\js\vendor\jquery-1.12.4.min.js"></script>
-        <script src="<?= BASE_URL ?>app\assets\libs\landing\js\vendor\modernizr-3.7.1.min.js"></script>
-
-        <!--====== Bootstrap js ======-->
-        <script src="<?= BASE_URL ?>app\assets\libs\landing\js\popper.min.js"></script>
-        <script src="<?= BASE_URL ?>app\assets\libs\landing\js\bootstrap.4.5.2.min.js"></script>
-
-
-        <!--====== Scrolling Nav js ======-->
-        <script src="<?= BASE_URL ?>app\assets\libs\landing\js\jquery.easing.min.js"></script>
-        <script src="<?= BASE_URL ?>app\assets\libs\landing\js\scrolling-nav.js"></script>
-
-        <!--====== wow js ======-->
-        <script src="<?= BASE_URL ?>app\assets\libs\landing\js\wow.min.js"></script>
-
-        <!--====== Main js ======-->
-        <script src="<?= BASE_URL ?>app\assets\libs\landing\js\main.js"></script>
+        <!-- Section: Design Block -->
+       
 
 </body>
 
