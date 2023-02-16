@@ -3,22 +3,21 @@
 
 <!doctype html>
 <html lang="en">
-<!-- <html class="no-js" lang="en"> -->
 
 <?php include_once 'config\config.php' ?>
+
 <script>
-    const BASE_URL = '<?= BASE_URL; ?>';
-    console.log(BASE_URL);
+    const BASE_URL = '<?= BASE_URL; ?>';// <---====== I have created this constant to be used as BASE_URL ======--->
 </script>
 
 
 <head>
-    <!-- Required meta tags -->
+    <!--====== Required meta tags ======-->
+
     <meta charset="utf-8">
 
     <!--====== Title ======-->
     <title>Tecnologym</title>
-
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -43,8 +42,8 @@
 </head>
 
 <body>
-
     <!--====== PRELOADER PART START ======-->
+    <!--====== When the page loading time is long, the loading spinner appears ======-->
     <div class="preloader">
         <div class="loader">
             <div class="ytp-spinner">
