@@ -6,13 +6,11 @@
 
 <?php include_once 'config\config.php' ?>
 
-<script>
-    const BASE_URL = '<?= BASE_URL; ?>';// <---====== I have created this constant to be used as BASE_URL ======--->
+<script>// <---====== I have created this constant to be used as BASE_URL ======--->
+    const BASE_URL = '<?= BASE_URL; ?>';
 </script>
 
-
-<head>
-    <!--====== Required meta tags ======-->
+<head><!--====== Required meta tags ======-->
 
     <meta charset="utf-8">
 
@@ -63,14 +61,15 @@
 
     <!--====== HEADER PART START ======-->
     <section class="header_area">
+        <!--====== HEADER NAVBAR ======-->
         <div class="header_navbar">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
                             <!--====== LOGO NAVBAR ======-->
-                            <a class="navbar-brand " href="index.html">
-                                <img src="<?= BASE_URL ?>app\assets\img\Brand_Tecnologym.png" alt="Logo">
+                            <a class="navbar-brand " href="<?= BASE_URL ?>">
+                                <img src="<?= BASE_URL ?>app\assets\img\Brand_Tecnologym.png" width="200" alt="Logo">
                             </a>
                             <!--====== BOTON RIGHT COLLAPSE ======-->
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -82,7 +81,7 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ml-auto">
                                     <li class="nav-item active">
-                                        <a class="page-scroll" href="index.php">Home</a>
+                                        <a class="page-scroll" href="#home">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#features">Features</a>
@@ -102,7 +101,7 @@
                     </div>
                 </div> <!-- row -->
             </div> <!-- container -->
-        </div> <!-- header navbar -->
+        </div> <!-- end header navbar -->
 
         <div id="home" class="header_hero d-lg-flex align-items-center">
             <!--====== Backgroung shapes======-->
@@ -115,11 +114,14 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="header_hero_content mt-45">
-                            <h2 class="header_title wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.2s">Tecnologym</h2>
-                            <p class="wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.6s">All the power of technology now in your hands.</p>
+                            <!--====== Brand ======-->
+                            <h2 class="header_title wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.2s">TECNOLOGYM</h2>
+                            <!--====== Slogan ======-->
+                            <p class="wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.6s">Toda la fuerza de la tecnología ahora en tus manos.</p>
                             <ul>
-                                <li><a class="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1s" href="<?= BASE_URL ?>c_Director">Sign In</a></li>
-                                <li><a class="main-btn main-btn-2 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.4s" href="<?= BASE_URL ?>c_Director">Sign Up</a></li>
+                                <!--====== Buttons to Register ======-->
+                                <li><a class="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1s" href="<?= BASE_URL ?>c_Users">Accede</a></li>
+                                <li><a class="main-btn main-btn-2 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.4s" href="<?= BASE_URL ?>c_Users">Registrate</a></li>
                             </ul>
                         </div> <!-- header hero content -->
                     </div>
