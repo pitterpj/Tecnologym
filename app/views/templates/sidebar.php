@@ -11,7 +11,7 @@
         <nav id="sidebar">
             <!-- BRAND -->
             <div class="sidebar-header">
-                <a href="<?= BASE_URL ?>/c_Person"><img class="img-fluid" src="<?= BASE_URL ?>app/assets/img/Brand_Tecnologym.png" width="200" alt="Brand-Tecnologym"></a>
+                <a href="<?= BASE_URL ?>c_Dashboard/dashboard"><img class="img-fluid" src="<?= BASE_URL ?>app/assets/img/Brand_Tecnologym.png" width="200" alt="Brand-Tecnologym"></a>
             </div>
 
             <!-- AVATAR ROLE PERSON -->
@@ -32,7 +32,7 @@
 
 
                 <li class="active"> <!-- Icon Home -->
-                    <a href="<?= BASE_URL ?>/c_Dashboard/schedule">
+                    <a href="<?= BASE_URL ?>c_Dashboard/dashboard">
                         <i class="fas fa-home"><img src="<?= BASE_URL ?>app\assets\img\icons\home_gym.png" width="50" alt="Inicio"></i>
                         <span class="disappear">Inicio</span>
                     </a>
@@ -49,7 +49,7 @@
                     <!-- subclass schedules -->
                     <ul class="collapse list-unstyled" id="schudeleSubmenu">
                         <li>
-                            <a href="<?= BASE_URL ?>/c_Schedule">
+                            <a href="<?= BASE_URL ?>c_Schedule/schedule">
                                 <i class="fas fa-home">
                                     <img src="<?= BASE_URL ?>app\assets\img\icons\calendar_watch.png" width="30" alt="Horario Personal">
                                 </i>
@@ -57,7 +57,7 @@
                         </li>
 
                         <li>
-                            <a href="#">
+                            <a href="<?= BASE_URL ?>c_Schedule/createSchedule">
                                 <i class="fas fa-home">
                                     <img src="<?= BASE_URL ?>app\assets\img\icons\calendar_plus.png" width="30" alt="Crear Horario">
                                 </i>
@@ -65,7 +65,7 @@
                         </li>
 
                         <li>
-                            <a href="#">
+                            <a href="<?= BASE_URL ?>c_Schedule/managePersonal">
                                 <i class="fas fa-home">
                                     <img src="<?= BASE_URL ?>app\assets\img\icons\tasks.png" width="35" alt="Administrar Personal">
                                 </i>
@@ -76,7 +76,7 @@
 
 
                 <li> <!-- Icon Personal Training  -->
-                    <a href="#">
+                    <a href="<?= BASE_URL ?>c_PersonalTraining/personalTraining">
                         <i class="fas fa-home"><img src="<?= BASE_URL ?>app\assets\img\icons\personal_training.png" width="50" alt="Entrenamientos Personales"></i>
                         <span class="disappear">Entrenamientos</span></a>
                 </li>
@@ -135,15 +135,15 @@
                         <ul class="nav navbar-nav ml-auto text-end">
 
                             <li class="nav-item active">
-                                <a class="text-light nav-link  rounded" href="#">Home</a>
+                                <a class="text-light nav-link  rounded" href="<?= BASE_URL ?>c_Dashboard/dashboard">Home</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="text-light nav-link rounded" href="#">Settings</a>
+                                <a class="text-light nav-link rounded" href="<?= BASE_URL ?>c_Dashboard/settings">Settings</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="text-light nav-link rounded" href="#">Log Out</a>
+                                <a class="text-light nav-link rounded" href="<?= BASE_URL ?>c_Dashboard/logOut">Log Out</a>
                             </li>
                         </ul>
                     </div>

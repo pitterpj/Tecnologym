@@ -12,10 +12,28 @@ class c_Dashboard extends Controller
         // $this->c_person= $this->loadModel("m_Person");
     }
 
-
     public function index()
     {
+
+    }
+    public function dashboard()
+    {
+        $this->loadView("templates/header");
+        $this->loadView("templates/sidebar");
         $this->loadView("v_Dashboard");
+        $this->loadView("templates/footer");
+    }
+    public function settings(){
+        $this->loadView("templates/header");
+        $this->loadView("templates/sidebar");
+        $this->loadView("monitor/v_Settings");
+        $this->loadView("templates/footer");
+    }
+    public function logOut(){
+        $this->loadView("templates/header");
+        $this->loadView("templates/sidebar");
+        $this->loadView("v_LogOut");
+        $this->loadView("templates/footer");
     }
 }
 

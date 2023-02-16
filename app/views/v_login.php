@@ -122,7 +122,7 @@
                                         Sign up
                                     </button> -->
                                     <button type="button"  class="btn btn-info btn-block mb-4">
-                                    <a class="page-scroll" href="<?= BASE_URL ?>c_Dashboard">Sign In</a>
+                                    <a class="page-scroll" href="<?= BASE_URL ?>c_Dashboard/dashboard">Sign In</a>
                                     </button>
 
                                     <!-- Register buttons -->

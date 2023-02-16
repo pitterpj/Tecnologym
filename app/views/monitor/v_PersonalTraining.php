@@ -1,17 +1,13 @@
 <!-- Pedro.J (Pitter) -->
 <!-- https://github.com/pitterpj -->
 
-<!-- Include Templates -->
-<?php include_once 'templates/header.php' ?>
-<?php include_once 'templates/sidebar.php' ?>
-
 
 <!-- CONTENT PAGE -->
 <div class="fondo-2 shadow p-3 mb-5 rounded text-center">
 
 
 
-    <h2>HORARIO PERSONAL</h2>
+    <h2>ENTRENAMIENTOS PERSONALES</h2>
     <p></p>
 
 
@@ -35,6 +31,3 @@
 
     <div class="line"></div>
 </div> <!-- END CONTENT PAGE WITH SHADOWS -->
-
-<!-- Include Templates -->
-<?php include_once 'templates/footer.php' ?>

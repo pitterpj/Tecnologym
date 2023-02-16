@@ -46,6 +46,8 @@
 
     - Links font awesmome fuera
 
+    - EN cada carpeta una vista de acción general en fución de quien puede por rango de proiridades
+
     - Modal Sign In
 
     - Botón en v_login sign up modificar y descomentar para que haga submit

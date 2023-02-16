@@ -18,7 +18,27 @@ class c_Schedule extends Controller
     }
     public function schedule()
     {
-        $this->loadView("v_Schedule");
+        $contenido = "monitor/v_Schedule";
+        $this->loadView("templates/header");
+        $this->loadView("templates/sidebar");
+        $this->loadView($contenido);
+        $this->loadView("templates/footer");
+    }
+    public function createSchedule()
+    {
+        $contenido = "manager/v_createSchedule";
+        $this->loadView("templates/header");
+        $this->loadView("templates/sidebar");
+        $this->loadView($contenido);
+        $this->loadView("templates/footer");
+    }
+    public function managePersonal()
+    {
+        $contenido = "director/v_managePersonal";
+        $this->loadView("templates/header");
+        $this->loadView("templates/sidebar");
+        $this->loadView($contenido);
+        $this->loadView("templates/footer");
     }
 }
 
