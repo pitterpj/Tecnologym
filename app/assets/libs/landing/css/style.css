@@ -1640,7 +1640,7 @@ p {
 /*===== BACK TO TOP =====*/
 .back-to-top {
   font-size: 20px;
-  color: #fff;
+  color: #677284;
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -1648,17 +1648,18 @@ p {
   height: 45px;
   line-height: 45px;
   border-radius: 5px;
-  background-color: #3698ee;
+  /* background-color: #3698ee; */
   text-align: center;
   z-index: 99;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
-  display: none;
+  /* display: none; */
 }
 
 .back-to-top:hover {
   color: #fff;
-  background-color: #3698ee;
+  background-color: #677284;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=style.css.map */
 

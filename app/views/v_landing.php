@@ -350,10 +350,11 @@
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
+        <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
     </section> <!--====== FOOTER PART ENDS ======-->
 
-    <!--====== BACK TOP TOP PART START ======-->
-    <a href="#" class="back-to-top arrowUp"><i class="lni lni-chevron-up"></i></a>
+    
 
     <!--=========================================================================-->
     <!--====== SCRIPTS ======-->
