@@ -6,7 +6,8 @@
 
 <?php include_once 'config\config.php' ?>
 
-<script>// <---====== I have created this constant to be used as BASE_URL ======--->
+<script>
+    // <---====== I have created this constant to be used as BASE_URL ======--->
     const BASE_URL = '<?= BASE_URL; ?>';
 </script>
 
@@ -81,19 +82,22 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ml-auto">
                                     <li class="nav-item active">
-                                        <a class="page-scroll" href="#home">Home</a>
+                                        <a class="page-scroll" href="#home">Inicio</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#features">Features</a>
+                                        <a class="page-scroll" href="#features">Características</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#about">About</a>
+                                        <a class="page-scroll" href="#about">Acerca de</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#pricing">Pricing</a>
+                                        <a class="page-scroll" href="#pricing">Precios</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="<?= BASE_URL ?>c_Users">Sign In</a>
+                                        <a class="page-scroll" href="#download">App</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="<?= BASE_URL ?>c_Users">Accede</a>
                                     </li>
                                 </ul>
                             </div> <!-- navbar collapse -->
@@ -102,7 +106,6 @@
                 </div> <!-- row -->
             </div> <!-- container -->
         </div> <!-- end header navbar -->
-
         <div id="home" class="header_hero d-lg-flex align-items-center">
             <!--====== Backgroung shapes======-->
             <img class="shape shape-1" src="<?= BASE_URL ?>app\assets\libs\landing\images\shape-1.svg" alt="shape">
@@ -126,20 +129,19 @@
                         </div> <!-- header hero content -->
                     </div>
                 </div> <!-- row -->
-            </div> <!-- container -->
+            </div> <!-- end left container -->
 
+            <!--====== Right Container ======-->
             <div class="header_image d-flex align-items-end">
                 <div class="image wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="1.8s">
                     <img src="<?= BASE_URL ?>app\assets\img\iphone.png" width="300" alt="header App">
                     <img src="<?= BASE_URL ?>app\assets\libs\landing\images\dots.svg" alt="dots" class="dots">
                 </div> <!-- image -->
-            </div> <!-- header image -->
+            </div> <!-- end image container -->
         </div> <!-- header hero -->
     </section> <!--====== HEADER PART ENDS ======-->
 
-
     <!--====== FEATURES PART START ======-->
-
     <section id="features" class="features_area pt-35 pb-80">
         <div class="container">
             <div class="row justify-content-center">
@@ -147,10 +149,10 @@
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single_features mt-30 features_1 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
 
-                        <img src="<?= BASE_URL ?>app\assets\img\icons\pullups.gif" alt="" srcset="">
+                        <img src="<?= BASE_URL ?>app\assets\img\icons\calendar.gif" alt="" srcset="">
                         <div class="features_content">
-                            <h4 class="features_title">Entrenos Personales</h4>
-                            <p>Cada monitor podrá llevar un registro de sus entrenos personales y continuo para que midan lo mismo</p>
+                            <h4 class="features_title">Creador de Horarios</h4>
+                            <p>Podrás gestionar las clases de tu gimnasio o centro deportivo semanal, mensual e incluso anualmente.</p>
                         </div>
 
                     </div> <!-- single featuresow -->
@@ -158,31 +160,28 @@
 
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single_features mt-30 features_2 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                        <img src="<?= BASE_URL ?>app\assets\img\icons\administration.gif" alt="" srcset="">
+                        <img src="<?= BASE_URL ?>app\assets\img\icons\pullups.gif" alt="" srcset="">
                         <div class="features_content">
-                            <h4 class="features_title">Administration</h4>
-                            <p>Fácil gestión de las salas y las clases para llevar la gestion perfecta de tu gimnasio</p>
+                            <h4 class="features_title">Entrenamientos Personales</h4>
+                            <p>Cada entrenador podrá llevar un seguimiento de la alimentación y las tablas de cada usuario desde un solo dispositivo</p>
                         </div>
                     </div> <!-- single featuresow -->
                 </div>
 
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single_features mt-30 features_3 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.9s">
-                        <img src="<?= BASE_URL ?>app\assets\img\icons\support.gif" alt="" srcset="">
+                        <img src="<?= BASE_URL ?>app\assets\img\icons\edition.gif" alt="" srcset="">
                         <div class="features_content">
                             <h4 class="features_title">Soporte Técnico</h4>
-                            <p>Soporte técnico garantizado que solucionara cualquier problema enseguida</p>
+                            <p>Administración total de tu centro o tu perfil. Ya sea para organizaciones como para profesionales individuales.</p>
                         </div>
                     </div> <!-- single featuresow -->
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
-    </section>
-
-    <!--====== FEATURES PART ENDS ======-->
+    </section><!--====== FEATURES PART ENDS ======-->
 
     <!--====== ABOUT PART START ======-->
-
     <section id="about" class="about_area pt-30 pb-80">
         <div class="container">
             <div class="row align-items-center">
@@ -195,8 +194,8 @@
                 <div class="col-lg-6">
                     <div class="about_content mt-45 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
                         <div class="section_title">
-                            <h4 class="title">Descubre la nueva manera de gestionar tu tiempo!</h4>
-                            <p>Si desea gestionar su gimnasio así como sus horarios o sus entrnemaientos personales esta aplciación te ayudará a todo eso y más. Desde gestión de centros a gestión personal tanto para entrenamientos como para horarios distribuidos en diferentes salas en función de las necesidades de su centro.</p>
+                            <h4 class="title">¡Descubre la nueva manera de gestionar tu centro o tu tiempo!</h4>
+                            <p>Si deseas gestionar tu gimnasio o tu centro, así como sus horarios o tu seguimiento de entrenamientos personales, esta aplciación te ayudará a todo eso y más. Desde la gestión interna del centro a la gestión personal tanto para entrenamientos como para horarios distribuidos en diferentes salas en función de las necesidades de organizaciones o individuales.</p>
                         </div>
                         <a class="main-btn" href="#">Descubrelo</a>
 
@@ -204,12 +203,9 @@
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
-    </section>
-
-    <!--====== ABOUT PART ENDS ======-->
+    </section><!--====== ABOUT PART ENDS ======-->
 
     <!--====== PRICNG PART START ======-->
-
     <section id="pricing" class="pricing_area mt-80 pt-75 pb-80">
         <div class="container">
             <div class="row justify-content-center">
@@ -221,6 +217,7 @@
                 </div>
             </div> <!-- row -->
             <div class="row justify-content-center">
+                <!--====== Training ======-->
                 <div class="col-lg-4 col-md-8 col-sm-10">
                     <div class="single_pricing text-center pricing_color_1 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
                         <div class="pricing_top_bar">
@@ -230,16 +227,18 @@
                         </div>
                         <div class="pricing_list">
                             <ul>
-                                <li>24/7 Support</li>
-                                <li>Free Update</li>
-                                <li>unimited download</li>
+                                <li>Soporte 24/7</li>
+                                <li>Actualizaciones automáticas</li>
+                                <li>Gestión de alimentación</li>
+                                <li>Gestión de tablas</li>
                             </ul>
                         </div>
                         <div class="pricing_btn">
-                            <a href="#" class="main-btn main-btn-2">Comienza ahora</a>
+                            <a href="#" class="main-btn main-btn-2">Soy Entrenador</a>
                         </div>
                     </div> <!-- single pricing -->
                 </div>
+                <!--====== Gym ======-->
                 <div class="col-lg-4 col-md-8 col-sm-10">
                     <div class="single_pricing text-center pricing_active pricing_color_2 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
                         <div class="pricing_top_bar">
@@ -249,16 +248,18 @@
                         </div>
                         <div class="pricing_list">
                             <ul>
-                                <li>24/7 Support</li>
-                                <li>Free Update</li>
-                                <li>unimited download</li>
+                                <li>Soporte 24/7</li>
+                                <li>Actualizaciones automáticas</li>
+                                <li>Gestión de entrenos</li>
+                                <li>Gestión de horarios</li>
                             </ul>
                         </div>
                         <div class="pricing_btn">
-                            <a href="#" class="main-btn">Comienza ahora</a>
+                            <a href="#" class="main-btn">Soy Gimnasio</a>
                         </div>
                     </div> <!-- single pricing -->
                 </div>
+                <!--====== Organization ======-->
                 <div class="col-lg-4 col-md-8 col-sm-10">
                     <div class="single_pricing text-center pricing_color_3 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
                         <div class="pricing_top_bar">
@@ -268,24 +269,22 @@
                         </div>
                         <div class="pricing_list">
                             <ul>
-                                <li>24/7 Support</li>
-                                <li>Free Update</li>
-                                <li>unimited download</li>
+                                <li>Soporte 24/7</li>
+                                <li>Actualizaciones automáticas</li>
+                                <li>Gestión de personal</li>
+                                <li>Gestión de salas</li>
                             </ul>
                         </div>
                         <div class="pricing_btn">
-                            <a href="#" class="main-btn main-btn-2">Comienza ahora</a>
+                            <a href="#" class="main-btn main-btn-2">Soy Organización</a>
                         </div>
                     </div> <!-- single pricing -->
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
-    </section>
-
-    <!--====== PRICNG PART ENDS ======-->
+    </section><!--====== PRICNG PART ENDS ======-->
 
     <!--====== DOWNLOAD APP PART START ======-->
-
     <section id="download" class="download_app_area pt-80 mb-80">
         <div class="container">
             <div class="download_app">
@@ -297,7 +296,7 @@
                 </div>
                 <div class="download_app_content">
                     <h3 class="download_title">Descarga la APP</h3>
-                    <p>Lleva siempre contigo la gestión de tu gimnasio y organiza tu vida y tus horarios desde cualquier sitio</p>
+                    <p>Lleva siempre contigo la gestión de tu gimnasio. Organiza tus entrenos y tus horarios desde cualquier sitio.</p>
                     <ul>
                         <li>
                             <a class="d-flex align-items-center" href="#">
@@ -330,60 +329,35 @@
                 <img src="<?= BASE_URL ?>app\assets\img\iphone.png" alt="download">
             </div> <!-- image -->
         </div> <!-- download app image -->
-    </section>
-
-    <!--====== DOWNLOAD APP PART ENDS ======-->
+    </section> <!--====== DOWNLOAD APP PART ENDS ======-->
 
     <!--====== FOOTER PART START ======-->
-
     <section id="footer" class="footer_area pt-75 pb-80">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
                     <div class="footer_social text-center mt-60">
                         <ul>
-                            <li><a href="#"><span class="lni lni-facebook-filled"></span></a></li>
-                            <li><a href="#"><span class="lni lni-twitter-original"></span></a></li>
-                            <li><a href="#"><span class="lni lni-instagram-filled"></span></a></li>
-                            <li><a href="#"><span class="lni lni-linkedin-original"></span></a></li>
+                            <li><a href="https://t.me/PitterPJ"><span class="lni lni-telegram-original"></span></a></li>
+                            <li><a href="https://twitter.com/pitterpjc"><span class="lni lni-twitter-original"></span></a></li>
+                            <li><a href="https://www.linkedin.com/in/pedro-jorge-cid/"><span class="lni lni-linkedin-original"></span></a></li>
+                            <li><a href="https://github.com/pitterpj"><span class="lni lni-github-original"></span></a></li>
                         </ul>
-
                     </div> <!-- footer social -->
                     <div class="footer_copyright text-center mt-55">
-                        <p>Copyright &copy; 2023. Designed and Developed by <a href="https://github.com/pitterpj" rel="nofollow">Pedro.J</a></p>
+                        <p>Copyright &copy; 2023. Diseñado y desarrolado por <a href="https://github.com/pitterpj" rel="nofollow">Pedro.J (Pitter)</a></p>
                     </div> <!-- footer copyright -->
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
-    </section>
-
-    <!--====== FOOTER PART ENDS ======-->
+    </section> <!--====== FOOTER PART ENDS ======-->
 
     <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top arrowUp"><i class="lni lni-chevron-up"></i></a>
 
-    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
-
-    <!--====== BACK TOP TOP PART ENDS ======-->
-
-    <!--====== PART START ======-->
-
-    <!--
-    <section class="">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-">
-                    
-                </div>
-            </div>
-        </div>
-    </section>
--->
-
-    <!--====== PART ENDS ======-->
-
-
-
-
+    <!--=========================================================================-->
+    <!--====== SCRIPTS ======-->
+    <!--=========================================================================-->
 
     <!--====== Jquery js ======-->
     <script src="<?= BASE_URL ?>app\assets\libs\landing\js\vendor\jquery-1.12.4.min.js"></script>

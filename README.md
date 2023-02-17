@@ -58,6 +58,8 @@
 
     - Elegir letra
 
+    - Poner flecha que sube al final de la landing
+
     - Ocultar Worker Name and Role Worker
 
     - CSS CTAs quitar
