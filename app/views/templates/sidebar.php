@@ -5,16 +5,13 @@
 
 <body>
     <div class="wrapper">
-        <!------------------------------------------------------------------------------------------------------------
-                    SIDEBAR
-        -------------------------------------------------------------------------------------------------------------->
+        <!--====== SIDEBAR ======-->
         <nav id="sidebar">
-            <!-- BRAND -->
+            <!--====== BRAND ======-->
             <div class="sidebar-header">
                 <a href="<?= BASE_URL ?>c_Dashboard/dashboard"><img class="img-fluid" src="<?= BASE_URL ?>app/assets/img/Brand_Tecnologym.png" width="200" alt="Brand-Tecnologym"></a>
             </div>
-
-            <!-- AVATAR ROLE PERSON -->
+            <!--====== AVATAR ROLE PERSON======-->
             <!-- TODO -- AÑADIR LA FOTO DE LA PERSONA.
                     -- CAMBIAR LA LETRA DEL ROL SEGÚN LA PERSONA -->
             <div class="sidebar-header text-center push ">
@@ -23,22 +20,18 @@
                 <span class="disappear fs-3">Worker Name</span>
                 <span class="disappear fs-4">Role</span>
                 <strong class="mt-4">G</strong>
-
             </div>
 
-            <!--  SIDEBAR OPTIONS LIST -->
-
+            <!--====== SIDEBAR OPTIONS======-->
             <ul class="list-unstyled">
-
-
-                <li class="active"> <!-- Icon Home -->
+                <li class="active"> <!--====== icon home ======-->
                     <a href="<?= BASE_URL ?>c_Dashboard/dashboard">
                         <i class="fas fa-home"><img src="<?= BASE_URL ?>app\assets\img\icons\home_gym.png" width="50" alt="Inicio"></i>
                         <span class="disappear">Inicio</span>
                     </a>
                 </li>
 
-                <li> <!-- Icon Create schedules  -->
+                <li> <!--====== Icon Create schedules  ======-->
                     <a href="#schudeleSubmenu" data-toggle="collapse" class="dropdown-toggle">
                         <i class="fas fa-home">
                             <img src="<?= BASE_URL ?>app\assets\img\icons\calendar.png" width="50" alt="Horario">
@@ -46,7 +39,7 @@
                         <span class="disappear">Horarios</span>
                     </a>
 
-                    <!-- subclass schedules -->
+                    <!--====== subclass schedules  ======-->
                     <ul class="collapse list-unstyled" id="schudeleSubmenu">
                         <li>
                             <a href="<?= BASE_URL ?>c_Schedule/schedule">
@@ -112,40 +105,39 @@
                     </ul>
                 </li>
             </ul>
-        </nav> <!-- END SIDEBAR -->
-        <!------------------------------------------------------------------------------------------------------------
-                    PAGE CONTENT HEADER 
-        -------------------------------------------------------------------------------------------------------------->
+        </nav> <!--====== END SIDEBAR======-->
+
+        <!--====== PAGE CONTENT HEADER ======-->
         <div id="content">
             <nav class="fondo-2 shadow p-3 mb-5 rounded navbar navbar-expand-lg navbar-light">
-                <div class=" container-fluid">
+                <div class="container-fluid">
 
-                    <!-- COLLAPSE BUTTON -->
+                    <!--====== COLLAPSE BUTTON ======-->
                     <button type="button" id="sidebarCollapse" class="btn">
                         <i class="fas fa-home"><img class="rotation" src="<?= BASE_URL ?>app\assets\img\icons\left_arrow.png" width="35" alt="Cerrar Menu"></i>
                     </button>
 
-                    <!-- RIGHT ICON COLLAPSE -->
+                    <!--====== RIGHT ICON COLLAPSE ======-->
                     <button class="btn d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"><img src="<?= BASE_URL ?>app\assets\img\icons\avatar.png" width="35" alt="X"></i>
                     </button>
 
-                    <!-- OPTIONS RIGHT BUTTON COLLAPSE -->
+                    <!--====== OPTIONS RIGHT BUTTON COLLAPSE ======-->
                     <div class="collapse justify-content-end navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto text-end">
 
                             <li class="nav-item active">
-                                <a class="text-light nav-link  rounded" href="<?= BASE_URL ?>c_Dashboard/dashboard">Home</a>
+                                <a class="text-light nav-link  rounded" href="<?= BASE_URL ?>c_Dashboard/dashboard">Inicio</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="text-light nav-link rounded" href="<?= BASE_URL ?>c_Dashboard/settings">Settings</a>
+                                <a class="text-light nav-link rounded" href="<?= BASE_URL ?>c_Dashboard/settings">Ajustes</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="text-light nav-link rounded" href="<?= BASE_URL ?>c_Dashboard/logOut">Log Out</a>
+                                <a class="text-light nav-link rounded" href="<?= BASE_URL ?>c_Dashboard/logOut">Cerrar Sesión</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-            </nav><!-- END CONTENT HEADER -->
+            </nav> <!--====== END PAGE CONTENT HEADER ======-->

@@ -34,6 +34,8 @@
     
     - [X] Poner logo al title
 
+    - Poner misma letra al resto
+
     - he creado carpetas css y js
 
     - Añadir descripcion seo

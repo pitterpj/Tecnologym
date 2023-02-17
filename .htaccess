@@ -9,5 +9,5 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ index.php [QSA,L]
 
 # Si tiene desactivado el open tag lo activamos
-php_flag short_open_tag 1
+# php_flag short_open_tag 1
 # php_flag short_open_tag = On

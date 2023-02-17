@@ -5,7 +5,7 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
+    <!--====== Required meta tags======-->
     <meta charset="utf-8">
 
     <!--====== Title ======-->
@@ -21,10 +21,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <!--====== Style CSS ======-->
-    <link rel="stylesheet" href="<?= BASE_URL ?>app\assets\libs\CSS\v_index.css">
-
-    <!-- Font Awesome JS
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="<?= BASE_URL ?>app\views\css\v_index.css">
 
 </head>

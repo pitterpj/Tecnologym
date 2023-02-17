@@ -8,7 +8,7 @@
         -> Folders and subfolders: where resource is
         -> Controller: Controller where methods are
         -> Method: Methods with the parameters
-        ->Parameter: Parameters used  
+        -> Parameter: Parameters used  
 -->
 <?php
 
