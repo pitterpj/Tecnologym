@@ -139,6 +139,18 @@
                 </div> <!-- image -->
             </div> <!-- end image container -->
         </div> <!-- header hero -->
+
+
+
+
+
+
+
+
+
+
+
+        
     </section> <!--====== HEADER PART ENDS ======-->
 
     <!--====== FEATURES PART START ======-->
@@ -353,8 +365,6 @@
         <!--====== BACK TOP TOP PART START ======-->
     <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
     </section> <!--====== FOOTER PART ENDS ======-->
-
-    
 
     <!--=========================================================================-->
     <!--====== SCRIPTS ======-->
