@@ -42,20 +42,46 @@
 
 <!--====== MODAL LOGIN ======-->
 <div class="modal fade" id="modalLogin" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
+    <!-- The modal needs me to place it outside the body to let me interact. Problems with the z-index-->
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
+                <h5 class="modal-title">Accede a tu cuenta</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <form action="" method="POST">
+                    <div class="form-group"> <!--== USER ==-->
+                        <label class="control-label">Usuario: </label>
+                        <div>
+                            <input type="text" class="form-control input-lg" name="user" placeholder="Nombre de Usuario" value="">
+                        </div>
+                    </div>
+                    <div class="form-group"><!--== PASSWORD ==-->
+                        <label class="control-label">Contraseña: </label>
+                        <div>
+                            <input type="password" class="form-control input-lg" name="password" placeholder="********" value="">
+                        </div>
+                    </div>
+                    <div class="form-group"><!--== REMEMBER ME ==-->
+                        <div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="remember"> Recuérdame
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group"><!--== SUBMIT ==-->
+                        <div>
+                            <button type="submit" class="btn btn-success">Acceder</button>
+
+                            <a class="btn btn-link" href="">¿Contraseña olvidada?</a>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
