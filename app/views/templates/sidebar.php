@@ -127,15 +127,15 @@
                         <ul class="nav navbar-nav ml-auto text-end">
 
                             <li class="nav-item active">
-                                <a class="text-light nav-link  rounded" href="<?= BASE_URL ?>c_Users">Inicio</a>
+                                <a class="text-light nav-link  rounded" href="<?= BASE_URL ?>c_Dashboard/">Inicio</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="text-light nav-link rounded" href="<?= BASE_URL ?>c_Users/settings">Ajustes</a>
+                                <a class="text-light nav-link rounded" href="<?= BASE_URL ?>c_Dashboard/settings">Ajustes</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="text-light nav-link rounded" href="<?= BASE_URL ?>c_Users/logOut">Cerrar Sesión</a>
+                                <a class="text-light nav-link rounded" href="<?= BASE_URL ?>c_Dashboard/logOut">Cerrar Sesión</a>
                             </li>
                         </ul>
                     </div>

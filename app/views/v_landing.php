@@ -52,7 +52,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="" method="POST">
+                <form action="<?= BASE_URL . "c_Users/authenticate" ?>" method="POST">
                     <div class="form-group"> <!--== USER ==-->
                         <label class="control-label">Usuario: </label>
                         <div>

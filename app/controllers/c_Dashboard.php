@@ -13,15 +13,18 @@ class c_Dashboard extends Controller
     }
 
     public function index()
-    {
-    }
-    public function dashboard()
-    {
-        $this->loadView("templates/header");
+    {        $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
         $this->loadView("v_Dashboard");
         $this->loadView("templates/footer");
     }
+    // public function dashboard()
+    // {
+    //     $this->loadView("templates/header");
+    //     $this->loadView("templates/sidebar");
+    //     $this->loadView("v_Dashboard");
+    //     $this->loadView("templates/footer");
+    // }
     public function settings()
     {
         $this->loadView("templates/header");
@@ -33,7 +36,7 @@ class c_Dashboard extends Controller
     {
         // Destroe session
         unset($_SESSION['session']);
-        header("Location:" . BASE_URL . "v_Landing");
+        header("Location:" . BASE_URL );
     }
 }
 

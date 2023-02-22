@@ -80,7 +80,7 @@ class Model
         // Calls the launch function to execute the query
         $this->launch();
 
-        return $this->stmt->fech(PDO::FETCH_ASSOC);
+        return $this->stmt->fetch(PDO::FETCH_ASSOC);
     }
 } //End class Model
 ?>
