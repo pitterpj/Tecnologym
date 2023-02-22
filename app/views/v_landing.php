@@ -104,7 +104,18 @@
                         </nav> <!-- navbar -->
                     </div>
                 </div> <!-- row -->
+
+
+
+
+
+
+
+
+
+                
             </div> <!-- container -->
+
         </div> <!-- end header navbar -->
         <div id="home" class="header_hero d-lg-flex align-items-center">
             <!--====== Backgroung shapes======-->
@@ -139,16 +150,6 @@
                 </div> <!-- image -->
             </div> <!-- end image container -->
         </div> <!-- header hero -->
-
-
-
-
-
-
-
-
-
-
 
         
     </section> <!--====== HEADER PART ENDS ======-->
