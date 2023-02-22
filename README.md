@@ -27,11 +27,15 @@
         Extra extra large	xxl	            ≥1400px
 
     - LOS MODELOS SON PARA CARGAR LAS FUNCIONES Y CONSULTAS DE LA BASE DE DATOS
+
+    - Error de base de datos: Find ‘utf8mb4_0900_ai_ci’ & replace it with ‘utf8mb4_unicode_ci’.
     
 
 ## To Do:
     
     - [X] Poner logo al title
+
+    - Crear la tabla meses y crear un horario anual¿?
 
     - Poner misma letra al resto
 
