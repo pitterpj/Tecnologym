@@ -54,15 +54,15 @@
             <div class="modal-body">
                 <form action="<?= BASE_URL . "c_Users/authenticate" ?>" method="POST">
                     <div class="form-group"> <!--== USER ==-->
-                        <label class="control-label">Usuario: </label>
+                        <label class="control-label">Usuario o email: </label>
                         <div>
-                            <input type="text" class="form-control input-lg" name="user" placeholder="Nombre de Usuario" value="">
+                            <input type="text" class="form-control input-lg" name="user" placeholder="Nombre de Usuario o email" value="director01">
                         </div>
                     </div>
                     <div class="form-group"><!--== PASSWORD ==-->
                         <label class="control-label">Contraseña: </label>
                         <div>
-                            <input type="password" class="form-control input-lg" name="password" placeholder="********" value="">
+                            <input type="password" class="form-control input-lg" name="password" placeholder="********" value="1234">
                         </div>
                     </div>
                     <div class="form-group"><!--== REMEMBER ME ==-->

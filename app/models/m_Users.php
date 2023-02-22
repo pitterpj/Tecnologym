@@ -14,22 +14,34 @@ class m_Users extends Model
 
     public function authenticate($user, $password)
     {
-        $snt = "SELECT * FROM person WHERE user=:user;";
+        $snt = "SELECT * FROM person WHERE user=:user OR email=:user;";
         $this->consult($snt);
         $this->link(":user", $user);
         $row = $this->row();
-        var_dump($row);
         if ($row) {
             //Check password
             if ($password != $row['password']) {
-                echo "paaaaatata";
                 return null;
             }
-            var_dump($row);
         }
         return $row;
     }
+
+    public function role($user)
+    {
+        //Return of rol of person authenticate
+        $snt = "SELECT type.role AS role FROM type INNER JOIN worker_type ON worker_type.id_type=type.id_type INNER JOIN worker ON worker_type.id_worker=worker.id_worker INNER JOIN person ON person.id_person=worker.id_person WHERE user=:user;";
+        $this->consult($snt);
+        $this->link(":user", $user);
+        $row = $this->row();
+        return $row;
+    }
+
 } //End m_Users
+
+
+
+// SELECT type.role FROM type INNER JOIN worker_type ON worker_type.id_type=type.id_type INNER JOIN worker ON worker_type.id_worker=worker.id_worker INNER JOIN person ON person.id_person=worker.id_person WHERE user="director01";
 
 
 

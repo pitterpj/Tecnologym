@@ -26,13 +26,19 @@ class c_Users extends Controller
     {
         //We recibed the user and pass and send to m_Users
         $row = $this->m_Users->authenticate($_REQUEST['user'], $_REQUEST['password']);
+        $role = $this->m_Users->role($_REQUEST['user']);
         if ($row) {
             $_SESSION['session'] = [
                 'user' => $row['user'],
-                'password' => $row['password']
-                // 'user'=> $row['user'].
+                'password' => $row['password'],
+                'name' => $row['name'],
+                'lastname' => $row['lastname'],
+                'email' => $row['email'],
+                'phone' => $row['phone'],
+                'avatar' => $row['avatar'],
+                'role' => $role['role']
             ];
-            header("Location:" . BASE_URL . "c_Users/index");
+            header("Location:" . BASE_URL . "c_Users");
         } else {
             //Si no existe error y al login con mensaje de error
             $_SESSION['errorMessage'] = 'Usuario o contraseña incorrectos';

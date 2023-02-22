@@ -17,8 +17,8 @@
             <div class="sidebar-header text-center push ">
                 <!-- Depending on the person, this avatar is one or the other -->
                 <img class="img-fluid rounded-circle" src="<?= BASE_URL ?>app\assets\img\icons\avatar_person.jpg" width="200" alt="Brand-Tecnologym">
-                <span class="disappear fs-3">Worker Name</span>
-                <span class="disappear fs-4">Role</span>
+                <span class="disappear fs-3"><?= $_SESSION['session']['name']; ?></span>
+                <span class="disappear fs-4"><?= $_SESSION['session']['role']; ?></span>
                 <strong class="mt-4">G</strong>
             </div>
 
