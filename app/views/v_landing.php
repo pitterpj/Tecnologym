@@ -40,6 +40,27 @@
 
 </head>
 
+<!--====== MODAL LOGIN ======-->
+<div class="modal fade" id="modalLogin" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div><!--====== END MODAL ======-->
+
 <body>
     <!--====== PRELOADER PART START ======-->
     <!--====== When the page loading time is long, the loading spinner appears ======-->
@@ -97,23 +118,15 @@
                                         <a class="page-scroll" href="#download">App</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="<?= BASE_URL ?>c_Users">Accede</a>
+                                        <!-- <a class="page-scroll" href="<?= BASE_URL ?>c_Users">Accede</a> -->
+                                        <!-- Button trigger modal -->
+                                        <a type="button" data-toggle="modal" data-target="#modalLogin">Accede</a>
                                     </li>
                                 </ul>
                             </div> <!-- navbar collapse -->
                         </nav> <!-- navbar -->
                     </div>
                 </div> <!-- row -->
-
-
-
-
-
-
-
-
-
-                
             </div> <!-- container -->
 
         </div> <!-- end header navbar -->
@@ -151,7 +164,7 @@
             </div> <!-- end image container -->
         </div> <!-- header hero -->
 
-        
+
     </section> <!--====== HEADER PART ENDS ======-->
 
     <!--====== FEATURES PART START ======-->
@@ -364,7 +377,7 @@
             </div> <!-- row -->
         </div> <!-- container -->
         <!--====== BACK TOP TOP PART START ======-->
-    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+        <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
     </section> <!--====== FOOTER PART ENDS ======-->
 
     <!--=========================================================================-->
@@ -389,6 +402,8 @@
 
     <!--====== Main js ======-->
     <script src="<?= BASE_URL ?>app\assets\libs\landing\js\main.js"></script>
+
+
 
 </body>
 
