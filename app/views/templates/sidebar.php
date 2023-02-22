@@ -19,7 +19,23 @@
                 <img class="img-fluid rounded-circle" src="<?= BASE_URL ?>app\assets\img\icons\avatar_person.jpg" width="200" alt="Brand-Tecnologym">
                 <span class="disappear fs-3"><?= $_SESSION['session']['name']; ?></span>
                 <span class="disappear fs-4"><?= $_SESSION['session']['role']; ?></span>
-                <strong class="mt-4">G</strong>
+                <strong class="mt-4">
+                    <?php
+
+                    switch ($_SESSION['session']['role']) {
+                        case "Director":
+                            echo "D";
+                            break;
+                        case "Monitor":
+                            echo "M";
+                            break;
+                    }
+
+                    ?>
+
+
+
+                </strong>
             </div>
 
             <!--====== SIDEBAR OPTIONS======-->
