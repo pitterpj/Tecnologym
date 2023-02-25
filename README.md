@@ -35,6 +35,10 @@
     
     - [X] Poner logo al title
 
+    - card decks
+
+    -bs5-card para administrar personal si eres el jefazo podrás cambiar entre areas del gym
+
     - Crear la tabla meses y crear un horario anual¿?
 
     - Passwordverify en m_Users

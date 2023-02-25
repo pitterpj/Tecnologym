@@ -12,7 +12,6 @@ class c_Schedule extends Controller
         // $this->c_person= $this->loadModel("m_Person");
     }
 
-
     public function index()
     {
     }

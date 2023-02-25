@@ -64,6 +64,13 @@ class c_Users extends Controller
         $this->loadView("templates/footer");
     }
 
+    public function managePersonal()
+    {
+        $this->loadView("templates/header");
+        $this->loadView("templates/sidebar");
+        $this->loadView("v_ManagePersonal");
+        $this->loadView("templates/footer");
+    }
 }
 
 ?>
