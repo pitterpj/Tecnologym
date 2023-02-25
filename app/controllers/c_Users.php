@@ -16,10 +16,10 @@ class c_Users extends Controller
 
     public function index()
     {
-        $this->loadView("templates/header");
-        $this->loadView("templates/sidebar");
-        $this->loadView("v_Dashboard");
-        $this->loadView("templates/footer");
+        // $this->loadView("templates/header");
+        // $this->loadView("templates/sidebar");
+        // $this->loadView("v_Dashboard");
+        // $this->loadView("templates/footer");
     }
 
     public function authenticate()
@@ -38,12 +38,30 @@ class c_Users extends Controller
                 'avatar' => $row['avatar'],
                 'role' => $role['role']
             ];
-            header("Location:" . BASE_URL . "c_Users");
+            header("Location:" . BASE_URL . "c_Users/loged/" . $_SESSION['session']['role']);
         } else {
             //Si no existe error y al login con mensaje de error
             $_SESSION['errorMessage'] = 'Usuario o contraseña incorrectos';
             header("Location:" . BASE_URL);
         }
+    }
+
+    public function loged($role)
+    {
+        $this->loadView("templates/header");
+        $this->loadView("templates/sidebar");
+        switch ($role[0]) {
+            case "Director":
+                $this->loadView("/director/v_Director");
+                break;
+            case "Monitor":
+                $this->loadView("/monitor/v_Monitor");
+                break;
+            case "Corrdinador":
+                $this->loadView("/manager/v_Coordinador");
+                break;
+        };
+        $this->loadView("templates/footer");
     }
 }
 
