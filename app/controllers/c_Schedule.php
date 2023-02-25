@@ -18,7 +18,7 @@ class c_Schedule extends Controller
     }
     public function schedule()
     {
-        $contenido = "monitor/v_Schedule";
+        $contenido = "v_Schedule";
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
         $this->loadView($contenido);
@@ -26,7 +26,7 @@ class c_Schedule extends Controller
     }
     public function createSchedule()
     {
-        $contenido = "manager/v_createSchedule";
+        $contenido = "v_createSchedule";
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
         $this->loadView($contenido);
@@ -34,7 +34,7 @@ class c_Schedule extends Controller
     }
     public function managePersonal()
     {
-        $contenido = "director/v_managePersonal";
+        $contenido = "v_managePersonal";
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
         $this->loadView($contenido);

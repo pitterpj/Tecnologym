@@ -39,8 +39,8 @@
             <!--====== SIDEBAR OPTIONS======-->
             <ul class="list-unstyled">
                 <li class="active"> <!--====== icon home ======-->
-                    <a href="<?= BASE_URL ?>c_Users/dashboard">
-                        <i class="fas fa-home"><img src="<?= BASE_URL ?>app\assets\img\icons\home_gym.png" width="50" alt="Inicio"></i>
+                    <a href="<?= BASE_URL . "c_Users/dashboard/" . $_SESSION['session']['role'] ?>">
+                        <i class=" fas fa-home"><img src="<?= BASE_URL ?>app\assets\img\icons\home_gym.png" width="50" alt="Inicio"></i>
                         <span class="disappear">Inicio</span>
                     </a>
                 </li>
