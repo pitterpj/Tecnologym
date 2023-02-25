@@ -52,18 +52,25 @@ class c_Users extends Controller
         $this->loadView("templates/sidebar");
         switch ($role[0]) {
             case "Director":
-                $this->loadView("/director/v_Director");
+                $this->loadView("director/v_Director");
                 break;
             case "Monitor":
-                $this->loadView("/monitor/v_Monitor");
+                $this->loadView("monitor/v_Monitor");
                 break;
             case "Corrdinador":
-                $this->loadView("/manager/v_Coordinador");
+                $this->loadView("manager/v_Coordinador");
                 break;
         };
         $this->loadView("templates/footer");
     }
 
+    public function registerWorker()
+    {
+        $this->loadView("templates/header");
+        $this->loadView("templates/sidebar");
+        $this->loadView("director/v_registerWorker");
+        $this->loadView("templates/footer");
+    }
 }
 
 ?>
