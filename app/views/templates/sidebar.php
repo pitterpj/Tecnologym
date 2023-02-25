@@ -21,7 +21,6 @@
                 <span class="disappear fs-4"><?= $_SESSION['session']['role']; ?></span>
                 <strong class="mt-4">
                     <?php
-
                     switch ($_SESSION['session']['role']) {
                         case "Director":
                             echo "D";
@@ -29,12 +28,11 @@
                         case "Monitor":
                             echo "M";
                             break;
+                        case "Corrdinador":
+                            echo "C";
+                            break;
                     }
-
                     ?>
-
-
-
                 </strong>
             </div>
 
