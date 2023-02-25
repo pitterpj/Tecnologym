@@ -39,48 +39,62 @@
             <!--====== SIDEBAR OPTIONS======-->
             <ul class="list-unstyled">
                 <li class="active"> <!--====== icon home ======-->
-                    <a href="<?= BASE_URL ?>c_Dashboard/dashboard">
+                    <a href="<?= BASE_URL ?>c_Users/dashboard">
                         <i class="fas fa-home"><img src="<?= BASE_URL ?>app\assets\img\icons\home_gym.png" width="50" alt="Inicio"></i>
                         <span class="disappear">Inicio</span>
                     </a>
                 </li>
 
+                <!-- Depending on the role, this shows one menu of options or another -->
                 <li> <!--====== Icon Create schedules  ======-->
-                    <a href="#schudeleSubmenu" data-toggle="collapse" class="dropdown-toggle">
-                        <i class="fas fa-home">
-                            <img src="<?= BASE_URL ?>app\assets\img\icons\calendar.png" width="50" alt="Horario">
-                        </i>
-                        <span class="disappear">Horarios</span>
-                    </a>
+                    <?php if ($_SESSION['session']['role'] == "Monitor") {
+                        echo "<a href='" . BASE_URL . "c_Schedule/schedule'  class='dropdown-toggle'>";
+                        echo "<i class='fas fa-home'>";
+                        echo "<img src='" . BASE_URL . "app\assets\img\icons\calendar.png' width='50' alt='Horario'>";
+                        echo "</i>";
+                        echo "<span class='disappear'>Horarios</span>";
+                        echo "</a>";
+                    } ?>
 
-                    <!--====== subclass schedules  ======-->
-                    <ul class="collapse list-unstyled" id="schudeleSubmenu">
-                        <li>
-                            <a href="<?= BASE_URL ?>c_Schedule/schedule">
-                                <i class="fas fa-home">
-                                    <img src="<?= BASE_URL ?>app\assets\img\icons\calendar_watch.png" width="30" alt="Horario Personal">
-                                </i>
-                                <span class="disappear">Horario personal</span></a>
-                        </li>
+                    <?php if ($_SESSION['session']['role'] != "Monitor") {
+                        echo "<a href='#schudeleSubmenu' data-toggle='collapse' class='dropdown-toggle'>";
+                        echo "<i class='fas fa-home'>";
+                        echo "<img src='" . BASE_URL . "app\assets\img\icons\calendar.png' width='50' alt='Horario'>";
+                        echo "</i>";
+                        echo "<span class='disappear'>Horarios</span>";
+                        echo "</a>";
+                        // <!--====== subclass schedules  ======-->
 
-                        <li>
-                            <a href="<?= BASE_URL ?>c_Schedule/createSchedule">
-                                <i class="fas fa-home">
-                                    <img src="<?= BASE_URL ?>app\assets\img\icons\calendar_plus.png" width="30" alt="Crear Horario">
-                                </i>
-                                <span class="disappear">Crear Horarios</span></a>
-                        </li>
+                        // <!--== Create ==-->
+                        echo "<ul class='collapse list-unstyled' id='schudeleSubmenu'>";
+                        echo "<li>";
+                        echo "<a href='" . BASE_URL . "c_Schedule/createSchedule'>";
+                        echo "<i class='fas fa-home'>";
+                        echo "<img src='" . BASE_URL . "app\assets\img\icons\calendar_plus.png' width='30' alt='Crear Horario'>";
+                        echo "</i>";
+                        echo "<span class='disappear'>Crear Horarios</span></a>";
+                        echo "</li>";
+                        // <!--== Personal  ==-->
+                        echo "<li>";
+                        echo "<a href='" . BASE_URL . "c_Schedule/schedule'>";
+                        echo "<i class='fas fa-home'>";
+                        echo "<img src='" . BASE_URL . "app/assets/img/icons/calendar.png' width='35' alt='Administrar Personal'>";
+                        echo "</i>";
+                        echo "<span class='disappear'>Horario Personal</span></a>";
+                        echo "</li>";
 
-                        <li>
-                            <a href="<?= BASE_URL ?>c_Schedule/managePersonal">
-                                <i class="fas fa-home">
-                                    <img src="<?= BASE_URL ?>app\assets\img\icons\tasks.png" width="35" alt="Administrar Personal">
-                                </i>
-                                <span class="disappear">Administrar Personal</span></a>
-                        </li>
-                    </ul>
+                        if ($_SESSION['session']['role'] == "Director") {
+                            echo "<li>";
+                            echo "<a href='" . BASE_URL . "c_Schedule/managePersonal'>";
+                            echo "<i class='fas fa-home'>";
+                            echo "<img src='" . BASE_URL . "app/assets/img/icons/tasks.png' width='35' alt='Administrar Personal'>";
+                            echo "</i>";
+                            echo "<span class='disappear'>Administrar Personal</span></a>";
+                            echo "</li>";
+                        }
+                        echo "</ul>";
+                    } ?>
                 </li>
-
 
                 <li> <!-- Icon Personal Training  -->
                     <a href="<?= BASE_URL ?>c_PersonalTraining/personalTraining">

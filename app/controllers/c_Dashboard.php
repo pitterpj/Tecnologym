@@ -13,7 +13,8 @@ class c_Dashboard extends Controller
     }
 
     public function index()
-    {        $this->loadView("templates/header");
+    {
+        $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
         $this->loadView("v_Dashboard");
         $this->loadView("templates/footer");
@@ -29,15 +30,16 @@ class c_Dashboard extends Controller
     {
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
-        $this->loadView("monitor/v_Settings");
+        $this->loadView("v_Settings");
         $this->loadView("templates/footer");
     }
     public function logOut()
     {
         // Destroe session
         unset($_SESSION['session']);
-        header("Location:" . BASE_URL );
+        header("Location:" . BASE_URL);
     }
+
 }
 
 

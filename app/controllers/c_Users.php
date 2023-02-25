@@ -38,7 +38,7 @@ class c_Users extends Controller
                 'avatar' => $row['avatar'],
                 'role' => $role['role']
             ];
-            header("Location:" . BASE_URL . "c_Users/loged/" . $_SESSION['session']['role']);
+            header("Location:" . BASE_URL . "c_Users/dashboard" . $_SESSION['session']['role']);
         } else {
             //Si no existe error y al login con mensaje de error
             $_SESSION['errorMessage'] = 'Usuario o contraseña incorrectos';
@@ -46,7 +46,7 @@ class c_Users extends Controller
         }
     }
 
-    public function loged($role)
+    public function dashboard($role)
     {
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
@@ -63,6 +63,7 @@ class c_Users extends Controller
         };
         $this->loadView("templates/footer");
     }
+
 }
 
 ?>
