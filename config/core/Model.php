@@ -67,7 +67,7 @@ class Model
         return $this->stmt->execute();
     }
 
-    public function resultado()
+    public function result()
     { // Returns the results in an associative array
         // Calls the launch function to execute the query
         $this->launch();

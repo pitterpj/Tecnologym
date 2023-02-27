@@ -37,6 +37,19 @@ class m_Users extends Model
         return $row;
     }
 
+
+    public function showWorker()
+    {
+        //Show all workers that not be a Director
+        $snt = " SELECT * FROM person 
+        INNER JOIN worker ON person.id_person=worker.id_person 
+        INNER JOIN worker_type ON worker_type.id_worker=worker.id_worker
+        INNER JOIN type ON type.id_type=worker_type.id_type
+        WHERE role != 'Director'";
+        $this->consult($snt);
+        $row = $this->result();
+        return $row;
+    }
 } //End m_Users
 
 
