@@ -9,7 +9,7 @@
         <nav id="sidebar">
             <!--====== BRAND ======-->
             <div class="sidebar-header">
-                <a href="<?= BASE_URL ?>c_Dashboard/dashboard"><img class="img-fluid" src="<?= BASE_URL ?>app/assets/img/Brand_Tecnologym.png" width="200" alt="Brand-Tecnologym"></a>
+                <a href="<?= BASE_URL . "c_Users/dashboard" ?>"><img class="img-fluid" src="<?= BASE_URL ?>app/assets/img/Brand_Tecnologym.png" width="200" alt="Brand-Tecnologym"></a>
             </div>
             <!--====== AVATAR ROLE PERSON======-->
             <!-- TODO -- AÑADIR LA FOTO DE LA PERSONA.
@@ -39,7 +39,7 @@
             <!--====== SIDEBAR OPTIONS======-->
             <ul class="list-unstyled">
                 <li class="active"> <!--====== icon home ======-->
-                    <a href="<?= BASE_URL ?>c_Users/dashboard">
+                    <a href="<?= BASE_URL . "c_Users/dashboard" ?>">
                         <i class="fas fa-home"><img src="<?= BASE_URL ?>app\assets\img\icons\home_gym.png" width="50" alt="Inicio"></i>
                         <span class="disappear">Inicio</span>
                     </a>
@@ -158,7 +158,7 @@
                         <ul class="nav navbar-nav ml-auto text-end">
 
                             <li class="nav-item active">
-                                <a class="text-light nav-link  rounded" href="<?= BASE_URL ?>c_Dashboard/">Inicio</a>
+                                <a class="text-light nav-link  rounded" href="<?= BASE_URL . "c_Users/dashboard" ?>">Inicio</a>
                             </li>
 
                             <li class="nav-item">

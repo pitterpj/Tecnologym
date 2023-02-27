@@ -7,7 +7,7 @@
 
 
 
-    <h2>Bienvenido Director</h2>
+    <h2>PRUEBA</h2>
     <p></p>
 
 

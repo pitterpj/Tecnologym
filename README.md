@@ -35,6 +35,8 @@
     
     - [X] Poner logo al title
 
+    - off canvas
+
     - card decks
 
     -bs5-card para administrar personal si eres el jefazo podrás cambiar entre areas del gym

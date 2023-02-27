@@ -38,7 +38,7 @@ class c_Users extends Controller
                 'avatar' => $row['avatar'],
                 'role' => $role['role']
             ];
-            header("Location:" . BASE_URL . "c_Users/dashboard" . $_SESSION['session']['role']);
+            header("Location:" . BASE_URL . "c_Users/dashboard");
         } else {
             //Si no existe error y al login con mensaje de error
             $_SESSION['errorMessage'] = 'Usuario o contraseña incorrectos';
@@ -46,11 +46,13 @@ class c_Users extends Controller
         }
     }
 
-    public function dashboard($role)
+    public function dashboard()
     {
+        define("ROLE",  $_SESSION['session']['role']);
+
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
-        switch ($role[0]) {
+        switch (ROLE) {
             case "Director":
                 $this->loadView("/director/v_Director");
                 break;
@@ -58,7 +60,7 @@ class c_Users extends Controller
                 $this->loadView("/monitor/v_Monitor");
                 break;
             case "Corrdinador":
-                $this->loadView("/manager/v_Coordinador");
+                $this->loadView("/manager/v_Manager");
                 break;
         };
         $this->loadView("templates/footer");
