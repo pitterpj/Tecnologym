@@ -65,6 +65,31 @@ class m_Users extends Model
         return $row;
     }
 
+    public function updateWorker($id_worker, $datos)
+    {
+        print_r($datos);
+
+        $snt = "UPDATE worker SET hours = :hours WHERE id_worker = :id_worker";
+
+        $this->consult($snt);
+        $this->link(":id_worker", $id_worker);
+        $this->link(":hours", $datos['updateHours']);
+        $this->launch();
+
+
+        $snt2 = "UPDATE person INNER JOIN worker ON person.id_person=worker.id_person SET name = :name, lastname = :lastname, email=:email, phone=:phone  WHERE worker.id_worker = :id_worker ;";
+        // $snt2 = "UPDATE person INNER JOIN worker ON person.id_person=worker.id_person SET name = :name, lastname = :lastname, role = :role, email = :email, phone = :phone WHERE worker.id_worker = :id_worker ;";
+
+        $this->consult($snt2);
+        $this->link(":id_worker", $id_worker);
+        $this->link(":name", $datos['updateName']);
+        $this->link(":lastname", $datos['updateLastname']);
+        //$this->link(":role", $datos['updateRole']);
+        $this->link(":email", $datos['updateEmail']);
+        $this->link(":phone", $datos['updatePhone']);
+        $this->launch();
+    }
+    
 } //End m_Users
 
 

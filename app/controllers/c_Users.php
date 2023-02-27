@@ -84,6 +84,18 @@ class c_Users extends Controller
         $this->loadView("v_UpdateWorker",$datos);
         $this->loadView("templates/footer");
     }
+
+    public function updateWorker($id_worker){
+
+        $this->m_Users->updateWorker($id_worker[0],$_POST);
+        
+        $this->loadView("templates/header");
+        $this->loadView("templates/sidebar");
+        $this->loadView("v_UpdateHour");
+        $this->loadView("templates/footer");
+    }
+
+
 }
 
 ?>
