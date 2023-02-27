@@ -29,6 +29,12 @@
     - LOS MODELOS SON PARA CARGAR LAS FUNCIONES Y CONSULTAS DE LA BASE DE DATOS
 
     - Error de base de datos: Find ‘utf8mb4_0900_ai_ci’ & replace it with ‘utf8mb4_unicode_ci’.
+
+    SELECT * FROM person 
+INNER JOIN worker ON person.id_person=worker.id_person 
+INNER JOIN worker_type ON worker_type.id_worker=worker.id_worker
+INNER JOIN type ON type.id_type=worker_type.id_type
+WHERE worker.id_worker= 2
     
 
 ## To Do:
@@ -36,6 +42,8 @@
     - [X] Poner logo al title
 
     - off canvas
+
+    - Datatables
 
     - card decks
 

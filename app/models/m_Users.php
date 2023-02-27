@@ -38,7 +38,7 @@ class m_Users extends Model
     }
 
 
-    public function showWorker()
+    public function showWorkers()
     {
         //Show all workers that not be a Director
         $snt = " SELECT * FROM person 
@@ -50,6 +50,21 @@ class m_Users extends Model
         $row = $this->result();
         return $row;
     }
+
+    public function showWorker($id_worker)
+    {
+        //Show all workers that not be a Director
+        $snt = " SELECT * FROM person 
+        INNER JOIN worker ON person.id_person=worker.id_person 
+        INNER JOIN worker_type ON worker_type.id_worker=worker.id_worker
+        INNER JOIN type ON type.id_type=worker_type.id_type
+        WHERE worker.id_worker= :id_worker";
+        $this->consult($snt);
+        $this->link(":id_worker", $id_worker);
+        $row = $this->row();
+        return $row;
+    }
+
 } //End m_Users
 
 

@@ -68,12 +68,20 @@ class c_Users extends Controller
 
     public function managePersonal()
     {
-
-        $datos["workers"]=$this->m_Users->showWorker();
+        $datos["workers"]=$this->m_Users->showWorkers();
 
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
         $this->loadView("v_ManagePersonal",$datos);
+        $this->loadView("templates/footer");
+    }
+
+    public function updateWorkers($id_worker){
+        $datos["worker"]=$this->m_Users->showWorker($id_worker[0]);
+
+        $this->loadView("templates/header");
+        $this->loadView("templates/sidebar");
+        $this->loadView("v_UpdateWorker",$datos);
         $this->loadView("templates/footer");
     }
 }

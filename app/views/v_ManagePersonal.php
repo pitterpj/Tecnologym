@@ -8,7 +8,6 @@
 <div class="row-6 fondo-2 shadow p-3 mb-5 rounded">
     <div class="">
         <h2 class="text-center">Administrar Personal</h2>
-        <?php var_dump($workers) ?>
 
         <div class="card">
             <div class="card-header">
@@ -33,13 +32,14 @@
                             <tr class="">
                                 <td scope="row">Avatar</td>
                                 <td><?= $worker['name'] ?></td>
-                                <td>Pan Pum</td>
-                                <td>Director</td>
-                                <td>pitter@correo.es</td>
-                                <td>123456789</td>
-                                <td>40</td>
+                                <td><?= $worker['lastname'] ?></td>
+                                <td><?= $worker['role'] ?></td>
+                                <td><?= $worker['email'] ?></td>
+                                <td><?= $worker['phone'] ?></td>
+                                <td><?= $worker['hours'] ?></td>
                                 <td>
-                                    <a name="updateWorker" class="btn btn-info" href="#" role="button">Editar</a>
+                                    <a name="updateWorker" class="btn btn-info" href="<?= BASE_URL . 'c_Users/updateWorkers/' . $worker['id_worker'] ?>" type="button">Editar</a>
+                                    
                                     <a name="deleteWorker" class="btn btn-warning" href="#" role="button">Eliminar</a>
                                 </td>
                             </tr>
