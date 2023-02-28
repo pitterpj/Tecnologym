@@ -11,7 +11,7 @@
 
         <div class="card">
             <div class="card-header">
-                <a name="addClient" class="btn btn-info" href="#" role="button">Agregar Entreno Personal </a>
+                <a name="addClient" class="btn btn-info" href="<?=BASE_URL."c_PersonalTraining/addPersonalTraining"?>" role="button">Agregar Entreno Personal </a>
             </div>
             <div class="table-responsive-sm">
                 <table class="table table-primary">
@@ -37,7 +37,7 @@
                                 <td><?= $client['weight'] ?></td>
                                 <td><?= $client['birth_date'] ?></td>
                                 <td>
-                                    <a name="" class="btn btn-info" href="" type="button">Editar</a>
+                                    <a name="updatePersonalTraining" class="btn btn-info" href="" type="button">Editar</a>
 
                                     <a name="" class="btn btn-warning" href="#" role="button">Eliminar</a>
                                 </td>
