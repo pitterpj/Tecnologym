@@ -29,11 +29,32 @@
                 <div class="card-header text-center">
                     Entrenamientos personales esta semana
                 </div>
-                <div class="card-body">
-                    <h4 class="card-title text-center">Entrenos</h4>
-                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam dolor laboriosam fugit omnis eius aut? Accusamus odio expedita dolore, hic veniam aliquam doloremque laborum eveniet? Repellendus labore accusamus rerum aperiam?</p>
-
-                </div>
+                <div class="table-responsive-sm">
+                <table class="table table-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">id_client</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">training_date</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($logs as $log) : ?>
+                            <tr class="">
+                                <td scope="row"><?= $log['id_client'] ?></td>
+                                <td><?= $log['training_date'] ?></td>
+                                <td>Nombre</td>
+                                <td>
+                                    <a name="updateWorker" class="btn btn-info" href="<?= BASE_URL . 'c_Users/updateWorkers/' . $worker['id_worker'] ?>" type="button">Editar</a>
+                                    
+                                    <a name="deleteWorker" class="btn btn-warning" href="#" role="button">Eliminar</a>
+                                </td>
+                            </tr>
+                        <?php endforeach ?>
+                    </tbody>
+                </table>
+            </div>
             </div>
 
 

@@ -8,6 +8,7 @@ class c_Users extends Controller
 {
 
     private $m_Users; //Property to instantiate the model
+    private $m_PersonalTraining;
 
     public function __construct()
     {
@@ -30,6 +31,7 @@ class c_Users extends Controller
         if ($row) {
             $_SESSION['session'] = [
                 'user' => $row['user'],
+                'id_person' => $row['id_person'],
                 'password' => $row['password'],
                 'name' => $row['name'],
                 'lastname' => $row['lastname'],
@@ -57,7 +59,11 @@ class c_Users extends Controller
                 $this->loadView("/director/v_Director");
                 break;
             case "Monitor":
-                $this->loadView("/monitor/v_Monitor");
+                $this->m_PersonalTraining = $this->loadModel("m_PersonalTraining");
+
+                $datos['logs'] = $this->m_PersonalTraining->showLogTraining($_SESSION['session']['id_person']);
+
+                $this->loadView("/monitor/v_Monitor", $datos);
                 break;
             case "Corrdinador":
                 $this->loadView("/manager/v_Manager");
@@ -68,34 +74,34 @@ class c_Users extends Controller
 
     public function managePersonal()
     {
-        $datos["workers"]=$this->m_Users->showWorkers();
+        $datos["workers"] = $this->m_Users->showWorkers();
 
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
-        $this->loadView("v_ManagePersonal",$datos);
+        $this->loadView("v_ManagePersonal", $datos);
         $this->loadView("templates/footer");
     }
 
-    public function updateWorkers($id_worker){
-        $datos["worker"]=$this->m_Users->showWorker($id_worker[0]);
+    public function updateWorkers($id_worker)
+    {
+        $datos["worker"] = $this->m_Users->showWorker($id_worker[0]);
 
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
-        $this->loadView("v_UpdateWorker",$datos);
+        $this->loadView("v_UpdateWorker", $datos);
         $this->loadView("templates/footer");
     }
 
-    public function updateWorker($id_worker){
+    public function updateWorker($id_worker)
+    {
 
-        $this->m_Users->updateWorker($id_worker[0],$_POST);
-        
+        $this->m_Users->updateWorker($id_worker[0], $_POST);
+
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
         $this->loadView("v_UpdateHour");
         $this->loadView("templates/footer");
     }
-
-
 }
 
 ?>

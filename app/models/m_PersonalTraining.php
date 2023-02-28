@@ -19,6 +19,15 @@ class m_PersonalTraining extends Model
         $row = $this->result();
         return $row;
     }
+
+    public function showLogTraining($id_person)
+    {
+        $snt = "SELECT * FROM `log_training` WHERE id_worker=4";
+        $this->consult($snt);
+        //$this->link(":id_worker", $id_person);
+        $row = $this->result();
+        return $row;
+    }
 }
 
 ?>
