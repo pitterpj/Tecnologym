@@ -3,31 +3,49 @@
 
 
 <!-- CONTENT PAGE -->
-<div class="fondo-2 shadow p-3 mb-5 rounded text-center">
 
 
-
-    <h2>ENTRENAMIENTOS PERSONALES</h2>
-    <p></p>
-
-
-
-</div> <!-- END CONTENT PAGE WITH SHADOWS -->
-<div class="fondo-2 shadow p-3 mb-5 rounded">
+<div class="row-6 fondo-2 shadow p-3 mb-5 rounded">
     <div class="">
-        <h2>Lorem Ipsum Dolor</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="">
-        <h2>Lorem Ipsum Dolor</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="line"></div>
-    <div class="">
-        <h2>Lorem Ipsum Dolor</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
+        <h2 class="text-center">Entrenamientos Personales</h2>
 
+        <div class="card">
+            <div class="card-header">
+                <a name="addClient" class="btn btn-info" href="#" role="button">Agregar Entreno Personal </a>
+            </div>
+            <div class="table-responsive-sm">
+                <table class="table table-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">Foto</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellidos</th>
+                            <th scope="col">BMI</th>
+                            <th scope="col">Peso</th>
+                            <th scope="col">Edad</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        foreach ($clients as $client) : ?>
+                            <tr class="">
+                                <td scope="row">Avatar</td>
+                                <td><?= $client['name'] ?></td>
+                                <td><?= $client['lastname'] ?></td>
+                                <td><?= $client['BMI'] ?></td>
+                                <td><?= $client['weight'] ?></td>
+                                <td><?= $client['birth_date'] ?></td>
+                                <td>
+                                    <a name="" class="btn btn-info" href="" type="button">Editar</a>
 
-    <div class="line"></div>
+                                    <a name="" class="btn btn-warning" href="#" role="button">Eliminar</a>
+                                </td>
+                            </tr>
+                        <?php endforeach ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div> <!-- END CONTENT PAGE WITH SHADOWS -->

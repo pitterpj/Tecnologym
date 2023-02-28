@@ -97,7 +97,7 @@
                 </li>
 
                 <li> <!-- Icon Personal Training  -->
-                    <a href="<?= BASE_URL ?>c_PersonalTraining/personalTraining">
+                    <a href="<?= BASE_URL ?>c_PersonalTraining/showPersonalTraining">
                         <i class="fas fa-home"><img src="<?= BASE_URL ?>app\assets\img\icons\personal_training.png" width="50" alt="Entrenamientos Personales"></i>
                         <span class="disappear">Entrenamientos</span></a>
                 </li>
