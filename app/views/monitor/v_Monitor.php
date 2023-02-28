@@ -3,41 +3,48 @@
 
 
 <!-- CONTENT PAGE -->
-
-<div class="fondo-2 shadow p-3 mb-5 rounded">
-    <div class="">
-        <div class="card">
+<div class="row container-fluid justify-content-around">
+    <div class="container col-6 fondo-2 shadow p-3 mb-5 rounded">
+        <div class="card h-100">
             <div class="card-header">
                 Header
             </div>
             <div class="card-body">
                 <h4 class="card-title">Title</h4>
-                <p class="card-text">Text</p>
-            </div>
-            <div class="card-footer text-muted">
-                Footer
-            </div>
-        </div>
-    </div>
-    
-
-</div> <!-- END CONTENT PAGE WITH SHADOWS -->
-
-<div class="fondo-2 shadow p-3 mb-5 rounded">
-    <div class="">
-        <div class="card">
-            <div class="card-header">
-                Header
-            </div>
-            <div class="card-body">
-                <h4 class="card-title">Title</h4>
-                <p class="card-text">Text</p>
-            </div>
-            <div class="card-footer text-muted">
-                Footer
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam dolor laboriosam fugit omnis eius aut? Accusamus odio expedita dolore, hic veniam aliquam doloremque laborum eveniet? Repellendus labore accusamus rerum aperiam?</p>
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam dolor laboriosam fugit omnis eius aut? Accusamus odio expedita dolore, hic veniam aliquam doloremque laborum eveniet? Repellendus labore accusamus rerum aperiam?</p>
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam dolor laboriosam fugit omnis eius aut? Accusamus odio expedita dolore, hic veniam aliquam doloremque laborum eveniet? Repellendus labore accusamus rerum aperiam?</p>
             </div>
         </div>
+    </div> <!-- END CONTENT PAGE WITH SHADOWS -->
+
+    <div class="row col-5">
+        <div class=" container col-9 fondo-2 shadow p-3 mb-5 rounded">
+
+            <div class="card">
+                <div class="card-header">
+                    Header
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Title</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eligendi at accusamus ipsam natus, explicabo voluptatum, voluptas mollitia, corrupti quam iusto eaque quos reiciendis itaque ea provident nesciunt quidem. Tempora.</p>
+                </div>
+
+            </div>
+        </div> <!-- END CONTENT PAGE WITH SHADOWS -->
+        <div class=" container col-9 fondo-2 shadow p-3 mb-5 rounded">
+
+            <div class="card">
+                <div class="card-header">
+                    Header
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Title</h4>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, laudantium porro laborum, est cum nesciunt reiciendis ipsum earum eligendi animi, facere nostrum sequi? Odio animi vel laudantium deleniti eos dolores?</p>
+                </div>
+
+
+            </div>
+        </div> <!-- END CONTENT PAGE WITH SHADOWS -->
     </div>
-
-
-</div> <!-- END CONTENT PAGE WITH SHADOWS -->
+</div>
