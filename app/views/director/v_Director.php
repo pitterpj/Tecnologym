@@ -3,27 +3,54 @@
 
 
 <!-- CONTENT PAGE -->
-<!-- <div class="fondo-2 shadow p-3 mb-5 rounded text-center">
-    <h2>Bienvenido <?= $_SESSION['session']['name']; ?></h2>
+<div class="row container-fluid justify-content-around">
+
+    <div class="container col-lg-5 col-md-9 col-sm-8 fondo-2 shadow p-3 mb-5 rounded">
+        <div class="card h-100">
+            <div class="card-header text-center">
+                Horario personal
+            </div>
+            <div class="card-body">
+                <h4 class="card-title text-center">Hoy</h4>
+                <!-- <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam dolor laboriosam fugit omnis eius aut? Accusamus odio expedita dolore, hic veniam aliquam doloremque laborum eveniet? Repellendus labore accusamus rerum aperiam?</p>
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam dolor laboriosam fugit omnis eius aut? Accusamus odio expedita dolore, hic veniam aliquam doloremque laborum eveniet? Repellendus labore accusamus rerum aperiam?</p> -->
+                <div id='calendar'></div>
+            </div>
+        </div>
+    </div> <!-- END CONTENT PAGE WITH SHADOWS -->
+
+    <!-- col 2 -->
+    <div class="container col-lg-5 col-md-9 col-sm-8 ">
+
+        <!-- row 2 -->
+        <div class="row fondo-2 shadow p-3 mb-5 rounded">
+            <!-- col2.1 -->
+            <div class="col-12 card  ">
+                <div class="card-header text-center">
+                    Entrenamientos personales esta semana
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title text-center">Entrenos</h4>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam dolor laboriosam fugit omnis eius aut? Accusamus odio expedita dolore, hic veniam aliquam doloremque laborum eveniet? Repellendus labore accusamus rerum aperiam?</p>
+
+                </div>
+            </div>
 
 
 
-
-</div> END CONTENT PAGE WITH SHADOWS -->
-<div class="fondo-2 shadow p-3 mb-5 rounded">
-    <div class="">
-        <h2>DIRECTOR</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div> <!-- end row2 -->
+        <div class="row fondo-2 shadow p-3 mb-5 rounded">
+            <!-- col.2.2 -->
+            <div class="col-12 card ">
+                <div class="card-header text-center">
+                    Notificaciones
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title text-center">Notificaciones</h4>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam dolor laboriosam fugit omnis eius aut? Accusamus odio expedita dolore, hic veniam aliquam doloremque laborum eveniet? Repellendus labore accusamus rerum aperiam?</p>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam dolor laboriosam fugit omnis eius aut? Accusamus odio expedita dolore, hic veniam aliquam doloremque laborum eveniet? Repellendus labore accusamus rerum aperiam?</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="">
-        <h2>Lorem Ipsum Dolor</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="line"></div>
-    <div class="">
-        <h2>Lorem Ipsum Dolor</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-
-    <div class="line"></div>
-</div> <!-- END CONTENT PAGE WITH SHADOWS -->
+</div><!-- row1 -->

@@ -23,4 +23,7 @@
     <!--====== Style CSS ======-->
     <link rel="stylesheet" href="<?= BASE_URL ?>app\views\css\v_index.css">
 
+    <!--====== Full Calendar ======-->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js"></script>
+
 </head>

@@ -5,21 +5,45 @@
 
 class c_PersonalTraining extends Controller
 {
+    private $m_PersonalTraining;
+
     public function __construct()
     {
+        $this->m_PersonalTraining = $this->loadModel("m_PersonalTraining");
     }
 
     public function index()
     {
     }
 
-    public function personalTraining()
+    // public function personalTraining()
+    // {
+    //     $contenido = "v_PersonalTraining";
+    //     $this->loadView("templates/header");
+    //     $this->loadView("templates/sidebar");
+    //     $this->loadView($contenido);
+    //     $this->loadView("templates/footer");
+    // }
+
+    public function showPersonalTraining()
     {
-        $contenido = "monitor/v_PersonalTraining";
+        $datos['clients'] = $this->m_PersonalTraining->showPersonalTraining();
+
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
-        $this->loadView($contenido);
+        $this->loadView("v_PersonalTraining",$datos);
         $this->loadView("templates/footer");
+    }
+
+    public function addPersonalTraining(){
+
+        // $datos['clients'] = $this->m_PersonalTraining->showPersonalTraining();
+        
+        $this->loadView("templates/header");
+        $this->loadView("templates/sidebar");
+        $this->loadView("v_AddPersonalTraining");
+        $this->loadView("templates/footer");
+
     }
 }
 

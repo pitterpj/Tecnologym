@@ -48,7 +48,7 @@
                 <!-- Depending on the role, this shows one menu of options or another -->
                 <li> <!--====== Icon Create schedules  ======-->
                     <?php if ($_SESSION['session']['role'] == "Monitor") {
-                        echo "<a href='" . BASE_URL . "c_Schedule/schedule'  class='dropdown-toggle'>";
+                        echo "<a href='" . BASE_URL . "c_Schedule/schedule'  class=''>";
                         echo "<i class='fas fa-home'>";
                         echo "<img src='" . BASE_URL . "app\assets\img\icons\calendar.png' width='50' alt='Horario'>";
                         echo "</i>";
@@ -97,7 +97,7 @@
                 </li>
 
                 <li> <!-- Icon Personal Training  -->
-                    <a href="<?= BASE_URL ?>c_PersonalTraining/personalTraining">
+                    <a href="<?= BASE_URL ?>c_PersonalTraining/showPersonalTraining">
                         <i class="fas fa-home"><img src="<?= BASE_URL ?>app\assets\img\icons\personal_training.png" width="50" alt="Entrenamientos Personales"></i>
                         <span class="disappear">Entrenamientos</span></a>
                 </li>
