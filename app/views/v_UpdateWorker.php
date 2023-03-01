@@ -18,9 +18,13 @@
                 <input type="text" class="form-control" name="updateLastname" aria-describedby="helpId" value="<?= $worker['lastname'] ?>">
             </div>
             <div class="mb-3">
-                <label for="updateRole" class="form-label">Puesto</label>
-                <input type="text" class="form-control" name="updateRole" aria-describedby="helpId" value="<?= $worker['role'] ?>">
+                <label for="updateRole" class="form-label">City</label>
+                <select class="form-select" name="updateRole">
+                    <option selected value="3">Monitor</option>
+                    <option value="2">Coordinador</option>
+                </select>
             </div>
+
             <div class="mb-3">
                 <label for="updateEmail" class="form-label">Email</label>
                 <input type="text" class="form-control" name="updateEmail" aria-describedby="helpId" value="<?= $worker['email'] ?>">
@@ -33,8 +37,6 @@
                 <label for="updateHours" class="form-label">Horas de Contrato</label>
                 <input type="text" class="form-control" name="updateHours" aria-describedby="helpId" value="<?= $worker['hours'] ?>">
             </div>
-
-            <!-- <a name="btnUpdate" type="submit" class="btn btn-primary" href="<?= BASE_URL . 'c_Users/updateWorker/' . $worker['id_worker'] ?>" role="button">Actualizar</a> -->
 
             <button type="submit" class="btn btn-primary">Submit</button>
 

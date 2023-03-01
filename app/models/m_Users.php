@@ -67,8 +67,6 @@ class m_Users extends Model
 
     public function updateWorker($id_worker, $datos)
     {
-        print_r($datos);
-
         $snt = "UPDATE worker SET hours = :hours WHERE id_worker = :id_worker";
 
         $this->consult($snt);
@@ -78,25 +76,30 @@ class m_Users extends Model
 
 
         $snt2 = "UPDATE person INNER JOIN worker ON person.id_person=worker.id_person SET name = :name, lastname = :lastname, email=:email, phone=:phone  WHERE worker.id_worker = :id_worker ;";
-        // $snt2 = "UPDATE person INNER JOIN worker ON person.id_person=worker.id_person SET name = :name, lastname = :lastname, role = :role, email = :email, phone = :phone WHERE worker.id_worker = :id_worker ;";
 
         $this->consult($snt2);
         $this->link(":id_worker", $id_worker);
         $this->link(":name", $datos['updateName']);
         $this->link(":lastname", $datos['updateLastname']);
-        //$this->link(":role", $datos['updateRole']);
         $this->link(":email", $datos['updateEmail']);
         $this->link(":phone", $datos['updatePhone']);
         $this->launch();
+
+
+        $snt3 = "UPDATE `worker_type` SET `id_type`=:role WHERE id_worker= :id_worker";
+        $this->consult($snt3);
+        $this->link(":id_worker", $id_worker);
+        $this->link(":role", $datos['updateRole']);
+        $this->launch();
     }
-    
+
+    public function selectRoles()
+    {
+        $snt = "SELECT role FROM type";
+        $this->consult($snt);
+        return $this->result();
+    }
 } //End m_Users
-
-
-
-// SELECT type.role FROM type INNER JOIN worker_type ON worker_type.id_type=type.id_type INNER JOIN worker ON worker_type.id_worker=worker.id_worker INNER JOIN person ON person.id_person=worker.id_person WHERE user="director01";
-
-
 
 
 ?>
