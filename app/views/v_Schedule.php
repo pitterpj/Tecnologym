@@ -10,10 +10,7 @@
         <h2 class="text-center">Horario Personal</h2>
 
         <div class="card">
-            <div class="card-header">
-                <!-- <a name="addWorker" class="btn btn-info" href="#" role="button">Agregar Trabajador</a> -->
-            </div>
-            <div class="table-responsive-sm ">
+            <div class="table-responsive-sm m-2">
                 <table class="table table-primary table-striped table-hover ">
                     <thead>
                         <tr>
