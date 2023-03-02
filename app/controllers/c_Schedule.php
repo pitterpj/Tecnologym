@@ -51,6 +51,11 @@ class c_Schedule extends Controller
         $this->loadView($contenido,$datos);
         $this->loadView("templates/footer");
     }
+    public function addClass(){
+        $this->m_schedule->addClass();
+
+        $this->personalSchedule();
+    }
 }
 
 

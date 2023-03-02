@@ -21,6 +21,20 @@ class m_Schedule extends Model
         $this->consult($snt);
         return $this->result();
     }
+
+    public function addClass(){
+
+        $snt="INSERT INTO `class` (`avatar`, `id_class`, `id_worker`, `id_skill`, `capacity`, `day`, `hour`) VALUES (:img, NULL, :id_worker, :id_skill, :capacity, :day, :hour);";
+
+        $this->consult($snt);
+        $this->link(":img", $_POST['addImg']);
+        $this->link(":id_worker", $_POST['addWorker']);
+        $this->link(":id_skill", $_POST['addSkill']);
+        $this->link(":capacity", $_POST['addCapacity']);
+        $this->link(":day", $_POST['addDay']);
+        $this->link(":hour", $_POST['addHour']);
+        $this->launch();
+    }
 }
 
 

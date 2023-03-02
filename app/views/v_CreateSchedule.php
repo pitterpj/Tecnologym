@@ -8,16 +8,16 @@
 <div class="row-6 fondo-2 shadow p-3 mb-5 rounded">
     <div class="">
 
-        <form action="" method="post">
+        <form action="<?= BASE_URL . 'c_Schedule/addClass' ?>" method="post">
             <div class="mb-3">
-                <label for="addClass" class="form-label">Imagen Clase: </label>
-                <input type="text" class="form-control" name="addClass" aria-describedby="helpId" value="img">
+                <label for="addImg" class="form-label">Imagen Clase: </label>
+                <input type="text" class="form-control" name="addImg" aria-describedby="helpId" value="img">
             </div>
             <div class="mb-3">
                 <div class="mb-3">
                     <label for="addWorker" class="form-label">Trabajador</label>
                     <select class="form-select form-select-lg" name="addWorker">
-                        <option selected>Trabajadores</option>
+                        <option selected>1</option>
                         <option value="">otro trabajador</option>
                     </select>
                 </div>
@@ -26,8 +26,8 @@
                 <div class="mb-3">
                     <label for="addSkill" class="form-label">Tipo de clase</label>
                     <select class="form-select form-select-lg" name="addSkill">
-                        <option selected>Aquazuuumba</option>
-                        <option value="">Piticlin</option>
+                        <option selected>2</option>
+                        <option value="">1</option>
                     </select>
                 </div>
             </div>
