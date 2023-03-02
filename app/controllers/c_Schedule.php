@@ -25,7 +25,7 @@ class c_Schedule extends Controller
     }
     public function createSchedule()
     {
-        $contenido = "manager/v_createSchedule";
+        $contenido = "v_createSchedule";
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
         $this->loadView($contenido);
