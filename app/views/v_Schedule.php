@@ -2,36 +2,49 @@
 <!-- https://github.com/pitterpj -->
 
 
-
-
-
 <!-- CONTENT PAGE -->
-<div class="fondo-2 shadow p-3 mb-5 rounded text-center">
 
 
+<div class="row-6 fondo-2 shadow p-3 mb-5 rounded">
+    <div class="">
+        <h2 class="text-center">Horario Personal</h2>
 
-    <h2>HORARIO PERSONAL</h2>
-    <p></p>
+        <div class="card">
+            <div class="card-header">
+                <!-- <a name="addWorker" class="btn btn-info" href="#" role="button">Agregar Trabajador</a> -->
+            </div>
+            <div class="table-responsive-sm ">
+                <table class="table table-primary table-striped table-hover ">
+                    <thead>
+                        <tr>
+                            <th class="d-none d-lg-block" scope="col">Imagen</th>
+                            <th scope="col">Nombre Clase</th>
+                            <th scope="col">Instructor</th>
+                            <th class="d-none d-lg-block" scope="col">Capacidad</th>
+                            <th scope="col">Día</th>
+                            <th scope="col">Hora</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($classes as $class) : ?>
+                            <tr class="">
+                                <td class="d-none d-lg-block" scope="row">Avatar</td>
+                                <td><?= $class['name_skill'] ?></td>
+                                <td><?= $class['name'] ?></td>
+                                <td class="d-none d-lg-block"><?= $class['capacity'] ?></td>
+                                <td><?= $class['day'] ?></td>
+                                <td><?= $class['hour'] ?></td>
+                            </tr>
+                        <?php endforeach ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
 
 
 
 </div> <!-- END CONTENT PAGE WITH SHADOWS -->
-<div class="fondo-2 shadow p-3 mb-5 rounded">
-    <div class="">
-        <h2>Lorem Ipsum Dolor</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="">
-        <h2>Lorem Ipsum Dolor</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="line"></div>
-    <div class="">
-        <h2>Lorem Ipsum Dolor</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-
-
-    <div class="line"></div>
-</div> <!-- END CONTENT PAGE WITH SHADOWS -->
-

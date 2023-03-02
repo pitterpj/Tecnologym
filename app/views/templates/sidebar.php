@@ -76,7 +76,7 @@
                         echo "</li>";
                         // <!--== Personal  ==-->
                         echo "<li>";
-                        echo "<a href='" . BASE_URL . "c_Schedule/schedule'>";
+                        echo "<a href='" . BASE_URL . "c_Schedule/personalSchedule'>";
                         echo "<i class='fas fa-home'>";
                         echo "<img src='" . BASE_URL . "app/assets/img/icons/calendar.png' width='35' alt='Administrar Personal'>";
                         echo "</i>";
