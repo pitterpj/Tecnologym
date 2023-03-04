@@ -39,9 +39,11 @@ SET `hours` = '39',`name` = 'monitor003', `lastname` = 'apellidos', `email` = 'm
     
     - [X] Poner logo al title
 
+    - Prueba
+
     - m_Schedule añadir img cambiar sentencia
 
-    - off canvas
+    - off canvas 
 
     - full calendar
 
