@@ -4,11 +4,11 @@
 
 <!-- CONTENT PAGE -->
 
-<div class="row container-fluid justify-content-around">
-    <div class="col-6 fondo-2 shadow p-3 mb-5 rounded">
-    <div class="card-header">
-                <h3>Crear Clase</h3>
-            </div>
+<div class="row container-fluid justify-content-around ">
+    <div class="container col-lg-6 col-md-9 col-sm-8 fondo-2 shadow p-3 mb-5 rounded">
+        <div class="card-header">
+            <h3>Crear Clase</h3>
+        </div>
         <form action="<?= BASE_URL . 'c_Schedule/addClass' ?>" method="post">
             <div class="mb-3">
                 <div class="mb-3">
@@ -55,31 +55,29 @@
     </div>
 
 
-    <div class="col-5 fondo-2 shadow p-3 mb-5 rounded">
-    <div class="card-header">
-                <h3>Crear Skill</h3>
-            </div>
+    <div class="container col-lg-5 col-md-9 col-sm-8 fondo-2 shadow p-3 mb-5 rounded ">
+
+        <div class="card-header text-center">
+            <h3>Crear Actividad</h3>
+        </div>
         <form action="<?= BASE_URL . 'c_Schedule/addSkill' ?>" method="post" enctype="multipart/form-data">
             <div class="mb-3">
-                <label for="addImg" class="form-label">Imagen Clase: </label>
+                <label for="addImg" class="form-label"></label>
                 <input type="file" class="form-control" name="addImg" aria-describedby="helpId">
             </div>
-            
             <div class="mb-3">
-                <label for="addNameSkill" class="form-label">Skill</label>
-                <input type="text" class="form-control" name="addNameSkill" aria-describedby="helpId" placeholder="nameSkill">
+                <label for="addNameSkill" class="form-label">Nombre de la habilidad:</label>
+                <input type="text" class="form-control" name="addNameSkill" aria-describedby="helpId" placeholder="Nombre de la Actividad">
+            </div>
+            <div class="mb-3">
+                <label for="addLevel" class="form-label">Nivel de la Actividad:</label>
+                <input type="text" class="form-control" name="addLevel" aria-describedby="helpId" placeholder="Nivel de la actividad">
             </div>
 
-            <div class="mb-3">
-                <label for="addLevel" class="form-label">Skill</label>
-                <input type="text" class="form-control" name="addLevel" aria-describedby="helpId" placeholder="12222">
+            <div class="d-flex justify-content-around ">
+                <button type="submit" class="btn btn-primary">Crear</button>
+                <a name="btnCancel" class="btn btn-danger" href="<?= BASE_URL ?>c_Users/managePersonal" role="button">Cancelar</a>
             </div>
-
-            <button type="submit" class="btn btn-primary">Submit</button>
-
-            <a name="btnCancel" class="btn btn-danger" href="<?= BASE_URL ?>c_Users/managePersonal" role="button">Cancelar</a>
-
         </form>
-
     </div>
 </div>

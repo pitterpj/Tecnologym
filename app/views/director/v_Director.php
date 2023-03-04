@@ -12,7 +12,6 @@
             </div>
             <div class="card-body">
                 <h4 class="card-title text-center">Hoy</h4>
-                <div id='calendar'></div>
             </div>
         </div>
     </div> <!-- END CONTENT PAGE WITH SHADOWS -->

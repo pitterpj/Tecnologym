@@ -25,10 +25,10 @@
                     <tbody>
                         <?php foreach ($classes as $class) : ?>
                             <tr class="">
-                                <td class="d-none d-lg-block" scope="row"><img width="100" src="<?= BASE_URL. $class['img'] ?>" alt=""></td>
+                                <td scope="row"><img width="100" src="<?= BASE_URL . $class['img'] ?>"></td>
                                 <td><?= $class['name_skill'] ?></td>
                                 <td><?= $class['name'] ?></td>
-                                <td class="d-none d-lg-block"><?= $class['capacity'] ?></td>
+                                <td><?= $class['capacity'] ?></td>
                                 <td><?= $class['day'] ?></td>
                                 <td><?= $class['hour'] ?></td>
                             </tr>
