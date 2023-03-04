@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1deb5ubuntu1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3306
--- Tiempo de generación: 22-02-2023 a las 10:53:58
--- Versión del servidor: 8.0.32-0ubuntu0.22.04.2
--- Versión de PHP: 8.2.2
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 04-03-2023 a las 13:34:39
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `pjorgec04`
+-- Base de datos: `tecnologym`
 --
 
 -- --------------------------------------------------------
@@ -28,22 +28,24 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `class` (
-  `id_class` int NOT NULL,
-  `id_worker` int NOT NULL,
-  `id_skill` int NOT NULL,
-  `capacity` int DEFAULT NULL,
-  `day` enum('lunes','martes','miercoles','jueves','viernes','sabado','domingo') NOT NULL,
-  `hour` enum('7:35','8:30','9:30','10:30','11:30','12:30','17:00','17:30','18:00','18:30','19:00','19:30','20:00','20:30','21:00') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+  `avatar` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_class` int(11) NOT NULL,
+  `id_worker` int(11) NOT NULL,
+  `id_skill` int(11) NOT NULL,
+  `capacity` int(11) DEFAULT NULL,
+  `day` date NOT NULL,
+  `hour` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `class`
 --
 
-INSERT INTO `class` (`id_class`, `id_worker`, `id_skill`, `capacity`, `day`, `hour`) VALUES
-(1, 1, 11, 12, 'lunes', '7:35'),
-(2, 2, 5, 10, 'lunes', '8:30'),
-(3, 2, 6, 12, 'lunes', '9:30');
+INSERT INTO `class` (`avatar`, `id_class`, `id_worker`, `id_skill`, `capacity`, `day`, `hour`) VALUES
+('avatar_img', 1, 1, 1, 12, '2023-03-05', '13:32:00'),
+('avatar_img', 2, 1, 3, 10, '2023-03-06', '10:33:00'),
+('avatar_img', 3, 3, 6, 9, '2023-03-04', '16:33:00'),
+('avatar_img', 4, 2, 1, 8, '2023-03-04', '19:33:00');
 
 -- --------------------------------------------------------
 
@@ -52,10 +54,10 @@ INSERT INTO `class` (`id_class`, `id_worker`, `id_skill`, `capacity`, `day`, `ho
 --
 
 CREATE TABLE `client` (
-  `id_client` int NOT NULL,
-  `id_person` int NOT NULL,
-  `BMI` double NOT NULL DEFAULT '0',
-  `weight` double NOT NULL DEFAULT '0',
+  `id_client` int(11) NOT NULL,
+  `id_person` int(11) NOT NULL,
+  `BMI` double NOT NULL DEFAULT 0,
+  `weight` double NOT NULL DEFAULT 0,
   `birth_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -64,8 +66,7 @@ CREATE TABLE `client` (
 --
 
 INSERT INTO `client` (`id_client`, `id_person`, `BMI`, `weight`, `birth_date`) VALUES
-(1, 4, 34.7, 88, '1994-01-08'),
-(2, 5, 21.3, 77.5, '1996-02-22');
+(1, 4, 38.9, 79.8, '2023-03-01');
 
 -- --------------------------------------------------------
 
@@ -74,9 +75,9 @@ INSERT INTO `client` (`id_client`, `id_person`, `BMI`, `weight`, `birth_date`) V
 --
 
 CREATE TABLE `log_training` (
-  `id_training` int NOT NULL,
-  `id_client` int NOT NULL,
-  `id_worker` int NOT NULL,
+  `id_training` int(11) NOT NULL,
+  `id_client` int(11) NOT NULL,
+  `id_worker` int(11) NOT NULL,
   `training_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -85,9 +86,7 @@ CREATE TABLE `log_training` (
 --
 
 INSERT INTO `log_training` (`id_training`, `id_client`, `id_worker`, `training_date`) VALUES
-(1, 1, 4, '2023-02-21'),
-(2, 1, 4, '2023-02-20'),
-(3, 2, 4, '2023-02-08');
+(1, 1, 1, '2023-03-06');
 
 -- --------------------------------------------------------
 
@@ -96,14 +95,14 @@ INSERT INTO `log_training` (`id_training`, `id_client`, `id_worker`, `training_d
 --
 
 CREATE TABLE `person` (
-  `id_person` int NOT NULL,
-  `name` varchar(70) NOT NULL,
-  `lastname` varchar(70) NOT NULL,
-  `user` varchar(70) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `email` varchar(70) NOT NULL,
-  `phone` varchar(9) NOT NULL,
-  `avatar` varchar(255) DEFAULT NULL
+  `id_person` int(11) NOT NULL,
+  `name` varchar(70) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `lastname` varchar(70) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user` varchar(70) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(70) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(9) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `avatar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -111,13 +110,10 @@ CREATE TABLE `person` (
 --
 
 INSERT INTO `person` (`id_person`, `name`, `lastname`, `user`, `password`, `email`, `phone`, `avatar`) VALUES
-(1, 'director01', 'apellidos director01', 'director01', '1234', 'director01@correo.es', '123456789', 'img'),
-(2, 'coordinador01', 'apellidos coordinador01', 'coordinador01', '1234', 'coordinador01@email.com', '987654321', 'img'),
-(3, 'monitor01', 'apellidos monitor01', 'monitor01', '1234', 'monitor01@email.com', '123456789', 'img'),
-(4, 'cliente01', 'apellidos cliente01', 'cliente01', '1234', 'cliente01@correo.es', '987654321', 'img'),
-(5, 'cliente02', 'apellidos cliente02', 'cliente02', '1234', 'cliente02@correo.es', '159357789', 'img'),
-(6, 'monitor02', 'apellidos monitor02', 'monitor02', '1234', 'monitor02@correo.es', '123456789', 'img'),
-(7, 'monitor03', 'apellidos monitor03', 'monitor03', '1234', 'monitor03@correo.es', '789456132', 'img');
+(1, 'director01', 'lastname director01', 'director01', '1234', 'director01@email.com', '123456789', 'avatar'),
+(2, 'coordinador01', 'lastname coordinador01', 'coordinador01', '1234', 'coordinador01@email.com', '789456123', 'avatar'),
+(3, 'monitor01', 'lastname monitor01', 'monitor01', '1234', 'monitor01@email.com', '789456123', 'avatar'),
+(4, 'cliente01', 'lastname cliente01', '', '', '', '', 'avatar');
 
 -- --------------------------------------------------------
 
@@ -126,9 +122,9 @@ INSERT INTO `person` (`id_person`, `name`, `lastname`, `user`, `password`, `emai
 --
 
 CREATE TABLE `skill` (
-  `id_skill` int NOT NULL,
-  `name_skill` varchar(70) NOT NULL,
-  `level` varchar(1) NOT NULL DEFAULT '1'
+  `id_skill` int(11) NOT NULL,
+  `name_skill` varchar(70) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `level` varchar(1) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -136,18 +132,12 @@ CREATE TABLE `skill` (
 --
 
 INSERT INTO `skill` (`id_skill`, `name_skill`, `level`) VALUES
-(1, 'Ciclo', '2'),
-(2, 'Zumba', '1'),
-(3, 'Pilates', '1'),
-(4, 'AquaTraining', 'P'),
-(5, 'Boxing', '3'),
-(6, 'BodyPump', '1'),
-(7, 'BodyStep', '1'),
-(8, 'Balance', '3'),
-(9, 'Fusion', '3'),
-(10, 'VitalFit', '1'),
-(11, 'Combat', '1'),
-(12, 'Strong', '1');
+(1, 'AquaZumba', '1'),
+(2, 'Boxing', '2'),
+(3, 'Attack', '3'),
+(4, 'BodyPump', '3'),
+(5, 'Pilates', '1'),
+(6, 'Yoga', '2');
 
 -- --------------------------------------------------------
 
@@ -156,8 +146,8 @@ INSERT INTO `skill` (`id_skill`, `name_skill`, `level`) VALUES
 --
 
 CREATE TABLE `type` (
-  `id_type` int NOT NULL,
-  `role` varchar(70) NOT NULL COMMENT 'Director, Coordinator, Manager, Monitor'
+  `id_type` int(11) NOT NULL,
+  `role` varchar(70) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Director, Coordinator, Manager, Monitor'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -176,9 +166,9 @@ INSERT INTO `type` (`id_type`, `role`) VALUES
 --
 
 CREATE TABLE `worker` (
-  `id_worker` int NOT NULL,
-  `id_person` int NOT NULL,
-  `hours` int NOT NULL DEFAULT '0'
+  `id_worker` int(11) NOT NULL,
+  `id_person` int(11) NOT NULL,
+  `hours` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -188,9 +178,7 @@ CREATE TABLE `worker` (
 INSERT INTO `worker` (`id_worker`, `id_person`, `hours`) VALUES
 (1, 1, 40),
 (2, 2, 40),
-(3, 3, 30),
-(4, 6, 30),
-(5, 7, 40);
+(3, 3, 30);
 
 -- --------------------------------------------------------
 
@@ -199,9 +187,9 @@ INSERT INTO `worker` (`id_worker`, `id_person`, `hours`) VALUES
 --
 
 CREATE TABLE `worker_skill` (
-  `id_worker` int NOT NULL,
-  `id_skill` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `id_worker` int(11) NOT NULL,
+  `id_skill` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `worker_skill`
@@ -212,26 +200,10 @@ INSERT INTO `worker_skill` (`id_worker`, `id_skill`) VALUES
 (1, 2),
 (1, 3),
 (1, 4),
-(1, 5),
-(1, 6),
-(1, 7),
-(1, 8),
-(1, 9),
-(1, 10),
-(1, 11),
-(1, 12),
 (2, 1),
-(2, 2),
-(2, 3),
-(2, 4),
-(2, 5),
 (2, 6),
-(2, 7),
-(2, 8),
-(2, 9),
-(2, 10),
-(2, 11),
-(2, 12);
+(3, 5),
+(3, 6);
 
 -- --------------------------------------------------------
 
@@ -240,8 +212,8 @@ INSERT INTO `worker_skill` (`id_worker`, `id_skill`) VALUES
 --
 
 CREATE TABLE `worker_type` (
-  `id_worker` int NOT NULL,
-  `id_type` int NOT NULL
+  `id_worker` int(11) NOT NULL,
+  `id_type` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -251,10 +223,7 @@ CREATE TABLE `worker_type` (
 INSERT INTO `worker_type` (`id_worker`, `id_type`) VALUES
 (1, 1),
 (2, 2),
-(2, 3),
-(3, 3),
-(4, 3),
-(5, 3);
+(3, 3);
 
 --
 -- Índices para tablas volcadas
@@ -330,43 +299,43 @@ ALTER TABLE `worker_type`
 -- AUTO_INCREMENT de la tabla `class`
 --
 ALTER TABLE `class`
-  MODIFY `id_class` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_class` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `client`
 --
 ALTER TABLE `client`
-  MODIFY `id_client` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_client` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `log_training`
 --
 ALTER TABLE `log_training`
-  MODIFY `id_training` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_training` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `person`
 --
 ALTER TABLE `person`
-  MODIFY `id_person` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_person` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `skill`
 --
 ALTER TABLE `skill`
-  MODIFY `id_skill` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_skill` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `type`
 --
 ALTER TABLE `type`
-  MODIFY `id_type` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_type` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `worker`
 --
 ALTER TABLE `worker`
-  MODIFY `id_worker` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_worker` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas

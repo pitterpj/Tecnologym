@@ -17,8 +17,9 @@
                 <div class="mb-3">
                     <label for="addWorker" class="form-label">Trabajador</label>
                     <select class="form-select form-select-lg" name="addWorker">
-                        <option selected>1</option>
-                        <option value="">otro trabajador</option>
+                        <?php foreach ($workers as $worker => $value) {
+                            echo "<option value='{$value['id_worker']}'>" . $value['name'] . "</option>";
+                        } ?>
                     </select>
                 </div>
             </div>
@@ -26,8 +27,9 @@
                 <div class="mb-3">
                     <label for="addSkill" class="form-label">Tipo de clase</label>
                     <select class="form-select form-select-lg" name="addSkill">
-                        <option selected>2</option>
-                        <option value="">1</option>
+                        <?php foreach ($datas as $dat => $value) {
+                            echo "<option value='{$value['id_skill']}'>" . $value['name_skill'] . "</option>";
+                        } ?>
                     </select>
                 </div>
             </div>

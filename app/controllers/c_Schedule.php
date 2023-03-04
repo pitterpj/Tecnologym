@@ -25,10 +25,14 @@ class c_Schedule extends Controller
     }
     public function createSchedule()
     {
+        $datos['datas'] = $this->m_schedule->showSchedule();
+        $datos['workers'] = $this->m_schedule->showName();
+
+        // var_dump($datos['workers']);
         $contenido = "v_createSchedule";
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
-        $this->loadView($contenido);
+        $this->loadView($contenido, $datos);
         $this->loadView("templates/footer");
     }
     public function managePersonal()
@@ -48,10 +52,12 @@ class c_Schedule extends Controller
         $contenido = "v_Schedule";
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
-        $this->loadView($contenido,$datos);
+        $this->loadView($contenido, $datos);
         $this->loadView("templates/footer");
     }
-    public function addClass(){
+
+    public function addClass()
+    {
         $this->m_schedule->addClass();
 
         $this->personalSchedule();

@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+SELECT name FROM `person` 
+        INNER JOIN worker ON worker.id_worker=person.id_person
+        INNER JOIN worker_type ON worker.id_worker=worker_type.id_worker
+        INNER JOIN type ON worker_type.id_type=type.id_type
+        WHERE type.id_type = 1 OR 2 OR 3
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <h1>Prueba index</h1>
-</body>
-
-</html>
+        SELECT name FROM `person` 
+        INNER JOIN worker ON worker.id_worker=person.id_person
+        INNER JOIN worker_type ON worker.id_worker=worker_type.id_worker
+        INNER JOIN type ON worker_type.id_type=type.id_type

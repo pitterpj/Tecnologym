@@ -14,7 +14,7 @@ class m_Schedule extends Model
     public function showSchedule()
     {
 
-        $snt = "SELECT * FROM `class` 
+        $snt = "SELECT * FROM class
         INNER JOIN skill ON skill.id_skill=class.id_skill
         INNER JOIN worker ON worker.id_worker=class.id_worker
         INNER JOIN person ON person.id_person=worker.id_person;";
@@ -22,9 +22,22 @@ class m_Schedule extends Model
         return $this->result();
     }
 
-    public function addClass(){
+    public function showName()
+    {
 
-        $snt="INSERT INTO `class` (`avatar`, `id_class`, `id_worker`, `id_skill`, `capacity`, `day`, `hour`) VALUES (:img, NULL, :id_worker, :id_skill, :capacity, :day, :hour);";
+        $snt = "SELECT name, worker.id_worker FROM `person` 
+        INNER JOIN worker ON worker.id_worker=person.id_person
+        INNER JOIN worker_type ON worker.id_worker=worker_type.id_worker
+        INNER JOIN type ON worker_type.id_type=type.id_type
+        WHERE type.id_type = 1 OR 2 OR 3";
+        $this->consult($snt);
+        return $this->result();
+    }
+
+    public function addClass()
+    {
+
+        $snt = "INSERT INTO `class` (`avatar`, `id_class`, `id_worker`, `id_skill`, `capacity`, `day`, `hour`) VALUES (:img, NULL, :id_worker, :id_skill, :capacity, :day, :hour);";
 
         $this->consult($snt);
         $this->link(":img", $_POST['addImg']);
