@@ -27,8 +27,9 @@ class c_Schedule extends Controller
     {
         $datos['datas'] = $this->m_schedule->showSkill();
         $datos['workers'] = $this->m_schedule->showName();
+        $datos["classes"] = $this->m_schedule->showSchedule();
 
-        // var_dump($datos['datas']);
+        //  var_dump($datos['classes']);
         $contenido = "v_createSchedule";
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
@@ -61,6 +62,16 @@ class c_Schedule extends Controller
         $this->m_schedule->addClass();
 
         $this->personalSchedule();
+    }
+
+    public function addSkill()
+    {
+        //redirect to editar personal para añadir la skill nueva
+        $datos["skills"] = $this->m_schedule->addSkill();
+
+        var_dump($datos["skills"]);
+        
+    //     $this->createSchedule();
     }
 }
 

@@ -14,7 +14,7 @@ class m_Schedule extends Model
     public function showSchedule()
     {
 
-        $snt = "SELECT class.avatar, name, name_skill, capacity, day, hour FROM class 
+        $snt = "SELECT name, name_skill, capacity, day, hour FROM class 
         INNER JOIN worker ON worker.id_worker =class.id_worker
         INNER JOIN person ON worker.id_person= person.id_person
         INNER JOIN skill ON skill.id_skill=class.id_skill";
@@ -54,15 +54,26 @@ class m_Schedule extends Model
     public function addClass()
     {
 
-        $snt = "INSERT INTO `class` (`avatar`, `id_class`, `id_worker`, `id_skill`, `capacity`, `day`, `hour`) VALUES (:img, NULL, :id_worker, :id_skill, :capacity, :day, :hour);";
+        $snt = "INSERT INTO `class` (`id_class`, `id_worker`, `id_skill`, `capacity`, `day`, `hour`) VALUES (NULL, :id_worker, :id_skill, :capacity, :day, :hour);";
 
         $this->consult($snt);
-        $this->link(":img", $_POST['addImg']);
         $this->link(":id_worker", $_POST['addWorker']);
         $this->link(":id_skill", $_POST['addSkill']);
         $this->link(":capacity", $_POST['addCapacity']);
         $this->link(":day", $_POST['addDay']);
         $this->link(":hour", $_POST['addHour']);
+        $this->launch();
+    }
+
+    public function addSkill(){
+        
+
+        $snt = "INSERT INTO `skill` (`img`, `id_skill`, `name_skill`, `level`) VALUES (:img, NULL, :name_skill, :level);";
+
+        $this->consult($snt);
+        $this->link(":img", $_FILES ['addImg']);
+        $this->link(":name_skill", $_POST['addNameSkill']);
+        $this->link(":level", $_POST['addLevel']);
         $this->launch();
     }
 }
