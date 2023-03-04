@@ -28,7 +28,7 @@ class c_Schedule extends Controller
         $datos['datas'] = $this->m_schedule->showSchedule();
         $datos['workers'] = $this->m_schedule->showName();
 
-        // var_dump($datos['workers']);
+        // var_dump($datos['datas']);
         $contenido = "v_createSchedule";
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
