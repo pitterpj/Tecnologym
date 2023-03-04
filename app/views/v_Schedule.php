@@ -25,7 +25,7 @@
                     <tbody>
                         <?php foreach ($classes as $class) : ?>
                             <tr class="">
-                                <td class="d-none d-lg-block" scope="row">Avatar</td>
+                                <td class="d-none d-lg-block" scope="row"><img width="100" src="<?= BASE_URL. $class['img'] ?>" alt=""></td>
                                 <td><?= $class['name_skill'] ?></td>
                                 <td><?= $class['name'] ?></td>
                                 <td class="d-none d-lg-block"><?= $class['capacity'] ?></td>

@@ -50,6 +50,7 @@ class c_Schedule extends Controller
 
         $datos["classes"] = $this->m_schedule->showSchedule();
 
+        //var_dump($datos["classes"]);
         $contenido = "v_Schedule";
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");

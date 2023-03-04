@@ -14,7 +14,7 @@ class m_Schedule extends Model
     public function showSchedule()
     {
 
-        $snt = "SELECT name, name_skill, capacity, day, hour FROM class 
+        $snt = "SELECT img, name, name_skill, capacity, day, hour FROM class 
         INNER JOIN worker ON worker.id_worker =class.id_worker
         INNER JOIN person ON worker.id_person= person.id_person
         INNER JOIN skill ON skill.id_skill=class.id_skill";
