@@ -14,6 +14,26 @@ class m_Schedule extends Model
     public function showSchedule()
     {
 
+        $snt = "SELECT class.avatar, name, name_skill, capacity, day, hour FROM class 
+        INNER JOIN worker ON worker.id_worker =class.id_worker
+        INNER JOIN person ON worker.id_person= person.id_person
+        INNER JOIN skill ON skill.id_skill=class.id_skill";
+        $this->consult($snt);
+        return $this->result();
+    }
+
+    public function showSkillWorker(){
+        $snt = "SELECT name_skill FROM skill 
+        INNER JOIN worker_skill ON skill.id_skill=worker_skill.id_skill
+        INNER JOIN worker ON worker.id_worker=worker_skill.id_worker
+        WHERE worker.id_worker= 1";
+        $this->consult($snt);
+        return $this->result();
+    }
+
+    public function showSkill()
+    {
+
         $snt = "SELECT name_skill FROM skill";
         $this->consult($snt);
         return $this->result();

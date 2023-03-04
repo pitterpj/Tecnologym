@@ -25,7 +25,7 @@ class c_Schedule extends Controller
     }
     public function createSchedule()
     {
-        $datos['datas'] = $this->m_schedule->showSchedule();
+        $datos['datas'] = $this->m_schedule->showSkill();
         $datos['workers'] = $this->m_schedule->showName();
 
         // var_dump($datos['datas']);
