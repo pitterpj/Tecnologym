@@ -82,5 +82,17 @@ class Model
 
         return $this->stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+    public function upImg($param, $img)
+    {
+        $date_img = new DateTime();
+        $name_img = ($img != "") ? $date_img->getTimestamp() . "_" . $_FILES['addImg']['name'] : "";
+        $tmp_img = $_FILES['addImg']['tmp_name'];
+        if ($tmp_img != "") {
+            move_uploaded_file($tmp_img, "./" . $name_img);
+        }
+
+        $this->stmt->bindParam($param, $name_img);
+    }
 } //End class Model
 ?>

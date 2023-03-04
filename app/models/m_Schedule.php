@@ -22,7 +22,8 @@ class m_Schedule extends Model
         return $this->result();
     }
 
-    public function showSkillWorker(){
+    public function showSkillWorker()
+    {
         $snt = "SELECT name_skill FROM skill 
         INNER JOIN worker_skill ON skill.id_skill=worker_skill.id_skill
         INNER JOIN worker ON worker.id_worker=worker_skill.id_worker
@@ -65,13 +66,15 @@ class m_Schedule extends Model
         $this->launch();
     }
 
-    public function addSkill(){
-        
+    public function addSkill()
+    {
+        // var_dump($_POST);
+        //var_dump($_FILES);
 
         $snt = "INSERT INTO `skill` (`img`, `id_skill`, `name_skill`, `level`) VALUES (:img, NULL, :name_skill, :level);";
 
         $this->consult($snt);
-        $this->link(":img", $_FILES ['addImg']);
+        $this->upImg(":img", $_FILES['addImg']);
         $this->link(":name_skill", $_POST['addNameSkill']);
         $this->link(":level", $_POST['addLevel']);
         $this->launch();

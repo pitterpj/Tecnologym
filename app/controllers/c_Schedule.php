@@ -69,9 +69,9 @@ class c_Schedule extends Controller
         //redirect to editar personal para añadir la skill nueva
         $datos["skills"] = $this->m_schedule->addSkill();
 
-        var_dump($datos["skills"]);
+        //var_dump($datos["skills"]);
         
-    //     $this->createSchedule();
+     $this->createSchedule();
     }
 }
 
