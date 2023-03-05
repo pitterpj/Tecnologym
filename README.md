@@ -26,85 +26,37 @@
         Extra large	        xl	            ≥1200px
         Extra extra large	xxl	            ≥1400px
 
-    - LOS MODELOS SON PARA CARGAR LAS FUNCIONES Y CONSULTAS DE LA BASE DE DATOS
+    - Al exportar de la base de Yisus a la mía: Find ‘utf8mb4_0900_ai_ci’ & replace it with ‘utf8mb4_unicode_ci’.
 
-    - Error de base de datos: Find ‘utf8mb4_0900_ai_ci’ & replace it with ‘utf8mb4_unicode_ci’.
-
-UPDATE worker 
-INNER JOIN person ON person.id_person=worker.id_person
-SET `hours` = '39',`name` = 'monitor003', `lastname` = 'apellidos', `email` = 'monitor003@correo.es', `phone` = '789456131' WHERE `worker`.`id_worker` = 5; 
     
 
 ## To Do:
-    
-    - [X] Poner logo al title
-
-    - Prueba
 
     - Sweet aler x2 en header
 
-    - m_Schedule añadir img cambiar sentencia
-
-    - off canvas 
-
-    - full calendar
-
     - Datatables
 
-    - card decks
+    - Borrar iconos que sobran
 
-    -bs5-card para administrar personal si eres el jefazo podrás cambiar entre areas del gym
+    - Cambiar la landing con img de la aplicación
 
-    - Crear la tabla meses y crear un horario anual¿?
+    - Card decks para mostrar a los trabajadores y editarlos.
 
-    - Passwordverify en m_Users
+    - Vista del horario por filtro día/mes/año
+
+    - Passwordverify en m_Users o algo para el hash de la contraseña
     
-    - Poner misma letra al resto
+    - Ver que todo tiene la misma fuente
 
-    - he creado carpetas css y js
+    - Repasar código CSS
 
     - Añadir descripcion seo
 
-    - Logo dispositivo movil hacer pequeño
-
-    - style landig responsive logo reducido en js
-
-    - Al crear templates mover archivo css(poner ruta)
-
-    - Links font awesmome fuera
-
-    - EN cada carpeta una vista de acción general en fución de quien puede por rango de proiridades
-
-    - Modal Sign In
-
-    - Botón en v_login sign up modificar y descomentar para que haga submit
-
     - Enviar correo autenticacion
-
-    - cambiar directorios assets
-
-    - Elegir letra
-
-    - Poner flecha que sube al final de la landing
-
-    - Ocultar Worker Name and Role Worker
 
     - CSS CTAs quitar
 
     - Quitar i de CSS
-
-    - Cambiar icono return por uno animado
-
-    - Cuando está en móvil mal las opciones hover a
-
-    - Revisar imágenes fluidas
-
-    - 
-.fondo-2{
-    background-color: #289bbe7a;
-}
-
-    - BG IMAGE CON OPACITY
 
     - Clase active por arreglar css 228
 
