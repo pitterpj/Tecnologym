@@ -1,8 +1,7 @@
 <!-- Pedro.J (Pitter) -->
 <!-- https://github.com/pitterpj -->
 
-<!-- Left Menu that contracts and header with collapsing buttons -->
-
+<!--==== Left Menu that contracts and header with collapsing buttons ====-->
 <body>
     <div class="wrapper">
         <!--====== SIDEBAR ======-->
@@ -38,7 +37,7 @@
 
             <!--====== SIDEBAR OPTIONS======-->
             <ul class="list-unstyled">
-                <li class="active"> <!--====== icon home ======-->
+                <li class="active"> <!--====== Icon home ======-->
                     <a href="<?= BASE_URL . "c_Users/dashboard" ?>">
                         <i class="fas fa-home"><img src="<?= BASE_URL ?>app\assets\img\icons\home_gym.png" width="50" alt="Inicio"></i>
                         <span class="disappear">Inicio</span>
@@ -149,9 +148,6 @@
                     <button class="btn d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"><img src="<?= BASE_URL ?>app\assets\img\icons\avatar.png" width="35" alt="X"></i>
                     </button>
-                    <!-- <div class="collapse justify-content-end navbar-collapse">
-                        <h2>Bienvenido <?= $_SESSION['session']['name']; ?></h2>
-                    </div> -->
 
                     <!--====== OPTIONS RIGHT BUTTON COLLAPSE ======-->
                     <div class="collapse justify-content-end navbar-collapse" id="navbarSupportedContent">

@@ -7,7 +7,7 @@
 
     <div class="container col-lg-5 col-md-9 col-sm-8 fondo-2 shadow p-3 mb-5 rounded">
         <div class="card h-100">
-            <div class="card-header text-center">Horario personal</div>
+            <div class="card-header text-center">Horario personal (D)</div>
             <div class="card-body">
                 <h4 class="card-title text-center">Hoy</h4>
             </div>

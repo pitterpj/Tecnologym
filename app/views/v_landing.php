@@ -42,7 +42,7 @@
 
 <!--====== MODAL LOGIN ======-->
 <div class="modal fade" id="modalLogin" tabindex="-1" aria-hidden="true">
-    <!-- The modal needs me to place it outside the body to let me interact. Problems with the z-index-->
+    <!-- Extra info: The modal needs me to place it outside the body to let me interact. Problems with the z-index-->
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -53,28 +53,19 @@
             </div>
             <div class="modal-body">
                 <form action="<?= BASE_URL . "c_Users/authenticate" ?>" method="POST">
-                    <div class="form-group"> <!--== USER ==-->
+                    <div class="form-group"> <!--==== USER ====-->
                         <label class="control-label">Usuario o email: </label>
                         <div>
                             <input type="text" class="form-control input-lg" name="user" placeholder="Nombre de Usuario o email" value="director01">
                         </div>
                     </div>
-                    <div class="form-group"><!--== PASSWORD ==-->
+                    <div class="form-group"><!--==== PASSWORD ====-->
                         <label class="control-label">Contraseña: </label>
                         <div>
                             <input type="password" class="form-control input-lg" name="password" placeholder="********" value="1234">
                         </div>
                     </div>
-                    <div class="form-group"><!--== REMEMBER ME ==-->
-                        <div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="remember"> Recuérdame
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group"><!--== SUBMIT ==-->
+                    <div class="form-group"><!--==== REMEMBER ME =======-->
                         <div>
                             <button type="submit" class="btn btn-success">Acceder</button>
 
@@ -82,7 +73,7 @@
                         </div>
                     </div>
                 </form>
-            </div>
+            </div> <!-- End modal body -->
         </div>
     </div>
 </div><!--====== END MODAL ======-->
@@ -144,8 +135,6 @@
                                         <a class="page-scroll" href="#download">App</a>
                                     </li>
                                     <li class="nav-item">
-                                        <!-- <a class="page-scroll" href="<?= BASE_URL ?>c_Users">Accede</a> -->
-                                        <!-- Button trigger modal -->
                                         <a type="button" data-toggle="modal" data-target="#modalLogin">Accede</a>
                                     </li>
                                 </ul>
@@ -200,14 +189,12 @@
 
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single_features mt-30 features_1 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
-
                         <img src="<?= BASE_URL ?>app\assets\img\icons\calendar.gif" alt="" srcset="">
                         <div class="features_content">
                             <h4 class="features_title">Creador de Horarios</h4>
                             <p>Podrás gestionar las clases de tu gimnasio o centro deportivo semanal, mensual e incluso anualmente.</p>
                         </div>
-
-                    </div> <!-- single featuresow -->
+                    </div> <!-- single features -->
                 </div>
 
                 <div class="col-lg-4 col-md-7 col-sm-8">
@@ -217,7 +204,7 @@
                             <h4 class="features_title">Entrenamientos Personales</h4>
                             <p>Cada entrenador podrá llevar un seguimiento de la alimentación y las tablas de cada usuario desde un solo dispositivo</p>
                         </div>
-                    </div> <!-- single featuresow -->
+                    </div> <!-- single features -->
                 </div>
 
                 <div class="col-lg-4 col-md-7 col-sm-8">
@@ -227,7 +214,7 @@
                             <h4 class="features_title">Soporte Técnico</h4>
                             <p>Administración total de tu centro o tu perfil. Ya sea para organizaciones como para profesionales individuales.</p>
                         </div>
-                    </div> <!-- single featuresow -->
+                    </div> <!-- single features -->
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
@@ -243,6 +230,7 @@
                         <img class="dots" src="<?= BASE_URL ?>app\assets\libs\landing\images\dots.svg" alt="dots">
                     </div> <!-- about image -->
                 </div>
+
                 <div class="col-lg-6">
                     <div class="about_content mt-45 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
                         <div class="section_title">
@@ -250,9 +238,9 @@
                             <p>Si deseas gestionar tu gimnasio o tu centro, así como sus horarios o tu seguimiento de entrenamientos personales, esta aplciación te ayudará a todo eso y más. Desde la gestión interna del centro a la gestión personal tanto para entrenamientos como para horarios distribuidos en diferentes salas en función de las necesidades de organizaciones o individuales.</p>
                         </div>
                         <a class="main-btn" href="#">Descubrelo</a>
-
                     </div> <!-- about image -->
                 </div>
+
             </div> <!-- row -->
         </div> <!-- container -->
     </section><!--====== ABOUT PART ENDS ======-->
@@ -269,6 +257,7 @@
                 </div>
             </div> <!-- row -->
             <div class="row justify-content-center">
+
                 <!--====== Training ======-->
                 <div class="col-lg-4 col-md-8 col-sm-10">
                     <div class="single_pricing text-center pricing_color_1 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
@@ -290,6 +279,7 @@
                         </div>
                     </div> <!-- single pricing -->
                 </div>
+
                 <!--====== Gym ======-->
                 <div class="col-lg-4 col-md-8 col-sm-10">
                     <div class="single_pricing text-center pricing_active pricing_color_2 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
@@ -311,6 +301,7 @@
                         </div>
                     </div> <!-- single pricing -->
                 </div>
+
                 <!--====== Organization ======-->
                 <div class="col-lg-4 col-md-8 col-sm-10">
                     <div class="single_pricing text-center pricing_color_3 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
@@ -332,6 +323,7 @@
                         </div>
                     </div> <!-- single pricing -->
                 </div>
+
             </div> <!-- row -->
         </div> <!-- container -->
     </section><!--====== PRICNG PART ENDS ======-->
@@ -418,7 +410,6 @@
     <script src="<?= BASE_URL ?>app\assets\libs\landing\js\popper.min.js"></script>
     <script src="<?= BASE_URL ?>app\assets\libs\landing\js\bootstrap.4.5.2.min.js"></script>
 
-
     <!--====== Scrolling Nav js ======-->
     <script src="<?= BASE_URL ?>app\assets\libs\landing\js\jquery.easing.min.js"></script>
     <script src="<?= BASE_URL ?>app\assets\libs\landing\js\scrolling-nav.js"></script>
@@ -429,8 +420,5 @@
     <!--====== Main js ======-->
     <script src="<?= BASE_URL ?>app\assets\libs\landing\js\main.js"></script>
 
-
-
 </body>
-
 </html>

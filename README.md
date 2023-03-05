@@ -33,6 +33,10 @@
 
     - c_Dashboard to delete
 
+    - Hacer los horarios (v_Schedule) responsives
+
+    - en v_Schedule mostrar si en el header si es horario u horario personal
+
     - En c_Schedule en addClass cuando añade hacer redirección por si queremos añadirla a los coachs la nueva habiliad.
 
     - Sweet aler x2 en header
@@ -40,6 +44,8 @@
     - En c_Users en authenticate cuando no existe el user guarda el error que no muestra. Hacer que lo muestre
 
     - Datatables
+
+    - v_CreateSchedule solo muestre las skill del trabajador seleccionado
 
     - c_PersonalTraining que solo muestre el entrenador logeado
 

@@ -2,14 +2,13 @@
 <!-- https://github.com/pitterpj -->
 
 
-<!-- TO DO tiene que seleccionar solo las clases que pueda dar el trabajador seleccionado arriba  -->
-
+<!-- TODO tiene que seleccionar solo las clases que pueda dar el trabajador seleccionado arriba  -->
 
 <!--====  CREATE CLASS====-->
 <div class="row container-fluid justify-content-around ">
 
     <div class="container card col-lg-6 col-md-9 col-sm-8 fondo-2 shadow p-3 mb-5 rounded">
-        <div class="card-header text-center">
+        <div class="text-center">
             <h3>Crear Clase</h3>
         </div>
         <form action="<?= BASE_URL . 'c_Schedule/addClass' ?>" method="post">
@@ -31,7 +30,7 @@
             </div>
             <div class="mb-3">
                 <label for="addCapacity" class="form-label">Capacidad de la clase:</label>
-                <input type="number" class="form-control" name="addCapacity" aria-describedby="helpId" placeholder="Introduce un número">
+                <input type="number" class="form-control" name="addCapacity" aria-describedby="helpId" placeholder="12">
             </div>
             <div class="mb-3">
                 <label for="addDay" class="form-label">Día:</label>
@@ -42,8 +41,7 @@
                 <input type="time" class="form-control" name="addHour" aria-describedby="helpId">
             </div>
             <div class="d-flex justify-content-around ">
-                <button type="submit" class="btn btn-primary">Crear</button>
-                <a name="btnCancel" class="btn btn-danger" href="<?= BASE_URL ?>c_Users/managePersonal" role="button">Cancelar</a>
+                <button type="submit" class="btn btn-primary">Añadir Clase</button>
             </div>
         </form>
     </div>
@@ -61,38 +59,31 @@
                         <input type="file" class="form-control" name="addImg" aria-describedby="helpId">
                     </div>
                     <div class="mb-3">
-                        <label for="addNameSkill" class="form-label">Nombre de la habilidad:</label>
-                        <input type="text" class="form-control" name="addNameSkill" aria-describedby="helpId" placeholder="Nombre de la Actividad">
+                        <label for="addNameSkill" class="form-label">Nombre de la actividad:</label>
+                        <input type="text" class="form-control" name="addNameSkill" aria-describedby="helpId" placeholder="Nombre de la actividad">
                     </div>
                     <div class="mb-3">
                         <label for="addLevel" class="form-label">Nivel de la Actividad:</label>
                         <input type="text" class="form-control" name="addLevel" aria-describedby="helpId" placeholder="Nivel de la actividad">
                     </div>
                     <div class="d-flex justify-content-around ">
-                        <button type="submit" class="btn btn-primary">Crear</button>
-                        <a name="btnCancel" class="btn btn-danger" href="<?= BASE_URL ?>c_Users/managePersonal" role="button">Cancelar</a>
+                        <button type="submit" class="btn btn-primary">Añadir Actividad</button>
                     </div>
                 </form>
             </div>
         </div>
 
         <!--==== BTN SCHEDULE COMPLETE ====-->
-        <div class="row fondo-2 shadow p-3 mb-5 rounded">
-            <div class=" col-lg-12 col-md-9 col-sm-8 text-center ">
+        <div class="row fondo-2 shadow p-3 mb-5 rounded text-center justify-content-around">
+            <div class=" col-lg-12 col-md-9 col-sm-8  ">
                 <div class="card-header ">
                     <h3>Horario completo del centro</h3>
                 </div>
                 <div class="card-body">
-                    <a name="" id="" class="btn btn-primary" href="#" role="button">Ver horario completo</a>
+                    <a class="btn btn-primary" href="<?= BASE_URL . "c_Schedule/completeSchedule" ?>" role="button">Ver horario completo</a>
                 </div>
             </div>
         </div>
 
     </div>
 </div>
-
-<script>
-    if ($_POST) {
-        swal("Hello world!");
-    }
-</script>

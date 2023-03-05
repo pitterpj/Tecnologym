@@ -23,6 +23,8 @@ PARA INSERTAR MÁS ADELANTE
 
 --------------------------------------------------------
 
+BOTON Cancelar
+ <!-- <a name="btnCancel" class="btn btn-danger" href="<?= BASE_URL ?>c_Users/managePersonal" role="button">Cancelar</a> -->
 
 --------------------------------------------------------
 
