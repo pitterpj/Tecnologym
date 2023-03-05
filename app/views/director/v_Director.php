@@ -22,7 +22,7 @@
         <!-- row 2 -->
         <div class="row fondo-2 shadow p-3 mb-5 rounded">
             <!-- col2.1 -->
-            <div class="col-12 card  ">
+            <div class="col-12 card">
                 <div class="card-header text-center">
                     Entrenamientos personales esta semana
                 </div>
@@ -31,10 +31,10 @@
                     <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam dolor laboriosam fugit omnis eius aut? Accusamus odio expedita dolore, hic veniam aliquam doloremque laborum eveniet? Repellendus labore accusamus rerum aperiam?</p>
                 </div>
             </div>
-
-
-
         </div> <!-- end row2 -->
+
+
+
         <div class="row fondo-2 shadow p-3 mb-5 rounded">
             <!-- col.2.2 -->
             <div class="col-12 card ">
