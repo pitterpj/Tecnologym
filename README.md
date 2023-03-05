@@ -41,6 +41,8 @@ SET `hours` = '39',`name` = 'monitor003', `lastname` = 'apellidos', `email` = 'm
 
     - Prueba
 
+    - Sweet aler x2 en header
+
     - m_Schedule añadir img cambiar sentencia
 
     - off canvas 

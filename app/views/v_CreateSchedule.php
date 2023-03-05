@@ -7,6 +7,7 @@
 
 <!--====  CREATE CLASS====-->
 <div class="row container-fluid justify-content-around ">
+
     <div class="container card col-lg-6 col-md-9 col-sm-8 fondo-2 shadow p-3 mb-5 rounded">
         <div class="card-header text-center">
             <h3>Crear Clase</h3>
@@ -48,7 +49,6 @@
     </div>
 
     <!--==== CREATE SKILL ====-->
-
     <div class="container col-lg-5 col-md-9 col-sm-8  ">
         <div class="row fondo-2 shadow p-3 mb-5 rounded">
             <div class="col-12">
@@ -76,26 +76,23 @@
             </div>
         </div>
 
-
-
+        <!--==== BTN SCHEDULE COMPLETE ====-->
         <div class="row fondo-2 shadow p-3 mb-5 rounded">
-
             <div class=" col-lg-12 col-md-9 col-sm-8 text-center ">
-
                 <div class="card-header ">
                     <h3>Horario completo del centro</h3>
-
                 </div>
-                <div class="card-body"> 
+                <div class="card-body">
                     <a name="" id="" class="btn btn-primary" href="#" role="button">Ver horario completo</a>
-            </div>
-
-
+                </div>
             </div>
         </div>
+
     </div>
 </div>
 
 <script>
-    swal("Hello world!");
+    if ($_POST) {
+        swal("Hello world!");
+    }
 </script>

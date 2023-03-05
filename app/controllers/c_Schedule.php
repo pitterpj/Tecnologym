@@ -58,16 +58,10 @@ class c_Schedule extends Controller
         $this->loadView("templates/footer");
     }
 
-    // public function addClass()
-    // {
-    //     $this->m_schedule->addClass();
-
-    //     $this->personalSchedule();
-    // }
-
     public function addClass()
     {
         $this->m_schedule->addClass();
+        $this->personalSchedule();
     }
 
     public function addSkill()
@@ -78,6 +72,20 @@ class c_Schedule extends Controller
         //var_dump($datos["skills"]);
 
         $this->createSchedule();
+    }
+
+    public function showPersonalSchedule()
+    {
+        $datos["personalSchedule"] = $this->m_schedule->showPersonalSchedule($_SESSION['session']['id_person']);
+        
+        //var_dump($datos["personalSchedule"]);
+        $contenido = "v_PersonalSchedule";
+        $this->loadView("templates/header");
+        $this->loadView("templates/sidebar");
+        $this->loadView($contenido, $datos);
+        $this->loadView("templates/footer");
+
+
     }
 }
 

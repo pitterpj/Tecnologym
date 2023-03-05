@@ -29,6 +29,7 @@ class c_Users extends Controller
         $role = $this->m_Users->role($_REQUEST['user']);
         if ($row) {
             $_SESSION['session'] = [
+                'id_person'=> $row['id_person'],
                 'user' => $row['user'],
                 'password' => $row['password'],
                 'name' => $row['name'],

@@ -55,7 +55,7 @@ class m_Schedule extends Model
     public function addClass()
     {
 
-       // var_dump($_POST);
+        // var_dump($_POST);
         $snt = "INSERT INTO `class` (`id_class`, `id_worker`, `id_skill`, `capacity`, `day`, `hour`) VALUES (NULL, :id_worker, :id_skill, :capacity, :day, :hour);";
 
         $this->consult($snt);
@@ -79,6 +79,18 @@ class m_Schedule extends Model
         $this->link(":name_skill", $_POST['addNameSkill']);
         $this->link(":level", $_POST['addLevel']);
         $this->launch();
+    }
+
+    public function showPersonalSchedule($id_person)
+    {
+
+        $snt = "SELECT img, name, name_skill, level, capacity, day, hour FROM `class` 
+        INNER JOIN skill ON skill.id_skill = class.id_skill
+        INNER JOIN worker ON worker.id_worker = class.id_worker
+        INNER JOIN person ON worker.id_person = person.id_person
+        WHERE person.id_person = $id_person";
+        $this->consult($snt);
+        return $this->result();
     }
 }
 

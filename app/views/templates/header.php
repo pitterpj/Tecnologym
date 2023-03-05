@@ -25,5 +25,6 @@
 
     <!--====== SweetAlert ======-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
