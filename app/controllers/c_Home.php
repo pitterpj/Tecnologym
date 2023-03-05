@@ -7,8 +7,10 @@ class c_Home extends Controller
     public function __construct()
     {
     }
+
     public function index()
     {
         $this->loadView("v_landing");
     }
 }
+?>

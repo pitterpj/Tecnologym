@@ -32,7 +32,13 @@
 
 ## To Do:
 
+    - c_Dashboard to delete
+
+    - En c_Schedule en addClass cuando añade hacer redirección por si queremos añadirla a los coachs la nueva habiliad.
+
     - Sweet aler x2 en header
+
+    - En c_Users en authenticate cuando no existe el user guarda el error que no muestra. Hacer que lo muestre
 
     - Datatables
 

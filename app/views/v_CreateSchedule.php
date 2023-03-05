@@ -24,7 +24,7 @@
             <div class="mb-3">
                 <label for="addSkill" class="form-label">Selecciona Actividad:</label>
                 <select class="form-select form-select-lg" name="addSkill">
-                    <?php foreach ($datas as $dat => $value) {
+                    <?php foreach ($skills as $skill => $value) {
                         echo "<option value='" . $value['id_skill'] . "'>" . $value['name_skill'] . "</option>";
                     }; ?>
                 </select>

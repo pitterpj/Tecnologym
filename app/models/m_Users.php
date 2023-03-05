@@ -47,8 +47,8 @@ class m_Users extends Model
         INNER JOIN type ON type.id_type=worker_type.id_type
         WHERE role != 'Director'";
         $this->consult($snt);
-        $row = $this->result();
-        return $row;
+        return $this->result();
+        
     }
 
     public function showWorker($id_worker)

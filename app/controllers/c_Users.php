@@ -1,106 +1,104 @@
 <!-- Pedro.J (Pitter) -->
 <!-- https://github.com/pitterpj -->
 
-
-
 <?php
 class c_Users extends Controller
 {
-
-    private $m_Users; //Property to instantiate the model
+    private $m_users; //Property to instantiate the model
 
     public function __construct()
     {
-        $this->m_Users = $this->loadModel("m_Users");
+        $this->m_users = $this->loadModel("m_Users");
     }
 
     public function index()
     {
-        // $this->loadView("templates/header");
-        // $this->loadView("templates/sidebar");
-        // $this->loadView("v_Dashboard");
-        // $this->loadView("templates/footer");
     }
 
+    // Initialise session and authenticate user
     public function authenticate()
     {
-        //We recibed the user and pass and send to m_Users
-        $row = $this->m_Users->authenticate($_REQUEST['user'], $_REQUEST['password']);
-        $role = $this->m_Users->role($_REQUEST['user']);
-        if ($row) {
+        $user = $this->m_users->authenticate($_REQUEST['user'], $_REQUEST['password']);
+        $role = $this->m_users->role($_REQUEST['user']);
+
+        if ($user) {
             $_SESSION['session'] = [
-                'id_person'=> $row['id_person'],
-                'user' => $row['user'],
-                'password' => $row['password'],
-                'name' => $row['name'],
-                'lastname' => $row['lastname'],
-                'email' => $row['email'],
-                'phone' => $row['phone'],
-                'avatar' => $row['avatar'],
+                'id_person' => $user['id_person'],
+                'user' => $user['user'],
+                'password' => $user['password'],
+                'name' => $user['name'],
+                'lastname' => $user['lastname'],
+                'email' => $user['email'],
+                'phone' => $user['phone'],
+                'avatar' => $user['avatar'],
                 'role' => $role['role']
             ];
             header("Location:" . BASE_URL . "c_Users/dashboard");
         } else {
-            //Si no existe error y al login con mensaje de error
+            // TODO HACER QUE MUESTRE EL ERROR EN ALGÚN LADO
             $_SESSION['errorMessage'] = 'Usuario o contraseña incorrectos';
             header("Location:" . BASE_URL);
         }
     }
 
+    // Display the home page of each coach according to their role
     public function dashboard()
     {
-        define("ROLE",  $_SESSION['session']['role']);
-
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
-        switch (ROLE) {
+        switch ($_SESSION['session']['role']) {
             case "Director":
                 $this->loadView("/director/v_Director");
                 break;
             case "Monitor":
                 $this->loadView("/monitor/v_Monitor");
                 break;
-            case "Corrdinador":
+            case "Coordinador":
                 $this->loadView("/manager/v_Manager");
                 break;
         };
         $this->loadView("templates/footer");
     }
 
+    // Showthe coachs to update them
     public function managePersonal()
     {
-        $datos["workers"]=$this->m_Users->showWorkers();
+        $datos["workers"] = $this->m_users->showWorkers();
 
+        $contenido = "v_ManagePersonal";
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
-        $this->loadView("v_ManagePersonal",$datos);
+        $this->loadView($contenido, $datos);
         $this->loadView("templates/footer");
     }
 
-    public function updateWorkers($id_worker){
-        $datos["worker"]=$this->m_Users->showWorker($id_worker[0]);
-        $datos["roles"]=$this->m_Users->selectRoles();
-        
+    // Show worker to update
+    public function updateWorkers($id_worker)
+    {
+        $datos["worker"] = $this->m_users->showWorker($id_worker[0]);
+        $datos["roles"] = $this->m_users->selectRoles();
 
+        $contenido = "v_UpdateWorker";
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
-        $this->loadView("v_UpdateWorker",$datos);
+        $this->loadView($contenido, $datos);
         $this->loadView("templates/footer");
     }
 
-    public function updateWorker($id_worker){
-
-        $this->m_Users->updateWorker($id_worker[0],$_POST);
+    // Update worker
+    public function updateWorker($id_worker)
+    {
+        $this->m_users->updateWorker($id_worker[0], $_POST);
         $this->managePersonal();
     }
 
-    public function addWorker(){
+    // TODO funcion para añadir trabajador
+    public function addWorker()
+    {
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
         $this->loadView("v_AddWorker");
         $this->loadView("templates/footer");
     }
-
-}
-
+} //End c_Users
 ?>

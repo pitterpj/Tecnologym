@@ -15,39 +15,26 @@ class c_Schedule extends Controller
     public function index()
     {
     }
-    public function schedule()
-    {
-        $contenido = "monitor/v_Schedule";
-        $this->loadView("templates/header");
-        $this->loadView("templates/sidebar");
-        $this->loadView($contenido);
-        $this->loadView("templates/footer");
-    }
+
+    //create schedules of each coach
     public function createSchedule()
     {
-        $datos['datas'] = $this->m_schedule->showSkill();
+        $datos['skills'] = $this->m_schedule->showSkill();
         $datos['workers'] = $this->m_schedule->showName();
-        $datos["classes"] = $this->m_schedule->showSchedule();
+        //$datos["classes"] = $this->m_schedule->showSchedule();
 
-        //   var_dump($datos['datas']);
+        // var_dump($datos['datas']);
+
         $contenido = "v_createSchedule";
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
         $this->loadView($contenido, $datos);
         $this->loadView("templates/footer");
     }
-    public function managePersonal()
-    {
-        $contenido = "director/v_managePersonal";
-        $this->loadView("templates/header");
-        $this->loadView("templates/sidebar");
-        $this->loadView($contenido);
-        $this->loadView("templates/footer");
-    }
 
-    public function personalSchedule()
+    //Display the complete calendar of all coaches
+    public function completeSchedule()
     {
-
         $datos["classes"] = $this->m_schedule->showSchedule();
 
         //var_dump($datos["classes"]);
@@ -58,22 +45,23 @@ class c_Schedule extends Controller
         $this->loadView("templates/footer");
     }
 
+    // Add a new class to the db
     public function addClass()
     {
         $this->m_schedule->addClass();
-        $this->personalSchedule();
+        $this->completeSchedule();
     }
 
+    // Add a new skill to the db
+    // TODO por redireccionar al crear una nueva skill para juntarla con el monitor
     public function addSkill()
     {
-        //redirect to editar personal para añadir la skill nueva
-        $datos["skills"] = $this->m_schedule->addSkill();
-
-        //var_dump($datos["skills"]);
+        $this->m_schedule->addSkill();
 
         $this->createSchedule();
     }
 
+    // Display the personal schedule for coach
     public function showPersonalSchedule()
     {
         $datos["personalSchedule"] = $this->m_schedule->showPersonalSchedule($_SESSION['session']['id_person']);
@@ -84,10 +72,6 @@ class c_Schedule extends Controller
         $this->loadView("templates/sidebar");
         $this->loadView($contenido, $datos);
         $this->loadView("templates/footer");
-
-
     }
-}
-
-
+}//End class c_Schedule
 ?>

@@ -18,7 +18,7 @@
                 <input type="text" class="form-control" name="updateLastname" aria-describedby="helpId" value="<?= $worker['lastname'] ?>">
             </div>
             <div class="mb-3">
-                <label for="updateRole" class="form-label">City</label>
+                <label for="updateRole" class="form-label">Puesto:</label>
                 <select class="form-select" name="updateRole">
                     <option selected value="3">Monitor</option>
                     <option value="2">Coordinador</option>
