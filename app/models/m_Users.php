@@ -3,15 +3,14 @@
 
 
 <?php
-
 class m_Users extends Model
 {
-
     public function __construct()
     {
         parent::__construct();
     }
 
+    // Search in db for a user and its pass
     public function authenticate($user, $password)
     {
         $snt = "SELECT * FROM person WHERE user=:user OR email=:user;";
@@ -27,20 +26,19 @@ class m_Users extends Model
         return $row;
     }
 
+    // Returns the role of authenticated person
     public function role($user)
     {
-        //Return of rol of person authenticate
         $snt = "SELECT type.role AS role FROM type INNER JOIN worker_type ON worker_type.id_type=type.id_type INNER JOIN worker ON worker_type.id_worker=worker.id_worker INNER JOIN person ON person.id_person=worker.id_person WHERE user=:user;";
         $this->consult($snt);
         $this->link(":user", $user);
-        $row = $this->row();
-        return $row;
+        return $this->row();
     }
 
-
+    // Show all workers who are not Directors
     public function showWorkers()
     {
-        //Show all workers that not be a Director
+
         $snt = " SELECT * FROM person 
         INNER JOIN worker ON person.id_person=worker.id_person 
         INNER JOIN worker_type ON worker_type.id_worker=worker.id_worker
@@ -48,12 +46,11 @@ class m_Users extends Model
         WHERE role != 'Director'";
         $this->consult($snt);
         return $this->result();
-        
     }
 
+    // Show a coach to be updated later
     public function showWorker($id_worker)
     {
-        //Show all workers that not be a Director
         $snt = " SELECT * FROM person 
         INNER JOIN worker ON person.id_person=worker.id_person 
         INNER JOIN worker_type ON worker_type.id_worker=worker.id_worker
@@ -61,10 +58,10 @@ class m_Users extends Model
         WHERE worker.id_worker= :id_worker";
         $this->consult($snt);
         $this->link(":id_worker", $id_worker);
-        $row = $this->row();
-        return $row;
+        return $this->row();
     }
 
+    // Easy, update worker
     public function updateWorker($id_worker, $datos)
     {
         $snt = "UPDATE worker SET hours = :hours WHERE id_worker = :id_worker";
@@ -93,6 +90,7 @@ class m_Users extends Model
         $this->launch();
     }
 
+    // Display all roles in the db
     public function selectRoles()
     {
         $snt = "SELECT role FROM type";
@@ -100,6 +98,4 @@ class m_Users extends Model
         return $this->result();
     }
 } //End m_Users
-
-
 ?>

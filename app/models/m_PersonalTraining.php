@@ -3,31 +3,20 @@
 
 
 <?php
-
 class m_PersonalTraining extends Model
 {
-
     public function __construct()
     {
         parent::__construct();
     }
 
+    // Show all personal Trainings
+    // TODO hacer que solo muestre el del entrenador que está logeado
     public function showPersonalTraining()
     {
         $snt = "SELECT * FROM person INNER JOIN client ON client.id_person = person.id_person;";
         $this->consult($snt);
-        $row = $this->result();
-        return $row;
+        return $this->result();
     }
-
-    public function showLogTraining($id_person)
-    {
-        $snt = "SELECT * FROM `log_training` WHERE id_worker=4";
-        $this->consult($snt);
-        //$this->link(":id_worker", $id_person);
-        $row = $this->result();
-        return $row;
-    }
-}
-
+} //End m_PersonalTraining
 ?>

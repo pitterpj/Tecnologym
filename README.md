@@ -1,5 +1,7 @@
 # TECNOLOGYM
+
 ## Author: Pedro.J (Pitter)
+
 ### https://github.com/pitterpj
 
 ### Organization of files:
@@ -9,7 +11,6 @@
     - System->core // This folder contains the core of the model-view-controller (DO NOT TOUCH).
 
     - App-> Folders of the application to be build.
-
 
 ## Personal Notes:
 
@@ -28,8 +29,6 @@
 
     - Al exportar de la base de Yisus a la mía: Find ‘utf8mb4_0900_ai_ci’ & replace it with ‘utf8mb4_unicode_ci’.
 
-    
-
 ## To Do:
 
     - c_Dashboard to delete
@@ -42,7 +41,13 @@
 
     - Datatables
 
+    - c_PersonalTraining que solo muestre el entrenador logeado
+
     - Borrar iconos que sobran
+
+    - m_Users updateWorker se puede mejorar la consulta
+
+    - En m_Users authenticate dejar que lo haga con el email
 
     - Cambiar la landing con img de la aplicación
 
@@ -51,7 +56,7 @@
     - Vista del horario por filtro día/mes/año
 
     - Passwordverify en m_Users o algo para el hash de la contraseña
-    
+
     - Ver que todo tiene la misma fuente
 
     - Repasar código CSS
@@ -67,6 +72,3 @@
     - Clase active por arreglar css 228
 
     - Shadows: https://getbootstrap.com/docs/4.1/utilities/shadows/
-
-
-

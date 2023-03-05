@@ -5,15 +5,14 @@
 <?php
 class m_Schedule extends Model
 {
-
     public function __construct()
     {
         parent::__construct();
     }
 
-    public function showSchedule()
+    // Display the schedule of all coaches
+    public function completeSchedule()
     {
-
         $snt = "SELECT img, name, name_skill, level, capacity, day, hour FROM `class` 
         INNER JOIN skill ON skill.id_skill = class.id_skill
         INNER JOIN worker ON worker.id_worker = class.id_worker
@@ -22,27 +21,17 @@ class m_Schedule extends Model
         return $this->result();
     }
 
-    public function showSkillWorker()
-    {
-        $snt = "SELECT name_skill FROM skill 
-        INNER JOIN worker_skill ON skill.id_skill=worker_skill.id_skill
-        INNER JOIN worker ON worker.id_worker=worker_skill.id_worker
-        WHERE worker.id_worker= 1";
-        $this->consult($snt);
-        return $this->result();
-    }
-
+    // Display all available skills 
     public function showSkill()
     {
-
         $snt = "SELECT name_skill, id_skill FROM skill";
         $this->consult($snt);
         return $this->result();
     }
 
+    // Show the all worker names
     public function showName()
     {
-
         $snt = "SELECT name, worker.id_worker FROM `person` 
         INNER JOIN worker ON worker.id_worker=person.id_person
         INNER JOIN worker_type ON worker.id_worker=worker_type.id_worker
@@ -52,10 +41,9 @@ class m_Schedule extends Model
         return $this->result();
     }
 
+    // Insert class in the db
     public function addClass()
     {
-
-        // var_dump($_POST);
         $snt = "INSERT INTO `class` (`id_class`, `id_worker`, `id_skill`, `capacity`, `day`, `hour`) VALUES (NULL, :id_worker, :id_skill, :capacity, :day, :hour);";
 
         $this->consult($snt);
@@ -67,6 +55,7 @@ class m_Schedule extends Model
         $this->launch();
     }
 
+    // Insert skill in the db
     public function addSkill()
     {
         // var_dump($_POST);
@@ -81,9 +70,9 @@ class m_Schedule extends Model
         $this->launch();
     }
 
+    //Show the personal schedule of one coach
     public function showPersonalSchedule($id_person)
     {
-
         $snt = "SELECT img, name, name_skill, level, capacity, day, hour FROM `class` 
         INNER JOIN skill ON skill.id_skill = class.id_skill
         INNER JOIN worker ON worker.id_worker = class.id_worker
@@ -92,8 +81,5 @@ class m_Schedule extends Model
         $this->consult($snt);
         return $this->result();
     }
-}
-
-
-
+} //En m_Schedule
 ?>

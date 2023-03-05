@@ -21,7 +21,6 @@ class c_Schedule extends Controller
     {
         $datos['skills'] = $this->m_schedule->showSkill();
         $datos['workers'] = $this->m_schedule->showName();
-        //$datos["classes"] = $this->m_schedule->showSchedule();
 
         // var_dump($datos['datas']);
 
@@ -35,7 +34,7 @@ class c_Schedule extends Controller
     //Display the complete calendar of all coaches
     public function completeSchedule()
     {
-        $datos["classes"] = $this->m_schedule->showSchedule();
+        $datos["classes"] = $this->m_schedule->completeSchedule();
 
         //var_dump($datos["classes"]);
         $contenido = "v_Schedule";
