@@ -73,13 +73,16 @@ class c_Schedule extends Controller
         $this->loadView("templates/footer");
     }
 
-    public function showSkills($id_person)
+    public function showSkills()
     {
-        $datos["skills"] = $this->m_schedule->showSkills($id_person);
 
-        var_dump($datos["skills"]);
+        $datos = $this->m_schedule->showSkills($_POST['id_person']);
 
-        echo json_encode($datos['skills']);
+        //var_dump($datos["skills"]);
+
+        echo json_encode($datos);
+
+        // echo json_encode($id_person);
     }
     public function prueba()
     {
