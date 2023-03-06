@@ -12,5 +12,12 @@ class c_Home extends Controller
     {
         $this->loadView("v_landing");
     }
+
+    // Destroy session
+    public function logOut()
+    {
+        unset($_SESSION['session']);
+        header("Location:" . BASE_URL);
+    }
 }
 ?>

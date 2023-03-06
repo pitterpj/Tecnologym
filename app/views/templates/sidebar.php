@@ -47,7 +47,7 @@
                 <!-- Depending on the role, this shows one menu of options or another -->
                 <li> <!--====== Icon Create schedules  ======-->
                     <?php if ($_SESSION['session']['role'] == "Monitor") {
-                        echo "<a href='" . BASE_URL . "c_Schedule/schedule'  class=''>";
+                        echo "<a href='" . BASE_URL . "c_Schedule/showPersonalSchedule'  class=''>";
                         echo "<i class='fas fa-home'>";
                         echo "<img src='" . BASE_URL . "app\assets\img\icons\calendar.png' width='50' alt='Horario'>";
                         echo "</i>";
@@ -162,7 +162,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="text-light nav-link rounded" href="<?= BASE_URL ?>c_Dashboard/logOut">Cerrar Sesión</a>
+                                <a class="text-light nav-link rounded" href="<?= BASE_URL ?>c_Home/logOut">Cerrar Sesión</a>
                             </li>
                         </ul>
                     </div>
