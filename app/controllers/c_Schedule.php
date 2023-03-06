@@ -64,7 +64,7 @@ class c_Schedule extends Controller
     public function showPersonalSchedule()
     {
         $datos["personalSchedule"] = $this->m_schedule->showPersonalSchedule($_SESSION['session']['id_person']);
-        
+
         //var_dump($datos["personalSchedule"]);
         $contenido = "v_PersonalSchedule";
         $this->loadView("templates/header");
@@ -72,5 +72,18 @@ class c_Schedule extends Controller
         $this->loadView($contenido, $datos);
         $this->loadView("templates/footer");
     }
-}//End class c_Schedule
+
+    public function showSkills($id_person)
+    {
+        $datos["skills"] = $this->m_schedule->showSkills($id_person);
+
+        var_dump($datos["skills"]);
+
+        echo json_encode($datos['skills']);
+    }
+    public function prueba()
+    {
+        echo "hola";
+    }
+} //End class c_Schedule
 ?>

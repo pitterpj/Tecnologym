@@ -81,5 +81,17 @@ class m_Schedule extends Model
         $this->consult($snt);
         return $this->result();
     }
+
+    public function showSkills($id_person)
+    {
+        $snt = "SELECT * FROM `worker_skill` 
+        INNER JOIN worker ON worker.id_worker = worker_skill.id_worker
+        INNER JOIN skill ON skill.id_skill = worker_skill.id_skill
+        INNER JOIN person ON person.id_person = worker.id_person
+        WHERE person.id_person= :id_person;";
+        $this->consult($snt);
+        $this->link(":id_person", $id_person);
+        return $this->result();
+    }
 } //En m_Schedule
 ?>
