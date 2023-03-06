@@ -41,6 +41,8 @@
 
     - Sweet aler x2 en header
 
+    - Bootstrat autocomplete | Select picker bootstrat | 
+
     - En c_Users en authenticate cuando no existe el user guarda el error que no muestra. Hacer que lo muestre
 
     - Datatables
