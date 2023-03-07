@@ -47,9 +47,10 @@ class c_Users extends Controller
     public function dashboard($calendar = "today")
     {
         $datos["personalScheduleToday"] = $this->m_schedule->showPersonalSchedule($_SESSION['session']['id_person'], $calendar);
+        $avatar['avatar'] = $_SESSION['session']['avatar'];
 
         $this->loadView("templates/header");
-        $this->loadView("templates/sidebar");
+        $this->loadView("templates/sidebar", $avatar);
         switch ($_SESSION['session']['role']) {
             case "Director":
                 $this->loadView("/director/v_Director", $datos);

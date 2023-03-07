@@ -27,7 +27,7 @@
                 <tbody>
                     <?php foreach ($workers as $worker) : ?>
                         <tr class="text-center">
-                            <td scope="row"><img width="100" src="<?= BASE_URL . $worker['avatar'] ?>"></td>
+                            <td scope="row"><img width="100" src="<?= BASE_URL . IMG_URL . $worker['avatar'] ?>"></td>
                             <td><?= $worker['name'] ?></td>
                             <td><?= $worker['lastname'] ?></td>
                             <td><?= $worker['role'] ?></td>

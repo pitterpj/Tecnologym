@@ -2,6 +2,7 @@
 <!-- https://github.com/pitterpj -->
 
 <!--==== Left Menu that contracts and header with collapsing buttons ====-->
+
 <body>
     <div class="wrapper">
         <!--====== SIDEBAR ======-->
@@ -14,8 +15,20 @@
             <!-- TODO -- AÑADIR LA FOTO DE LA PERSONA.
                     -- CAMBIAR LA LETRA DEL ROL SEGÚN LA PERSONA -->
             <div class="sidebar-header text-center push ">
-                <!-- Depending on the person, this avatar is one or the other -->
-                <img class="img-fluid rounded-circle" src="<?= BASE_URL ?>app\assets\img\icons\avatar_person.jpg" width="200" alt="Brand-Tecnologym">
+                <?php
+                print_r($avatar);
+                if ($avatar != "avatar") {
+                    echo '<img class="img-fluid rounded-circle" src="' . BASE_URL . IMG_URL . $avatar . '" width="200" alt="Brand-Tecnologym">';
+                } else {
+                    echo '<img class="img-fluid rounded-circle" src="' . BASE_URL . 'app\assets\img\icons\avatar_person.jpg" width="200" alt="Brand-Tecnologym">';
+                }
+
+                ?>
+
+                <!-- <img class="img-fluid rounded-circle" src="<?= BASE_URL ?>app\assets\img\icons\avatar_person.jpg" width="200" alt="Brand-Tecnologym"> -->
+                <!-- <img class="img-fluid rounded-circle" src="<?= BASE_URL . IMG_URL . $avatar ?>" width="200" alt="Brand-Tecnologym"> -->
+
+
                 <span class="disappear fs-3"><?= $_SESSION['session']['name']; ?></span>
                 <span class="disappear fs-4"><?= $_SESSION['session']['role']; ?></span>
                 <strong class="mt-4">
@@ -27,7 +40,7 @@
                         case "Monitor":
                             echo "M";
                             break;
-                        case "Corrdinador":
+                        case "Coordinador":
                             echo "C";
                             break;
                     }

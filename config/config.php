@@ -11,6 +11,7 @@ define("PATH_MODELS", "app/models/"); // Path to the models
 // **** Change this setting for each project **** //
 define("ROOT", $_SERVER['DOCUMENT_ROOT'] . '/Tecnologym/');
 define("BASE_URL", "http://localhost/Tecnologym/");
+define("IMG_URL", "app\assets\img\uploaded_images/");
 
 // **** DATABASE **** //
 define("DB_HOST","localhost");
