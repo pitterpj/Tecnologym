@@ -79,7 +79,7 @@ class m_Schedule extends Model
         //return $calendar;
         switch ($calendar[1]) {
             case "today":
-                $snt = "SELECT img, name, name_skill, level, capacity, day, hour FROM `class` INNER JOIN skill ON skill.id_skill = class.id_skill INNER JOIN worker ON worker.id_worker = class.id_worker INNER JOIN person ON worker.id_person = person.id_person WHERE person.id_person = :id_person AND CURDATE() = day ORDER BY day, hour";
+                $snt = "SELECT DISTINCT img, name, name_skill, level, capacity, day, hour FROM `class` INNER JOIN skill ON skill.id_skill = class.id_skill INNER JOIN worker ON worker.id_worker = class.id_worker INNER JOIN person ON worker.id_person = person.id_person WHERE person.id_person = :id_person AND CURDATE() = day ORDER BY day, hour";
                 $this->consult($snt);
                 $this->link(":id_person", $id_person);
                 return $this->result();
@@ -91,8 +91,9 @@ class m_Schedule extends Model
                 return $this->result();
                 break;
             case "month":
-                $snt = "SELECT name, name_skill, level, capacity, day, hour FROM `class` INNER JOIN skill ON skill.id_skill = class.id_skill INNER JOIN worker ON worker.id_worker = class.id_worker INNER JOIN person ON worker.id_person = person.id_person WHERE person.id_person = $id_person AND CURDATE() = day ORDER BY day, hour";
+                $snt = "SELECT DISTINCT img, name, name_skill, level, capacity, day, hour FROM `class` INNER JOIN skill ON skill.id_skill = class.id_skill INNER JOIN worker ON worker.id_worker = class.id_worker INNER JOIN person ON worker.id_person = person.id_person WHERE person.id_person = :id_person AND EXTRACT(MONTH from day) = EXTRACT(MONTH from CURRENT_TIMESTAMP()) ORDER BY day, hour";
                 $this->consult($snt);
+                $this->link(":id_person", $id_person);
                 return $this->result();
                 break;
             case "year":
@@ -103,7 +104,7 @@ class m_Schedule extends Model
                 return $this->result();
                 break;
             default:
-                $snt = "SELECT img, name, name_skill, level, capacity, day, hour FROM `class` INNER JOIN skill ON skill.id_skill = class.id_skill INNER JOIN worker ON worker.id_worker = class.id_worker INNER JOIN person ON worker.id_person = person.id_person WHERE person.id_person = :id_person AND CURDATE() = day ORDER BY day, hour";
+                $snt = "SELECT DISTINCT img, name, name_skill, level, capacity, day, hour FROM `class` INNER JOIN skill ON skill.id_skill = class.id_skill INNER JOIN worker ON worker.id_worker = class.id_worker INNER JOIN person ON worker.id_person = person.id_person WHERE person.id_person = :id_person AND CURDATE() = day ORDER BY day, hour";
                 $this->consult($snt);
                 $this->link(":id_person", $id_person);
                 return $this->result();

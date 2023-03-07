@@ -6,11 +6,13 @@ class c_Users extends Controller
 {
     private $m_users; //Property to instantiate the model
     private $m_schedule; //Property to instantiate the model
+    private $m_logTraining; //Property to instantiate the model
 
     public function __construct()
     {
         $this->m_users = $this->loadModel("m_Users");
         $this->m_schedule = $this->loadModel("m_Schedule");
+        $this->m_logTraining = $this->loadModel("m_PersonalTraining");
     }
 
     public function index()
@@ -48,6 +50,7 @@ class c_Users extends Controller
     {
         $datos["personalScheduleToday"] = $this->m_schedule->showPersonalSchedule($_SESSION['session']['id_person'], $calendar);
         $avatar['avatar'] = $_SESSION['session']['avatar'];
+        $datos['logTraining'] = $this->m_logTraining->countLogTraining($_SESSION['session']['id_person']);
 
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar", $avatar);
