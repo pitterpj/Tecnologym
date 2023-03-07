@@ -1,6 +1,3 @@
-<!-- Pedro.J (Pitter) -->
-<!-- https://github.com/pitterpj -->
-
 <?php
 
 class View

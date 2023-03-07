@@ -1,6 +1,3 @@
-<!-- Pedro.J (Pitter) -->
-<!-- https://github.com/pitterpj -->
-
 <?php
 
 class Model
@@ -89,7 +86,7 @@ class Model
         $name_img = ($img != "") ? $date_img->getTimestamp() . "_" . $_FILES['addImg']['name'] : "";
         $tmp_img = $_FILES['addImg']['tmp_name'];
         if ($tmp_img != "") {
-            move_uploaded_file($tmp_img, ROOT . "app/assets/img/uploaded_images" . $name_img);
+            move_uploaded_file($tmp_img, ROOT . "app/assets/img/uploaded_images/" . $name_img);
         }
 
         $this->stmt->bindParam($param, $name_img);

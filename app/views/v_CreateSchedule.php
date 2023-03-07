@@ -23,9 +23,9 @@
             <div class="mb-3">
                 <label for="addSkill" class="form-label">Selecciona Actividad:</label>
                 <select id="addSkill" class="form-select form-select-lg" name="addSkill">
-                    <?php foreach ($skills as $skill => $value) {
-                        echo "<option value='" . $value['id_skill'] . "'>" . $value['name_skill'] . "</option>";
-                    }; ?>
+                    <!-- <?php foreach ($skills as $skill => $value) {
+                                echo "<option value='" . $value['id_skill'] . "'>" . $value['name_skill'] . "</option>";
+                            }; ?> -->
                 </select>
             </div>
             <div class="mb-3">
@@ -45,26 +45,6 @@
             </div>
         </form>
     </div>
-
-    <script>
-        $("#addWorker").on("change", function(e) {
-            //console.log($("#addWorker").val());
-            $.post(
-                BASE_URL + "c_Schedule/showSkills", {
-                    id_person: $("#addWorker").val()
-                },
-                function(skills) {
-                    //showSkills(JSON.parse(skills));
-                    console.log(JSON.parse(skills));
-                }
-            ); //end post
-        });
-
-        function showSkills(skills) {
-            console.log(skills);
-
-        }
-    </script>
 
     <!--==== CREATE SKILL ====-->
     <div class="container col-lg-5 col-md-9 col-sm-8  ">
@@ -107,3 +87,15 @@
 
     </div>
 </div>
+<script>
+    $(window).on("load", function(e) {
+        $.post(
+            BASE_URL + "c_Schedule/showSkills", {
+                id_person: $("#addWorker").val(),
+            },
+            function(skills) {
+                showSkills(JSON.parse(skills));
+            }
+        ); //end post
+    });
+</script>

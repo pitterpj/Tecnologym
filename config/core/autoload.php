@@ -1,8 +1,8 @@
-<!-- Pedro.J (Pitter) -->
-<!-- https://github.com/pitterpj -->
-
-<!-- This code autoload all classes there are in the core -->
 <?php
+// <!-- Pedro.J (Pitter) -->
+// <!-- https://github.com/pitterpj -->
+
+// <!-- This code autoload all classes there are in the core -->
 
 /* This function (anonymous) loads all classes in the file where it is included.
 In this case in Index*/

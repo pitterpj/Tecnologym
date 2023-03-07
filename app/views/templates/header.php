@@ -1,6 +1,3 @@
-<!-- Pedro.J (Pitter) -->
-<!-- https://github.com/pitterpj -->
-
 <!doctype html>
 <html lang="en">
 
@@ -26,7 +23,6 @@
 
     <!--====== JQuery ======-->
     <script src="<?= BASE_URL ?>app\assets\libs\jquery-3.6.3.js"> </script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.js"></script> -->
 
 
     <script>

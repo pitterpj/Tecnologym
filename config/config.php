@@ -1,7 +1,3 @@
-<!-- Pedro.J (Pitter) -->
-<!-- https://github.com/pitterpj -->
-
-
 <?php
 //  **** GENERAL CONFIGURATION  **** //
 define("URI", $_SERVER['REQUEST_URI']); // Return the URI of th current page
@@ -25,7 +21,7 @@ define("DB_NAME","tecnologym"); // Change this!
 ?>
 
 
-<!--====== Config to Yisus Server======-->
+
 <?php
 // //  **** GENERAL CONFIGURATION  **** //
 // define("URI", $_SERVER['REQUEST_URI']); // Return the URI of th current page

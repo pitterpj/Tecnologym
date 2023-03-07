@@ -1,7 +1,5 @@
-<!-- Pedro.J (Pitter) -->
-<!-- https://github.com/pitterpj -->
-
 <?php
+
 //This means that if you try enter by URL it will not allow it.
 //defined('BASEPATH') or exit('No direct script access allowed');
 

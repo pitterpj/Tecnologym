@@ -21,7 +21,7 @@
                 <tbody>
                     <?php foreach ($classes as $class) : ?>
                         <tr class="text-center">
-                            <td scope="row"><img width="100" src="<?= BASE_URL . $class['img'] ?>"></td>
+                            <td scope="row"><img width="100" src="<?= BASE_URL . "app/assets/img/uploaded_images/" . $class['img'] ?>"></td>
                             <td><?= $class['name_skill'] ?></td>
                             <td><?= $class['name'] ?></td>
                             <td><?= $class['capacity'] ?></td>
