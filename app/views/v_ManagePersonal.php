@@ -8,7 +8,7 @@
     <h2 class="text-center">Administrar Personal</h2>
     <div class="card">
         <div class="table-responsive-sm m-2">
-            <a name="addWorker" class="btn btn-info" href="#" role="button">Agregar Trabajador</a>
+            <a class="btn btn-info" href="<?= BASE_URL ?>c_PersonalTraining/addPersonalTraining" role="button">Agregar Trabajador</a>
         </div>
         <div class="table-responsive-sm m-2">
             <table class="table table-primary table-striped table-hover">
@@ -27,7 +27,7 @@
                 <tbody>
                     <?php foreach ($workers as $worker) : ?>
                         <tr class="text-center">
-                            <td scope="row">Avatar</td>
+                            <td scope="row"><img width="100" src="<?= BASE_URL . $worker['avatar'] ?>"></td>
                             <td><?= $worker['name'] ?></td>
                             <td><?= $worker['lastname'] ?></td>
                             <td><?= $worker['role'] ?></td>

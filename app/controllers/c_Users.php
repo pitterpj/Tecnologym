@@ -93,17 +93,19 @@ class c_Users extends Controller
     // Update worker
     public function updateWorker($id_worker)
     {
-        $this->m_users->updateWorker($id_worker[0], $_POST);
+        $this->m_users->updateWorker($id_worker[0]);
+        //var_dump($_FILES);
         $this->managePersonal();
     }
 
     // TODO funcion para añadir trabajador
     public function addWorker()
     {
-        $this->loadView("templates/header");
-        $this->loadView("templates/sidebar");
-        $this->loadView("v_AddWorker");
-        $this->loadView("templates/footer");
+        //var_dump($_POST);
+        //var_dump($_FILES);
+        $this->m_users->addWorker();
+        // //var_dump($datos);
+        $this->managePersonal();
     }
 } //End c_Users
 ?>

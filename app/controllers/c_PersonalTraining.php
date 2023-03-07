@@ -30,9 +30,6 @@ class c_PersonalTraining extends Controller
     // Add personal coachs to database
     public function addPersonalTraining()
     {
-
-        // $datos['clients'] = $this->m_PersonalTraining->showPersonalTraining();
-
         $contenido = "v_AddPersonalTraining";
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");

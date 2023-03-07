@@ -59,37 +59,38 @@ class m_Users extends Model
     }
 
     // Easy, update worker
-    public function updateWorker($id_worker, $datos)
+    public function updateWorker($id_worker)
     {
+
         $snt = "UPDATE worker SET hours = :hours WHERE id_worker = :id_worker";
 
         $this->consult($snt);
         $this->link(":id_worker", $id_worker);
-        $this->link(":hours", $datos['updateHours']);
+        $this->link(":hours", $_POST['updateHours']);
         $this->launch();
 
 
-        $snt2 = "UPDATE person INNER JOIN worker ON person.id_person=worker.id_person SET name = :name, lastname = :lastname, email=:email, phone=:phone  WHERE worker.id_worker = :id_worker ;";
+        $snt2 = "UPDATE person INNER JOIN worker ON person.id_person=worker.id_person SET name = :name, lastname = :lastname, email=:email, phone=:phone avatar=:avatar WHERE worker.id_worker = :id_worker";
 
         $this->consult($snt2);
         $this->link(":id_worker", $id_worker);
-        $this->link(":name", $datos['updateName']);
-        $this->link(":lastname", $datos['updateLastname']);
-        $this->link(":email", $datos['updateEmail']);
-        $this->link(":phone", $datos['updatePhone']);
+        $this->link(":name", $_POST['updateName']);
+        $this->link(":lastname", $_POST['updateLastname']);
+        $this->link(":email", $_POST['updateEmail']);
+        $this->link(":phone", $_POST['updatePhone']);
+        $this->upImg(":avatar", $_FILES['addImg']);
         $this->launch();
-
 
         $snt3 = "UPDATE `worker_type` SET `id_type`=:role WHERE id_worker = :id_worker";
         $this->consult($snt3);
         $this->link(":id_worker", $id_worker);
-        $this->link(":role", $datos['updateRole']);
+        $this->link(":role", $_POST['updateRole']);
         $this->launch();
 
         $snt4 = "INSERT INTO `worker_skill` (`id_worker`, `id_skill`) VALUES  ( :id_worker, :id_skill)";
         $this->consult($snt4);
         $this->link(":id_worker", $id_worker);
-        $this->link(":id_skill", $datos['addWorkerSkill']);
+        $this->link(":id_skill", $_POST['addWorkerSkill']);
         $this->launch();
     }
     // Display all available skills 
@@ -106,4 +107,29 @@ class m_Users extends Model
         $this->consult($snt);
         return $this->result();
     }
+
+    public function addWorker()
+    {
+        $snt = "INSERT INTO `person` (`id_person`, `name`, `lastname`, `user`, `password`, `email`, `phone`, `avatar`) VALUES (NULL, :name, :lastName, :user, :password, :email, :phone, :avatar);";
+        $this->consult($snt);
+        $this->link(":name", $_POST['addName']);
+        $this->link(":lastName", $_POST['addLastName']);
+        $this->link(":user", $_POST['addUser']);
+        $this->link(":password", $_POST['addPass']);
+        $this->link(":email", $_POST['addEmail']);
+        $this->link(":phone", $_POST['addPhone']);
+        $this->upImg(":avatar", $_FILES['addImg']);
+        $this->launch();
+
+        $snt2 = "INSERT INTO `worker` (`id_worker`, `id_person`, `hours`) VALUES (NULL, (SELECT MAX(id_person) FROM person), :hours);";
+        $this->consult($snt2);
+        $this->link(":hours", $_POST['addHours']);
+        $this->launch();
+
+        $snt3 = "INSERT INTO `worker_type` (`id_worker`, `id_type`) VALUES ((SELECT MAX(id_worker) FROM worker), :id_type);";
+        $this->consult($snt3);
+        $this->link(":id_type", $_POST['addRole']);
+        $this->launch();
+    }
 } //End m_Users
+?>

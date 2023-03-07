@@ -33,6 +33,8 @@
 
 -   - Cabeceras!
 
+- Actualizar foto. primero borrarmos.
+
     - c_Dashboard to delete
 
     - Hacer los horarios (v_Schedule) responsives

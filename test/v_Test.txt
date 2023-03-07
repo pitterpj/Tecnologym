@@ -47,8 +47,11 @@ BOTON Cancelar
         ); //end post
     });
 </script> -->
-
 --------------------------------------------------------
-SELECT DISTINCT img, name, name_skill, level, capacity, day, hour FROM `class` INNER JOIN skill ON skill.id_skill = class.id_skill INNER JOIN worker ON worker.id_worker = class.id_worker INNER JOIN person ON worker.id_person = person.id_person WHERE person.id_person = 1 AND EXTRACT(DAY from day) = (EXTRACT(DAY from CURRENT_TIMESTAMP())+7) ORDER BY day, hour
+INSERT INTO `person` (`id_person`, `name`, `lastname`, `user`, `password`, `email`, `phone`, `avatar`) VALUES (NULL, 'alpha Luis', 'Almendral Piticlín', 'alphaluis', '1234', 'alphaluis@correo.es', '123456789', 'avatar');
 
+
+INSERT INTO `worker` (`id_worker`, `id_person`, `hours`) VALUES (NULL, '5', '50');
+
+INSERT INTO `worker_type` (`id_worker`, `id_type`) VALUES ('4', '3');
 --------------------------------------------------------
