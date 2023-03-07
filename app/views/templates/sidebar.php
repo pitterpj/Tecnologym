@@ -16,8 +16,7 @@
                     -- CAMBIAR LA LETRA DEL ROL SEGÚN LA PERSONA -->
             <div class="sidebar-header text-center push ">
                 <?php
-                print_r($avatar);
-                if ($avatar != "avatar") {
+                if (isset($avatar)) {
                     echo '<img class="img-fluid rounded-circle" src="' . BASE_URL . IMG_URL . $avatar . '" width="200" alt="Brand-Tecnologym">';
                 } else {
                     echo '<img class="img-fluid rounded-circle" src="' . BASE_URL . 'app\assets\img\icons\avatar_person.jpg" width="200" alt="Brand-Tecnologym">';
