@@ -49,6 +49,6 @@ BOTON Cancelar
 </script> -->
 
 --------------------------------------------------------
-
+SELECT DISTINCT img, name, name_skill, level, capacity, day, hour FROM `class` INNER JOIN skill ON skill.id_skill = class.id_skill INNER JOIN worker ON worker.id_worker = class.id_worker INNER JOIN person ON worker.id_person = person.id_person WHERE person.id_person = 1 AND EXTRACT(DAY from day) = (EXTRACT(DAY from CURRENT_TIMESTAMP())+7) ORDER BY day, hour
 
 --------------------------------------------------------

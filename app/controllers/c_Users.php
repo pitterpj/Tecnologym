@@ -5,10 +5,12 @@
 class c_Users extends Controller
 {
     private $m_users; //Property to instantiate the model
+    private $m_schedule; //Property to instantiate the model
 
     public function __construct()
     {
         $this->m_users = $this->loadModel("m_Users");
+        $this->m_schedule = $this->loadModel("m_Schedule");
     }
 
     public function index()
@@ -42,13 +44,15 @@ class c_Users extends Controller
     }
 
     // Display the home page of each coach according to their role
-    public function dashboard()
+    public function dashboard($calendar = "today")
     {
+        $datos["personalScheduleToday"] = $this->m_schedule->showPersonalSchedule($_SESSION['session']['id_person'], $calendar);
+
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
         switch ($_SESSION['session']['role']) {
             case "Director":
-                $this->loadView("/director/v_Director");
+                $this->loadView("/director/v_Director", $datos);
                 break;
             case "Monitor":
                 $this->loadView("/monitor/v_Monitor");

@@ -10,6 +10,22 @@
             <div class="card-header text-center">Horario personal (D)</div>
             <div class="card-body">
                 <h4 class="card-title text-center">Hoy</h4>
+                <table class="table table-primary table-striped table-hover">
+                    <thead>
+                        <tr class="text-center">
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Hora</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($personalScheduleToday as $class) : ?>
+                            <tr class="text-center">
+                                <td scope="row"><img width="100" src="<?= BASE_URL . $class['img'] ?>"></td>
+                                <td scope="row"><?= $class['hour'] ?></td>
+                            </tr>
+                        <?php endforeach ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

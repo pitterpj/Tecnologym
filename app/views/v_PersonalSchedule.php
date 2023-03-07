@@ -7,6 +7,12 @@
     <h2 class="text-center">Horario Personal</h2>
     <div class="card">
         <div class="table-responsive-sm m-2">
+            <div class="card-body text-center">
+                <a class="btn btn-primary" href="<?=BASE_URL?>c_Schedule/showPersonalSchedule//today" role="button">Diario</a>
+                <a class="btn btn-primary" href="<?=BASE_URL?>c_Schedule/showPersonalSchedule//week" role="button">Semanal</a>
+                <a class="btn btn-primary" href="<?=BASE_URL?>c_Schedule/showPersonalSchedule//month" role="button">Mensual</a>
+                <a class="btn btn-primary" href="<?=BASE_URL?>c_Schedule/showPersonalSchedule//year" role="button">Anual</a>
+            </div>
             <table class="table table-primary table-striped table-hover">
                 <thead>
                     <tr class="text-center">
