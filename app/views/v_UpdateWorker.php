@@ -32,6 +32,15 @@
             <label for="updateHours" class="form-label">Horas de Contrato</label>
             <input type="text" class="form-control" name="updateHours" aria-describedby="helpId" value="<?= $worker['hours'] ?>">
         </div>
+        <div class="mb-3">
+            <label for="addWorkerSkill" class="form-label">Selecciona Actividad:</label>
+            <select id="addWorkerSkill" class="form-select form-select-lg" name="addWorkerSkill">
+                <?php foreach ($skills as $skill => $value) {
+                    var_dump($skills);
+                    echo "<option value='" . $value['id_skill'] . "'>" . $value['name_skill'] . "</option>";
+                }; ?>
+            </select>
+        </div>
         <div class="d-flex justify-content-around ">
             <button type="submit" class="btn btn-primary">Actualizar Trabajador</button>
         </div>

@@ -6,7 +6,7 @@
 
 ### Organization of files:
 
-    - System->config.php // The file contains constants and database parameters. Here you must change the data to make it work.
+-   - System->config.php // The file contains constants and database parameters. Here you must change the data to make it work.
 
     - System->core // This folder contains the core of the model-view-controller (DO NOT TOUCH).
 
@@ -14,7 +14,7 @@
 
 ## Personal Notes:
 
-    - La función consultar del Model (consult) no me convence el nombre
+-   - La función consultar del Model (consult) no me convence el nombre
 
     - Ejecutar = launch()
 
@@ -30,6 +30,8 @@
     - Al exportar de la base de Yisus a la mía: Find ‘utf8mb4_0900_ai_ci’ & replace it with ‘utf8mb4_unicode_ci’.
 
 ## To Do:
+
+-   - Cabeceras!
 
     - c_Dashboard to delete
 

@@ -22,11 +22,7 @@
             </div>
             <div class="mb-3">
                 <label for="addSkill" class="form-label">Selecciona Actividad:</label>
-                <select id="addSkill" class="form-select form-select-lg" name="addSkill">
-                    <!-- <?php foreach ($skills as $skill => $value) {
-                                echo "<option value='" . $value['id_skill'] . "'>" . $value['name_skill'] . "</option>";
-                            }; ?> -->
-                </select>
+                <select id="addSkill" class="form-select form-select-lg" name="addSkill"></select>
             </div>
             <div class="mb-3">
                 <label for="addCapacity" class="form-label">Capacidad de la clase:</label>
@@ -88,9 +84,24 @@
     </div>
 </div>
 <script>
+    // <!--====== Script Select Workers and skills on load ======-->
     $(window).on("load", function(e) {
         $.post(
-            BASE_URL + "c_Schedule/showSkills", {
+            BASE_URL + "c_Schedule/showSkillsWorker", {
+                id_person: $("#addWorker").val(),
+            },
+            function(skills) {
+                showSkills(JSON.parse(skills));
+            }
+        ); //end post
+    });
+
+    // <!--====== Script Select Show Skills of Workers on change ======-->
+
+    $("#addWorker").on("change", function(e) {
+        //console.log($("#addWorker").val());
+        $.post(
+            BASE_URL + "c_Schedule/showSkillsWorker", {
                 id_person: $("#addWorker").val(),
             },
             function(skills) {

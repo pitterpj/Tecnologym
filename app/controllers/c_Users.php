@@ -77,6 +77,7 @@ class c_Users extends Controller
     {
         $datos["worker"] = $this->m_users->showWorker($id_worker[0]);
         $datos["roles"] = $this->m_users->selectRoles();
+        $datos["skills"] = $this->m_users->showSkill();
 
         $contenido = "v_UpdateWorker";
         $this->loadView("templates/header");

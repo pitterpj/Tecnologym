@@ -22,15 +22,6 @@
 <!--====== Local JS ======-->
 <script src="<?= BASE_URL ?>app\views\js\js.js"></script>
 
-<!--====== Script Sidebar Collapsable ======-->
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#sidebarCollapse').on('click', function() {
-            $('#sidebar').toggleClass('active');
-        });
-    });
-</script>
-
 </body>
 
 </html>

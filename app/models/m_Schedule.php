@@ -24,14 +24,6 @@ class m_Schedule extends Model
         return $this->result();
     }
 
-    // Display all available skills 
-    public function showSkill()
-    {
-        $snt = "SELECT name_skill, id_skill FROM skill";
-        $this->consult($snt);
-        return $this->result();
-    }
-
     // Show the all worker names
     public function showName()
     {
@@ -85,7 +77,7 @@ class m_Schedule extends Model
         return $this->result();
     }
 
-    public function showSkills($id_person)
+    public function showSkillsWorker($id_person)
     {
         $snt = "SELECT name_skill, skill.id_skill FROM `worker_skill` 
         INNER JOIN worker ON worker.id_worker = worker_skill.id_worker

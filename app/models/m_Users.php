@@ -1,8 +1,6 @@
-<!-- Pedro.J (Pitter) -->
-<!-- https://github.com/pitterpj -->
-
-
 <?php
+// <!-- Pedro.J (Pitter) -->
+// <!-- https://github.com/pitterpj -->
 class m_Users extends Model
 {
     public function __construct()
@@ -38,7 +36,6 @@ class m_Users extends Model
     // Show all workers who are not Directors
     public function showWorkers()
     {
-
         $snt = " SELECT * FROM person 
         INNER JOIN worker ON person.id_person=worker.id_person 
         INNER JOIN worker_type ON worker_type.id_worker=worker.id_worker
@@ -83,13 +80,25 @@ class m_Users extends Model
         $this->launch();
 
 
-        $snt3 = "UPDATE `worker_type` SET `id_type`=:role WHERE id_worker= :id_worker";
+        $snt3 = "UPDATE `worker_type` SET `id_type`=:role WHERE id_worker = :id_worker";
         $this->consult($snt3);
         $this->link(":id_worker", $id_worker);
         $this->link(":role", $datos['updateRole']);
         $this->launch();
-    }
 
+        $snt4 = "INSERT INTO `worker_skill` (`id_worker`, `id_skill`) VALUES  ( :id_worker, :id_skill)";
+        $this->consult($snt4);
+        $this->link(":id_worker", $id_worker);
+        $this->link(":id_skill", $datos['addWorkerSkill']);
+        $this->launch();
+    }
+    // Display all available skills 
+    public function showSkill()
+    {
+        $snt = "SELECT name_skill, id_skill FROM skill";
+        $this->consult($snt);
+        return $this->result();
+    }
     // Display all roles in the db
     public function selectRoles()
     {
@@ -98,4 +107,3 @@ class m_Users extends Model
         return $this->result();
     }
 } //End m_Users
-?>

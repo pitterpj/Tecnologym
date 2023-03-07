@@ -24,7 +24,6 @@
     <!--====== JQuery ======-->
     <script src="<?= BASE_URL ?>app\assets\libs\jquery-3.6.3.js"> </script>
 
-
     <script>
         BASE_URL = "<?= BASE_URL ?>";
     </script>

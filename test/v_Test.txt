@@ -27,7 +27,26 @@ BOTON Cancelar
  <!-- <a name="btnCancel" class="btn btn-danger" href="<?= BASE_URL ?>c_Users/managePersonal" role="button">Cancelar</a> -->
 
 --------------------------------------------------------
+<!-- <script>
+    // <!--====== Script Select Show Skills of Workers to Update ======-->
+    $("#addWorkerSkill").on("load", function(e) {
+        $.post(BASE_URL + "c_Schedule/showSkillsWorkers", function(skills) {
+            selectSkills(JSON.parse(skills));
+        });
+    });
 
+
+    $(window).on("load", function(e) {
+        $.post(
+            BASE_URL + "c_Schedule/showSkillsWorker", {
+                id_person: $("#addWorker").val(),
+            },
+            function(skills) {
+                showSkills(JSON.parse(skills));
+            }
+        ); //end post
+    });
+</script> -->
 
 --------------------------------------------------------
 
