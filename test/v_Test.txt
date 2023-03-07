@@ -91,3 +91,5 @@ INSERT INTO `worker_type` (`id_worker`, `id_type`) VALUES ('4', '3');
         $this->link(":id_skill", $_POST['addWorkerSkill']);
         $this->launch();
     }
+
+    4:00

@@ -99,9 +99,9 @@ class c_Users extends Controller
     {
 
 
-        $datos = $this->m_users->updateWorker($id_worker[0]);
-        var_dump($datos);
-        //$this->managePersonal();
+        $this->m_users->updateWorker($id_worker[0]);
+        //var_dump($datos);
+        $this->managePersonal();
     }
 
     // TODO funcion para añadir trabajador

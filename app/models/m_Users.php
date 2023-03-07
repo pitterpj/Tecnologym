@@ -61,14 +61,29 @@ class m_Users extends Model
     // Easy, update worker
     public function updateWorker($id_worker)
     {
-        // if (isset($_FILES['addImg'])) {
-        //     $sntToDelete = "SELECT avatar FROM person INNER JOIN worker ON worker.id_person=person.id_person WHERE worker.id_worker = :id_worker";
-        //     $this->consult($sntToDelete);
-        //     $this->link(":id_worker",$id_worker);
-        //     $this->launch();
-        //     //return $imgToDelete;
-        // }
-        //return $imgToDelete = NULL;
+        $avatar = isset($_FILES['addImg']['name']) ? $_FILES['addImg']['name'] : "";
+        $date = new DateTime();
+        $nameAvatar = ($avatar != "") ? $date->getTimestamp() . "_" . $_FILES['addImg']['name'] : "";
+
+        $tmp_avatar = $_FILES['addImg']['tmp_name'];
+
+        if ($tmp_avatar != "") {
+            move_uploaded_file($tmp_avatar, IMG_URL . $nameAvatar);
+
+            $sntToDelete = "SELECT avatar FROM person INNER JOIN worker ON worker.id_person=person.id_person WHERE worker.id_worker = :id_worker";
+            $this->consult($sntToDelete);
+            $this->link(":id_worker", $id_worker);
+            $avatarWorker = $this->row();
+
+
+            if (isset($avatarWorker['avatar']) && $avatarWorker['avatar'] != "") {
+                if (file_exists(IMG_URL . $avatarWorker['avatar'])) {
+                    //return BASE_URL . IMG_URL . $avatarWorker['avatar'];
+                    unlink(IMG_URL . $avatarWorker['avatar']);
+                }
+            }
+        }
+
         $sntImg = "UPDATE `person` INNER JOIN worker ON person.id_person=worker.id_person SET `avatar` = :avatar WHERE worker.id_worker = :id_worker;";
         $this->consult($sntImg);
         $this->link(":id_worker", $id_worker);
