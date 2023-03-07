@@ -27,7 +27,20 @@
                 <tbody>
                     <?php foreach ($workers as $worker) : ?>
                         <tr class="text-center">
-                            <td scope="row"><img width="100" src="<?= BASE_URL . IMG_URL . $worker['avatar'] ?>"></td>
+
+                            <!-- <td scope="row"><img width="100" src="<?= BASE_URL . IMG_URL . $worker['avatar'] ?>"></td> -->
+
+                            <td scope="row">
+                                <?php
+                                if (isset($avatar)) {
+                                    echo '<img class="img-fluid rounded-circle" src="' . BASE_URL . IMG_URL . $worker['avatar'] . '" width="200" alt="Brand-Tecnologym">';
+                                } else {
+                                    echo '<img class="img-fluid rounded-circle" src="' . BASE_URL . 'app\assets\img\icons\avatar_person.jpg" width="200" alt="Brand-Tecnologym">';
+                                }
+
+                                ?>
+                                <!-- <img width="100" src="<?= BASE_URL . IMG_URL . $worker['avatar'] ?>"> -->
+                            </td>
                             <td><?= $worker['name'] ?></td>
                             <td><?= $worker['lastname'] ?></td>
                             <td><?= $worker['role'] ?></td>

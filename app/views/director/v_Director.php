@@ -19,7 +19,7 @@
                     <tbody>
                         <?php foreach ($personalScheduleToday as $class) : ?>
                             <tr class="text-center">
-                                <td scope="row"><img width="100" src="<?= BASE_URL . $class['img'] ?>"></td>
+                                <td scope="row"><img width="100" src="<?= BASE_URL . IMG_URL . $class['img'] ?>"></td>
                                 <td scope="row"><?= $class['hour'] ?></td>
                             </tr>
                         <?php endforeach ?>

@@ -4,6 +4,17 @@
 
 ### https://github.com/pitterpj
 
+### Data to access the application:
+-   - Director-> Pitter 1234
+    - Coordinador-> Alpha 1234
+    - Monitor-> Elena 1234
+    - Monitor-> Dario 1234
+    - Monitor-> Daniel 1234
+    - Monitor-> Maria 1234
+    - Cliente-> Isabel
+    - Cliente-> Jesús
+
+
 ### Organization of files:
 
 -   - System->config.php // The file contains constants and database parameters. Here you must change the data to make it work.
