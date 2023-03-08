@@ -36,6 +36,7 @@ define("DB_NAME","tecnologym"); // Change this!
 // // **** Change this setting for each project **** //
 // define("ROOT", '/home/pjorgec04/public_html/');
 // define("BASE_URL", "http://jmlcasa.dyndns.info:8080/~pjorgec04/");
+// define("IMG_URL", "app\assets\img\uploaded_images/");
 
 // // **** DATABASE **** //
 // define("DB_HOST","localhost");
