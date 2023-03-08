@@ -84,13 +84,13 @@ class m_Users extends Model
             }
         }
 
-        $sntImg = "UPDATE `person` INNER JOIN worker ON person.id_person=worker.id_person SET `avatar` = :avatar WHERE worker.id_worker = :id_worker;";
-        $this->consult($sntImg);
-        $this->link(":id_worker", $id_worker);
-        $this->upImg(":avatar", $_FILES['addImg']);
-        $this->launch();
-
-
+        if ($avatar != "") {
+            $sntImg = "UPDATE `person` INNER JOIN worker ON person.id_person=worker.id_person SET `avatar` = :avatar WHERE worker.id_worker = :id_worker;";
+            $this->consult($sntImg);
+            $this->link(":id_worker", $id_worker);
+            $this->upImg(":avatar", $_FILES['addImg']);
+            $this->launch();
+        }
 
         $snt = "UPDATE worker SET hours = :hours WHERE id_worker = :id_worker";
         $this->consult($snt);
@@ -99,7 +99,7 @@ class m_Users extends Model
         $this->launch();
 
 
-        $snt2 = "UPDATE person INNER JOIN worker ON person.id_person=worker.id_person SET name = :name, lastname = :lastname, email=:email, phone=:phone avatar=:avatar WHERE worker.id_worker = :id_worker";
+        $snt2 = "UPDATE person INNER JOIN worker ON person.id_person=worker.id_person SET name = :name, lastname = :lastname, email=:email, phone=:phone WHERE worker.id_worker = :id_worker";
 
         $this->consult($snt2);
         $this->link(":id_worker", $id_worker);
@@ -107,7 +107,6 @@ class m_Users extends Model
         $this->link(":lastname", $_POST['updateLastname']);
         $this->link(":email", $_POST['updateEmail']);
         $this->link(":phone", $_POST['updatePhone']);
-        $this->upImg(":avatar", $_FILES['addImg']);
         $this->launch();
 
         $snt3 = "UPDATE `worker_type` SET `id_type`=:role WHERE id_worker = :id_worker";

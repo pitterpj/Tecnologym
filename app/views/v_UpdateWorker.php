@@ -5,8 +5,9 @@
 <!--==== CONTENT PAGE ====-->
 <div class="row-6 fondo-2 shadow p-3 mb-5 rounded">
     <form action="<?= BASE_URL . 'c_Users/updateWorker/' . $worker['id_worker'] ?>" method="post" enctype="multipart/form-data">
-    <div class="mb-3">
-            <label for="addImg" class="form-label">Foto de Perfil:</label>
+        <div class="mb-3">
+            <img src="<?= BASE_URL . IMG_URL . $worker['avatar'] ?>"  width="100" class="img-fluid rounded-top mb-3">
+            <label for="addImg" class="form-label"></label>
             <input type="file" class="form-control" name="addImg" aria-describedby="helpId">
         </div>
         <div class="mb-3">
