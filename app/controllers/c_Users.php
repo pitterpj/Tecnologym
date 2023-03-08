@@ -114,5 +114,10 @@ class c_Users extends Controller
         // //var_dump($datos);
         $this->managePersonal();
     }
+
+    public function deletePerson($id_person){
+        $this->m_users->deletePerson($id_person[0]);
+        $this->managePersonal();
+    }
 } //End c_Users
 ?>

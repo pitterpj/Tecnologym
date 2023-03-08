@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-03-2023 a las 13:34:39
+-- Tiempo de generación: 08-03-2023 a las 08:55:23
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -28,11 +28,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `class` (
-  `avatar` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `id_class` int(11) NOT NULL,
   `id_worker` int(11) NOT NULL,
   `id_skill` int(11) NOT NULL,
-  `capacity` int(11) DEFAULT NULL,
+  `capacity` int(11) NOT NULL DEFAULT 12,
   `day` date NOT NULL,
   `hour` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -41,11 +40,18 @@ CREATE TABLE `class` (
 -- Volcado de datos para la tabla `class`
 --
 
-INSERT INTO `class` (`avatar`, `id_class`, `id_worker`, `id_skill`, `capacity`, `day`, `hour`) VALUES
-('avatar_img', 1, 1, 1, 12, '2023-03-05', '13:32:00'),
-('avatar_img', 2, 1, 3, 10, '2023-03-06', '10:33:00'),
-('avatar_img', 3, 3, 6, 9, '2023-03-04', '16:33:00'),
-('avatar_img', 4, 2, 1, 8, '2023-03-04', '19:33:00');
+INSERT INTO `class` (`id_class`, `id_worker`, `id_skill`, `capacity`, `day`, `hour`) VALUES
+(1, 1, 1, 7, '2023-03-07', '21:00:00'),
+(2, 1, 4, 12, '2023-03-07', '22:00:00'),
+(3, 1, 6, 12, '2023-03-08', '14:01:00'),
+(4, 1, 2, 8, '2023-03-08', '16:00:00'),
+(5, 1, 5, 9, '2023-03-08', '14:31:00'),
+(6, 1, 7, 77, '2023-03-08', '16:55:00'),
+(7, 1, 1, 6, '2023-04-01', '07:55:00'),
+(8, 1, 1, 1, '2023-05-10', '22:51:00'),
+(9, 1, 3, 12, '2023-03-15', '11:50:00'),
+(10, 1, 2, 7, '2023-03-15', '10:01:00'),
+(11, 1, 6, 11, '2023-03-08', '14:11:00');
 
 -- --------------------------------------------------------
 
@@ -66,7 +72,8 @@ CREATE TABLE `client` (
 --
 
 INSERT INTO `client` (`id_client`, `id_person`, `BMI`, `weight`, `birth_date`) VALUES
-(1, 4, 38.9, 79.8, '2023-03-01');
+(1, 7, 25.7, 55, '1983-06-08'),
+(2, 8, 25.5, 66, '1972-11-07');
 
 -- --------------------------------------------------------
 
@@ -86,7 +93,9 @@ CREATE TABLE `log_training` (
 --
 
 INSERT INTO `log_training` (`id_training`, `id_client`, `id_worker`, `training_date`) VALUES
-(1, 1, 1, '2023-03-06');
+(1, 1, 1, '2023-03-08'),
+(2, 1, 1, '2023-03-09'),
+(3, 2, 1, '2023-03-14');
 
 -- --------------------------------------------------------
 
@@ -98,8 +107,8 @@ CREATE TABLE `person` (
   `id_person` int(11) NOT NULL,
   `name` varchar(70) COLLATE utf8mb4_unicode_ci NOT NULL,
   `lastname` varchar(70) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user` varchar(70) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user` varchar(70) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email` varchar(70) COLLATE utf8mb4_unicode_ci NOT NULL,
   `phone` varchar(9) COLLATE utf8mb4_unicode_ci NOT NULL,
   `avatar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
@@ -110,10 +119,15 @@ CREATE TABLE `person` (
 --
 
 INSERT INTO `person` (`id_person`, `name`, `lastname`, `user`, `password`, `email`, `phone`, `avatar`) VALUES
-(1, 'director01', 'lastname director01', 'director01', '1234', 'director01@email.com', '123456789', 'avatar'),
-(2, 'coordinador01', 'lastname coordinador01', 'coordinador01', '1234', 'coordinador01@email.com', '789456123', 'avatar'),
-(3, 'monitor01', 'lastname monitor01', 'monitor01', '1234', 'monitor01@email.com', '789456123', 'avatar'),
-(4, 'cliente01', 'lastname cliente01', '', '', '', '', 'avatar');
+(1, 'Pedro', 'Jorge Cid', 'Pitter', '1234', 'pitter@pitter.es', '603548777', '1678259863_Avatar_Pitter-PJ_sonrisa.png'),
+(2, 'Alpha Luis', 'Almendral', 'Alpha', '1234', 'alpha@correo.es', '123123123', '1678260321_alphaPerrito.jpg'),
+(3, 'María Cremita', 'Lorenzo Cremi', 'Elena', '1234', 'email@cremi.es', '123456456', '1678261701_crematia.jpg'),
+(4, 'Darío', 'Estevez', 'Dario', '1234', 'dario@dario.es', '123123123', '1678260632_dario.jpg'),
+(5, 'Daniel', 'García', 'Daniel', '1234', 'daniel@daniel.es', '123123123', '1678260759_daniel.jpg'),
+(6, 'María', 'Srta.M', 'Maria', '1234', 'maria@correo.es', '345345345', NULL),
+(7, 'Isabel', 'Cortés', NULL, NULL, 'isabel@correo.es', '123666666', NULL),
+(8, 'Jesús', 'Labrador', NULL, NULL, 'jesuslab@correo.es', '066736456', NULL),
+(9, 'Prueba', 'prueba apellidos', 'prueba', '1234', 'prueba@correo.es', '123123123', '1678261814_test.jpg');
 
 -- --------------------------------------------------------
 
@@ -122,6 +136,7 @@ INSERT INTO `person` (`id_person`, `name`, `lastname`, `user`, `password`, `emai
 --
 
 CREATE TABLE `skill` (
+  `img` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `id_skill` int(11) NOT NULL,
   `name_skill` varchar(70) COLLATE utf8mb4_unicode_ci NOT NULL,
   `level` varchar(1) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '1'
@@ -131,13 +146,14 @@ CREATE TABLE `skill` (
 -- Volcado de datos para la tabla `skill`
 --
 
-INSERT INTO `skill` (`id_skill`, `name_skill`, `level`) VALUES
-(1, 'AquaZumba', '1'),
-(2, 'Boxing', '2'),
-(3, 'Attack', '3'),
-(4, 'BodyPump', '3'),
-(5, 'Pilates', '1'),
-(6, 'Yoga', '2');
+INSERT INTO `skill` (`img`, `id_skill`, `name_skill`, `level`) VALUES
+('1678217903_Bodypump.png', 1, 'BodyPump', '1'),
+('1678217923_BodyStep.png', 2, 'BodyStep', '1'),
+('1678217933_Boxing.png', 3, 'Boxing', '3'),
+('1678217940_Ciclo.png', 4, 'Ciclo', '2'),
+('1678217947_Combat.png', 5, 'Combat', '1'),
+('1678217961_Fusion.png', 6, 'HBX Fusion', '3'),
+('1678217968_Zumba.png', 7, 'Zumba', '1');
 
 -- --------------------------------------------------------
 
@@ -176,9 +192,13 @@ CREATE TABLE `worker` (
 --
 
 INSERT INTO `worker` (`id_worker`, `id_person`, `hours`) VALUES
-(1, 1, 40),
-(2, 2, 40),
-(3, 3, 30);
+(1, 1, 30),
+(2, 2, 30),
+(3, 3, 41),
+(4, 4, 40),
+(5, 5, 40),
+(6, 6, 40),
+(7, 9, 12);
 
 -- --------------------------------------------------------
 
@@ -200,10 +220,26 @@ INSERT INTO `worker_skill` (`id_worker`, `id_skill`) VALUES
 (1, 2),
 (1, 3),
 (1, 4),
+(1, 5),
+(1, 6),
+(1, 7),
 (2, 1),
+(2, 3),
+(2, 4),
 (2, 6),
+(3, 1),
+(3, 1),
+(3, 1),
+(3, 1),
+(3, 1),
 (3, 5),
-(3, 6);
+(3, 6),
+(3, 7),
+(4, 2),
+(4, 4),
+(5, 1),
+(5, 2),
+(6, 6);
 
 -- --------------------------------------------------------
 
@@ -223,7 +259,11 @@ CREATE TABLE `worker_type` (
 INSERT INTO `worker_type` (`id_worker`, `id_type`) VALUES
 (1, 1),
 (2, 2),
-(3, 3);
+(3, 3),
+(4, 3),
+(5, 3),
+(6, 3),
+(7, 3);
 
 --
 -- Índices para tablas volcadas
@@ -299,31 +339,31 @@ ALTER TABLE `worker_type`
 -- AUTO_INCREMENT de la tabla `class`
 --
 ALTER TABLE `class`
-  MODIFY `id_class` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_class` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `client`
 --
 ALTER TABLE `client`
-  MODIFY `id_client` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_client` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `log_training`
 --
 ALTER TABLE `log_training`
-  MODIFY `id_training` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_training` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `person`
 --
 ALTER TABLE `person`
-  MODIFY `id_person` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_person` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `skill`
 --
 ALTER TABLE `skill`
-  MODIFY `id_skill` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_skill` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `type`
@@ -335,7 +375,7 @@ ALTER TABLE `type`
 -- AUTO_INCREMENT de la tabla `worker`
 --
 ALTER TABLE `worker`
-  MODIFY `id_worker` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_worker` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Restricciones para tablas volcadas
@@ -371,8 +411,8 @@ ALTER TABLE `worker`
 -- Filtros para la tabla `worker_skill`
 --
 ALTER TABLE `worker_skill`
-  ADD CONSTRAINT `worker_skill_ibfk_1` FOREIGN KEY (`id_worker`) REFERENCES `worker` (`id_worker`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `worker_skill_ibfk_2` FOREIGN KEY (`id_skill`) REFERENCES `skill` (`id_skill`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `worker_skill_ibfk_1` FOREIGN KEY (`id_worker`) REFERENCES `worker` (`id_worker`),
+  ADD CONSTRAINT `worker_skill_ibfk_2` FOREIGN KEY (`id_skill`) REFERENCES `skill` (`id_skill`);
 
 --
 -- Filtros para la tabla `worker_type`

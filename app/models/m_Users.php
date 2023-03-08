@@ -159,4 +159,11 @@ class m_Users extends Model
         $this->link(":id_type", $_POST['addRole']);
         $this->launch();
     }
+
+    public function deletePerson($id_person){
+        $snt="DELETE FROM person WHERE id_person = :id_person;";
+        $this->consult($snt);
+        $this->link(":id_person",$id_person);
+        $this->launch();
+    }
 } //End m_Users

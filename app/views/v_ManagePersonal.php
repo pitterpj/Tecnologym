@@ -49,7 +49,7 @@
                             <td><?= $worker['hours'] ?></td>
                             <td>
                                 <a name="updateWorker" class="btn btn-info" href="<?= BASE_URL . 'c_Users/updateWorkers/' . $worker['id_worker'] ?>" type="button">Editar</a>
-                                <a name="deleteWorker" class="btn btn-warning" href="#" role="button">Eliminar</a>
+                                <a name="deleteWorker" class="btn btn-warning" href="<?= BASE_URL . 'c_Users/deletePerson/' . $worker['id_person']?> " role="button">Eliminar</a>
                             </td>
                         </tr>
                     <?php endforeach ?>
