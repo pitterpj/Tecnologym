@@ -160,10 +160,61 @@ class m_Users extends Model
         $this->launch();
     }
 
-    public function deletePerson($id_person){
-        $snt="DELETE FROM person WHERE id_person = :id_person;";
+    public function deletePerson($id_person)
+    {
+        $snt = "DELETE FROM person WHERE id_person = :id_person;";
         $this->consult($snt);
-        $this->link(":id_person",$id_person);
+        $this->link(":id_person", $id_person);
+        $this->launch();
+    }
+
+    // Easy, update client
+    public function updateClient($id_person)
+    {
+        $avatar = isset($_FILES['addImg']['name']) ? $_FILES['addImg']['name'] : "";
+        $date = new DateTime();
+        $nameAvatar = ($avatar != "") ? $date->getTimestamp() . "_" . $_FILES['addImg']['name'] : "";
+
+        $tmp_avatar = $_FILES['addImg']['tmp_name'];
+
+        if ($tmp_avatar != "") {
+            move_uploaded_file($tmp_avatar, IMG_URL . $nameAvatar);
+
+            $sntToDelete = "SELECT avatar FROM person WHERE id_person = :id_person";
+            $this->consult($sntToDelete);
+            $this->link(":id_person", $id_person);
+            $avatarWorker = $this->row();
+
+
+            if (isset($avatarWorker['avatar']) && $avatarWorker['avatar'] != "") {
+                if (file_exists(IMG_URL . $avatarWorker['avatar'])) {
+                    //return BASE_URL . IMG_URL . $avatarWorker['avatar'];
+                    unlink(IMG_URL . $avatarWorker['avatar']);
+                }
+            }
+        }
+
+        if ($avatar != "") {
+            $sntImg = "UPDATE `person` SET `avatar` = :avatar WHERE id_person = :id_person;";
+            $this->consult($sntImg);
+            $this->link(":id_person", $id_person);
+            $this->upImg(":avatar", $_FILES['addImg']);
+            $this->launch();
+        }
+
+        $snt2 = "UPDATE person SET name = :name, lastname = :lastname  WHERE id_person = :id_person";
+        $this->consult($snt2);
+        $this->link(":id_person", $id_person);
+        $this->link(":name", $_POST['updateName']);
+        $this->link(":lastname", $_POST['updateLastName']);
+        $this->launch();
+
+        $snt3 = "UPDATE `client` SET `BMI`= :BMI ,`weight`= :weight,`birth_date`= :date WHERE id_person = :id_person";
+        $this->consult($snt3);
+        $this->link(":id_person", $id_person);
+        $this->link(":BMI", $_POST['updateBMI']);
+        $this->link(":weight", $_POST['updateWeight']);
+        $this->link(":date", $_POST['updateDate']);
         $this->launch();
     }
 } //End m_Users

@@ -115,9 +115,18 @@ class c_Users extends Controller
         $this->managePersonal();
     }
 
-    public function deletePerson($id_person){
+    public function deletePerson($id_person)
+    {
         $this->m_users->deletePerson($id_person[0]);
         $this->managePersonal();
+    }
+
+    // Update worker
+    public function updateClient($id_person)
+    {
+        $this->m_users->updateClient($id_person[0]);
+        $this->managePersonal();
+
     }
 } //End c_Users
 ?>

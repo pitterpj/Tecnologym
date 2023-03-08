@@ -4,7 +4,7 @@
 
 <!--==== CONTENT PAGE ====-->
 <div class="row-6 fondo-2 shadow p-3 mb-5 rounded">
-    <form action="<?= BASE_URL ?>c_Users/addWorker" method="post" enctype="multipart/form-data">
+    <form action="<?= BASE_URL ?>c_PersonalTraining/addClient" method="post" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="addImg" class="form-label">Foto de Perfil:</label>
             <input type="file" class="form-control" name="addImg" aria-describedby="helpId">
@@ -18,45 +18,19 @@
             <input type="text" class="form-control" name="addLastName" aria-describedby="helpId">
         </div>
         <div class="mb-3">
-            <label for="addUser" class="form-label">Usuario:</label>
-            <input type="text" class="form-control" name="addUser" aria-describedby="helpId">
+            <label for="addBMI" class="form-label">BMI:</label>
+            <input type="text" class="form-control" name="addBMI" aria-describedby="helpId">
         </div>
         <div class="mb-3">
-            <label for="addPass" class="form-label">Contraseña:</label>
-            <input type="password" class="form-control" name="addPass" aria-describedby="helpId">
+            <label for="addWeight" class="form-label">Peso:</label>
+            <input type="number" class="form-control" name="addWeight" aria-describedby="helpId">
         </div>
         <div class="mb-3">
-            <label for="addRole" class="form-label">Puesto:</label>
-            <select class="form-select" name="addRole">
-                <option selected value="3">Monitor</option>
-                <option value="2">Coordinador</option>
-            </select>
+            <label for="addDate" class="form-label">Fecha de Nacimiento</label>
+            <input type="date" class="form-control" name="addDate" aria-describedby="helpId">
         </div>
-        <div class="mb-3">
-            <label for="addEmail" class="form-label">Email</label>
-            <input type="text" class="form-control" name="addEmail" aria-describedby="helpId">
-        </div>
-        <div class="mb-3">
-            <label for="addPhone" class="form-label">Teléfono</label>
-            <input type="text" class="form-control" name="addPhone" aria-describedby="helpId">
-        </div>
-        <div class="mb-3">
-            <label for="addHours" class="form-label">Horas de Contrato</label>
-            <input type="text" class="form-control" name="addHours" aria-describedby="helpId">
-        </div>
-        <!-- <div class="mb-3">
-            <label for="selectWorkerSkill" class="form-label">Selecciona Actividad:</label>
-             <select id="selectWorkerSkill" class="form-select form-select-lg" name="selectWorkerSkill">
-                 <?php
-                    //  foreach ($skills as $skill => $value) {
-                    //     var_dump($skills);
-                    //     echo "<option value='" . $value['id_skill'] . "'>" . $value['name_skill'] . "</option>";
-                    // }; 
-                    ?> 
-            </select> 
-        </div>-->
         <div class="d-flex justify-content-around ">
-            <button type="submit" class="btn btn-primary">Agregar Trabajador</button>
+            <button type="submit" class="btn btn-primary">Agregar CLiente</button>
         </div>
     </form>
 </div><!--==== END CONTENT PAGE WITH SHADOWS ====-->

@@ -26,15 +26,22 @@
                     <?php
                     foreach ($clients as $client) : ?>
                         <tr class="text-center">
-                            <td scope="row">Avatar</td>
+                            <td scope="row">
+                                <?php if (isset($client['avatar']) or $client['avatar'] != NULL) {
+                                    echo '<img class="img-fluid rounded-circle" src="' . BASE_URL . IMG_URL . $client['avatar'] . '" width="100" alt="Brand-Tecnologym">';
+                                } else {
+                                    echo '<img class="img-fluid rounded-circle" src="' . BASE_URL . 'app\assets\img\icons\avatar_person.jpg" width="100" alt="Brand-Tecnologym">';
+                                }  ?>
+                            </td>
                             <td><?= $client['name'] ?></td>
                             <td><?= $client['lastname'] ?></td>
                             <td><?= $client['BMI'] ?></td>
                             <td><?= $client['weight'] ?></td>
                             <td><?= $client['birth_date'] ?></td>
                             <td>
-                                <a name="updatePersonalTraining" class="btn btn-info" href="" type="button">Editar</a>
-                                <a name="" class="btn btn-warning" href="#" role="button">Eliminar</a>
+                                <a name="updatePersonalTraining" class="btn btn-info" href="<?= BASE_URL . "c_PersonalTraining/updateClients/" . $client['id_person'] ?>" type="button">Editar</a>
+                                <a class="btn btn-warning" href="<?= BASE_URL . "c_Users/deletePerson/" . $client['id_person'] ?>" role="button">Eliminar</a>
+                                <!-- <?php var_dump($clients); ?> -->
                             </td>
                         </tr>
                     <?php endforeach ?>
