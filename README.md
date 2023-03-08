@@ -52,6 +52,8 @@
 
     - en v_Schedule mostrar si en el header si es horario u horario personal
 
+    - El rol de director del sidebard no desaparece
+
     - En c_Schedule en addClass cuando añade hacer redirección por si queremos añadirla a los coachs la nueva habiliad.
 
     - Sweet aler x2 en header

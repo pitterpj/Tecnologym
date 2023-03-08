@@ -49,20 +49,23 @@ class c_Users extends Controller
     public function dashboard($calendar = "today")
     {
         $datos["personalScheduleToday"] = $this->m_schedule->showPersonalSchedule($_SESSION['session']['id_person'], $calendar);
-        $avatar['avatar'] = $_SESSION['session']['avatar'];
+
+        //$avatar['avatar'] = $_SESSION['session']['avatar'];
+
         $datos['logTraining'] = $this->m_logTraining->countLogTraining($_SESSION['session']['id_person']);
 
         $this->loadView("templates/header");
-        $this->loadView("templates/sidebar", $avatar);
+        $this->loadView("templates/sidebar");
+
         switch ($_SESSION['session']['role']) {
             case "Director":
                 $this->loadView("/director/v_Director", $datos);
                 break;
             case "Monitor":
-                $this->loadView("/monitor/v_Monitor");
+                $this->loadView("/monitor/v_Monitor", $datos);
                 break;
             case "Coordinador":
-                $this->loadView("/manager/v_Manager");
+                $this->loadView("/manager/v_Manager", $datos);
                 break;
         };
         $this->loadView("templates/footer");
@@ -97,8 +100,6 @@ class c_Users extends Controller
     // Update worker
     public function updateWorker($id_worker)
     {
-
-
         $this->m_users->updateWorker($id_worker[0]);
         //var_dump($datos);
         $this->managePersonal();

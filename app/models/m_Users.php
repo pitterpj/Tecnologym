@@ -92,35 +92,35 @@ class m_Users extends Model
 
 
 
-        // $snt = "UPDATE worker SET hours = :hours WHERE id_worker = :id_worker";
-        // $this->consult($snt);
-        // $this->link(":id_worker", $id_worker);
-        // $this->link(":hours", $_POST['updateHours']);
-        // $this->launch();
+        $snt = "UPDATE worker SET hours = :hours WHERE id_worker = :id_worker";
+        $this->consult($snt);
+        $this->link(":id_worker", $id_worker);
+        $this->link(":hours", $_POST['updateHours']);
+        $this->launch();
 
 
-        // $snt2 = "UPDATE person INNER JOIN worker ON person.id_person=worker.id_person SET name = :name, lastname = :lastname, email=:email, phone=:phone avatar=:avatar WHERE worker.id_worker = :id_worker";
+        $snt2 = "UPDATE person INNER JOIN worker ON person.id_person=worker.id_person SET name = :name, lastname = :lastname, email=:email, phone=:phone avatar=:avatar WHERE worker.id_worker = :id_worker";
 
-        // $this->consult($snt2);
-        // $this->link(":id_worker", $id_worker);
-        // $this->link(":name", $_POST['updateName']);
-        // $this->link(":lastname", $_POST['updateLastname']);
-        // $this->link(":email", $_POST['updateEmail']);
-        // $this->link(":phone", $_POST['updatePhone']);
-        // $this->upImg(":avatar", $_FILES['addImg']);
-        // $this->launch();
+        $this->consult($snt2);
+        $this->link(":id_worker", $id_worker);
+        $this->link(":name", $_POST['updateName']);
+        $this->link(":lastname", $_POST['updateLastname']);
+        $this->link(":email", $_POST['updateEmail']);
+        $this->link(":phone", $_POST['updatePhone']);
+        $this->upImg(":avatar", $_FILES['addImg']);
+        $this->launch();
 
-        // $snt3 = "UPDATE `worker_type` SET `id_type`=:role WHERE id_worker = :id_worker";
-        // $this->consult($snt3);
-        // $this->link(":id_worker", $id_worker);
-        // $this->link(":role", $_POST['updateRole']);
-        // $this->launch();
+        $snt3 = "UPDATE `worker_type` SET `id_type`=:role WHERE id_worker = :id_worker";
+        $this->consult($snt3);
+        $this->link(":id_worker", $id_worker);
+        $this->link(":role", $_POST['updateRole']);
+        $this->launch();
 
-        // $snt4 = "INSERT INTO `worker_skill` (`id_worker`, `id_skill`) VALUES  ( :id_worker, :id_skill)";
-        // $this->consult($snt4);
-        // $this->link(":id_worker", $id_worker);
-        // $this->link(":id_skill", $_POST['addWorkerSkill']);
-        // $this->launch();
+        $snt4 = "INSERT INTO `worker_skill` (`id_worker`, `id_skill`) VALUES  ( :id_worker, :id_skill)";
+        $this->consult($snt4);
+        $this->link(":id_worker", $id_worker);
+        $this->link(":id_skill", $_POST['addWorkerSkill']);
+        $this->launch();
     }
     // Display all available skills 
     public function showSkill()

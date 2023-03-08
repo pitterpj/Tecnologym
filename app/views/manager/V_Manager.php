@@ -10,6 +10,22 @@
             <div class="card-header text-center">Horario personal(C)</div>
             <div class="card-body">
                 <h4 class="card-title text-center">Hoy</h4>
+                <table class="table table-primary table-striped table-hover">
+                    <thead>
+                        <tr class="text-center">
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Hora</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($personalScheduleToday as $class) : ?>
+                            <tr class="text-center">
+                                <td scope="row"><img width="100" src="<?= BASE_URL . IMG_URL . $class['img'] ?>"></td>
+                                <td scope="row"><?= $class['hour'] ?></td>
+                            </tr>
+                        <?php endforeach ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -20,9 +36,11 @@
             <!--==== col2.1 ====-->
             <div class="col-12 card">
                 <div class="card-header text-center">Entrenamientos personales esta semana</div>
-                <div class="card-body">
+                <div class="card-body text-center">
                     <h4 class="card-title text-center">Entrenos</h4>
-                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam dolor laboriosam fugit omnis eius aut?</p>
+                    <p class="card-text">
+                    <h3> <?= $logTraining['log'] ?> </h3>
+                    </p>
                 </div>
             </div>
         </div> <!--==== end row2 ====-->
@@ -31,9 +49,9 @@
             <!--==== col 2.2 ====-->
             <div class="col-12 card ">
                 <div class="card-header text-center">Notificaciones</div>
-                <div class="card-body">
+                <div class="card-body text-center">
                     <h4 class="card-title text-center">Notificaciones</h4>
-                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam dolor laboriosam fugit omnis eius aut? Accusamus odio expedita dolore, hic veniam aliquam doloremque laborum eveniet? Repellendus labore accusamus rerum aperiam?</p>
+                    <p class="card-text">No tiene notificaciones actualmente</p>
                 </div>
             </div>
         </div>

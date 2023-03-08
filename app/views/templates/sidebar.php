@@ -5,34 +5,27 @@
 
 <body>
     <div class="wrapper">
+
         <!--====== SIDEBAR ======-->
         <nav id="sidebar">
+
             <!--====== BRAND ======-->
             <div class="sidebar-header">
                 <a href="<?= BASE_URL . "c_Users/dashboard" ?>"><img class="img-fluid" src="<?= BASE_URL ?>app/assets/img/Brand_Tecnologym.png" width="200" alt="Brand-Tecnologym"></a>
             </div>
+
             <!--====== AVATAR ROLE PERSON======-->
-            <!-- TODO -- AÑADIR LA FOTO DE LA PERSONA.
-                    -- CAMBIAR LA LETRA DEL ROL SEGÚN LA PERSONA -->
             <div class="sidebar-header text-center push ">
-                <?php
-                if (isset($avatar)) {
-                    echo '<img class="img-fluid rounded-circle" src="' . BASE_URL . IMG_URL . $avatar . '" width="200" alt="Brand-Tecnologym">';
+                <?php if (isset($_SESSION['session']['avatar'])) {
+                    echo '<img class="img-fluid rounded-circle" src="' . BASE_URL . IMG_URL . $_SESSION['session']['avatar'] . '" width="200" "height=200" alt="Brand-Tecnologym">';
                 } else {
                     echo '<img class="img-fluid rounded-circle" src="' . BASE_URL . 'app\assets\img\icons\avatar_person.jpg" width="200" alt="Brand-Tecnologym">';
-                }
-
-                ?>
-
-                <!-- <img class="img-fluid rounded-circle" src="<?= BASE_URL ?>app\assets\img\icons\avatar_person.jpg" width="200" alt="Brand-Tecnologym"> -->
-                <!-- <img class="img-fluid rounded-circle" src="<?= BASE_URL . IMG_URL . $avatar ?>" width="200" alt="Brand-Tecnologym"> -->
-
-
+                } ?>
                 <span class="disappear fs-3"><?= $_SESSION['session']['name']; ?></span>
+                <p></p>
                 <span class="disappear fs-4"><?= $_SESSION['session']['role']; ?></span>
                 <strong class="mt-4">
-                    <?php
-                    switch ($_SESSION['session']['role']) {
+                    <?php switch ($_SESSION['session']['role']) {
                         case "Director":
                             echo "D";
                             break;
@@ -42,8 +35,7 @@
                         case "Coordinador":
                             echo "C";
                             break;
-                    }
-                    ?>
+                    } ?>
                 </strong>
             </div>
 
@@ -56,7 +48,7 @@
                     </a>
                 </li>
 
-                <!-- Depending on the role, this shows one menu of options or another -->
+                <!--==== Depending on the role, this shows one menu of options or another ====-->
                 <li> <!--====== Icon Create schedules  ======-->
                     <?php if ($_SESSION['session']['role'] == "Monitor") {
                         echo "<a href='" . BASE_URL . "c_Schedule/showPersonalSchedule'  class=''>";
@@ -85,6 +77,7 @@
                         echo "</i>";
                         echo "<span class='disappear'>Crear Horarios</span></a>";
                         echo "</li>";
+
                         // <!--== Personal  ==-->
                         echo "<li>";
                         echo "<a href='" . BASE_URL . "c_Schedule/showPersonalSchedule'>";
