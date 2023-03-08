@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-03-2023 a las 08:55:23
+-- Tiempo de generación: 08-03-2023 a las 10:47:02
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -51,7 +51,11 @@ INSERT INTO `class` (`id_class`, `id_worker`, `id_skill`, `capacity`, `day`, `ho
 (8, 1, 1, 1, '2023-05-10', '22:51:00'),
 (9, 1, 3, 12, '2023-03-15', '11:50:00'),
 (10, 1, 2, 7, '2023-03-15', '10:01:00'),
-(11, 1, 6, 11, '2023-03-08', '14:11:00');
+(11, 1, 6, 11, '2023-03-08', '14:11:00'),
+(12, 2, 1, 13, '2023-03-08', '11:43:00'),
+(13, 2, 4, 11, '2023-03-08', '10:45:00'),
+(14, 2, 1, 15, '2023-03-08', '15:43:00'),
+(15, 3, 5, 45, '2023-03-08', '14:44:00');
 
 -- --------------------------------------------------------
 
@@ -109,8 +113,8 @@ CREATE TABLE `person` (
   `lastname` varchar(70) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user` varchar(70) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` varchar(70) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone` varchar(9) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(70) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` varchar(9) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `avatar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -125,9 +129,9 @@ INSERT INTO `person` (`id_person`, `name`, `lastname`, `user`, `password`, `emai
 (4, 'Darío', 'Estevez', 'Dario', '1234', 'dario@dario.es', '123123123', '1678260632_dario.jpg'),
 (5, 'Daniel', 'García', 'Daniel', '1234', 'daniel@daniel.es', '123123123', '1678260759_daniel.jpg'),
 (6, 'María', 'Srta.M', 'Maria', '1234', 'maria@correo.es', '345345345', NULL),
-(7, 'Isabel', 'Cortés', NULL, NULL, 'isabel@correo.es', '123666666', NULL),
-(8, 'Jesús', 'Labrador', NULL, NULL, 'jesuslab@correo.es', '066736456', NULL),
-(9, 'Prueba', 'prueba apellidos', 'prueba', '1234', 'prueba@correo.es', '123123123', '1678261814_test.jpg');
+(7, 'Isabel', 'Cortés', NULL, NULL, 'isabel@correo.es', '123666666', '1678268521_Mindfulnes.jpg'),
+(8, 'Jesús', 'Labrador', NULL, NULL, 'jesuslab@correo.es', '066736456', '1678268530_jesus.jpg'),
+(12, 'Prueba', 'prueba', 'prueba', '1234', 'prueba@correo.es', '123546123', '1678264221_test.jpg');
 
 -- --------------------------------------------------------
 
@@ -198,7 +202,7 @@ INSERT INTO `worker` (`id_worker`, `id_person`, `hours`) VALUES
 (4, 4, 40),
 (5, 5, 40),
 (6, 6, 40),
-(7, 9, 12);
+(11, 12, 13);
 
 -- --------------------------------------------------------
 
@@ -263,7 +267,7 @@ INSERT INTO `worker_type` (`id_worker`, `id_type`) VALUES
 (4, 3),
 (5, 3),
 (6, 3),
-(7, 3);
+(11, 3);
 
 --
 -- Índices para tablas volcadas
@@ -339,13 +343,13 @@ ALTER TABLE `worker_type`
 -- AUTO_INCREMENT de la tabla `class`
 --
 ALTER TABLE `class`
-  MODIFY `id_class` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_class` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `client`
 --
 ALTER TABLE `client`
-  MODIFY `id_client` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_client` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `log_training`
@@ -357,7 +361,7 @@ ALTER TABLE `log_training`
 -- AUTO_INCREMENT de la tabla `person`
 --
 ALTER TABLE `person`
-  MODIFY `id_person` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_person` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `skill`
@@ -375,7 +379,7 @@ ALTER TABLE `type`
 -- AUTO_INCREMENT de la tabla `worker`
 --
 ALTER TABLE `worker`
-  MODIFY `id_worker` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_worker` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Restricciones para tablas volcadas
@@ -398,8 +402,8 @@ ALTER TABLE `client`
 -- Filtros para la tabla `log_training`
 --
 ALTER TABLE `log_training`
-  ADD CONSTRAINT `log_training_ibfk_1` FOREIGN KEY (`id_client`) REFERENCES `client` (`id_client`),
-  ADD CONSTRAINT `log_training_ibfk_2` FOREIGN KEY (`id_worker`) REFERENCES `worker` (`id_worker`);
+  ADD CONSTRAINT `log_training_ibfk_2` FOREIGN KEY (`id_worker`) REFERENCES `worker` (`id_worker`),
+  ADD CONSTRAINT `log_training_ibfk_3` FOREIGN KEY (`id_client`) REFERENCES `client` (`id_client`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `worker`
@@ -411,15 +415,15 @@ ALTER TABLE `worker`
 -- Filtros para la tabla `worker_skill`
 --
 ALTER TABLE `worker_skill`
-  ADD CONSTRAINT `worker_skill_ibfk_1` FOREIGN KEY (`id_worker`) REFERENCES `worker` (`id_worker`),
-  ADD CONSTRAINT `worker_skill_ibfk_2` FOREIGN KEY (`id_skill`) REFERENCES `skill` (`id_skill`);
+  ADD CONSTRAINT `worker_skill_ibfk_2` FOREIGN KEY (`id_skill`) REFERENCES `skill` (`id_skill`),
+  ADD CONSTRAINT `worker_skill_ibfk_3` FOREIGN KEY (`id_worker`) REFERENCES `worker` (`id_worker`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `worker_type`
 --
 ALTER TABLE `worker_type`
-  ADD CONSTRAINT `worker_type_ibfk_1` FOREIGN KEY (`id_worker`) REFERENCES `worker` (`id_worker`),
-  ADD CONSTRAINT `worker_type_ibfk_2` FOREIGN KEY (`id_type`) REFERENCES `type` (`id_type`);
+  ADD CONSTRAINT `worker_type_ibfk_2` FOREIGN KEY (`id_type`) REFERENCES `type` (`id_type`),
+  ADD CONSTRAINT `worker_type_ibfk_3` FOREIGN KEY (`id_worker`) REFERENCES `worker` (`id_worker`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
