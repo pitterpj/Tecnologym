@@ -38,6 +38,9 @@
     <!--====== Style CSS ======-->
     <link rel="stylesheet" href="<?= BASE_URL ?>app\assets\libs\landing\css\style.css">
 
+    <!--====== SweetAlert ======-->
+    <script src="http://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <!--====== MODAL LOGIN ======-->
@@ -56,7 +59,7 @@
                     <div class="form-group"> <!--==== USER ====-->
                         <label class="control-label">Usuario o email: </label>
                         <div>
-                            <input type="text" class="form-control input-lg" name="user" placeholder="Nombre de Usuario o email" value="director01">
+                            <input type="text" class="form-control input-lg" name="user" placeholder="Nombre de Usuario o email" value="Pitter">
                         </div>
                     </div>
                     <div class="form-group"><!--==== PASSWORD ====-->
@@ -76,7 +79,49 @@
             </div> <!-- End modal body -->
         </div>
     </div>
-</div><!--====== END MODAL ======-->
+</div><!--====== END MODAL LOGIN ======-->
+
+
+<!--==== MODAL REGISTER ====-->
+<div class="modal fade" id="modalRegister" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Contacta con nosotros para registrarte:</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="<?= BASE_URL . "" ?>" method="POST">
+                    <div class="form-group">
+                        <label class="control-label">Nombre: </label>
+                        <div>
+                            <input type="text" class="form-control input-lg" name="name" placeholder="Nombre completo">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Email: </label>
+                        <div>
+                            <input type="email" class="form-control input-lg" name="email" placeholder="correo@correo.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Mensaje: </label>
+                        <textarea class="form-control" name="message" rows="3" placeholder="Añade el plan elegido en el mensaje y nos pondremos en contacto contigo."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <button id="sendRegister" type="submit" class="btn btn-success">Enviar</button>
+                            <button id="btnClose" type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                        </div>
+                    </div>
+                </form>
+            </div> <!-- End modal body -->
+        </div>
+    </div>
+
+</div><!--==== END MODAL REGISTER ====-->
 
 <body>
     <!--====== PRELOADER PART START ======-->
@@ -163,7 +208,7 @@
                             <ul>
                                 <!--====== Buttons to Register ======-->
                                 <li><a class="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1s" href="<?= BASE_URL ?>c_Users">Accede</a></li>
-                                <li><a class="main-btn main-btn-2 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.4s" href="<?= BASE_URL ?>c_Users">Registrate</a></li>
+                                <li><a class="main-btn main-btn-2 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.4s" data-toggle="modal" data-target="#modalRegister">Registrate</a></li>
                             </ul>
                         </div> <!-- header hero content -->
                     </div>
@@ -237,7 +282,7 @@
                             <h4 class="title">¡Descubre la nueva manera de gestionar tu centro o tu tiempo!</h4>
                             <p>Si deseas gestionar tu gimnasio o tu centro, así como sus horarios o tu seguimiento de entrenamientos personales, esta aplciación te ayudará a todo eso y más. Desde la gestión interna del centro a la gestión personal tanto para entrenamientos como para horarios distribuidos en diferentes salas en función de las necesidades de organizaciones o individuales.</p>
                         </div>
-                        <a class="main-btn" href="#">Descubrelo</a>
+                        <a class="main-btn page-scroll" href="#pricing">Descubrelo</a>
                     </div> <!-- about image -->
                 </div>
 
@@ -421,4 +466,18 @@
     <script src="<?= BASE_URL ?>app\assets\libs\landing\js\main.js"></script>
 
 </body>
+<script>
+    $("#sendRegister").on("click", function(e) {
+        e.preventDefault();
+
+        Swal.fire(
+            '¡Registro enviado!',
+            'Nos pondremos en contacto con la mayor brevedad posible',
+            'success'
+        )
+
+        $("#btnClose").click();
+    })
+</script>
+
 </html>

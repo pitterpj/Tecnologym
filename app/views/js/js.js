@@ -1,4 +1,4 @@
-
+// <!--====== Show skills of Workers ======-->
 
 function selectSkills(skills) {
   console.log(skills);
@@ -15,9 +15,7 @@ function selectSkills(skills) {
   $("#addWorkerSkill").html(cadena);
 }
 
-
-
-
+// <!--====== Show skills of Workers ======-->
 
 function showSkills(skills) {
   //console.log(skills);
@@ -41,3 +39,4 @@ $(document).ready(function () {
     $("#sidebar").toggleClass("active");
   });
 });
+

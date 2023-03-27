@@ -11,8 +11,9 @@
     - Monitor-> Dario 1234
     - Monitor-> Daniel 1234
     - Monitor-> Maria 1234
-    - Cliente-> Isabel
-    - Cliente-> Jesús
+    # These don´t have access to the application 
+        - Cliente-> Isabel
+        - Cliente-> Jesús
 
 
 ### Organization of files:
