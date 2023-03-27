@@ -45,31 +45,32 @@
 
 -   - Cabeceras!
 
-- Actualizar foto. primero borrarmos.
+    - Actualizar foto. primero borrarmos.
 
     - c_Dashboard to delete
 
-    - Hacer los horarios (v_Schedule) responsives
+    - Cambiar iconos sweet alert
 
-    - en v_Schedule mostrar si en el header si es horario u horario personal
+    - Cambiar V_schedule cuando creo una clase y redirigir a la principal(ahorro una vista)
 
-    - El rol de director del sidebard no desaparece
+            - Hacer los horarios (v_Schedule) responsives
+
+            - en v_Schedule mostrar si en el header si es horario u horario personal
+
 
     - En c_Schedule en addClass cuando añade hacer redirección por si queremos añadirla a los coachs la nueva habiliad.
-
-    - Sweet aler x2 en header
-
-    - Bootstrat autocomplete | Select picker bootstrat | 
 
     - En c_Users en authenticate cuando no existe el user guarda el error que no muestra. Hacer que lo muestre
 
     - Datatables
 
+    - Resetear Database
+
     - v_CreateSchedule solo muestre las skill del trabajador seleccionado
 
     - c_PersonalTraining que solo muestre el entrenador logeado
 
-    - Borrar iconos que sobran
+    - Borrar iconos que sobran (Vacaciones)
 
     - m_Users updateWorker se puede mejorar la consulta
 
@@ -88,8 +89,6 @@
     - Repasar código CSS
 
     - Añadir descripcion seo
-
-    - Enviar correo autenticacion
 
     - CSS CTAs quitar
 
