@@ -43,6 +43,7 @@
 
 </head>
 
+
 <!--====== MODAL LOGIN ======-->
 <div class="modal fade" id="modalLogin" tabindex="-1" aria-hidden="true">
     <!-- Extra info: The modal needs me to place it outside the body to let me interact. Problems with the z-index-->
@@ -59,20 +60,20 @@
                     <div class="form-group"> <!--==== USER ====-->
                         <label class="control-label">Usuario o email: </label>
                         <div>
-                            <input type="text" class="form-control input-lg" name="user" placeholder="Nombre de Usuario o email" value="Pitter">
+                            <input type="text" class="form-control input-lg" name="user" minlength="3" maxlength="25" pattern="[A-Za-z0-9@.]+" placeholder="Nombre de Usuario o Email" title="No puede contener menos de 3 caracteres" required value="pitter">
                         </div>
                     </div>
                     <div class="form-group"><!--==== PASSWORD ====-->
                         <label class="control-label">Contraseña: </label>
                         <div>
-                            <input type="password" class="form-control input-lg" name="password" placeholder="********" value="1234">
+                            <input type="password" class="form-control input-lg" minlength="4" name="password" title="No puede contener menos de 4 caracteres" placeholder="********" required value="1234">
                         </div>
                     </div>
                     <div class="form-group"><!--==== REMEMBER ME =======-->
                         <div>
                             <button type="submit" class="btn btn-success">Acceder</button>
 
-                            <a class="btn btn-link" href="">¿Contraseña olvidada?</a>
+                            <a class="btn btn-link" data-toggle="modal" data-target="#modalPassword">¿Contraseña olvidada?</a>
                         </div>
                     </div>
                 </form>
@@ -93,22 +94,22 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="<?= BASE_URL . "" ?>" method="POST">
+                <form id="formRegister" action="" method="POST">
                     <div class="form-group">
                         <label class="control-label">Nombre: </label>
                         <div>
-                            <input type="text" class="form-control input-lg" name="name" placeholder="Nombre completo">
+                            <input type="text" class="form-control input-lg" minlength="5" name="name"  placeholder="Nombre completo" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label">Email: </label>
                         <div>
-                            <input type="email" class="form-control input-lg" name="email" placeholder="correo@correo.com">
+                            <input type="email" class="form-control input-lg" minlength="5" name="email" required placeholder="correo@correo.com">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="message" class="form-label">Mensaje: </label>
-                        <textarea class="form-control" name="message" rows="3" placeholder="Añade el plan elegido en el mensaje y nos pondremos en contacto contigo."></textarea>
+                        <textarea class="form-control" name="message" rows="3" required placeholder="Añade el plan elegido en el mensaje y nos pondremos en contacto contigo."></textarea>
                     </div>
                     <div class="form-group">
                         <div>
@@ -122,6 +123,39 @@
     </div>
 
 </div><!--==== END MODAL REGISTER ====-->
+
+<!--====== MODAL LOGIN ======-->
+<div class="modal fade" id="modalPassword" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Contáctanos para recuperar tu contraseña:</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="" method="POST">
+                    <div class="form-group"> <!--==== USER ====-->
+                        <label class="control-label">Usuario o email: </label>
+                        <div>
+                            <input type="text" class="form-control input-lg" name="user" minlength="3" maxlength="25" pattern="[A-Za-z0-9@.]+" placeholder="Nombre de Usuario o Email" title="No puede contener menos de 3 caracteres" required value="pitter">
+                        </div>
+                    </div>
+                    <div>
+                        <p> Te enviaremos un email con los pasos a seguir para recuperar tu contraseña.</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div>
+                            <button type="submit" class="btn btn-success" >Recuperar contraseña</button>
+                        </div>
+                    </div>
+                </form>
+            </div> <!-- End modal body -->
+        </div>
+    </div>
+</div><!--====== END MODAL LOGIN ======-->
 
 <body>
     <!--====== PRELOADER PART START ======-->
@@ -207,7 +241,7 @@
                             <p class="wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.6s">Toda la fuerza de la tecnología ahora en tus manos.</p>
                             <ul>
                                 <!--====== Buttons to Register ======-->
-                                <li><a class="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1s" href="<?= BASE_URL ?>c_Users">Accede</a></li>
+                                <li><a class="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1s" data-toggle="modal" data-target="#modalLogin">Accede</a></li>
                                 <li><a class="main-btn main-btn-2 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.4s" data-toggle="modal" data-target="#modalRegister">Registrate</a></li>
                             </ul>
                         </div> <!-- header hero content -->
@@ -236,8 +270,8 @@
                     <div class="single_features mt-30 features_1 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
                         <img src="<?= BASE_URL ?>app\assets\img\icons\calendar.gif" alt="" srcset="">
                         <div class="features_content">
-                            <h4 class="features_title">Creador de Horarios</h4>
-                            <p>Podrás gestionar las clases de tu gimnasio o centro deportivo semanal, mensual e incluso anualmente.</p>
+                            <h4 class="features_title">Gestión de Horarios</h4>
+                            <p>Gestiona las clases del centro y planifica el horario de tus trabajadores de manera sencilla</p>
                         </div>
                     </div> <!-- single features -->
                 </div>
@@ -246,8 +280,8 @@
                     <div class="single_features mt-30 features_2 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
                         <img src="<?= BASE_URL ?>app\assets\img\icons\pullups.gif" alt="" srcset="">
                         <div class="features_content">
-                            <h4 class="features_title">Entrenamientos Personales</h4>
-                            <p>Cada entrenador podrá llevar un seguimiento de la alimentación y las tablas de cada usuario desde un solo dispositivo</p>
+                            <h4 class="features_title">Entrenador Personal</h4>
+                            <p>Realiza un seguimiento a tus usuarios. Crea, edita o modifica según las necesidades de los clientes.</p>
                         </div>
                     </div> <!-- single features -->
                 </div>
@@ -256,8 +290,8 @@
                     <div class="single_features mt-30 features_3 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.9s">
                         <img src="<?= BASE_URL ?>app\assets\img\icons\edition.gif" alt="" srcset="">
                         <div class="features_content">
-                            <h4 class="features_title">Soporte Técnico</h4>
-                            <p>Administración total de tu centro o tu perfil. Ya sea para organizaciones como para profesionales individuales.</p>
+                            <h4 class="features_title">Control Total</h4>
+                            <p>Administración total de tu centro o tus trabajadores. Ya sea para organizaciones como para profesionales individuales.</p>
                         </div>
                     </div> <!-- single features -->
                 </div>
@@ -279,10 +313,10 @@
                 <div class="col-lg-6">
                     <div class="about_content mt-45 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
                         <div class="section_title">
-                            <h4 class="title">¡Descubre la nueva manera de gestionar tu centro o tu tiempo!</h4>
-                            <p>Si deseas gestionar tu gimnasio o tu centro, así como sus horarios o tu seguimiento de entrenamientos personales, esta aplciación te ayudará a todo eso y más. Desde la gestión interna del centro a la gestión personal tanto para entrenamientos como para horarios distribuidos en diferentes salas en función de las necesidades de organizaciones o individuales.</p>
+                            <h4 class="title">¡Descubre la nueva manera de gestionar tu tiempo o tu centro!</h4>
+                            <p>Si deseas gestionar tu gimnasio o tu centro, así como sus horarios o tu seguimiento de entrenamientos personales, esta apliciación te ayudará a todo eso y más. Desde la gestión interna del centro a la gestión personal tanto para entrenamientos como para horarios distribuidos en diferentes salas en función de las necesidades de organizaciones o individuales.</p>
                         </div>
-                        <a class="main-btn page-scroll" href="#pricing">Descubrelo</a>
+                        <a class="main-btn page-scroll" data-toggle="modal" data-target="#modalRegister">Descubrelo</a>
                     </div> <!-- about image -->
                 </div>
 
@@ -297,7 +331,7 @@
                 <div class="col-lg-6">
                     <div class="section_title text-center pb-25">
                         <h4 class="title">Elige tu Plan</h4>
-                        <p>Elige que eres y como deseas gastar tu dinero para ganar tu tiempo.</p>
+                        <p>Elige como deseas gastar tu dinero para ganar en tiempo.</p>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
@@ -307,7 +341,7 @@
                 <div class="col-lg-4 col-md-8 col-sm-10">
                     <div class="single_pricing text-center pricing_color_1 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
                         <div class="pricing_top_bar">
-                            <h5 class="pricing_title">Entrenador</h5>
+                            <h5 class="pricing_title">Entrenador Personal</h5>
                             <i class="lni lni-coffee-cup"></i>
                             <span class="price">9.00€/MES</span>
                         </div>
@@ -320,7 +354,7 @@
                             </ul>
                         </div>
                         <div class="pricing_btn">
-                            <a href="#" class="main-btn main-btn-2">Soy Entrenador</a>
+                            <a data-toggle="modal" data-target="#modalRegister" class="main-btn main-btn-2">Soy Entrenador</a>
                         </div>
                     </div> <!-- single pricing -->
                 </div>
@@ -329,7 +363,7 @@
                 <div class="col-lg-4 col-md-8 col-sm-10">
                     <div class="single_pricing text-center pricing_active pricing_color_2 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
                         <div class="pricing_top_bar">
-                            <h5 class="pricing_title">Gimnasio</h5>
+                            <h5 class="pricing_title">Centro Deportivo</h5>
                             <i class="lni lni-crown"></i>
                             <span class="price">15.00€/MES</span>
                         </div>
@@ -342,7 +376,7 @@
                             </ul>
                         </div>
                         <div class="pricing_btn">
-                            <a href="#" class="main-btn">Soy Gimnasio</a>
+                            <a data-toggle="modal" data-target="#modalRegister" class="main-btn">Soy Gimnasio</a>
                         </div>
                     </div> <!-- single pricing -->
                 </div>
@@ -351,7 +385,7 @@
                 <div class="col-lg-4 col-md-8 col-sm-10">
                     <div class="single_pricing text-center pricing_color_3 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
                         <div class="pricing_top_bar">
-                            <h5 class="pricing_title">Organizaciones</h5>
+                            <h5 class="pricing_title">Organización Deportiva</h5>
                             <i class="lni lni-diamond-alt"></i>
                             <span class="price">20.00€/MES</span>
                         </div>
@@ -364,7 +398,7 @@
                             </ul>
                         </div>
                         <div class="pricing_btn">
-                            <a href="#" class="main-btn main-btn-2">Soy Organización</a>
+                            <a data-toggle="modal" data-target="#modalRegister" class="main-btn main-btn-2">Soy Organización</a>
                         </div>
                     </div> <!-- single pricing -->
                 </div>
@@ -388,7 +422,7 @@
                     <p>Lleva siempre contigo la gestión de tu gimnasio. Organiza tus entrenos y tus horarios desde cualquier sitio.</p>
                     <ul>
                         <li>
-                            <a class="d-flex align-items-center" href="#">
+                            <a class="d-flex align-items-center page-scroll" href="#home">
                                 <span class="icon">
                                     <i class="lni lni-play-store"></i>
                                 </span>
@@ -399,7 +433,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="d-flex align-items-center" href="#">
+                            <a class="d-flex align-items-center page-scroll" href="#home">
                                 <span class="icon">
                                     <i class="lni lni-apple"></i>
                                 </span>
