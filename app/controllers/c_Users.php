@@ -41,7 +41,8 @@ class c_Users extends Controller
         } else {
             // TODO HACER QUE MUESTRE EL ERROR EN ALGÚN LADO
             $_SESSION['errorMessage'] = 'Usuario o contraseña incorrectos';
-            header("Location:" . BASE_URL);
+
+            header("Location:" . BASE_URL . "c_Home/logOutLanding");
         }
     }
 
@@ -126,7 +127,6 @@ class c_Users extends Controller
     {
         $this->m_users->updateClient($id_person[0]);
         $this->managePersonal();
-
     }
 } //End c_Users
 ?>

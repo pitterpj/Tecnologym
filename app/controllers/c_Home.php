@@ -17,6 +17,13 @@ class c_Home extends Controller
     public function logOut()
     {
         unset($_SESSION['session']);
+        unset($_SESSION['errorMessage']);
+        header("Location:" . BASE_URL);
+    }
+    // Destroy session
+    public function logOutLanding()
+    {
+        unset($_SESSION['session']);
         header("Location:" . BASE_URL);
     }
 }

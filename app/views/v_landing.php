@@ -43,7 +43,6 @@
 
 </head>
 
-
 <!--====== MODAL LOGIN ======-->
 <div class="modal fade" id="modalLogin" tabindex="-1" aria-hidden="true">
     <!-- Extra info: The modal needs me to place it outside the body to let me interact. Problems with the z-index-->
@@ -83,6 +82,39 @@
 </div><!--====== END MODAL LOGIN ======-->
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--==== MODAL REGISTER ====-->
 <div class="modal fade" id="modalRegister" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -98,7 +130,7 @@
                     <div class="form-group">
                         <label class="control-label">Nombre: </label>
                         <div>
-                            <input type="text" class="form-control input-lg" minlength="5" name="name"  placeholder="Nombre completo" required>
+                            <input type="text" class="form-control input-lg" minlength="5" name="name" placeholder="Nombre completo" required>
                         </div>
                     </div>
                     <div class="form-group">
@@ -123,7 +155,6 @@
     </div>
 
 </div><!--==== END MODAL REGISTER ====-->
-
 <!--====== MODAL LOGIN ======-->
 <div class="modal fade" id="modalPassword" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -145,10 +176,10 @@
                     <div>
                         <p> Te enviaremos un email con los pasos a seguir para recuperar tu contraseña.</p>
                     </div>
-                    
+
                     <div class="form-group">
                         <div>
-                            <button type="submit" class="btn btn-success" >Recuperar contraseña</button>
+                            <button type="submit" class="btn btn-success">Recuperar contraseña</button>
                         </div>
                     </div>
                 </form>
@@ -500,18 +531,42 @@
     <script src="<?= BASE_URL ?>app\assets\libs\landing\js\main.js"></script>
 
 </body>
+
 <script>
-    $("#sendRegister").on("click", function(e) {
-        e.preventDefault();
+    const myForm = document.querySelector('#formRegister');
+    myForm.addEventListener('submit', event => {
+        event.preventDefault();
+        console.log('Envío del formulario');
+    });
 
-        Swal.fire(
-            '¡Registro enviado!',
-            'Nos pondremos en contacto con la mayor brevedad posible',
-            'success'
-        )
 
-        $("#btnClose").click();
-    })
+    // $("#sendRegister").on("click", function(e) {
+    //     e.preventDefault()
+
+    //     Swal.fire(
+    //         '¡Registro enviado!',
+    //         'Nos pondremos en contacto con la mayor brevedad posible',
+    //         'success'
+    //     )
+
+    //     $("#btnClose").click();
+    //     $("#formRegister").submit();
+
+
+    // })
+
+    error = "<?= $_SESSION['errorMessage'] ?>";
+
+    if (error) {
+        window.onload = function() {
+
+            Swal.fire(
+                '¡Usuario o contraseña incorrectos!',
+                "",
+                'warning'
+            )
+        }
+    };
 </script>
 
 </html>
