@@ -130,13 +130,13 @@
                     <div class="form-group">
                         <label class="control-label">Nombre: </label>
                         <div>
-                            <input type="text" class="form-control input-lg" minlength="5" name="name" placeholder="Nombre completo" required>
+                            <input type="text" class="form-control input-lg" minlength="5" name="name" placeholder="Nombre completo" value="asdasd" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label">Email: </label>
                         <div>
-                            <input type="email" class="form-control input-lg" minlength="5" name="email" required placeholder="correo@correo.com">
+                            <input type="email" class="form-control input-lg" minlength="5" name="email" required placeholder="correo@correo.com" value="correo@correo.com">
                         </div>
                     </div>
                     <div class="form-group">
@@ -153,6 +153,20 @@
             </div> <!-- End modal body -->
         </div>
     </div>
+
+    <script>
+        document.getElementById("formRegister").addEventListener("submit", function(event) {
+            event.preventDefault()
+            //lo que necesites hacer
+            Swal.fire(
+                '¡Registro enviado!',
+                'Nos pondremos en contacto con la mayor brevedad posible',
+                'success'
+            )
+            $("#btnClose").click();
+
+        })
+    </script>
 
 </div><!--==== END MODAL REGISTER ====-->
 <!--====== MODAL LOGIN ======-->
@@ -530,43 +544,23 @@
     <!--====== Main js ======-->
     <script src="<?= BASE_URL ?>app\assets\libs\landing\js\main.js"></script>
 
+    <script>
+        error = "<?= $_SESSION['errorMessage'] ?>";
+
+        if (error) {
+            window.onload = function() {
+
+                Swal.fire(
+                    '¡Usuario o contraseña incorrectos!',
+                    "",
+                    'warning'
+                )
+            }
+        };
+    </script>
+
 </body>
 
-<script>
-    const myForm = document.querySelector('#formRegister');
-    myForm.addEventListener('submit', event => {
-        event.preventDefault();
-        console.log('Envío del formulario');
-    });
 
-
-    // $("#sendRegister").on("click", function(e) {
-    //     e.preventDefault()
-
-    //     Swal.fire(
-    //         '¡Registro enviado!',
-    //         'Nos pondremos en contacto con la mayor brevedad posible',
-    //         'success'
-    //     )
-
-    //     $("#btnClose").click();
-    //     $("#formRegister").submit();
-
-
-    // })
-
-    error = "<?= $_SESSION['errorMessage'] ?>";
-
-    if (error) {
-        window.onload = function() {
-
-            Swal.fire(
-                '¡Usuario o contraseña incorrectos!',
-                "",
-                'warning'
-            )
-        }
-    };
-</script>
 
 </html>
