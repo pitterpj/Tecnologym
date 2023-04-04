@@ -59,7 +59,7 @@
                     <div class="form-group"> <!--==== USER ====-->
                         <label class="control-label">Usuario o email: </label>
                         <div>
-                            <input type="text" class="form-control input-lg" name="user" minlength="3" maxlength="25" pattern="[A-Za-z0-9@.]+" placeholder="Nombre de Usuario o Email" title="No puede contener menos de 3 caracteres" required value="pitter">
+                            <input type="text" class="form-control input-lg" name="user" minlength="3" maxlength="25" pattern="[A-Za-z0-9@.]+" placeholder="Nombre de Usuario o Email" title="No puede contener menos de 3 caracteres o caracteres raros" required value="pitter">
                         </div>
                     </div>
                     <div class="form-group"><!--==== PASSWORD ====-->
@@ -81,40 +81,6 @@
     </div>
 </div><!--====== END MODAL LOGIN ======-->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!--==== MODAL REGISTER ====-->
 <div class="modal fade" id="modalRegister" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -127,49 +93,32 @@
             </div>
             <div class="modal-body">
                 <form id="formRegister" action="" method="POST">
-                    <div class="form-group">
+                    <div class="form-group"><!--==== NAME ====-->
                         <label class="control-label">Nombre: </label>
                         <div>
-                            <input type="text" class="form-control input-lg" minlength="5" name="name" placeholder="Nombre completo" value="asdasd" required>
+                            <input type="text" class="form-control input-lg" minlength="5" name="name" placeholder="Nombre completo" required>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group"><!--==== EMAIL ====-->
                         <label class="control-label">Email: </label>
                         <div>
-                            <input type="email" class="form-control input-lg" minlength="5" name="email" required placeholder="correo@correo.com" value="correo@correo.com">
+                            <input type="email" class="form-control input-lg" minlength="5" name="email" required placeholder="correo@correo.com">
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group"><!--==== MESSAGE ====-->
                         <label for="message" class="form-label">Mensaje: </label>
-                        <textarea class="form-control" name="message" rows="3" required placeholder="Añade el plan elegido en el mensaje y nos pondremos en contacto contigo."></textarea>
+                        <textarea class="form-control" name="message" rows="3" required placeholder="Añade el plan elegido en el mensaje. Nos encantará ayudarle."></textarea>
                     </div>
                     <div class="form-group">
-                        <div>
-                            <button id="sendRegister" type="submit" class="btn btn-success">Enviar</button>
-                            <button id="btnClose" type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">Cancelar</button>
-                        </div>
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                        <button id="btnClose" type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">Cancelar</button>
                     </div>
                 </form>
             </div> <!-- End modal body -->
         </div>
     </div>
-
-    <script>
-        document.getElementById("formRegister").addEventListener("submit", function(event) {
-            event.preventDefault()
-            //lo que necesites hacer
-            Swal.fire(
-                '¡Registro enviado!',
-                'Nos pondremos en contacto con la mayor brevedad posible',
-                'success'
-            )
-            $("#btnClose").click();
-
-        })
-    </script>
-
 </div><!--==== END MODAL REGISTER ====-->
-<!--====== MODAL LOGIN ======-->
+<!--====== MODAL RECOVER PASSWORD ======-->
 <div class="modal fade" id="modalPassword" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -184,7 +133,7 @@
                     <div class="form-group"> <!--==== USER ====-->
                         <label class="control-label">Usuario o email: </label>
                         <div>
-                            <input type="text" class="form-control input-lg" name="user" minlength="3" maxlength="25" pattern="[A-Za-z0-9@.]+" placeholder="Nombre de Usuario o Email" title="No puede contener menos de 3 caracteres" required value="pitter">
+                            <input type="text" class="form-control input-lg" name="user" minlength="3" maxlength="25" pattern="[A-Za-z0-9@.]+" placeholder="Nombre de Usuario o Email" title="No puede contener menos de 3 caracteres" required>
                         </div>
                     </div>
                     <div>
@@ -369,7 +318,7 @@
         </div> <!-- container -->
     </section><!--====== ABOUT PART ENDS ======-->
 
-    <!--====== PRICNG PART START ======-->
+    <!--====== PRICING PART START ======-->
     <section id="pricing" class="pricing_area mt-80 pt-75 pb-80">
         <div class="container">
             <div class="row justify-content-center">
@@ -554,13 +503,10 @@
                     '¡Usuario o contraseña incorrectos!',
                     "",
                     'warning'
-                )
-            }
+                );
+            };
         };
     </script>
-
 </body>
-
-
 
 </html>

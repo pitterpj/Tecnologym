@@ -96,4 +96,6 @@
 
     - Clase active por arreglar css 228
 
+    - El email de recuperacion debe estar en la base de datos
+
     - Shadows: https://getbootstrap.com/docs/4.1/utilities/shadows/
