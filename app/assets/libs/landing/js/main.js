@@ -3,7 +3,7 @@ $(function () {
 
   //===== Sweet Alert btn Register
   document.getElementById("formRegister").addEventListener("submit", function(event) {
-    event.preventDefault()
+    event.preventDefault();
     //lo que necesites hacer
     Swal.fire(
         '¡Registro enviado!',

@@ -43,7 +43,7 @@
             <ul class="list-unstyled">
                 <li class="active"> <!--====== Icon home ======-->
                     <a href="<?= BASE_URL . "c_Users/dashboard" ?>">
-                        <i class="fas fa-home"><img src="<?= BASE_URL ?>app\assets\img\icons\homeGym2.png" width="50" alt="Inicio"></i>
+                        <i class="fas fa-home"><img src="<?= BASE_URL ?>app\assets\img\icons\home_gym.png" width="50" alt="Inicio"></i>
                         <span class="disappear">Inicio</span>
                     </a>
                 </li>
@@ -53,66 +53,66 @@
                     <?php if ($_SESSION['session']['role'] == "Monitor") {
                         echo "<a href='" . BASE_URL . "c_Schedule/showPersonalSchedule'  class=''>";
                         echo "<i class='fas fa-home'>";
-                        echo "<img src='" . BASE_URL . "app\assets\img\icons\schedule2.png' width='50' alt='Horario'>";
+                        echo "<img src='" . BASE_URL . "app\assets\img\icons\calendar.png' width='50' alt='Horario'>";
                         echo "</i>";
                         echo "<span class='disappear'>Horarios</span>";
                         echo "</a>";
                     } ?>
 
                     <?php if ($_SESSION['session']['role'] != "Monitor") {
-                        echo "<a href='" . BASE_URL . "c_Schedule/showPersonalSchedule'  class=''>";
+                        echo "<a href='#schudeleSubmenu' data-toggle='collapse' class='dropdown-toggle'>";
                         echo "<i class='fas fa-home'>";
-                        echo "<img src='" . BASE_URL . "app\assets\img\icons\schedule2.png' width='50' alt='Horario'>";
+                        echo "<img src='" . BASE_URL . "app\assets\img\icons\calendar.png' width='50' alt='Horario'>";
                         echo "</i>";
                         echo "<span class='disappear'>Horarios</span>";
                         echo "</a>";
                         // <!--====== subclass schedules  ======-->
 
                         // <!--== Create ==-->
-                        
-                        
+                        echo "<ul class='collapse list-unstyled' id='schudeleSubmenu'>";
+                        echo "<li>";
                         echo "<a href='" . BASE_URL . "c_Schedule/createSchedule'>";
                         echo "<i class='fas fa-home'>";
-                        echo "<img src='" . BASE_URL . "app\assets\img\icons\schedule_plus2.png' width='50' alt='Crear Horario'>";
+                        echo "<img src='" . BASE_URL . "app\assets\img\icons\calendar_plus.png' width='30' alt='Crear Horario'>";
                         echo "</i>";
                         echo "<span class='disappear'>Crear Horarios</span></a>";
-                        
+                        echo "</li>";
 
                         // <!--== Personal  ==-->
-                        
-                        // echo "<a href='" . BASE_URL . "c_Schedule/showPersonalSchedule'>";
-                        // echo "<i class='fas fa-home'>";
-                        // echo "<img src='" . BASE_URL . "app/assets/img/icons/calendar.png' width='50' alt='Administrar Personal'>";
-                        // echo "</i>";
-                        // echo "<span class='disappear'>Horario Personal</span></a>";
-                        
+                        echo "<li>";
+                        echo "<a href='" . BASE_URL . "c_Schedule/showPersonalSchedule'>";
+                        echo "<i class='fas fa-home'>";
+                        echo "<img src='" . BASE_URL . "app/assets/img/icons/calendar.png' width='35' alt='Administrar Personal'>";
+                        echo "</i>";
+                        echo "<span class='disappear'>Horario Personal</span></a>";
+                        echo "</li>";
 
                         if ($_SESSION['session']['role'] == "Director") {
-                            
+                            echo "<li>";
                             echo "<a href='" . BASE_URL . "c_Users/managePersonal'>";
                             echo "<i class='fas fa-home'>";
-                            echo "<img src='" . BASE_URL . "app/assets/img/icons/adminPerson.png' width='50' alt='Administrar Personal'>";
+                            echo "<img src='" . BASE_URL . "app/assets/img/icons/tasks.png' width='35' alt='Administrar Personal'>";
                             echo "</i>";
-                            echo "<span class='disappear'>Administrar Person</span></a>";
-                            
+                            echo "<span class='disappear'>Administrar Personal</span></a>";
+                            echo "</li>";
                         }
-                        
+                        echo "</ul>";
                     } ?>
                 </li>
 
                 <li> <!-- Icon Personal Training  -->
                     <a href="<?= BASE_URL ?>c_PersonalTraining/showPersonalTraining">
-                        <i class="fas fa-home"><img src="<?= BASE_URL ?>app\assets\img\icons\personalTrainer2.png" width="50" alt="Entrenamientos Personales"></i>
+                        <i class="fas fa-home"><img src="<?= BASE_URL ?>app\assets\img\icons\personal_training.png" width="50" alt="Entrenamientos Personales"></i>
                         <span class="disappear">Entrenamientos</span></a>
                 </li>
 
-                <!-- <li> Icon Vacations / Rotations 
+                <li> <!-- Icon Vacations / Rotations -->
                     <a href="#holidaysSubmenu" data-toggle="collapse" class="dropdown-toggle">
                         <i class="fas fa-home"><img src="<?= BASE_URL ?>app\assets\img\icons\time_out.png" width="50" alt="Horario"></i>
                         <span class="disappear">Vacaciones</span>
                     </a>
 
-                     subclass schedules 
+                    <!-- subclass schedules -->
                     <ul class="collapse list-unstyled" id="holidaysSubmenu">
                         <li>
                             <a href="#">
@@ -135,7 +135,7 @@
                             </a>
                         </li>
                     </ul>
-                </li> -->
+                </li>
             </ul>
         </nav> <!--====== END SIDEBAR======-->
 
@@ -167,7 +167,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a id="btn_logOut"class="text-light nav-link rounded" href="<?= BASE_URL ?>c_Home/logOut">Cerrar Sesión</a>
+                                <a class="text-light nav-link rounded" href="<?= BASE_URL ?>c_Home/logOut">Cerrar Sesión</a>
                             </li>
                         </ul>
                     </div>

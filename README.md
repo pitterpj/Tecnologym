@@ -41,6 +41,14 @@
 
     - Al exportar de la base de Yisus a la mía: Find ‘utf8mb4_0900_ai_ci’ & replace it with ‘utf8mb4_unicode_ci’.
 
+    -   Background colors:
+        -   #3698ee azul fuerte
+        -   rgba(54, 152, 238, 0.8); azul claro
+        -   #3a424e gris oscuro
+        -   #581ccb lila oscuro
+        -   #642ABC lila fondo
+        -   
+
 ## To Do:
 
 -   - Cabeceras!
