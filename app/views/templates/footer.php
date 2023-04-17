@@ -1,7 +1,3 @@
-<!-- Pedro.J (Pitter) -->
-<!-- https://github.com/pitterpj -->
-
-
 </div><!-- End Page content -->
 </div> <!-- End wrapper -->
 

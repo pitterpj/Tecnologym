@@ -2,9 +2,6 @@
 <html lang="en">
 
 <head>
-    <!--====== Required meta tags======-->
-    <meta charset="utf-8">
-
     <!--====== Title ======-->
     <title>Tecnologym</title>
 
@@ -19,7 +16,7 @@
     <link rel="stylesheet" href="<?= BASE_URL ?>app\views\css\v_index.css">
 
     <!--====== SweetAlert ======-->
-    <script src="http://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!--====== JQuery ======-->
     <script src="<?= BASE_URL ?>app\assets\libs\jquery-3.6.3.js"> </script>

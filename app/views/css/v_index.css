@@ -72,8 +72,8 @@ span {
 }
 
 #sidebar {
-  min-width: 250px;
-  max-width: 250px;
+  min-width: 270px;
+  max-width: 270px;
   background: #642ABC;  /*-------/--------------------------------------------------------------*/
   /* background: #7386d5;  -------/-------------------------------------------------------------- */
   color: #fff;
@@ -128,7 +128,7 @@ span {
 
 #sidebar .sidebar-header {
   padding: 20px;
-  background: #642ABC;
+  /* background: #bc2a2a0e; */
   /* background: #6d7fcc; *-------------------------------------------------------------*/
 }
 
@@ -149,6 +149,7 @@ span {
 }
 
 #sidebar ul li a:hover {
+  font-weight: bold;
   color: #000000;
   background: #642ABC;
   /* color: #7386d5;
@@ -179,13 +180,13 @@ a[data-toggle="collapse"] {
   transform: translateY(-50%);
 }
 
-ul ul a {
+/* ul ul a {
   font-size: 0.9em !important;
   padding-left: 30px !important;
   background: #6d7fcc;
-}
+} */
 
-ul.CTAs {
+/* ul.CTAs {
   padding: 20px;
 }
 
@@ -195,7 +196,7 @@ ul.CTAs a {
   display: block;
   border-radius: 5px;
   margin-bottom: 5px;
-}
+} */
 
 /* a.download {
   background: #fff;
@@ -279,14 +280,19 @@ a.article:hover {
   background: #3a72df;
 }
 .fondo-2{
-  background-color: #289bbe7a;
+  /* background-color:#642ABC; */
+  /* background-color:#642abcde; */
+  background-color: rgba(54, 152, 238, 0.7);
+  /* background-color: #3698ee; */
+  /* background-color: #289bbe7a; */
 }
 
 /* ---------------------------------------------------
     HEADER STYLES
 ----------------------------------------------------- */
 div ul li a:hover{
-  background: #3a72df;
+  background: #642abcab;
+  /* background: #3a72df; */
 }
 
 /* ---------------------------------------------------

@@ -4,6 +4,7 @@
 <!--==== Left Menu that contracts and header with collapsing buttons ====-->
 
 <body>
+    
     <div class="wrapper">
 
         <!--====== SIDEBAR ======-->
@@ -11,7 +12,7 @@
 
             <!--====== BRAND ======-->
             <div class="sidebar-header">
-                <a href="<?= BASE_URL . "c_Users/dashboard" ?>"><img class="img-fluid" src="<?= BASE_URL ?>app/assets/img/Brand_Tecnologym.png" width="200" alt="Brand-Tecnologym"></a>
+                <a href="<?= BASE_URL . "./c_Users/dashboard" ?>"><img class="img-fluid" src="<?= BASE_URL ?>app/assets/img/Brand_Tecnologym.png" width="200" alt="Brand-Tecnologym"></a>
             </div>
 
             <!--====== AVATAR ROLE PERSON======-->
