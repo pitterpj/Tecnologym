@@ -164,7 +164,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="text-light nav-link rounded" href="<?= BASE_URL ?>c_Dashboard/settings">Ajustes</a>
+                                <a class="text-light nav-link rounded" href="<?= BASE_URL ?>c_Users/settings">Ajustes</a>
                             </li>
 
                             <li class="nav-item">

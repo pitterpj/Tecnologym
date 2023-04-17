@@ -128,5 +128,16 @@ class c_Users extends Controller
         $this->m_users->updateClient($id_person[0]);
         $this->managePersonal();
     }
+
+    public function settings(){
+        // $datos["workers"] = $this->m_users->showWorkers();
+
+        $contenido = "v_Settings";
+        $this->loadView("templates/header");
+        $this->loadView("templates/sidebar");
+        $this->loadView($contenido);
+        $this->loadView("templates/footer");
+    }
+
 } //End c_Users
 ?>
