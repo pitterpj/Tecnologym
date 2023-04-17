@@ -20,6 +20,7 @@
                         <?php foreach ($personalScheduleToday as $class) : ?>
                             <tr class="text-center">
                                 <td scope="row"><img width="100" src="<?= BASE_URL . IMG_URL . $class['img'] ?>"></td>
+                                <!-- <td scope="row"><?= strtoupper($class['name_skill']);  ?></td> -->
                                 <td scope="row"><?= substr($class['hour'], 0, 5); ?></td>
                             </tr>
                         <?php endforeach ?>
@@ -41,8 +42,8 @@
                     <h3> <?= $logTraining['log'] ?> </h3>
                     </p>
                     <div class="d-flex justify-content-around ">
-                        <a name="addClient" class="btn btn-color" href="<?= BASE_URL . "c_PersonalTraining/addPersonalTraining" ?>" role="button">AÑADIR</a>
-                        <a name="addClient" class="btn btn-color" href="<?= BASE_URL . "c_PersonalTraining/showPersonalTraining" ?>" role="button">VER TODOS</a>
+                        <a name="addClient" class="btn btn-color shadow" href="<?= BASE_URL . "c_PersonalTraining/addPersonalTraining" ?>" role="button">AÑADIR</a>
+                        <a name="addClient" class="btn btn-color shadow" href="<?= BASE_URL . "c_PersonalTraining/showPersonalTraining" ?>" role="button">VER TODOS</a>
                     </div>
                 </div>
             </div>

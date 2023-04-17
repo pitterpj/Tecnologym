@@ -160,7 +160,7 @@
                         <ul class="nav navbar-nav ml-auto text-end">
 
                             <li class="nav-item active">
-                                <a class="text-light nav-link  rounded" href="<?= BASE_URL . "c_Users/dashboard" ?>">Inicio</a>
+                                <a class="text-light nav-link rounded" href="<?= BASE_URL . "c_Users/dashboard" ?>">Inicio</a>
                             </li>
 
                             <li class="nav-item">
