@@ -4,7 +4,7 @@
 <!--==== Left Menu that contracts and header with collapsing buttons ====-->
 
 <body>
-    
+
     <div class="wrapper">
 
         <!--====== SIDEBAR ======-->
@@ -70,34 +70,32 @@
                         // <!--====== subclass schedules  ======-->
 
                         // <!--== Create ==-->
-                        
-                        
+
+
                         echo "<a href='" . BASE_URL . "c_Schedule/createSchedule'>";
                         echo "<i class='fas fa-home'>";
                         echo "<img src='" . BASE_URL . "app\assets\img\icons\schedule_plus2.png' width='50' alt='Crear Horario'>";
                         echo "</i>";
                         echo "<span class='disappear'>Crear Horarios</span></a>";
-                        
+
 
                         // <!--== Personal  ==-->
-                        
+
                         // echo "<a href='" . BASE_URL . "c_Schedule/showPersonalSchedule'>";
                         // echo "<i class='fas fa-home'>";
                         // echo "<img src='" . BASE_URL . "app/assets/img/icons/calendar.png' width='50' alt='Administrar Personal'>";
                         // echo "</i>";
                         // echo "<span class='disappear'>Horario Personal</span></a>";
-                        
+
 
                         if ($_SESSION['session']['role'] == "Director") {
-                            
+
                             echo "<a href='" . BASE_URL . "c_Users/managePersonal'>";
                             echo "<i class='fas fa-home'>";
                             echo "<img src='" . BASE_URL . "app/assets/img/icons/adminPerson.png' width='50' alt='Administrar Personal'>";
                             echo "</i>";
                             echo "<span class='disappear'>Administrar Person</span></a>";
-                            
                         }
-                        
                     } ?>
                 </li>
 
@@ -164,11 +162,11 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="text-light nav-link rounded" href="<?= BASE_URL ?>c_Users/settings">Ajustes</a>
+                                <a class="text-light nav-link rounded" href="<?= BASE_URL . 'c_Users/settings/' . $_SESSION["session"]["id_person"] ?>">Ajustes</a>
                             </li>
 
-                            <li class="nav-item">
-                                <a id="btn_logOut"class="text-light nav-link rounded" href="<?= BASE_URL ?>c_Home/logOut">Cerrar Sesión</a>
+                            <li class=" nav-item">
+                                <a id="btn_logOut" class="text-light nav-link rounded" href="<?= BASE_URL ?>c_Home/logOut">Cerrar Sesión</a>
                             </li>
                         </ul>
                     </div>

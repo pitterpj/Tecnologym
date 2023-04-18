@@ -129,13 +129,16 @@ class c_Users extends Controller
         $this->managePersonal();
     }
 
-    public function settings(){
-        // $datos["workers"] = $this->m_users->showWorkers();
+    public function settings($id_worker)
+    {
+       // $datos["person"] = ['pepe','luis'];
+        $datos["worker"] = $this->m_users->showWorker($id_worker[0]);
+        //var_dump($datos["person"]);
 
         $contenido = "v_Settings";
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
-        $this->loadView($contenido);
+        $this->loadView($contenido,$datos);
         $this->loadView("templates/footer");
     }
 

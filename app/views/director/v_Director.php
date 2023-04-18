@@ -1,7 +1,6 @@
 <!-- Pedro.J (Pitter) -->
 <!-- https://github.com/pitterpj -->
 
-
 <!--==== CONTENT PAGE ====-->
 <div class="row container-fluid justify-content-around">
     <div class="container col-lg-5 col-md-9 col-sm-8 fondo-2 shadow p-3 mb-5 rounded">

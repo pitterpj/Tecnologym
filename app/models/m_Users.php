@@ -48,7 +48,7 @@ class m_Users extends Model
     // Show a coach to be updated later
     public function showWorker($id_worker)
     {
-        $snt = " SELECT * FROM person 
+        $snt = "SELECT * FROM person 
         INNER JOIN worker ON person.id_person=worker.id_person 
         INNER JOIN worker_type ON worker_type.id_worker=worker.id_worker
         INNER JOIN type ON type.id_type=worker_type.id_type
