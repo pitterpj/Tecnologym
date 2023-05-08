@@ -11,9 +11,9 @@
             <a class="btn btn-info" href="<?= BASE_URL ?>c_PersonalTraining/addWorker" role="button">Agregar Trabajador</a>
         </div>
         <div class="table-responsive-sm m-2">
-            <table class="table table-primary table-striped table-hover">
+            <table class="table table-primary table-striped table-hover align-baseline">
                 <thead>
-                    <tr class="text-center">
+                    <tr class="text-center ">
                         <th scope="col">Foto</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Apellidos</th>

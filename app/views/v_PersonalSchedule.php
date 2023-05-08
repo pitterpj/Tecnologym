@@ -3,7 +3,7 @@
 
 
 <!--==== CONTENT PAGE ====-->
-<div class="row-6 fondo-2 shadow p-3 mb-5 rounded">
+<div class="row-6 fondo-2 shadow p-3 mb-5 rounded ">
     <h2 class="text-center">Horario Personal</h2>
     <div class="card">
         <div class="table-responsive-sm m-2">
@@ -13,7 +13,7 @@
                 <a class="btn btn-primary" href="<?= BASE_URL ?>c_Schedule/showPersonalSchedule//month" role="button">Mensual</a>
                 <a class="btn btn-primary" href="<?= BASE_URL ?>c_Schedule/showPersonalSchedule//year" role="button">Anual</a>
             </div>
-            <table class="table table-primary table-striped table-hover">
+            <table class="table table-primary table-striped table-hover ">
                 <thead>
                     <tr class="text-center">
                         <th scope="col">Imagen</th>

@@ -9,7 +9,7 @@
                     <div class="mb-3">
                         <img src="<?= BASE_URL . IMG_URL . $worker['avatar'] ?>" width="300" class=" mx-auto d-block img-fluid rounded-top mb-3">
                         <label for="addImg" class="form-label"></label>
-                        <input type="file" class="form-control" name="addImg" aria-describedby="helpId">
+                        <input type="file" class="form-control mt-4" name="addImg" aria-describedby="helpId">
                     </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                 <!--==== col2.1 ====-->
                 <div class="col-12 card">
                     <!-- <div class="card-header text-center">ENTRENOS PERSONALES:</div> -->
-                    <div class="card-body text-center">
+                    <div class="card-body">
                         <h4 class="card-title text-center">ENTRENOS PARA HOY</h4>
                         <div class="mb-3">
                             <label for="updateName" class="form-label">Nombre</label>
@@ -58,9 +58,9 @@
     <div class="row container-fluid justify-content-around">
         <div class="container col-lg-11 col-md-9 col-sm-8 fondo-2 shadow p-3 mb-5 rounded">
             <div class="card h-100">
-            <h4 class="card-title text-center mt-2">AÑADIR HABILIDAD</h4>
+            <h4 class="card-title text-center mt-3">AÑADIR HABILIDAD</h4>
                 <div class="row">
-                    <div class="mb-3 col-5 m-4">
+                    <div class="mb-3 col-5 col-sm-11 m-4">
                         <label for="addWorkerSkill" class="form-label">Selecciona Actividad:</label>
                         <select id="addWorkerSkill" class="form-select form-select-lg" name="addWorkerSkill">
                             <?php foreach ($skills as $skill => $value) {
@@ -69,7 +69,7 @@
                             }; ?>
                         </select>
                     </div>
-                    <div class="mb-3 col-6 text-center mt-5">
+                    <div class="mb-3 col-6 col-sm-11 text-center mt-5">
                         <button type="submit" class="btn btn-primary">Aprender habilidad</button>
                     </div>
                 </div>
