@@ -4,7 +4,7 @@
 
 <!--==== CONTENT PAGE ====-->
 <div class="row-6 fondo-2 shadow p-3 mb-5 rounded">
-    <form action="<?= BASE_URL ?>c_PersonalTraining/addClient" method="post" enctype="multipart/form-data">
+    <form id="formAdd" action="<?= BASE_URL ?>c_PersonalTraining/addClient" method="post" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="addImg" class="form-label">Foto de Perfil:</label>
             <input type="file" class="form-control" name="addImg" aria-describedby="helpId">
@@ -30,7 +30,28 @@
             <input type="date" class="form-control" name="addDate" aria-describedby="helpId">
         </div>
         <div class="d-flex justify-content-around ">
-            <button type="submit" class="btn btn-primary">Agregar CLiente</button>
+            <button id="addWorker" type="submit" class="btn btn-primary">Agregar CLiente</button>
         </div>
     </form>
 </div><!--==== END CONTENT PAGE WITH SHADOWS ====-->
+<script>
+    // <!--====== Sweet Alert PersonalTraining======-->
+    $("#addWorker").on("click", function(e) {
+        e.preventDefault();
+
+        Swal.fire({
+            title: "¿Dar de alta al nuevo cliente?",
+            text: "Va a crear un nuevo registro",
+            icon: "info",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#1E7361",
+            confirmButtonText: "Si, estoy seguro.",
+            cancelButtonText: "Cancelar",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $("#formAdd").trigger("submit");
+            }
+        });
+    });
+</script>

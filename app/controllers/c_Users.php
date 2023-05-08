@@ -126,7 +126,7 @@ class c_Users extends Controller
     public function updateClient($id_person)
     {
         $this->m_users->updateClient($id_person[0]);
-        $this->managePersonal();
+        $this->dashboard();
     }
 
     public function settings($id_worker)

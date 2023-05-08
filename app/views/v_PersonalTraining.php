@@ -40,8 +40,7 @@
                             <td><?= $client['birth_date'] ?></td>
                             <td>
                                 <a name="updatePersonalTraining" class="btn btn-info" href="<?= BASE_URL . "c_PersonalTraining/updateClients/" . $client['id_person'] ?>" type="button">Editar</a>
-                                <a id="btn_delete_PT" class="btn btn-warning" href="<?= BASE_URL . "c_Users/deletePerson/" . $client['id_person'] ?>" role="button">Eliminar</a>
-                                <!-- <?php var_dump($clients); ?> -->
+                                <a id="btn_delete_PT" class="btn btn-warning" role="button">Eliminar</a>
                             </td>
                         </tr>
                     <?php endforeach ?>
