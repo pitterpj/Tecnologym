@@ -10,11 +10,11 @@
             <input type="file" class="form-control" name="addImg" aria-describedby="helpId">
         </div>
         <div class="mb-3">
-            <label for="updateName" class="form-label">Nombre</label>
+            <label for="updateName" class="form-label">Nombre:</label>
             <input type="text" class="form-control" name="updateName" aria-describedby="helpId" value="<?= $client[0]['name'] ?>">
         </div>
         <div class="mb-3">
-            <label for="updateLastName" class="form-label">Apellidos</label>
+            <label for="updateLastName" class="form-label">Apellidos:</label>
             <input type="text" class="form-control" name="updateLastName" aria-describedby="helpId" value="<?= $client[0]['lastname'] ?>">
         </div>
         <div class="mb-3">
@@ -26,11 +26,11 @@
             <input type="number" class="form-control" name="updateWeight" aria-describedby="helpId" value="<?= $client[0]['weight'] ?>">
         </div>
         <div class="mb-3">
-            <label for="updateDate" class="form-label">Fecha de Nacimiento</label>
+            <label for="updateDate" class="form-label">Fecha de Nacimiento:</label>
             <input type="date" class="form-control" name="updateDate" aria-describedby="helpId" value="<?= $client[0]['birth_date'] ?>">
         </div>
         <div class="mb-3">
-            <label for="updateComments" class="form-label">Fecha de Nacimiento</label>
+            <label for="updateComments" class="form-label">Notas:</label>
             <textarea class="form-control" name="updateComments" aria-describedby="helpId"> <?= $client[0]['comments'] ?></textarea>
             <!-- <input type="date" class="form-control" name="updateComments" aria-describedby="helpId" value=""> -->
         </div>

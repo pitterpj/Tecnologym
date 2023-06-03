@@ -22,7 +22,7 @@
                 <div class="col-12 card">
                     <!-- <div class="card-header text-center">ENTRENOS PERSONALES:</div> -->
                     <div class="card-body">
-                        <h4 class="card-title text-center">ENTRENOS PARA HOY</h4>
+                        <h4 class="card-title text-center">INFORMACIÓN PERSONAL</h4>
                         <div class="mb-3">
                             <label for="updateName" class="form-label">Nombre</label>
                             <input type="text" class="form-control" name="updateName" aria-describedby="helpId" value="<?= $worker['name'] ?>">
@@ -30,13 +30,6 @@
                         <div class="mb-3">
                             <label for="updateLastname" class="form-label">Apellidos</label>
                             <input type="text" class="form-control" name="updateLastname" aria-describedby="helpId" value="<?= $worker['lastname'] ?>">
-                        </div>
-                        <div class="mb-3">
-                            <label for="updateRole" class="form-label">Puesto:</label>
-                            <select class="form-select" name="updateRole">
-                                <option selected value="3">Monitor</option>
-                                <option value="2">Coordinador</option>
-                            </select>
                         </div>
                         <div class="mb-3">
                             <label for="updateEmail" class="form-label">Email</label>
@@ -55,7 +48,7 @@
             </div> <!--==== end row2 ====-->
         </div>
     </div>
-    <div class="row container-fluid justify-content-around">
+    <!-- <div class="row container-fluid justify-content-around">
         <div class="container col-lg-11 col-md-9 col-sm-8 fondo-2 shadow p-3 mb-5 rounded">
             <div class="card h-100">
             <h4 class="card-title text-center mt-3">AÑADIR HABILIDAD</h4>
@@ -76,5 +69,5 @@
             </div>
         </div>
     </div>
-    </div>
+    </div> -->
 </form>

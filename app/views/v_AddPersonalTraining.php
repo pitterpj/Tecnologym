@@ -10,11 +10,11 @@
             <input type="file" class="form-control" name="addImg" aria-describedby="helpId">
         </div>
         <div class="mb-3">
-            <label for="addName" class="form-label">Nombre</label>
+            <label for="addName" class="form-label">Nombre:</label>
             <input type="text" class="form-control" name="addName" aria-describedby="helpId">
         </div>
         <div class="mb-3">
-            <label for="addLastName" class="form-label">Apellidos</label>
+            <label for="addLastName" class="form-label">Apellidos:</label>
             <input type="text" class="form-control" name="addLastName" aria-describedby="helpId">
         </div>
         <div class="mb-3">
@@ -26,11 +26,11 @@
             <input type="number" class="form-control" name="addWeight" aria-describedby="helpId">
         </div>
         <div class="mb-3">
-            <label for="addDate" class="form-label">Fecha de Nacimiento</label>
+            <label for="addDate" class="form-label">Fecha de Nacimiento:</label>
             <input type="date" class="form-control" name="addDate" aria-describedby="helpId">
         </div>
         <div class="mb-3">
-            <label for="addComments" class="form-label">Comentarios</label>
+            <label for="addComments" class="form-label">Notas:</label>
             <textarea class="form-control" name="addComments" aria-describedby="helpId"></textarea>
             <!-- <input type="textarea" class="form-control" name="addComments" aria-describedby="helpId"> -->
         </div>

@@ -103,7 +103,7 @@ class c_Users extends Controller
     {
         $this->m_users->updateWorker($id_worker[0]);
         //var_dump($datos);
-        $this->managePersonal();
+        $this->dashboard();
     }
 
     // TODO funcion para añadir trabajador
