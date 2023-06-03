@@ -38,11 +38,12 @@ class m_PersonalTraining extends Model
         $this->upImg(":avatar", $_FILES['addImg']);
         $this->launch();
 
-        $snt2 = "INSERT INTO `client` (`id_client`, `id_person`, `BMI`, `weight`, `birth_date`) VALUES (NULL, (SELECT MAX(id_person) FROM person), :BMI, :weight, :date);";
+        $snt2 = "INSERT INTO `client` (`id_client`, `id_person`, `BMI`, `weight`, `birth_date`,`comments`) VALUES (NULL, (SELECT MAX(id_person) FROM person), :BMI, :weight, :date, :comments);";
         $this->consult($snt2);
         $this->link(":BMI", $_POST['addBMI']);
         $this->link(":weight", $_POST['addWeight']);
         $this->link(":date", $_POST['addDate']);
+        $this->link(":comments", $_POST['addComments']);
         $this->launch();
     }
 

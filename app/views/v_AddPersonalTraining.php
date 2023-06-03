@@ -29,6 +29,11 @@
             <label for="addDate" class="form-label">Fecha de Nacimiento</label>
             <input type="date" class="form-control" name="addDate" aria-describedby="helpId">
         </div>
+        <div class="mb-3">
+            <label for="addComments" class="form-label">Comentarios</label>
+            <textarea class="form-control" name="addComments" aria-describedby="helpId"></textarea>
+            <!-- <input type="textarea" class="form-control" name="addComments" aria-describedby="helpId"> -->
+        </div>
         <div class="d-flex justify-content-around ">
             <button id="addWorker" type="submit" class="btn btn-primary">Agregar CLiente</button>
         </div>

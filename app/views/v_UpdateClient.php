@@ -29,6 +29,11 @@
             <label for="updateDate" class="form-label">Fecha de Nacimiento</label>
             <input type="date" class="form-control" name="updateDate" aria-describedby="helpId" value="<?= $client[0]['birth_date'] ?>">
         </div>
+        <div class="mb-3">
+            <label for="updateComments" class="form-label">Fecha de Nacimiento</label>
+            <textarea class="form-control" name="updateComments" aria-describedby="helpId"> <?= $client[0]['comments'] ?></textarea>
+            <!-- <input type="date" class="form-control" name="updateComments" aria-describedby="helpId" value=""> -->
+        </div>
         <div class="d-flex justify-content-around ">
             <button type="submit" class="btn btn-primary">Actualizar CLiente</button>
         </div>

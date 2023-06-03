@@ -209,12 +209,13 @@ class m_Users extends Model
         $this->link(":lastname", $_POST['updateLastName']);
         $this->launch();
 
-        $snt3 = "UPDATE `client` SET `BMI`= :BMI ,`weight`= :weight,`birth_date`= :date WHERE id_person = :id_person";
+        $snt3 = "UPDATE `client` SET `BMI`= :BMI ,`weight`= :weight,`birth_date`= :date,`comments`= :comments  WHERE id_person = :id_person";
         $this->consult($snt3);
         $this->link(":id_person", $id_person);
         $this->link(":BMI", $_POST['updateBMI']);
         $this->link(":weight", $_POST['updateWeight']);
         $this->link(":date", $_POST['updateDate']);
+        $this->link(":comments", $_POST['updateComments']);
         $this->launch();
     }
 } //End m_Users
