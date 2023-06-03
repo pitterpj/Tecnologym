@@ -36,9 +36,9 @@
             <div class="col-12 card">
                 <!-- <div class="card-header text-center">ENTRENOS PERSONALES:</div> -->
                 <div class="card-body text-center">
-                    <h4 class="card-title text-center">ENTRENOS PARA HOY</h4>
+                    <h4 class="card-title text-center">ENTRENOS PERSONALES</h4>
                     <p class="card-text">
-                    <h3> <?= $logTraining['log'] ?> </h3>
+                    <!-- <h3> <?= $logTraining['log'] ?> </h3> -->
                     </p>
                     <div class="d-flex justify-content-around ">
                         <a name="addClient" class="btn btn-color shadow" href="<?= BASE_URL . "c_PersonalTraining/addPersonalTraining" ?>" role="button">AÑADIR</a>

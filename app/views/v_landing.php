@@ -246,7 +246,7 @@
             <!--====== Right Container ======-->
             <div class="header_image d-flex align-items-end">
                 <div class="image wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="1.8s">
-                    <img src="<?= BASE_URL ?>app\assets\img\iphone.png" width="300" alt="header App">
+                    <img src="<?= BASE_URL ?>app\assets\img\iphone_all.png" width="300" alt="header App">
                     <img src="<?= BASE_URL ?>app\assets\libs\landing\images\dots.svg" alt="dots" class="dots">
                 </div> <!-- image -->
             </div> <!-- end image container -->
@@ -299,7 +299,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-9">
                     <div class="about_image mt-50 wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                        <img class="image" src="<?= BASE_URL ?>app\assets\img\iphone.png" alt="about">
+                        <img class="image" src="<?= BASE_URL ?>app\assets\img\iphone_all.png" alt="about">
                         <img class="dots" src="<?= BASE_URL ?>app\assets\libs\landing\images\dots.svg" alt="dots">
                     </div> <!-- about image -->
                 </div>
@@ -443,7 +443,7 @@
         </div> <!-- container -->
         <div class="download_app_image d-none d-lg-flex align-items-end">
             <div class="image wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                <img src="<?= BASE_URL ?>app\assets\img\iphone.png" alt="download">
+                <img src="<?= BASE_URL ?>app\assets\img\iphone_all.png" alt="download">
             </div> <!-- image -->
         </div> <!-- download app image -->
     </section> <!--====== DOWNLOAD APP PART ENDS ======-->

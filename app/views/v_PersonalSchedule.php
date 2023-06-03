@@ -8,16 +8,19 @@
     <div class="card">
         <div class="table-responsive-sm m-2">
             <div class="card-body text-center">
-                <a class="btn btn-primary" href="<?= BASE_URL ?>c_Schedule/showPersonalSchedule//today" role="button">Diario</a>
-                <a class="btn btn-primary" href="<?= BASE_URL ?>c_Schedule/showPersonalSchedule//week" role="button">Semanal</a>
-                <a class="btn btn-primary" href="<?= BASE_URL ?>c_Schedule/showPersonalSchedule//month" role="button">Mensual</a>
-                <a class="btn btn-primary" href="<?= BASE_URL ?>c_Schedule/showPersonalSchedule//year" role="button">Anual</a>
+                <div class="d-flex justify-content-around ">
+                     <a class="btn btn-primary" href="<?= BASE_URL ?>c_Schedule/showPersonalSchedule//today" role="button">Diario</a>
+                    <a class="btn btn-primary" href="<?= BASE_URL ?>c_Schedule/showPersonalSchedule//week" role="button">Semanal</a>
+                </div>
+
+                <!-- <a class="btn btn-primary" href="<?= BASE_URL ?>c_Schedule/showPersonalSchedule//month" role="button">Mensual</a>
+                <a class="btn btn-primary" href="<?= BASE_URL ?>c_Schedule/showPersonalSchedule//year" role="button">Anual</a> -->
             </div>
             <table class="table table-primary table-striped table-hover ">
                 <thead>
                     <tr class="text-center">
-                        <th scope="col">Imagen</th>
-                        <th scope="col">Nombre Clase</th>
+                        <th scope="col"></th>
+                        <th scope="col">Clase</th>
                         <th scope="col">Instructor</th>
                         <th scope="col">Capacidad</th>
                         <th scope="col">Día</th>

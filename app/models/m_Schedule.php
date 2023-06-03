@@ -85,24 +85,31 @@ class m_Schedule extends Model
                 return $this->result();
                 break;
             case "week":
-                $snt = "SELECT DISTINCT img, name, name_skill, level, capacity, day, hour FROM `class` INNER JOIN skill ON skill.id_skill = class.id_skill INNER JOIN worker ON worker.id_worker = class.id_worker INNER JOIN person ON worker.id_person = person.id_person WHERE person.id_person = :id_person AND EXTRACT(DAY from day) = (EXTRACT(DAY from CURRENT_TIMESTAMP())+7) ORDER BY day, hour";
-                $this->consult($snt);
-                $this->link(":id_person", $id_person);
-                return $this->result();
-                break;
-            case "month":
-                $snt = "SELECT DISTINCT img, name, name_skill, level, capacity, day, hour FROM `class` INNER JOIN skill ON skill.id_skill = class.id_skill INNER JOIN worker ON worker.id_worker = class.id_worker INNER JOIN person ON worker.id_person = person.id_person WHERE person.id_person = :id_person AND EXTRACT(MONTH from day) = EXTRACT(MONTH from CURRENT_TIMESTAMP()) ORDER BY day, hour";
-                $this->consult($snt);
-                $this->link(":id_person", $id_person);
-                return $this->result();
-                break;
-            case "year":
                 $snt = "SELECT DISTINCT img, name, name_skill, level, capacity, day, hour FROM `class` 
-                INNER JOIN skill ON skill.id_skill = class.id_skill INNER JOIN worker ON worker.id_worker = class.id_worker INNER JOIN person ON worker.id_person = person.id_person WHERE person.id_person = :id_person AND EXTRACT(YEAR from day) = EXTRACT(YEAR from CURRENT_TIMESTAMP()) ORDER BY day, hour";
+                INNER JOIN skill ON skill.id_skill = class.id_skill 
+                INNER JOIN worker ON worker.id_worker = class.id_worker 
+                INNER JOIN person ON worker.id_person = person.id_person 
+                WHERE person.id_person = :id_person
+                AND day >= NOW() AND day <= date_add(NOW(), INTERVAL +7 DAY)";
+
+
                 $this->consult($snt);
                 $this->link(":id_person", $id_person);
                 return $this->result();
                 break;
+            // case "month":
+            //     $snt = "SELECT DISTINCT img, name, name_skill, level, capacity, day, hour FROM `class` INNER JOIN skill ON skill.id_skill = class.id_skill INNER JOIN worker ON worker.id_worker = class.id_worker INNER JOIN person ON worker.id_person = person.id_person WHERE person.id_person = :id_person AND EXTRACT(MONTH from day) = EXTRACT(MONTH from CURRENT_TIMESTAMP()) ORDER BY day, hour";
+            //     $this->consult($snt);
+            //     $this->link(":id_person", $id_person);
+            //     return $this->result();
+            //     break;
+            // case "year":
+            //     $snt = "SELECT DISTINCT img, name, name_skill, level, capacity, day, hour FROM `class` 
+            //     INNER JOIN skill ON skill.id_skill = class.id_skill INNER JOIN worker ON worker.id_worker = class.id_worker INNER JOIN person ON worker.id_person = person.id_person WHERE person.id_person = :id_person AND EXTRACT(YEAR from day) = EXTRACT(YEAR from CURRENT_TIMESTAMP()) ORDER BY day, hour";
+            //     $this->consult($snt);
+            //     $this->link(":id_person", $id_person);
+            //     return $this->result();
+            //     break;
             default:
                 $snt = "SELECT DISTINCT img, name, name_skill, level, capacity, day, hour FROM `class` INNER JOIN skill ON skill.id_skill = class.id_skill INNER JOIN worker ON worker.id_worker = class.id_worker INNER JOIN person ON worker.id_person = person.id_person WHERE person.id_person = :id_person AND CURDATE() = day ORDER BY day, hour";
                 $this->consult($snt);
