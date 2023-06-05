@@ -60,7 +60,6 @@
                             <a name="deleteNot" class="btn btn-warning m-2" href="<?= BASE_URL . 'c_Users/deleteNotification/' . $not['id'] ?> " role="button">Eliminar</a>
                         </div>
                     <?php endforeach ?>
-
                 </div>
             </div>
         </div>

@@ -56,7 +56,10 @@
                 <div class="card-body text-center">
                     <h4 class="card-title text-center">Notificaciones</h4>
                     <?php foreach ($notifications as $notification => $not) : ?>
-                        <p><?= $not['notification']; ?></p>
+                        <div class="d-flex justify-content-between">
+                            <p class=""><?= $not['notification']; ?> </p>
+                            <a name="deleteNot" class="btn btn-warning m-2" href="<?= BASE_URL . 'c_Users/deleteNotification/' . $not['id'] ?> " role="button">Eliminar</a>
+                        </div>
                     <?php endforeach ?>
                 </div>
             </div>
