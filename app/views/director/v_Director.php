@@ -55,8 +55,12 @@
                 <div class="card-body text-center">
                     <h4 class="card-title text-center">Notificaciones</h4>
                     <?php foreach ($notifications as $notification => $not) : ?>
-                        <p><?= $not['notification']; ?></p>
+                        <div class="d-flex justify-content-between">
+                            <p class=""><?= $not['notification']; ?> </p>
+                            <button type="submit" class="btn btn-danger shadow m-2">X</button>
+                        </div>
                     <?php endforeach ?>
+
                 </div>
             </div>
         </div>

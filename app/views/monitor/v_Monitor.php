@@ -56,7 +56,7 @@
                 <div class="card-body text-center">
                     <h4 class="card-title text-center">Notificaciones</h4>
                     <?php foreach ($notifications as $notification => $not) : ?>
-                        <p><?= $not['notification']; ?></p>
+                        <p><?= $not['notification']; ?> <button> X </button></p>
                     <?php endforeach ?>
                 </div>
             </div>
