@@ -30,7 +30,7 @@
             </div>
             <div class="mb-3">
                 <label for="addDay" class="form-label">Día:</label>
-                <input type="date" class="form-control" name="addDay" aria-describedby="helpId">
+                <input type="date" class="form-control" name="addDay" aria-describedby="helpId" min="<?php echo date('Y-m-d'); ?>">
             </div>
             <div class="mb-3">
                 <label for="addHour" class="form-label">Hora:</label>

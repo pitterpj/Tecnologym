@@ -27,7 +27,8 @@ class m_Schedule extends Model
         $snt = "SELECT img, name, name_skill, level, capacity, day, hour FROM `class` 
         INNER JOIN skill ON skill.id_skill = class.id_skill
         INNER JOIN worker ON worker.id_worker = class.id_worker
-        INNER JOIN person ON worker.id_person = person.id_person";
+        INNER JOIN person ON worker.id_person = person.id_person
+        WHERE day > CURRENT_DATE";
         $this->consult($snt);
         return $this->result();
     }

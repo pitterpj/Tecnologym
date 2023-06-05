@@ -11,11 +11,11 @@
         </div>
         <div class="mb-3">
             <label for="addName" class="form-label">Nombre:</label>
-            <input type="text" class="form-control" name="addName" aria-describedby="helpId">
+            <input type="text" class="form-control" name="addName" aria-describedby="helpId" required>
         </div>
         <div class="mb-3">
             <label for="addLastName" class="form-label">Apellidos:</label>
-            <input type="text" class="form-control" name="addLastName" aria-describedby="helpId">
+            <input type="text" class="form-control" name="addLastName" aria-describedby="helpId" required>
         </div>
         <div class="mb-3">
             <label for="addBMI" class="form-label">BMI:</label>
@@ -23,11 +23,11 @@
         </div>
         <div class="mb-3">
             <label for="addWeight" class="form-label">Peso:</label>
-            <input type="number" class="form-control" name="addWeight" aria-describedby="helpId">
+            <input type="number" class="form-control" name="addWeight" aria-describedby="helpId" required>
         </div>
         <div class="mb-3">
             <label for="addDate" class="form-label">Fecha de Nacimiento:</label>
-            <input type="date" class="form-control" name="addDate" aria-describedby="helpId">
+            <input type="date" class="form-control" max="<?php echo date('2005-m-d'); ?>" name="addDate" aria-describedby="helpId" required>
         </div>
         <div class="mb-3">
             <label for="addComments" class="form-label">Notas:</label>

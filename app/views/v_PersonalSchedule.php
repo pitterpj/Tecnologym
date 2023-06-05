@@ -9,8 +9,9 @@
         <div class="table-responsive-sm m-2">
             <div class="card-body text-center">
                 <div class="d-flex justify-content-around ">
-                     <a class="btn btn-primary" href="<?= BASE_URL ?>c_Schedule/showPersonalSchedule//today" role="button">Diario</a>
+                    <a class="btn btn-primary" href="<?= BASE_URL ?>c_Schedule/showPersonalSchedule//today" role="button">Diario</a>
                     <a class="btn btn-primary" href="<?= BASE_URL ?>c_Schedule/showPersonalSchedule//week" role="button">Semanal</a>
+                    <a class="btn btn-primary" href="<?= BASE_URL . "c_Schedule/completeSchedule" ?>" role="button">Ver horario completo</a>
                 </div>
 
                 <!-- <a class="btn btn-primary" href="<?= BASE_URL ?>c_Schedule/showPersonalSchedule//month" role="button">Mensual</a>
@@ -34,8 +35,8 @@
                             <td scope="row"><?= $class['name_skill'] ?></td>
                             <td scope="row"><?= $class['name'] ?></td>
                             <td scope="row"><?= $class['capacity'] ?></td>
-                            <td scope="row"><?= $class['day'] ?></td>
-                            <td scope="row"><?= $class['hour'] ?></td>
+                            <td scope="row"><?= substr($class['day'], 5, 5) ?></td>
+                            <td scope="row"><?= substr($class['hour'], 0, 5); ?></td>
                         </tr>
                     <?php endforeach ?>
                 </tbody>

@@ -4,7 +4,7 @@
 
 <!--==== CONTENT PAGE ====-->
 <div class="row-6 fondo-2 shadow p-3 mb-5 rounded">
-    <h2 class="text-center">Horario</h2>
+    <h2 class="text-center">Horario del Centro</h2>
     <div class="card">
         <div class="table-responsive-sm m-2">
             <table class="table table-primary table-striped table-hover">

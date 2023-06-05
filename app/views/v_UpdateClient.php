@@ -27,7 +27,7 @@
         </div>
         <div class="mb-3">
             <label for="updateDate" class="form-label">Fecha de Nacimiento:</label>
-            <input type="date" class="form-control" name="updateDate" aria-describedby="helpId" value="<?= $client[0]['birth_date'] ?>">
+            <input type="date" class="form-control" name="updateDate" aria-describedby="helpId" max="<?php echo date('2005-m-d'); ?>" value="<?= $client[0]['birth_date'] ?>">
         </div>
         <div class="mb-3">
             <label for="updateComments" class="form-label">Notas:</label>
