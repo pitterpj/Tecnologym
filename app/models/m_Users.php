@@ -33,6 +33,14 @@ class m_Users extends Model
         return $this->row();
     }
 
+    // Returns the notifications to be displayed in the dashboards
+    public function notifications($user){
+        $snt= "SELECT * FROM `notifications` WHERE id_person = :user";
+        $this->consult($snt);
+        $this->link(":user", $user);
+        return $this->result();
+    }
+
     // Show all workers who are not Directors
     public function showWorkers()
     {

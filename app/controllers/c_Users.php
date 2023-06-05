@@ -35,7 +35,9 @@ class c_Users extends Controller
                 'email' => $user['email'],
                 'phone' => $user['phone'],
                 'avatar' => $user['avatar'],
-                'role' => $role['role']
+                'role' => $role['role'],
+                'notifications' => $notifications['notifications']
+
             ];
             header("Location:" . BASE_URL . "c_Users/dashboard");
         } else {
@@ -53,7 +55,9 @@ class c_Users extends Controller
 
         //$avatar['avatar'] = $_SESSION['session']['avatar'];
 
-        $datos['logTraining'] = $this->m_logTraining->countLogTraining($_SESSION['session']['id_person']);
+        // $datos['logTraining'] = $this->m_logTraining->countLogTraining($_SESSION['session']['id_person']);
+
+        $datos['notifications'] = $this->m_users->notifications($_SESSION['session']['id_person']);
 
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
@@ -131,16 +135,15 @@ class c_Users extends Controller
 
     public function settings($id_worker)
     {
-       // $datos["person"] = ['pepe','luis'];
+        // $datos["person"] = ['pepe','luis'];
         $datos["worker"] = $this->m_users->showWorker($id_worker[0]);
         //var_dump($datos["person"]);
 
         $contenido = "v_Settings";
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
-        $this->loadView($contenido,$datos);
+        $this->loadView($contenido, $datos);
         $this->loadView("templates/footer");
     }
-
 } //End c_Users
 ?>

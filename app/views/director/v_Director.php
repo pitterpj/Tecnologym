@@ -38,7 +38,7 @@
                 <div class="card-body text-center">
                     <h4 class="card-title text-center">ENTRENOS PERSONALES</h4>
                     <p class="card-text">
-                    <!-- <h3> <?= $logTraining['log'] ?> </h3> -->
+                        <!-- <h3> <?= $logTraining['log'] ?> </h3> -->
                     </p>
                     <div class="d-flex justify-content-around ">
                         <a name="addClient" class="btn btn-color shadow" href="<?= BASE_URL . "c_PersonalTraining/addPersonalTraining" ?>" role="button">AÑADIR</a>
@@ -54,7 +54,9 @@
                 <!-- <div class="card-header text-center">Notificaciones</div> -->
                 <div class="card-body text-center">
                     <h4 class="card-title text-center">Notificaciones</h4>
-                    <p class="card-text">No tiene notificaciones actualmente</p>
+                    <?php foreach ($notifications as $notification => $not) : ?>
+                        <p><?= $not['notification']; ?></p>
+                    <?php endforeach ?>
                 </div>
             </div>
         </div>

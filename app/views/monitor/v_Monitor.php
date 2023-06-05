@@ -55,7 +55,9 @@
                 <!-- <div class="card-header text-center">Notificaciones</div> -->
                 <div class="card-body text-center">
                     <h4 class="card-title text-center">Notificaciones</h4>
-                    <p class="card-text">No tiene notificaciones actualmente</p>
+                    <?php foreach ($notifications as $notification => $not) : ?>
+                        <p><?= $not['notification']; ?></p>
+                    <?php endforeach ?>
                 </div>
             </div>
         </div>
