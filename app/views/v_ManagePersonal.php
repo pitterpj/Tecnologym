@@ -42,7 +42,8 @@
                             <td><?= $worker['hours'] ?></td>
                             <td>
                                 <a name="updateWorker" class="btn btn-info" href="<?= BASE_URL . 'c_Users/updateWorkers/' . $worker['id_worker'] ?>" type="button">Editar</a>
-                                <a name="deleteWorker" class="btn btn-warning" href="<?= BASE_URL . 'c_Users/deletePerson/' . $worker['id_person'] ?> " role="button">Eliminar</a>
+                                <a name="deleteWorker" class="del btn btn-warning" role="button">Eliminar</a>
+                                <!-- <a name="deleteWorker" class="del btn btn-warning" href="<?= BASE_URL . 'c_Users/deletePerson/' . $worker['id_person'] ?> " role="button">Eliminar</a> -->
                             </td>
                         </tr>
                     <?php endforeach ?>
@@ -51,3 +52,23 @@
         </div>
     </div>
 </div> <!--==== END CONTENT PAGE WITH SHADOWS ====-->
+<script>
+    $(".del").on("click", function(e) {
+        e.preventDefault();
+
+        Swal.fire({
+            title: "¿Dar de alta al nuevo cliente?",
+            text: "Va a crear un nuevo registro",
+            icon: "info",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#1E7361",
+            confirmButtonText: "Si, estoy seguro.",
+            cancelButtonText: "Cancelar",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "<?= BASE_URL . 'c_Users/deletePerson/' . $worker['id_person'] ?>";
+            }
+        });
+    });
+</script>
