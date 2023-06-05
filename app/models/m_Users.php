@@ -127,6 +127,11 @@ class m_Users extends Model
             $this->link(":id_worker", $id_worker);
             $this->link(":role", $_POST['updateRole']);
             $this->launch();
+
+            $snt4="INSERT INTO `notifications` (`id`, `id_person`, `notification`) VALUES (NULL, :id_person, '¡Nueva habilidad desbloqueada!');";
+            $this->consult($snt4);
+            $this->link(":id_person", $id_worker);
+            $this->launch();
         }
 
 

@@ -56,6 +56,11 @@ class m_Schedule extends Model
         $this->link(":day", $_POST['addDay']);
         $this->link(":hour", $_POST['addHour']);
         $this->launch();
+
+        $snt2="INSERT INTO `notifications` (`id`, `id_person`, `notification`) VALUES (NULL, :id_person, '¡Nueva clase añadida a tu horario!');";
+        $this->consult($snt2);
+        $this->link(":id_person", $_POST['addWorker']);
+        $this->launch();
     }
 
     // Insert skill in the db
@@ -71,6 +76,7 @@ class m_Schedule extends Model
         $this->link(":name_skill", $_POST['addNameSkill']);
         $this->link(":level", $_POST['addLevel']);
         $this->launch();
+
     }
 
     //Show the personal schedule of one coach
