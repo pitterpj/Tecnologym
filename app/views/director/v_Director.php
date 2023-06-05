@@ -42,7 +42,7 @@
                     </p>
                     <div class="d-flex justify-content-around ">
                         <a name="addClient" class="btn btn-color shadow" href="<?= BASE_URL . "c_PersonalTraining/addPersonalTraining" ?>" role="button">AÑADIR</a>
-                        <a name="addClient" class="btn btn-color shadow" href="<?= BASE_URL . "c_PersonalTraining/showPersonalTraining" ?>" role="button">VER TODOS</a>
+                        <a name="showClients" class="btn btn-color shadow" href="<?= BASE_URL . "c_PersonalTraining/showPersonalTraining" ?>" role="button">VER TODOS</a>
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                     <?php foreach ($notifications as $notification => $not) : ?>
                         <div class="d-flex justify-content-between">
                             <p class=""><?= $not['notification']; ?> </p>
-                            <button type="submit" class="btn btn-danger shadow m-2">X</button>
+                            <a name="deleteNot" class="btn btn-warning m-2" href="<?= BASE_URL . 'c_Users/deleteNotification/' . $not['id'] ?> " role="button">Eliminar</a>
                         </div>
                     <?php endforeach ?>
 

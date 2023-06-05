@@ -35,8 +35,7 @@ class c_Users extends Controller
                 'email' => $user['email'],
                 'phone' => $user['phone'],
                 'avatar' => $user['avatar'],
-                'role' => $role['role'],
-                'notifications' => $notifications['notifications']
+                'role' => $role['role']
 
             ];
             header("Location:" . BASE_URL . "c_Users/dashboard");
@@ -124,6 +123,12 @@ class c_Users extends Controller
     {
         $this->m_users->deletePerson($id_person[0]);
         $this->managePersonal();
+    }
+
+    public function deleteNotification($id_not)
+    {
+        $this->m_users->deleteNotification($id_not[0]);
+        $this->dashboard();
     }
 
     // Update worker

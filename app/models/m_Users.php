@@ -198,6 +198,14 @@ class m_Users extends Model
         $this->launch();
     }
 
+    public function deleteNotification($id_not)
+    {
+        $snt = "DELETE FROM `notifications` WHERE id = :id;";
+        $this->consult($snt);
+        $this->link(":id", $id_not);
+        $this->launch();
+    }
+
     // Easy, update client
     public function updateClient($id_person)
     {
