@@ -17,7 +17,7 @@ define("IMG_URL", "app\assets\img\uploaded_images/");
 define("DB_HOST","localhost");
 define("DB_USER","root");
 define("DB_PASS","");
-define("DB_NAME","tecnologym"); // Change this!
+define("DB_NAME","tecnologym_full"); // Change this!
 
 ?>
 

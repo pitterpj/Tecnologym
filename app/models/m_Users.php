@@ -34,8 +34,9 @@ class m_Users extends Model
     }
 
     // Returns the notifications to be displayed in the dashboards
-    public function notifications($user){
-        $snt= "SELECT * FROM `notifications` WHERE id_person = :user";
+    public function notifications($user)
+    {
+        $snt = "SELECT * FROM `notifications` WHERE id_person = :user";
         $this->consult($snt);
         $this->link(":user", $user);
         return $this->result();
@@ -100,10 +101,10 @@ class m_Users extends Model
             $this->launch();
         }
 
-        if(!isset($_POST['updateHours'])){
-    
+        if (!isset($_POST['updateHours'])) {
+
             $snt2 = "UPDATE person INNER JOIN worker ON person.id_person=worker.id_person SET name = :name, lastname = :lastname, email=:email, phone=:phone WHERE worker.id_worker = :id_worker";
-    
+
             $this->consult($snt2);
             $this->link(":id_worker", $id_worker);
             $this->link(":name", $_POST['updateName']);
@@ -111,17 +112,16 @@ class m_Users extends Model
             $this->link(":email", $_POST['updateEmail']);
             $this->link(":phone", $_POST['updatePhone']);
             $this->launch();
-    
-        }else{
+        } else {
             $snt = "UPDATE worker SET hours = :hours WHERE id_worker = :id_worker";
             $this->consult($snt);
             $this->link(":id_worker", $id_worker);
             $this->link(":hours", $_POST['updateHours']);
             $this->launch();
-    
-    
+
+
             $snt2 = "UPDATE person INNER JOIN worker ON person.id_person=worker.id_person SET name = :name, lastname = :lastname, email=:email, phone=:phone WHERE worker.id_worker = :id_worker";
-    
+
             $this->consult($snt2);
             $this->link(":id_worker", $id_worker);
             $this->link(":name", $_POST['updateName']);
@@ -129,27 +129,29 @@ class m_Users extends Model
             $this->link(":email", $_POST['updateEmail']);
             $this->link(":phone", $_POST['updatePhone']);
             $this->launch();
-    
+
             $snt3 = "UPDATE `worker_type` SET `id_type`=:role WHERE id_worker = :id_worker";
             $this->consult($snt3);
             $this->link(":id_worker", $id_worker);
             $this->link(":role", $_POST['updateRole']);
             $this->launch();
 
-            $snt4="INSERT INTO `notifications` (`id`, `id_person`, `notification`) VALUES (NULL, :id_person, '¡Nueva habilidad desbloqueada!');";
+            $snt6 = "SELECT person.id_person FROM `person` INNER JOIN worker ON person.id_person=worker.id_person WHERE worker.id_worker = :id_worker";
+            $this->consult($snt6);
+            $this->link(":id_worker", $id_worker);
+            $person= $this->launch();
+
+            $snt4 = "INSERT INTO `notifications` (`id`, `id_person`, `notification`) VALUES (NULL, :id_person, '¡Nueva habilidad desbloqueada!');";
             $this->consult($snt4);
+            $this->link(":id_person", $person);
+            $this->launch();
+
+            $snt5 = "INSERT INTO `worker_skill`(`id_worker`, `id_skill`) VALUES (:id_person,:skill)";
+            $this->consult($snt5);
             $this->link(":id_person", $id_worker);
+            $this->link(":skill", $_POST['addWorkerSkill']);
             $this->launch();
         }
-
-
-
-
-
-
-
-
-
     }
     // Display all available skills 
     public function showSkill()
