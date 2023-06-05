@@ -57,9 +57,9 @@
         e.preventDefault();
 
         Swal.fire({
-            title: "¿Dar de alta al nuevo cliente?",
-            text: "Va a crear un nuevo registro",
-            icon: "info",
+            title: "¿Desea eliminar a este trabajador?",
+            text: "Va dar de baja a este trabajador",
+            icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#1E7361",
