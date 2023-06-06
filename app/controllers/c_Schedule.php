@@ -100,7 +100,6 @@ class c_Schedule extends Controller
         $this->loadView("templates/sidebar");
         $this->loadView($contenido, $datos);
         $this->loadView("templates/footer");
-
     }
     public function updateClass($class)
     {
@@ -112,6 +111,13 @@ class c_Schedule extends Controller
 
         // $datos = $this->m_schedule->updateClass($class[0]);
 
+        $this->showPersonalSchedule();
+    }
+
+    public function deleteClass($id_class)
+    {
+        //var_dump($id_class);
+        $this->m_schedule->deleteClass($id_class[0]);
         $this->showPersonalSchedule();
     }
 } //End class c_Schedule

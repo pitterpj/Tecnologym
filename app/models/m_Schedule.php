@@ -154,4 +154,12 @@ class m_Schedule extends Model
         $this->link(":id_class", $id_class);
         return $this->result();
     }
+
+    public function deleteClass($id_class)
+    {
+        $snt = "DELETE FROM class WHERE `class`.`id_class` = :id_class";
+        $this->consult($snt);
+        $this->link(":id_class", $id_class);
+        return $this->result();
+    }
 } //En m_Schedule
