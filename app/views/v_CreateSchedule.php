@@ -6,7 +6,6 @@
 
 <!--====  CREATE CLASS====-->
 <div class="row container-fluid justify-content-around ">
-
     <div class="container card col-lg-6 col-md-9 col-sm-8 fondo-2 shadow p-3 mb-5 rounded">
         <div class="text-center">
             <h3>Crear Clase</h3>

@@ -26,6 +26,7 @@
                         <th scope="col">Capacidad</th>
                         <th scope="col">Día</th>
                         <th scope="col">Hora</th>
+                        <th scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,6 +38,10 @@
                             <td scope="row"><?= $class['capacity'] ?></td>
                             <td scope="row"><?= substr($class['day'], 5, 5) ?></td>
                             <td scope="row"><?= substr($class['hour'], 0, 5); ?></td>
+                            <td>
+                                <a name="updateClass" class="btn btn-info" href="<?= BASE_URL . 'c_Schedule/updateClasses/' . $class['id_class'] ?>" type="button">Editar</a>
+                                <a name="deleteWorker" class="del btn btn-warning" role="button">Eliminar</a>
+                            </td>
                         </tr>
                     <?php endforeach ?>
                 </tbody>

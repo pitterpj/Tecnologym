@@ -58,9 +58,9 @@ class c_Schedule extends Controller
     }
 
     // Display the personal schedule for coach
-    public function showPersonalSchedule($calendar="today")
+    public function showPersonalSchedule($calendar = "today")
     {
-        $datos["personalSchedule"] = $this->m_schedule->showPersonalSchedule($_SESSION['session']['id_person'],$calendar);
+        $datos["personalSchedule"] = $this->m_schedule->showPersonalSchedule($_SESSION['session']['id_person'], $calendar);
 
         //var_dump($datos["personalSchedule"] );
         $contenido = "v_PersonalSchedule";
@@ -88,5 +88,30 @@ class c_Schedule extends Controller
     public function prueba()
     {
         echo "hola";
+    }
+
+    public function updateClasses($id_class)
+    {
+        $datos["class"] = $this->m_schedule->showClass($id_class[0]);
+
+        //var_dump($datos);
+        $contenido = "v_UpdateClass";
+        $this->loadView("templates/header");
+        $this->loadView("templates/sidebar");
+        $this->loadView($contenido, $datos);
+        $this->loadView("templates/footer");
+
+    }
+    public function updateClass($class)
+    {
+
+        $this->m_schedule->updateClass($class[0]);
+
+        //var_dump($_POST);
+        //var_dump($class[0]);
+
+        // $datos = $this->m_schedule->updateClass($class[0]);
+
+        $this->showPersonalSchedule();
     }
 } //End class c_Schedule
