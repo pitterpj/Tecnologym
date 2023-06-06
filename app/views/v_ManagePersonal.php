@@ -42,8 +42,8 @@
                             <td><?= $worker['hours'] ?></td>
                             <td>
                                 <a name="updateWorker" class="btn btn-info" href="<?= BASE_URL . 'c_Users/updateWorkers/' . $worker['id_worker'] ?>" type="button">Editar</a>
-                                <a name="deleteWorker" class="del btn btn-warning" role="button">Eliminar</a>
-                                <!-- <a name="deleteWorker" class="del btn btn-warning" href="<?= BASE_URL . 'c_Users/deletePerson/' . $worker['id_person'] ?> " role="button">Eliminar</a> -->
+                                <a name="deleteWorker" data-id_p="<?= $worker['id_worker']  ?>" class="del btn btn-warning" role="button">Eliminar</a>
+
                             </td>
                         </tr>
                     <?php endforeach ?>
@@ -56,9 +56,13 @@
     $(".del").on("click", function(e) {
         e.preventDefault();
 
+        var id_person = parseInt($(this).data('id_p'));
+
+        console.log(id_person);
+
         Swal.fire({
-            title: "¿Desea eliminar a este trabajador?",
-            text: "Va dar de baja a este trabajador",
+            title: "¿Desea eliminar a esta clase?",
+            text: "Va a eliminar por completo una clase",
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
@@ -67,7 +71,7 @@
             cancelButtonText: "Cancelar",
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = "<?= BASE_URL . 'c_Users/deletePerson/' . $worker['id_person'] ?>";
+                window.location.href = BASE_URL + 'c_Users/deletePerson/' + id_person;
             }
         });
     });

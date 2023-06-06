@@ -194,7 +194,7 @@ class m_Users extends Model
 
     public function deletePerson($id_person)
     {
-        $snt = "DELETE FROM person WHERE id_person = :id_person;";
+        $snt = "DELETE FROM person WHERE `person`.`id_person` = :id_person";
         $this->consult($snt);
         $this->link(":id_person", $id_person);
         $this->launch();
