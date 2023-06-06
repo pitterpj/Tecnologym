@@ -9,7 +9,7 @@
         <div class="text-center">
             <h3>Editar Clase</h3>
         </div>
-        <form action="<? BASE_URL . 'c_Schedule/updateClass/' . $class[0]['id_class'] ?>" method="post">
+        <form action="<?= BASE_URL . 'c_Schedule/updateClass/' . $class[0]['id_class'] ?>" method="post">
             <div class="mb-3">
                 <label for="addCapacity" class="form-label">Capacidad de la clase:</label>
                 <input type="number" class="form-control" name="addCapacity" aria-describedby="helpId" value="<?= $class[0]['capacity'] ?>">
@@ -26,15 +26,15 @@
                 <button type="submit" class="btn btn-primary">Actualizar Clase</button>
             </div>
         </form>
-        <?=var_dump($_POST)?>
-        <?=var_dump($class[0]['id_class'])?>
+        <?= var_dump($_POST) ?>
+        <?= var_dump($class[0]['id_class']) ?>
     </div>
 
 </div>
 
 
-<script>
-    // <!--====== Script Select Workers and skills on load ======-->
+<!-- <script>
+    // ====== Script Select Workers and skills on load ======
     $(window).on("load", function(e) {
         $.post(
             BASE_URL + "c_Schedule/showSkillsWorker", {
@@ -46,7 +46,7 @@
         ); //end post
     });
 
-    // <!--====== Script Select Show Skills of Workers on change ======-->
+    // ====== Script Select Show Skills of Workers on change ======
 
     $("#addWorker").on("change", function(e) {
         //console.log($("#addWorker").val());
@@ -58,5 +58,6 @@
                 showSkills(JSON.parse(skills));
             }
         ); //end post
-    });
-</script>
+    }); 
+</script> 
+-->
