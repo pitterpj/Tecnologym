@@ -197,7 +197,8 @@ class m_Users extends Model
         $snt = "DELETE FROM person WHERE `person`.`id_person` = :id_person";
         $this->consult($snt);
         $this->link(":id_person", $id_person);
-        $this->launch();
+        $this->launch(); 
+        
     }
 
     public function deleteNotification($id_not)
