@@ -2,10 +2,6 @@
 // <!-- Pedro.J (Pitter) -->
 // <!-- https://github.com/pitterpj -->
 
-// <!-- Pedro.J (Pitter) -->
-// <!-- https://github.com/pitterpj -->
-
-
 class m_Schedule extends Model
 {
     public function __construct()
@@ -64,9 +60,6 @@ class m_Schedule extends Model
     // Insert skill in the db
     public function addSkill()
     {
-        // var_dump($_POST);
-        //var_dump($_FILES);
-
         $snt = "INSERT INTO `skill` (`img`, `id_skill`, `name_skill`, `level`) VALUES (:img, NULL, :name_skill, :level);";
 
         $this->consult($snt);
@@ -79,7 +72,6 @@ class m_Schedule extends Model
     //Show the personal schedule of one coach
     public function showPersonalSchedule($id_person, $calendar)
     {
-        //return $calendar;
         switch ($calendar[1]) {
             case "today":
                 $snt = "SELECT DISTINCT id_class, img, name, name_skill, level, capacity, day, hour FROM `class` INNER JOIN skill ON skill.id_skill = class.id_skill INNER JOIN worker ON worker.id_worker = class.id_worker INNER JOIN person ON worker.id_person = person.id_person WHERE person.id_person = :id_person AND CURDATE() = day ORDER BY day, hour";
@@ -98,19 +90,6 @@ class m_Schedule extends Model
                 $this->link(":id_person", $id_person);
                 return $this->result();
                 break;
-                // case "month":
-                //     $snt = "SELECT DISTINCT img, name, name_skill, level, capacity, day, hour FROM `class` INNER JOIN skill ON skill.id_skill = class.id_skill INNER JOIN worker ON worker.id_worker = class.id_worker INNER JOIN person ON worker.id_person = person.id_person WHERE person.id_person = :id_person AND EXTRACT(MONTH from day) = EXTRACT(MONTH from CURRENT_TIMESTAMP()) ORDER BY day, hour";
-                //     $this->consult($snt);
-                //     $this->link(":id_person", $id_person);
-                //     return $this->result();
-                //     break;
-                // case "year":
-                //     $snt = "SELECT DISTINCT img, name, name_skill, level, capacity, day, hour FROM `class` 
-                //     INNER JOIN skill ON skill.id_skill = class.id_skill INNER JOIN worker ON worker.id_worker = class.id_worker INNER JOIN person ON worker.id_person = person.id_person WHERE person.id_person = :id_person AND EXTRACT(YEAR from day) = EXTRACT(YEAR from CURRENT_TIMESTAMP()) ORDER BY day, hour";
-                //     $this->consult($snt);
-                //     $this->link(":id_person", $id_person);
-                //     return $this->result();
-                //     break;
             default:
                 $snt = "SELECT DISTINCT id_class, img, name, name_skill, level, capacity, day, hour FROM `class` INNER JOIN skill ON skill.id_skill = class.id_skill INNER JOIN worker ON worker.id_worker = class.id_worker INNER JOIN person ON worker.id_person = person.id_person WHERE person.id_person = :id_person AND CURDATE() = day ORDER BY day, hour";
                 $this->consult($snt);
@@ -120,7 +99,7 @@ class m_Schedule extends Model
         }
     }
 
-
+    // Showcase a worker's skills
     public function showSkillsWorker($id_person)
     {
         $snt = "SELECT name_skill, skill.id_skill FROM `worker_skill` 
@@ -128,22 +107,27 @@ class m_Schedule extends Model
         INNER JOIN skill ON skill.id_skill = worker_skill.id_skill
         INNER JOIN person ON person.id_person = worker.id_person
         WHERE worker.id_worker = :id_person;";
+
         $this->consult($snt);
         $this->link(":id_person", $id_person);
         return $this->result();
     }
 
+    // Display the data of a class
     public function showClass($id_class)
     {
         $snt = "SELECT * FROM `class` WHERE id_class=:id_class";
+
         $this->consult($snt);
         $this->link(":id_class", $id_class);
         return $this->result();
     }
 
+    // Update class
     public function updateClass($id_class)
     {
         $snt = "UPDATE `class` SET `capacity` = :capacity, `day` = :day, `hour` = :hour WHERE `class`.`id_class` = :id_class;";
+
         $this->consult($snt);
         $this->link(":capacity", $_POST["addCapacity"]);
         $this->link(":day", $_POST["addDay"]);
@@ -152,9 +136,11 @@ class m_Schedule extends Model
         return $this->result();
     }
 
+    // Delete class
     public function deleteClass($id_class)
     {
         $snt = "DELETE FROM class WHERE `class`.`id_class` = :id_class";
+        
         $this->consult($snt);
         $this->link(":id_class", $id_class);
         return $this->result();

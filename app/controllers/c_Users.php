@@ -6,13 +6,11 @@ class c_Users extends Controller
 {
     private $m_users; //Property to instantiate the model
     private $m_schedule; //Property to instantiate the model
-    private $m_logTraining; //Property to instantiate the model
 
     public function __construct()
     {
         $this->m_users = $this->loadModel("m_Users");
         $this->m_schedule = $this->loadModel("m_Schedule");
-        $this->m_logTraining = $this->loadModel("m_PersonalTraining");
     }
 
     public function index()
@@ -40,9 +38,7 @@ class c_Users extends Controller
             ];
             header("Location:" . BASE_URL . "c_Users/dashboard");
         } else {
-            // TODO HACER QUE MUESTRE EL ERROR EN ALGÚN LADO
             $_SESSION['errorMessage'] = 'Usuario o contraseña incorrectos';
-
             header("Location:" . BASE_URL . "c_Home/logOutLanding");
         }
     }
@@ -51,11 +47,6 @@ class c_Users extends Controller
     public function dashboard($calendar = "today")
     {
         $datos["personalScheduleToday"] = $this->m_schedule->showPersonalSchedule($_SESSION['session']['id_person'], $calendar);
-
-        //$avatar['avatar'] = $_SESSION['session']['avatar'];
-
-        // $datos['logTraining'] = $this->m_logTraining->countLogTraining($_SESSION['session']['id_person']);
-
         $datos['notifications'] = $this->m_users->notifications($_SESSION['session']['id_person']);
 
         $this->loadView("templates/header");
@@ -105,44 +96,40 @@ class c_Users extends Controller
     public function updateWorker($id_worker)
     {
         $this->m_users->updateWorker($id_worker[0]);
-        //var_dump($datos);
         $this->dashboard();
     }
 
-    // TODO funcion para añadir trabajador
+    // New worker
     public function addWorker()
     {
-        //var_dump($_POST);
-        //var_dump($_FILES);
         $this->m_users->addWorker();
-        // //var_dump($datos);
         $this->managePersonal();
     }
 
+    // Delete worker
     public function deletePerson($id_person)
     {
-        //var_dump($id_person);
         $this->m_users->deletePerson($id_person[0]);
-        // $this->managePersonal();
         $this->dashboard();
     }
 
+    // Delete notifications
     public function deleteNotification($id_not)
     {
         $this->m_users->deleteNotification($id_not[0]);
         $this->dashboard();
     }
 
-    // Update worker
+    // Update Client
     public function updateClient($id_person)
     {
         $this->m_users->updateClient($id_person[0]);
         $this->dashboard();
     }
 
+    // Functions to settings
     public function settings($id_worker)
     {
-
         $datos["worker"] = $this->m_users->showWorker($id_worker[0]);
 
         $contenido = "v_Settings";

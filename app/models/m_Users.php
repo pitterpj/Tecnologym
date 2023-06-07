@@ -1,6 +1,7 @@
 <?php
 // <!-- Pedro.J (Pitter) -->
 // <!-- https://github.com/pitterpj -->
+
 class m_Users extends Model
 {
     public function __construct()
@@ -28,6 +29,7 @@ class m_Users extends Model
     public function role($user)
     {
         $snt = "SELECT type.role AS role FROM type INNER JOIN worker_type ON worker_type.id_type=type.id_type INNER JOIN worker ON worker_type.id_worker=worker.id_worker INNER JOIN person ON person.id_person=worker.id_person WHERE user=:user;";
+
         $this->consult($snt);
         $this->link(":user", $user);
         return $this->row();
@@ -37,6 +39,7 @@ class m_Users extends Model
     public function notifications($user)
     {
         $snt = "SELECT * FROM `notifications` WHERE id_person = :user";
+
         $this->consult($snt);
         $this->link(":user", $user);
         return $this->result();
@@ -50,6 +53,7 @@ class m_Users extends Model
         INNER JOIN worker_type ON worker_type.id_worker=worker.id_worker
         INNER JOIN type ON type.id_type=worker_type.id_type
         WHERE role != 'Director'";
+
         $this->consult($snt);
         return $this->result();
     }
@@ -62,6 +66,7 @@ class m_Users extends Model
         INNER JOIN worker_type ON worker_type.id_worker=worker.id_worker
         INNER JOIN type ON type.id_type=worker_type.id_type
         WHERE worker.id_worker= :id_worker";
+
         $this->consult($snt);
         $this->link(":id_worker", $id_worker);
         return $this->row();
@@ -114,6 +119,7 @@ class m_Users extends Model
             $this->launch();
         } else {
             $snt = "UPDATE worker SET hours = :hours WHERE id_worker = :id_worker";
+
             $this->consult($snt);
             $this->link(":id_worker", $id_worker);
             $this->link(":hours", $_POST['updateHours']);
@@ -131,12 +137,14 @@ class m_Users extends Model
             $this->launch();
 
             $snt3 = "UPDATE `worker_type` SET `id_type`=:role WHERE id_worker = :id_worker";
+
             $this->consult($snt3);
             $this->link(":id_worker", $id_worker);
             $this->link(":role", $_POST['updateRole']);
             $this->launch();
 
             $snt6 = "SELECT person.id_person FROM `person` INNER JOIN worker ON person.id_person=worker.id_person WHERE worker.id_worker = :id_worker";
+
             $this->consult($snt6);
             $this->link(":id_worker", $id_worker);
             $person = $this->launch();
@@ -146,11 +154,13 @@ class m_Users extends Model
             if ($_POST['addWorkerSkill'] != "" or $_POST['addWorkerSkill'] != NULL) {
 
                 $snt4 = "INSERT INTO `notifications` (`id`, `id_person`, `notification`) VALUES (NULL, :id_person, '¡Nueva habilidad desbloqueada!');";
+
                 $this->consult($snt4);
                 $this->link(":id_person", $person);
                 $this->launch();
 
                 $snt5 = "INSERT INTO `worker_skill`(`id_worker`, `id_skill`) VALUES (:id_person,:skill)";
+
                 $this->consult($snt5);
                 $this->link(":id_person", $id_worker);
                 $this->link(":skill", $_POST['addWorkerSkill']);
@@ -165,6 +175,7 @@ class m_Users extends Model
         $this->consult($snt);
         return $this->result();
     }
+
     // Display all roles in the db
     public function selectRoles()
     {
@@ -173,9 +184,11 @@ class m_Users extends Model
         return $this->result();
     }
 
+    //Add new worker
     public function addWorker()
     {
         $snt = "INSERT INTO `person` (`id_person`, `name`, `lastname`, `user`, `password`, `email`, `phone`, `avatar`) VALUES (NULL, :name, :lastName, :user, :password, :email, :phone, :avatar);";
+
         $this->consult($snt);
         $this->link(":name", $_POST['addName']);
         $this->link(":lastName", $_POST['addLastName']);
@@ -187,27 +200,33 @@ class m_Users extends Model
         $this->launch();
 
         $snt2 = "INSERT INTO `worker` (`id_worker`, `id_person`, `hours`) VALUES (NULL, (SELECT MAX(id_person) FROM person), :hours);";
+
         $this->consult($snt2);
         $this->link(":hours", $_POST['addHours']);
         $this->launch();
 
         $snt3 = "INSERT INTO `worker_type` (`id_worker`, `id_type`) VALUES ((SELECT MAX(id_worker) FROM worker), :id_type);";
+
         $this->consult($snt3);
         $this->link(":id_type", $_POST['addRole']);
         $this->launch();
     }
 
+    // Delete person
     public function deletePerson($id_person)
     {
         $snt = "DELETE FROM person WHERE `person`.`id_person` = :id_person";
+
         $this->consult($snt);
         $this->link(":id_person", $id_person);
         $this->launch();
     }
 
+    // Delete notifications
     public function deleteNotification($id_not)
     {
         $snt = "DELETE FROM `notifications` WHERE id = :id;";
+
         $this->consult($snt);
         $this->link(":id", $id_not);
         $this->launch();
@@ -248,6 +267,7 @@ class m_Users extends Model
         }
 
         $snt2 = "UPDATE person SET name = :name, lastname = :lastname  WHERE id_person = :id_person";
+
         $this->consult($snt2);
         $this->link(":id_person", $id_person);
         $this->link(":name", $_POST['updateName']);
@@ -255,6 +275,7 @@ class m_Users extends Model
         $this->launch();
 
         $snt3 = "UPDATE `client` SET `BMI`= :BMI ,`weight`= :weight,`birth_date`= :date,`comments`= :comments  WHERE id_person = :id_person";
+
         $this->consult($snt3);
         $this->link(":id_person", $id_person);
         $this->link(":BMI", $_POST['updateBMI']);

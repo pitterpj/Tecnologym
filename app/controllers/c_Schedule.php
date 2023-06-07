@@ -19,8 +19,6 @@ class c_Schedule extends Controller
         $datos['skills'] = $this->m_schedule->showSkill();
         $datos['workers'] = $this->m_schedule->showName();
 
-        // var_dump($datos['datas']);
-
         $contenido = "v_CreateSchedule";
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
@@ -33,7 +31,6 @@ class c_Schedule extends Controller
     {
         $datos["classes"] = $this->m_schedule->completeSchedule();
 
-        //var_dump($datos["classes"]);
         $contenido = "v_Schedule";
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
@@ -53,7 +50,6 @@ class c_Schedule extends Controller
     public function addSkill()
     {
         $this->m_schedule->addSkill();
-
         $this->createSchedule();
     }
 
@@ -62,7 +58,6 @@ class c_Schedule extends Controller
     {
         $datos["personalSchedule"] = $this->m_schedule->showPersonalSchedule($_SESSION['session']['id_person'], $calendar);
 
-        //var_dump($datos["personalSchedule"] );
         $contenido = "v_PersonalSchedule";
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
@@ -70,19 +65,18 @@ class c_Schedule extends Controller
         $this->loadView("templates/footer");
     }
 
+    // Output a JSON with the workers' skills
     public function showSkillsWorkers()
     {
         $datosW = $this->m_schedule->showSkill();
-
         echo json_encode($datosW);
     }
 
+    // Output a JSON with the skills of a single worker
     public function showSkillsWorker()
     {
         $datos = $this->m_schedule->showSkillsWorker($_POST['id_person']);
-        //var_dump($datos["skills"]);
         echo json_encode($datos);
-        // echo json_encode($id_person);
     }
 
     public function prueba()
@@ -90,33 +84,28 @@ class c_Schedule extends Controller
         echo "hola";
     }
 
+    // Leads to update by loading the data of that class
     public function updateClasses($id_class)
     {
         $datos["class"] = $this->m_schedule->showClass($id_class[0]);
 
-        //var_dump($datos);
         $contenido = "v_UpdateClass";
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
         $this->loadView($contenido, $datos);
         $this->loadView("templates/footer");
     }
+
+    // Update classes 
     public function updateClass($class)
     {
-
         $this->m_schedule->updateClass($class[0]);
-
-        //var_dump($_POST);
-        //var_dump($class[0]);
-
-        // $datos = $this->m_schedule->updateClass($class[0]);
-
         $this->showPersonalSchedule();
     }
 
+    // Delete classes 
     public function deleteClass($id_class)
     {
-        //var_dump($id_class);
         $this->m_schedule->deleteClass($id_class[0]);
         $this->showPersonalSchedule();
     }

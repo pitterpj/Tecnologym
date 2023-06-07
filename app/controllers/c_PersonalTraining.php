@@ -46,7 +46,6 @@ class c_PersonalTraining extends Controller
         $this->loadView("templates/footer");
     }
 
-
     public function addClient()
     {
         $this->m_personalTraining->addClient();
@@ -57,8 +56,6 @@ class c_PersonalTraining extends Controller
     public function updateClients($id_person)
     {
         $datos["client"] = $this->m_personalTraining->showClient($id_person[0]);
-        // //var_dump($datos);
-        // $this->managePersonal();
         $contenido = "v_UpdateClient";
         $this->loadView("templates/header");
         $this->loadView("templates/sidebar");
