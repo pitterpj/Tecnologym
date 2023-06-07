@@ -139,18 +139,23 @@ class m_Users extends Model
             $snt6 = "SELECT person.id_person FROM `person` INNER JOIN worker ON person.id_person=worker.id_person WHERE worker.id_worker = :id_worker";
             $this->consult($snt6);
             $this->link(":id_worker", $id_worker);
-            $person= $this->launch();
+            $person = $this->launch();
 
-            $snt4 = "INSERT INTO `notifications` (`id`, `id_person`, `notification`) VALUES (NULL, :id_person, '¡Nueva habilidad desbloqueada!');";
-            $this->consult($snt4);
-            $this->link(":id_person", $person);
-            $this->launch();
 
-            $snt5 = "INSERT INTO `worker_skill`(`id_worker`, `id_skill`) VALUES (:id_person,:skill)";
-            $this->consult($snt5);
-            $this->link(":id_person", $id_worker);
-            $this->link(":skill", $_POST['addWorkerSkill']);
-            $this->launch();
+
+            if ($_POST['addWorkerSkill'] != "" or $_POST['addWorkerSkill'] != NULL) {
+
+                $snt4 = "INSERT INTO `notifications` (`id`, `id_person`, `notification`) VALUES (NULL, :id_person, '¡Nueva habilidad desbloqueada!');";
+                $this->consult($snt4);
+                $this->link(":id_person", $person);
+                $this->launch();
+
+                $snt5 = "INSERT INTO `worker_skill`(`id_worker`, `id_skill`) VALUES (:id_person,:skill)";
+                $this->consult($snt5);
+                $this->link(":id_person", $id_worker);
+                $this->link(":skill", $_POST['addWorkerSkill']);
+                $this->launch();
+            }
         }
     }
     // Display all available skills 
@@ -197,8 +202,7 @@ class m_Users extends Model
         $snt = "DELETE FROM person WHERE `person`.`id_person` = :id_person";
         $this->consult($snt);
         $this->link(":id_person", $id_person);
-        $this->launch(); 
-        
+        $this->launch();
     }
 
     public function deleteNotification($id_not)

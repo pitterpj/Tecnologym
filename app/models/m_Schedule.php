@@ -36,11 +36,8 @@ class m_Schedule extends Model
     // Show the all worker names
     public function showName()
     {
-        $snt = "SELECT name, worker.id_worker FROM `person` 
-        INNER JOIN worker ON worker.id_worker=person.id_person
-        INNER JOIN worker_type ON worker.id_worker=worker_type.id_worker
-        INNER JOIN type ON worker_type.id_type=type.id_type
-        WHERE type.id_type = 1 OR 2 OR 3";
+        $snt = "SELECT name, worker.id_worker FROM `worker` 
+        INNER JOIN person ON person.id_person=worker.id_person";
         $this->consult($snt);
         return $this->result();
     }
@@ -130,7 +127,7 @@ class m_Schedule extends Model
         INNER JOIN worker ON worker.id_worker = worker_skill.id_worker
         INNER JOIN skill ON skill.id_skill = worker_skill.id_skill
         INNER JOIN person ON person.id_person = worker.id_person
-        WHERE person.id_person = :id_person;";
+        WHERE worker.id_worker = :id_person;";
         $this->consult($snt);
         $this->link(":id_person", $id_person);
         return $this->result();

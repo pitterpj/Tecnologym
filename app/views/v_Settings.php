@@ -7,7 +7,7 @@
                 <div class="card-body">
                     <h4 class="card-title text-center ">AVATAR</h4>
                     <div class="mb-3">
-                        <img src="<?= BASE_URL . IMG_URL . $worker['avatar'] ?>" width="300" class=" mx-auto d-block img-fluid rounded-top mb-3">
+                        <img src="<?= BASE_URL . IMG_URL . $worker['avatar'] ?>" width="260" class=" mx-auto d-block img-fluid rounded-top mb-3">
                         <label for="addImg" class="form-label"></label>
                         <input type="file" class="form-control mt-4" name="addImg" aria-describedby="helpId">
                     </div>
@@ -25,19 +25,19 @@
                         <h4 class="card-title text-center">INFORMACIÓN PERSONAL</h4>
                         <div class="mb-3">
                             <label for="updateName" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" name="updateName" aria-describedby="helpId" value="<?= $worker['name'] ?>" required>
+                            <input type="text" class="form-control" name="updateName" aria-describedby="helpId" value="<?= $worker['name'] ?>" onblur="validarCampo(this)" required>
                         </div>
                         <div class="mb-3">
                             <label for="updateLastname" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" name="updateLastname" aria-describedby="helpId" value="<?= $worker['lastname'] ?>" required>
+                            <input type="text" class="form-control" name="updateLastname" aria-describedby="helpId" value="<?= $worker['lastname'] ?>" onblur="validarCampo(this)" required>
                         </div>
                         <div class="mb-3">
                             <label for="updateEmail" class="form-label">Email</label>
-                            <input type="text" class="form-control" name="updateEmail" aria-describedby="helpId" value="<?= $worker['email'] ?>" required>
+                            <input type="email" class="form-control" name="updateEmail" aria-describedby="helpId" value="<?= $worker['email'] ?>" onblur="validarCampo(this)" required>
                         </div>
                         <div class="mb-3">
                             <label for="updatePhone" class="form-label">Teléfono</label>
-                            <input type="text" class="form-control" name="updatePhone" aria-describedby="helpId" value="<?= $worker['phone'] ?>" required>
+                            <input type="number" class="form-control" name="updatePhone" aria-describedby="helpId" value="<?= $worker['phone'] ?>" onblur="validarCampo(this)" required>
                         </div>
                         <div class="d-flex justify-content-around ">
                             <button type="submit" class="btn btn-primary">Actualizar Trabajador</button>
@@ -48,26 +48,4 @@
             </div> <!--==== end row2 ====-->
         </div>
     </div>
-    <!-- <div class="row container-fluid justify-content-around">
-        <div class="container col-lg-11 col-md-9 col-sm-8 fondo-2 shadow p-3 mb-5 rounded">
-            <div class="card h-100">
-            <h4 class="card-title text-center mt-3">AÑADIR HABILIDAD</h4>
-                <div class="row">
-                    <div class="mb-3 col-5 col-sm-11 m-4">
-                        <label for="addWorkerSkill" class="form-label">Selecciona Actividad:</label>
-                        <select id="addWorkerSkill" class="form-select form-select-lg" name="addWorkerSkill">
-                            <?php foreach ($skills as $skill => $value) {
-                                var_dump($skills);
-                                echo "<option value='" . $value['id_skill'] . "'>" . $value['name_skill'] . "</option>";
-                            }; ?>
-                        </select>
-                    </div>
-                    <div class="mb-3 col-6 col-sm-11 text-center mt-5">
-                        <button type="submit" class="btn btn-primary">Aprender habilidad</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div> -->
 </form>

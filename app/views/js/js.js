@@ -114,7 +114,7 @@ $(".del").on("click", function (e) {
 
   Swal.fire({
     title: "¿Desea eliminar a esta persona?",
-    text: "Va a eliminar por completo su registro",
+    text: "Una vez realizado se redireccionará a Inicio",
     icon: "warning",
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
@@ -129,25 +129,45 @@ $(".del").on("click", function (e) {
 });
 
 // <!--====== Script to Sweet Alert to deleteClass ======-->
-$(".delClas").on("click", function(e) {
+$(".delClas").on("click", function (e) {
   e.preventDefault();
 
-  var id_class = parseInt($(this).data('id'));
+  var id_class = parseInt($(this).data("id"));
 
   console.log(id_class);
 
   Swal.fire({
-      title: "¿Desea eliminar a esta clase?",
-      text: "Va a eliminar por completo una clase",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#1E7361",
-      confirmButtonText: "Si, estoy seguro.",
-      cancelButtonText: "Cancelar",
+    title: "¿Desea eliminar a esta clase?",
+    text: "Va a eliminar por completo una clase",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#1E7361",
+    confirmButtonText: "Si, estoy seguro.",
+    cancelButtonText: "Cancelar",
   }).then((result) => {
-      if (result.isConfirmed) {
-          window.location.href = BASE_URL + "c_Schedule/deleteClass/" + id_class;
-      }
+    if (result.isConfirmed) {
+      window.location.href = BASE_URL + "c_Schedule/deleteClass/" + id_class;
+    }
+  });
+});
+
+// <!--====== Sweet Alert Delete PersonalTraining ======-->
+$("#btn_delete_PT").on("click", function (e) {
+  e.preventDefault();
+
+  Swal.fire({
+    title: "¿Seguro desea eliminar?",
+    text: "Una vez realizado se redireccionará a Inicio",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#1E7361",
+    confirmButtonText: "Si, estoy seguro.",
+    cancelButtonText: "Cancelar",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.replace(BASE_URL + "c_Users/deletePerson/" + id);
+    }
   });
 });

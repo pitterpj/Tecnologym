@@ -1,7 +1,6 @@
 <!-- Pedro.J (Pitter) -->
 <!-- https://github.com/pitterpj -->
 
-
 <!--==== CONTENT PAGE ====-->
 <div class="row-6 fondo-2 shadow p-3 mb-5 rounded">
     <h2 class="text-center">Entrenamientos Personales</h2>
@@ -51,24 +50,4 @@
 </div> <!--==== END CONTENT PAGE WITH SHADOWS ====-->
 <script>
     id = "<?= $client['id_person'] ?>";
-    console.log(id);
-    // <!--====== Sweet Alert PersonalTraining======-->
-    $("#btn_delete_PT").on("click", function(e) {
-        e.preventDefault();
-
-        Swal.fire({
-            title: "¿Seguro desea eliminar?",
-            text: "Va a dar de baja un registro",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#1E7361",
-            confirmButtonText: "Si, estoy seguro.",
-            cancelButtonText: "Cancelar",
-        }).then((result) => {
-            if (result.isConfirmed) {
-                window.location.replace(BASE_URL + "c_Users/deletePerson/"+id );
-            }
-        });
-    });
 </script>

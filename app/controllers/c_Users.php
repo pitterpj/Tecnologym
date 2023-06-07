@@ -123,7 +123,8 @@ class c_Users extends Controller
     {
         //var_dump($id_person);
         $this->m_users->deletePerson($id_person[0]);
-        $this->managePersonal();
+        // $this->managePersonal();
+        $this->dashboard();
     }
 
     public function deleteNotification($id_not)
@@ -141,7 +142,7 @@ class c_Users extends Controller
 
     public function settings($id_worker)
     {
-        
+
         $datos["worker"] = $this->m_users->showWorker($id_worker[0]);
 
         $contenido = "v_Settings";

@@ -33,7 +33,7 @@
         </div>
         <div class="mb-3">
             <label for="addEmail" class="form-label">Email:*</label>
-            <input type="text" class="form-control" minlength="3" maxlength="25" pattern="[A-Za-z0-9@.]+" name="addEmail" aria-describedby="helpId" onblur="validarCampo(this)" required>
+            <input type="email" class="form-control" minlength="3" maxlength="25" pattern="[A-Za-z0-9@.]+" name="addEmail" aria-describedby="helpId" onblur="validarCampo(this)" required>
         </div>
         <div class="mb-3">
             <label for="addPhone" class="form-label">Teléfono:*</label>
