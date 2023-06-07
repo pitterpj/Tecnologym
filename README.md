@@ -10,7 +10,6 @@
     - Monitor-> Elena 1234
     - Monitor-> Dario 1234
     - Monitor-> Daniel 1234
-    - Monitor-> Maria 1234
     # These don´t have access to the application 
         - Cliente-> Isabel
         - Cliente-> Jesús
@@ -51,50 +50,17 @@
 
 ## To Do:
 
--   - Cabeceras!
-
-    - Actualizar foto. primero borrarmos.
-
-    - c_Dashboard to delete
-
-    - Cambiar iconos sweet alert
-
-    - Cambiar V_schedule cuando creo una clase y redirigir a la principal(ahorro una vista)
-
-            - Hacer los horarios (v_Schedule) responsives
-
-            - en v_Schedule mostrar si en el header si es horario u horario personal
-
-
-    - En c_Schedule en addClass cuando añade hacer redirección por si queremos añadirla a los coachs la nueva habiliad.
-
-    - En c_Users en authenticate cuando no existe el user guarda el error que no muestra. Hacer que lo muestre
+-   - En c_Schedule en addClass cuando añade hacer redirección por si queremos añadirla a los coachs la nueva habiliad.
 
     - Datatables
 
-    - Resetear Database
-
-    - v_CreateSchedule solo muestre las skill del trabajador seleccionado
-
-    - c_PersonalTraining que solo muestre el entrenador logeado
-
     - Borrar iconos que sobran (Vacaciones)
-
-    - m_Users updateWorker se puede mejorar la consulta
-
-    - En m_Users authenticate dejar que lo haga con el email
-
-    - Cambiar la landing con img de la aplicación
 
     - Card decks para mostrar a los trabajadores y editarlos.
 
     - Vista del horario por filtro día/mes/año
 
     - Passwordverify en m_Users o algo para el hash de la contraseña
-
-    - Ver que todo tiene la misma fuente
-
-    - Repasar código CSS
 
     - Añadir descripcion seo
 

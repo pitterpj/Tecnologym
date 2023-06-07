@@ -20,7 +20,7 @@ class m_Schedule extends Model
     // Display the schedule of all coaches
     public function completeSchedule()
     {
-        $snt = "SELECT img, name, name_skill, level, capacity, day, hour FROM `class` 
+        $snt = "SELECT id_class, img, name, name_skill, level, capacity, day, hour FROM `class` 
         INNER JOIN skill ON skill.id_skill = class.id_skill
         INNER JOIN worker ON worker.id_worker = class.id_worker
         INNER JOIN person ON worker.id_person = person.id_person
