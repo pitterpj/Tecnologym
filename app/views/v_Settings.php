@@ -25,19 +25,19 @@
                         <h4 class="card-title text-center">INFORMACIÓN PERSONAL</h4>
                         <div class="mb-3">
                             <label for="updateName" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" name="updateName" aria-describedby="helpId" value="<?= $worker['name'] ?>">
+                            <input type="text" class="form-control" name="updateName" aria-describedby="helpId" value="<?= $worker['name'] ?>" required>
                         </div>
                         <div class="mb-3">
                             <label for="updateLastname" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" name="updateLastname" aria-describedby="helpId" value="<?= $worker['lastname'] ?>">
+                            <input type="text" class="form-control" name="updateLastname" aria-describedby="helpId" value="<?= $worker['lastname'] ?>" required>
                         </div>
                         <div class="mb-3">
                             <label for="updateEmail" class="form-label">Email</label>
-                            <input type="text" class="form-control" name="updateEmail" aria-describedby="helpId" value="<?= $worker['email'] ?>">
+                            <input type="text" class="form-control" name="updateEmail" aria-describedby="helpId" value="<?= $worker['email'] ?>" required>
                         </div>
                         <div class="mb-3">
                             <label for="updatePhone" class="form-label">Teléfono</label>
-                            <input type="text" class="form-control" name="updatePhone" aria-describedby="helpId" value="<?= $worker['phone'] ?>">
+                            <input type="text" class="form-control" name="updatePhone" aria-describedby="helpId" value="<?= $worker['phone'] ?>" required>
                         </div>
                         <div class="d-flex justify-content-around ">
                             <button type="submit" class="btn btn-primary">Actualizar Trabajador</button>

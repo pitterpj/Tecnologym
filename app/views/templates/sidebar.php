@@ -78,16 +78,6 @@
                         echo "</i>";
                         echo "<span class='disappear'>Crear Horarios</span></a>";
 
-
-                        // <!--== Personal  ==-->
-
-                        // echo "<a href='" . BASE_URL . "c_Schedule/showPersonalSchedule'>";
-                        // echo "<i class='fas fa-home'>";
-                        // echo "<img src='" . BASE_URL . "app/assets/img/icons/calendar.png' width='50' alt='Administrar Personal'>";
-                        // echo "</i>";
-                        // echo "<span class='disappear'>Horario Personal</span></a>";
-
-
                         if ($_SESSION['session']['role'] == "Director") {
 
                             echo "<a href='" . BASE_URL . "c_Users/managePersonal'>";
@@ -105,6 +95,7 @@
                         <span class="disappear">Entrenamientos</span></a>
                 </li>
 
+                <!-- TODO:  Ability to request vacations and add shift changes-->
                 <!-- <li> Icon Vacations / Rotations 
                     <a href="#holidaysSubmenu" data-toggle="collapse" class="dropdown-toggle">
                         <i class="fas fa-home"><img src="<?= BASE_URL ?>app\assets\img\icons\time_out.png" width="50" alt="Horario"></i>

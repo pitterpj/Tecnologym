@@ -18,7 +18,7 @@ $("#btn_logOut").on("click", function (e) {
   });
 });
 
-// <!--====== Show skills of Workers ======-->
+// <!--====== Select skills of Workers ======-->
 
 function selectSkills(skills) {
   console.log(skills);
@@ -60,8 +60,16 @@ $(document).ready(function () {
   });
 });
 
-// <!--====== Script Notifications ======-->
+// <!--====== Script to Validate input ======-->
 
-
-
-
+function validarCampo(campo) {
+  if (campo.value.trim() === "") {
+    // The field is empty, displays an error message, or performs some action.
+    console.log("Campo requerido");
+    // También puedes añadir una clase CSS para resaltar el campo con un borde rojo, por ejemplo:
+    campo.classList.add("campo-error");
+  } else {
+    // If the field previously had an error, you can delete the error CSS class
+    campo.classList.remove("campo-error");
+  }
+}

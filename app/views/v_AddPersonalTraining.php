@@ -3,6 +3,12 @@
 
 
 <!--==== CONTENT PAGE ====-->
+<style>
+    .campo-error {
+        border: 2px solid red;
+    }
+</style>
+
 <div class="row-6 fondo-2 shadow p-3 mb-5 rounded">
     <form id="formAdd" action="<?= BASE_URL ?>c_PersonalTraining/addClient" method="post" enctype="multipart/form-data">
         <div class="mb-3">
@@ -11,7 +17,7 @@
         </div>
         <div class="mb-3">
             <label for="addName" class="form-label">Nombre:</label>
-            <input type="text" class="form-control" name="addName" aria-describedby="helpId" required>
+            <input type="text" class="form-control" name="addName" aria-describedby="helpId" onblur="validarCampo(this)" required>
         </div>
         <div class="mb-3">
             <label for="addLastName" class="form-label">Apellidos:</label>
