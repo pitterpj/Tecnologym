@@ -25,5 +25,9 @@
         BASE_URL = "<?= BASE_URL ?>";
     </script>
 
+    <style>
+
+    </style>
+
 
 </head>

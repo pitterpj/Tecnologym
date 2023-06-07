@@ -1,9 +1,6 @@
 <!-- Pedro.J (Pitter) -->
 <!-- https://github.com/pitterpj -->
 
-
-<!-- TODO tiene que seleccionar solo las clases que pueda dar el trabajador seleccionado arriba  -->
-
 <!--====  CREATE CLASS====-->
 <div class="row container-fluid justify-content-around ">
     <div class="container card col-lg-6 col-md-9 col-sm-8 fondo-2 shadow p-3 mb-5 rounded">
@@ -25,15 +22,15 @@
             </div>
             <div class="mb-3">
                 <label for="addCapacity" class="form-label">Capacidad de la clase:</label>
-                <input type="number" class="form-control" name="addCapacity" aria-describedby="helpId" placeholder="12">
+                <input type="number" class="form-control" name="addCapacity" aria-describedby="helpId" placeholder="12" required>
             </div>
             <div class="mb-3">
                 <label for="addDay" class="form-label">Día:</label>
-                <input type="date" class="form-control" name="addDay" aria-describedby="helpId" min="<?php echo date('Y-m-d'); ?>">
+                <input type="date" class="form-control" name="addDay" aria-describedby="helpId" min="<?php echo date('Y-m-d'); ?>" required>
             </div>
             <div class="mb-3">
                 <label for="addHour" class="form-label">Hora:</label>
-                <input type="time" class="form-control" name="addHour" aria-describedby="helpId">
+                <input type="time" class="form-control" name="addHour" aria-describedby="helpId" required>
             </div>
             <div class="d-flex justify-content-around ">
                 <button type="submit" class="btn btn-primary">Añadir Clase</button>
@@ -51,15 +48,15 @@
                 <form action="<?= BASE_URL . 'c_Schedule/addSkill' ?>" method="post" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="addImg" class="form-label"></label>
-                        <input type="file" class="form-control" name="addImg" aria-describedby="helpId">
+                        <input type="file" class="form-control" name="addImg" aria-describedby="helpId" required>
                     </div>
                     <div class="mb-3">
                         <label for="addNameSkill" class="form-label">Nombre de la actividad:</label>
-                        <input type="text" class="form-control" name="addNameSkill" aria-describedby="helpId" placeholder="Nombre de la actividad">
+                        <input type="text" class="form-control" name="addNameSkill" aria-describedby="helpId" placeholder="Nombre de la actividad" required>
                     </div>
                     <div class="mb-3">
                         <label for="addLevel" class="form-label">Nivel de la Actividad:</label>
-                        <input type="text" class="form-control" name="addLevel" aria-describedby="helpId" placeholder="Nivel de la actividad">
+                        <input type="text" class="form-control" name="addLevel" aria-describedby="helpId" placeholder="Nivel de la actividad" required>
                     </div>
                     <div class="d-flex justify-content-around ">
                         <button type="submit" class="btn btn-primary">Añadir Actividad</button>
@@ -79,26 +76,11 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 <script>
     // <!--====== Script Select Workers and skills on load ======-->
     $(window).on("load", function(e) {
-        $.post(
-            BASE_URL + "c_Schedule/showSkillsWorker", {
-                id_person: $("#addWorker").val(),
-            },
-            function(skills) {
-                showSkills(JSON.parse(skills));
-            }
-        ); //end post
-    });
-
-    // <!--====== Script Select Show Skills of Workers on change ======-->
-
-    $("#addWorker").on("change", function(e) {
-        //console.log($("#addWorker").val());
         $.post(
             BASE_URL + "c_Schedule/showSkillsWorker", {
                 id_person: $("#addWorker").val(),

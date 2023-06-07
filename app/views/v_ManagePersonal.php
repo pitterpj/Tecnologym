@@ -1,10 +1,8 @@
 <!-- Pedro.J (Pitter) -->
 <!-- https://github.com/pitterpj -->
 
-
 <!--==== CONTENT PAGE ====-->
 <div class="row-6 fondo-2 shadow p-3 mb-5 rounded">
-
     <h2 class="text-center">Administrar Personal</h2>
     <div class="card">
         <div class="table-responsive-sm m-2">
@@ -31,8 +29,8 @@
                                 <?php if (isset($worker['avatar'])) {
                                     echo '<img class="img-fluid rounded-circle" src="' . BASE_URL . IMG_URL . $worker['avatar'] . '" width="200" alt="Brand-Tecnologym">';
                                 } else {
-                                    echo '<img class="img-fluid rounded-circle" src="' . BASE_URL . 'app\assets\img\icons\avatar_person.jpg" width="200" alt="Brand-Tecnologym">';
-                                }                                ?>
+                                    echo '<img class="img-fluid rounded-circle" src="' . BASE_URL . 'app/assets/img/icons/avatar_person.jpg" width="200" alt="Brand-Tecnologym">';
+                                } ?>
                             </td>
                             <td><?= $worker['name'] ?></td>
                             <td><?= $worker['lastname'] ?></td>
@@ -43,7 +41,6 @@
                             <td>
                                 <a name="updateWorker" class="btn btn-info" href="<?= BASE_URL . 'c_Users/updateWorkers/' . $worker['id_worker'] ?>" type="button">Editar</a>
                                 <a name="deleteWorker" data-id_p="<?= $worker['id_person']  ?>" class="del btn btn-warning" role="button">Eliminar</a>
-
                             </td>
                         </tr>
                     <?php endforeach ?>
@@ -52,27 +49,3 @@
         </div>
     </div>
 </div> <!--==== END CONTENT PAGE WITH SHADOWS ====-->
-<script>
-    $(".del").on("click", function(e) {
-        e.preventDefault();
-
-        var id_person = parseInt($(this).data('id_p'));
-
-        console.log(id_person);
-
-        Swal.fire({
-            title: "¿Desea eliminar a esta clase?",
-            text: "Va a eliminar por completo una clase",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#1E7361",
-            confirmButtonText: "Si, estoy seguro.",
-            cancelButtonText: "Cancelar",
-        }).then((result) => {
-            if (result.isConfirmed) {
-                window.location.href = BASE_URL + 'c_Users/deletePerson/' + id_person;
-            }
-        });
-    });
-</script>

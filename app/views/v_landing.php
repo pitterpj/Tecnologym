@@ -71,7 +71,6 @@
                     <div class="form-group"><!--==== REMEMBER ME =======-->
                         <div>
                             <button type="submit" class="btn btn-success">Acceder</button>
-
                             <a class="btn btn-link" data-toggle="modal" data-target="#modalPassword">¿Contraseña olvidada?</a>
                         </div>
                     </div>
@@ -170,7 +169,6 @@
             </div>
         </div>
     </div> <!--====== PRELOADER PART ENDS ======-->
-
     <!--====== HEADER PART START ======-->
     <section class="header_area">
         <!--====== HEADER NAVBAR ======-->
@@ -251,8 +249,6 @@
                 </div> <!-- image -->
             </div> <!-- end image container -->
         </div> <!-- header hero -->
-
-
     </section> <!--====== HEADER PART ENDS ======-->
 
     <!--====== FEATURES PART START ======-->
@@ -313,7 +309,6 @@
                         <a class="main-btn page-scroll" data-toggle="modal" data-target="#modalRegister">Descubrelo</a>
                     </div> <!-- about image -->
                 </div>
-
             </div> <!-- row -->
         </div> <!-- container -->
     </section><!--====== ABOUT PART ENDS ======-->

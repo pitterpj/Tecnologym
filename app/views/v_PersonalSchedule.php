@@ -1,7 +1,6 @@
 <!-- Pedro.J (Pitter) -->
 <!-- https://github.com/pitterpj -->
 
-
 <!--==== CONTENT PAGE ====-->
 <div class="row-6 fondo-2 shadow p-3 mb-5 rounded ">
     <h2 class="text-center">Horario Personal</h2>
@@ -13,9 +12,6 @@
                     <a class="btn btn-primary" href="<?= BASE_URL ?>c_Schedule/showPersonalSchedule//week" role="button">Semanal</a>
                     <a class="btn btn-primary" href="<?= BASE_URL . "c_Schedule/completeSchedule" ?>" role="button">Ver horario completo</a>
                 </div>
-
-                <!-- <a class="btn btn-primary" href="<?= BASE_URL ?>c_Schedule/showPersonalSchedule//month" role="button">Mensual</a>
-                <a class="btn btn-primary" href="<?= BASE_URL ?>c_Schedule/showPersonalSchedule//year" role="button">Anual</a> -->
             </div>
             <table class="table table-primary table-striped table-hover ">
                 <thead>
@@ -40,7 +36,7 @@
                             <td scope="row"><?= substr($class['hour'], 0, 5); ?></td>
                             <td>
                                 <a name="updateClass" class="btn btn-info" href="<?= BASE_URL . 'c_Schedule/updateClasses/' . $class['id_class'] ?>" type="button">Editar</a>
-                                <a name="deleteClass" data-id="<?= $class['id_class'] ?>" class="del btn btn-warning" role="button">Eliminar</a>
+                                <a name="deleteClass" data-id="<?= $class['id_class'] ?>" class="delClas btn btn-warning" role="button">Eliminar</a>
                             </td>
                         </tr>
                     <?php endforeach ?>
@@ -49,27 +45,3 @@
         </div>
     </div>
 </div> <!--==== END CONTENT PAGE WITH SHADOWS ====-->
-<script>
-    $(".del").on("click", function(e) {
-        e.preventDefault();
-
-        var id_class = parseInt($(this).data('id'));
-
-        console.log(id_class);
-
-        Swal.fire({
-            title: "¿Desea eliminar a esta clase?",
-            text: "Va a eliminar por completo una clase",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#1E7361",
-            confirmButtonText: "Si, estoy seguro.",
-            cancelButtonText: "Cancelar",
-        }).then((result) => {
-            if (result.isConfirmed) {
-                window.location.href = BASE_URL + "c_Schedule/deleteClass/" + id_class;
-            }
-        });
-    });
-</script>
