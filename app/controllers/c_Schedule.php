@@ -99,7 +99,7 @@ class c_Schedule extends Controller
     // Update classes 
     public function updateClass($class)
     {
-        $this->m_schedule->updateClass($class[0]);
+        $datos=$this->m_schedule->updateClass($class[0]);
         $this->showPersonalSchedule();
     }
 

@@ -20,6 +20,10 @@
                 <label for="addHour" class="form-label">Hora:</label>
                 <input type="time" class="form-control" name="addHour" aria-describedby="helpId" value="<?= $class[0]['hour'] ?>" onblur="validarCampo(this)" required>
             </div>
+            <div class="mb-3">
+                <label for="id_worker" hidden class="form-label"></label>
+                <input type="text" hidden class="form-control" name="id_worker" aria-describedby="helpId" value="<?= $class[0]['id_worker'] ?>">
+            </div>
             <div class="d-flex justify-content-around ">
                 <button type="submit" class="btn btn-primary">Actualizar Clase</button>
             </div>

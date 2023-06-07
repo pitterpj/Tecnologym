@@ -126,6 +126,14 @@ class m_Schedule extends Model
     // Update class
     public function updateClass($id_class)
     {
+
+        $snt2 = "INSERT INTO `notifications` (`id`, `id_person`, `notification`) VALUES (NULL, :id_person, '¡Existen cambios en tu horario!');";
+
+        $this->consult($snt2);
+        $this->link(":id_person", $_POST['id_worker']);
+        $this->launch();
+
+
         $snt = "UPDATE `class` SET `capacity` = :capacity, `day` = :day, `hour` = :hour WHERE `class`.`id_class` = :id_class;";
 
         $this->consult($snt);
@@ -140,7 +148,7 @@ class m_Schedule extends Model
     public function deleteClass($id_class)
     {
         $snt = "DELETE FROM class WHERE `class`.`id_class` = :id_class";
-        
+
         $this->consult($snt);
         $this->link(":id_class", $id_class);
         return $this->result();
