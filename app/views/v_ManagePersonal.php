@@ -42,7 +42,7 @@
                             <td><?= $worker['hours'] ?></td>
                             <td>
                                 <a name="updateWorker" class="btn btn-info" href="<?= BASE_URL . 'c_Users/updateWorkers/' . $worker['id_worker'] ?>" type="button">Editar</a>
-                                <a name="deleteWorker" data-id_p="<?= $worker['id_worker']  ?>" class="del btn btn-warning" role="button">Eliminar</a>
+                                <a name="deleteWorker" data-id_p="<?= $worker['id_person']  ?>" class="del btn btn-warning" role="button">Eliminar</a>
 
                             </td>
                         </tr>
