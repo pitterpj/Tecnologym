@@ -152,22 +152,22 @@ $(".delClas").on("click", function (e) {
   });
 });
 
-// <!--====== Sweet Alert Delete PersonalTraining ======-->
-$("#btn_delete_PT").on("click", function (e) {
-  e.preventDefault();
+    // <!--====== Sweet Alert Delete PersonalTraining ======-->
+    $(".btn_delete_PT").on("click", function(e) {
+      e.preventDefault();
 
-  Swal.fire({
-    title: "¿Seguro desea eliminar?",
-    text: "Una vez realizado se redireccionará a Inicio",
-    icon: "warning",
-    showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#1E7361",
-    confirmButtonText: "Si, estoy seguro.",
-    cancelButtonText: "Cancelar",
-  }).then((result) => {
-    if (result.isConfirmed) {
-      window.location.replace(BASE_URL + "c_Users/deletePerson/" + id);
-    }
+      Swal.fire({
+          title: "¿Seguro desea eliminar?",
+          text: "Una vez realizado se redireccionará a Inicio",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#1E7361",
+          confirmButtonText: "Si, estoy seguro.",
+          cancelButtonText: "Cancelar",
+      }).then((result) => {
+          if (result.isConfirmed) {
+              window.location.replace(BASE_URL + "c_Users/deletePerson/" + id);
+          }
+      });
   });
-});

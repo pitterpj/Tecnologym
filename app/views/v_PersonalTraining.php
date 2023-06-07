@@ -39,7 +39,7 @@
                             <td><?= $client['birth_date'] ?></td>
                             <td>
                                 <a name="updatePersonalTraining" class="btn btn-info" href="<?= BASE_URL . "c_PersonalTraining/updateClients/" . $client['id_person'] ?>" type="button">Editar</a>
-                                <a id="btn_delete_PT" class="btn btn-warning" role="button">Eliminar</a>
+                                <a id="" class="btn_delete_PT btn btn-warning" role="button">Eliminar</a>
                             </td>
                         </tr>
                     <?php endforeach ?>
