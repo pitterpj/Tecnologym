@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-06-2023 a las 13:39:32
+-- Tiempo de generación: 12-06-2023 a las 12:44:51
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.0.25
 
@@ -36,6 +36,75 @@ CREATE TABLE `class` (
   `hour` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `class`
+--
+
+INSERT INTO `class` (`id_class`, `id_worker`, `id_skill`, `capacity`, `day`, `hour`) VALUES
+(1, 1, 1, 12, '2023-06-12', '10:00:00'),
+(2, 1, 2, 12, '2023-06-12', '11:00:00'),
+(3, 1, 3, 14, '2023-06-12', '12:00:00'),
+(4, 1, 4, 11, '2023-06-12', '13:00:00'),
+(5, 1, 5, 13, '2023-06-12', '16:00:00'),
+(6, 1, 6, 5, '2023-06-12', '17:00:00'),
+(7, 1, 4, 9, '2023-06-12', '19:00:00'),
+(8, 1, 5, 8, '2023-06-12', '20:00:00'),
+(9, 1, 7, 9, '2023-06-12', '18:00:00'),
+(10, 1, 3, 14, '2023-06-14', '12:00:00'),
+(11, 1, 4, 11, '2023-06-14', '13:00:00'),
+(12, 1, 5, 13, '2023-06-14', '16:00:00'),
+(13, 1, 6, 5, '2023-06-14', '17:00:00'),
+(14, 1, 4, 9, '2023-06-14', '19:00:00'),
+(15, 1, 5, 8, '2023-06-14', '20:00:00'),
+(16, 1, 7, 9, '2023-06-14', '18:00:00'),
+(17, 2, 3, 14, '2023-06-12', '12:00:00'),
+(18, 2, 4, 11, '2023-06-12', '13:00:00'),
+(19, 2, 3, 13, '2023-06-12', '16:00:00'),
+(20, 2, 6, 5, '2023-06-12', '17:00:00'),
+(21, 2, 4, 9, '2023-06-12', '19:00:00'),
+(22, 2, 5, 8, '2023-06-12', '20:00:00'),
+(23, 2, 7, 9, '2023-06-12', '18:00:00'),
+(24, 2, 3, 14, '2023-06-14', '12:00:00'),
+(25, 2, 4, 11, '2023-06-14', '13:00:00'),
+(26, 2, 3, 13, '2023-06-14', '16:00:00'),
+(27, 2, 6, 5, '2023-06-14', '17:00:00'),
+(28, 2, 4, 9, '2023-06-14', '19:00:00'),
+(29, 2, 5, 8, '2023-06-14', '20:00:00'),
+(30, 2, 7, 9, '2023-06-14', '18:00:00'),
+(31, 2, 3, 13, '2023-06-15', '16:00:00'),
+(32, 2, 6, 5, '2023-06-15', '17:00:00'),
+(33, 2, 4, 9, '2023-06-17', '19:00:00'),
+(34, 2, 5, 8, '2023-06-17', '20:00:00'),
+(35, 2, 7, 9, '2023-06-17', '18:00:00'),
+(36, 3, 5, 14, '2023-06-14', '12:00:00'),
+(37, 3, 5, 11, '2023-06-14', '13:00:00'),
+(38, 3, 6, 13, '2023-06-14', '16:00:00'),
+(39, 3, 6, 5, '2023-06-14', '17:00:00'),
+(40, 3, 7, 9, '2023-06-14', '19:00:00'),
+(41, 3, 5, 8, '2023-06-14', '20:00:00'),
+(42, 3, 7, 9, '2023-06-14', '18:00:00'),
+(43, 3, 5, 14, '2023-06-15', '12:00:00'),
+(44, 3, 5, 11, '2023-06-16', '13:00:00'),
+(45, 3, 6, 13, '2023-06-15', '16:00:00'),
+(46, 3, 6, 5, '2023-06-17', '17:00:00'),
+(47, 3, 7, 9, '2023-06-20', '19:00:00'),
+(48, 3, 5, 8, '2023-06-22', '20:00:00'),
+(49, 3, 7, 9, '2023-06-25', '18:00:00'),
+(50, 4, 2, 14, '2023-06-15', '12:00:00'),
+(51, 4, 3, 11, '2023-06-16', '13:00:00'),
+(52, 4, 4, 13, '2023-06-15', '16:00:00'),
+(53, 4, 3, 5, '2023-06-17', '17:00:00'),
+(54, 4, 4, 9, '2023-06-20', '19:00:00'),
+(55, 4, 2, 8, '2023-06-22', '20:00:00'),
+(56, 4, 2, 9, '2023-06-25', '18:00:00'),
+(57, 4, 2, 14, '2023-06-14', '12:00:00'),
+(58, 4, 3, 11, '2023-06-14', '13:00:00'),
+(59, 4, 4, 13, '2023-06-14', '16:00:00'),
+(60, 4, 3, 5, '2023-06-14', '17:00:00'),
+(61, 4, 4, 9, '2023-06-14', '19:00:00'),
+(62, 4, 2, 8, '2023-06-14', '20:00:00'),
+(63, 4, 2, 9, '2023-06-14', '18:00:00');
+
 -- --------------------------------------------------------
 
 --
@@ -50,6 +119,14 @@ CREATE TABLE `client` (
   `birth_date` date NOT NULL,
   `comments` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `client`
+--
+
+INSERT INTO `client` (`id_client`, `id_person`, `BMI`, `weight`, `birth_date`, `comments`) VALUES
+(1, 6, 21, 45, '1989-02-17', 'Nota sobre progeso de rendimiento de fuerza y mindfullnes'),
+(2, 7, 22, 55, '1990-02-09', 'Progeso de cardio y realización de ejercicos de musculación favorables');
 
 -- --------------------------------------------------------
 
@@ -100,9 +177,11 @@ CREATE TABLE `person` (
 INSERT INTO `person` (`id_person`, `name`, `lastname`, `user`, `password`, `email`, `phone`, `avatar`) VALUES
 (1, 'Pedro', 'Jorge Cid', 'Pitter', '1234', 'pitter@pitter.es', '603548778', '1685812582_Avatar_Pitter-PJ_sonrisa.png'),
 (2, 'Alpha Luis', 'Almendral', 'Alpha', '1234', 'alpha@correo.es', '684658753', '1685976100_alpha.jpg'),
-(3, 'María Cremita', 'Lorenzo Cremita', 'Elena', '1234', 'elena@correo.es', '632148954', '1685976026_elena.jpg'),
+(3, 'María Elena', 'Lorenzo ', 'Elena', '1234', 'elena@correo.es', '632148957', '1686562780_1678261701_crematia.jpg'),
 (4, 'Darío', 'Estevez', 'Dario', '1234', 'dario@correo.es', '658741258', '1678732733_1678260632_dario.jpg'),
-(5, 'Daniel', 'García', 'Daniel', '1234', 'daniel@correo.es', '698963258', '1678260759_daniel.jpg');
+(5, 'Daniel', 'García', 'Daniel', '1234', 'daniel@correo.es', '698963258', '1678260759_daniel.jpg'),
+(6, 'Isabel', 'DWES', NULL, NULL, NULL, NULL, '1686152727_avatar.jpg'),
+(7, 'Jesús', 'DWEC', NULL, NULL, NULL, NULL, '1686152775_avatar_person.jpg');
 
 -- --------------------------------------------------------
 
@@ -312,13 +391,13 @@ ALTER TABLE `worker_type`
 -- AUTO_INCREMENT de la tabla `class`
 --
 ALTER TABLE `class`
-  MODIFY `id_class` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_class` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT de la tabla `client`
 --
 ALTER TABLE `client`
-  MODIFY `id_client` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_client` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `log_training`
@@ -336,7 +415,7 @@ ALTER TABLE `notifications`
 -- AUTO_INCREMENT de la tabla `person`
 --
 ALTER TABLE `person`
-  MODIFY `id_person` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_person` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `skill`
